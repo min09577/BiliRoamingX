@@ -34,9 +34,7 @@ object RememberPlaybackSpeedPatch : MultiMethodBytecodePatch(
 ) {
     override fun execute(context: BytecodeContext) {
         super.execute(context)
-        PlayerSpeedChooseWidgetFingerprint.result.ifEmpty {
-            throw PlayerSpeedChooseWidgetFingerprint.exception
-        }.forEach { r ->
+        for (r in PlayerSpeedChooseWidgetFingerprint.result) {
             r.mutableMethod.addInstructions(
                 0, """
                 invoke-static {p1}, Lapp/revanced/bilibili/patches/PlaybackSpeedPatch;->onPlaybackSpeedSelected(F)V
@@ -53,9 +51,6 @@ object RememberPlaybackSpeedPatch : MultiMethodBytecodePatch(
                 invoke-static {v0}, Lapp/revanced/bilibili/patches/PlaybackSpeedPatch;->onPlaybackSpeedSelected(F)V
             """.trimIndent()
             )
-        } ?: run {
-            if (SettingsResourcePatch.isPink)
-                throw PlayerSettingCreateSpeedFingerprint.exception
         }
         MenuServiceCreateSpeedFingerprint.result?.run {
             val speedListField = mutableClass.fields.first { it.type == "Ljava/util/List;" }
@@ -70,13 +65,8 @@ object RememberPlaybackSpeedPatch : MultiMethodBytecodePatch(
                 invoke-static {v0}, Lapp/revanced/bilibili/patches/PlaybackSpeedPatch;->onPlaybackSpeedSelected(F)V
             """.trimIndent()
             )
-        } ?: run {
-            if (SettingsResourcePatch.isPink)
-                throw MenuServiceCreateSpeedFingerprint.exception
         }
-        PlaybackSpeedSettingFingerprint.result.ifEmpty {
-            throw PlaybackSpeedSettingFingerprint.exception
-        }.forEach { r ->
+        for (r in PlaybackSpeedSettingFingerprint.result) {
             val instructions = r.mutableMethod.implementation!!.instructions
             val (index, register) = instructions.withIndex().firstNotNullOf { (index, inst) ->
                 if (inst.opcode == Opcode.INVOKE_DIRECT && inst.getReference<MethodReference>().let {
