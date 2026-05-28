@@ -58,23 +58,28 @@ object PegasusPatch : BytecodePatch(
                 it.annotation("Lcom/alibaba/fastjson/annotation/JSONField;")
                     ?.value<StringEncodedValue>("name")?.value == "banner_item"
             }?.let { c to it } else null
-        } ?: throw PatchException("not found banner item field")
+        } ?: run {
+            // banner_item field not found in 8.95.0+, skip banner hooking
+            null to null
+        }
         val myBannersItemClassName = "Lapp/revanced/bilibili/meta/pegasus/BannersItem;"
         val myBannersItemClass = context.findClass(myBannersItemClassName)!!
-        stockBannersItemClass.proxy(context).setSuperClass(myBannersItemClassName)
-        myBannersItemClass.mutableClass.methods.run {
-            find { it.name == "getBanners" }?.also { remove(it) }
-                ?.cloneMutable(3, clearImplementation = true)
-                ?.apply {
-                    addInstructions(
-                        """
-                        move-object v0, p0
-                        check-cast v0, $stockBannersItemClass
-                        iget-object v1, v0, $bannerItemFiled
-                        return-object v1
-                    """.trimIndent()
-                    )
-                }?.also { add(it) }
+        if (stockBannersItemClass != null && bannerItemFiled != null) {
+            stockBannersItemClass.proxy(context).setSuperClass(myBannersItemClassName)
+            myBannersItemClass.mutableClass.methods.run {
+                find { it.name == "getBanners" }?.also { remove(it) }
+                    ?.cloneMutable(3, clearImplementation = true)
+                    ?.apply {
+                        addInstructions(
+                            """
+                            move-object v0, p0
+                            check-cast v0, $stockBannersItemClass
+                            iget-object v1, v0, $bannerItemFiled
+                            return-object v1
+                        """.trimIndent()
+                        )
+                    }?.also { add(it) }
+            }
         }
         fun MutableMethod.hookOnFeedClick() = addInstructionsWithLabels(
             0, """
@@ -87,7 +92,6 @@ object PegasusPatch : BytecodePatch(
         """.trimIndent()
         )
         CardClickProcessorFingerprint.result?.mutableMethod?.hookOnFeedClick()
-            ?: throw CardClickProcessorFingerprint.exception
         // only exist on 7.63.0 alpha version now
         CardClickProcessorNewFingerprint.result?.mutableMethod?.hookOnFeedClick()
     }

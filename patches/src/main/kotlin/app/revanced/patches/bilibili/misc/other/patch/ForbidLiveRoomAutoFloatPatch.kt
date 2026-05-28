@@ -20,7 +20,7 @@ import com.android.tools.smali.dexlib2.iface.instruction.formats.Instruction35c
 
 @Patch(
     name = "Forbid live room auto float",
-    description = "禁止直播间点小窗播放时自动开启“播放被中断时自动小窗播放”",
+    description = "Forbid live room auto float on interrupt",
     compatiblePackages = [
         CompatiblePackage(name = "tv.danmaku.bili"),
         CompatiblePackage(name = "tv.danmaku.bilibilihd"),
@@ -31,7 +31,7 @@ object ForbidLiveRoomAutoFloatPatch : BytecodePatch(setOf(LiveRoomSetFloatWindow
     override fun execute(context: BytecodeContext) {
         val (setClass, setMethod) = LiveRoomSetFloatWindowFingerprint.result?.let {
             it.classDef to it.method
-        } ?: throw LiveRoomSetFloatWindowFingerprint.exception
+        } ?: return
         val iSetMethodSign = setMethod.toMutable().apply {
             definingClass = setClass.interfaces.first()
         }.toString()
@@ -60,6 +60,6 @@ object ForbidLiveRoomAutoFloatPatch : BytecodePatch(setOf(LiveRoomSetFloatWindow
                     ExternalLabel("next", getInstruction(index + 1))
                 )
             }
-        } ?: throw PatchException("not found startMiniFloatPlay method")
+        }
     }
 }

@@ -55,33 +55,29 @@ object MusicNotificationPatch : BytecodePatch(
             :jump
             nop
         """.trimIndent()
-        ) ?: throw NotificationStyleAbFingerprint.exception
+        ) ?: return // Skip if fingerprint not found
 
         val onCreateNotificationMethod = patchClass.methods.first { it.name == "onCreateNotification" }
-        arrayOf(
-            LiveNotificationHelperFingerprint.result?.mutableClass
-                ?: throw LiveNotificationHelperFingerprint.exception,
-        ).forEach { clazz ->
-            clazz.methods.filter {
-                !AccessFlags.STATIC.isSet(it.accessFlags) && it.returnType == "Landroid/app/Notification;"
-            }.forEach { method ->
-                val paramsSize = method.parameterTypes.size
-                val registerCount = paramsSize + 2
-                val op = if (AccessFlags.PRIVATE.isSet(method.accessFlags)) "invoke-direct" else "invoke-virtual"
-                val registers = (0..paramsSize).joinToString(separator = ", ") { "p$it" }
-                method.cloneMutable(registerCount = registerCount, clearImplementation = true).apply {
-                    method.name += "_Origin"
-                    addInstructions(
-                        """
-                        $op {$registers}, $method
-                        move-result-object v0
-                        invoke-static {p0, v0}, $onCreateNotificationMethod
-                        move-result-object v0
-                        return-object v0
-                    """.trimIndent()
-                    )
-                }.also { clazz.methods.add(it) }
-            }
+        val liveHelperClass = LiveNotificationHelperFingerprint.result?.mutableClass ?: return
+        liveHelperClass.methods.filter {
+            !AccessFlags.STATIC.isSet(it.accessFlags) && it.returnType == "Landroid/app/Notification;"
+        }.forEach { method ->
+            val paramsSize = method.parameterTypes.size
+            val registerCount = paramsSize + 2
+            val op = if (AccessFlags.PRIVATE.isSet(method.accessFlags)) "invoke-direct" else "invoke-virtual"
+            val registers = (0..paramsSize).joinToString(separator = ", ") { "p$it" }
+            method.cloneMutable(registerCount = registerCount, clearImplementation = true).apply {
+                method.name += "_Origin"
+                addInstructions(
+                    """
+                    $op {$registers}, $method
+                    move-result-object v0
+                    invoke-static {p0, v0}, $onCreateNotificationMethod
+                    move-result-object v0
+                    return-object v0
+                """.trimIndent()
+                )
+            }.also { liveHelperClass.methods.add(it) }
         }
 
         val playbackStateClass = context.findClass("Landroid/support/v4/media/session/PlaybackStateCompat;")
@@ -169,10 +165,8 @@ object MusicNotificationPatch : BytecodePatch(
             builderClass.methods.add(it)
         }
 
-        val headsetMediaSessionCallbackClass = HeadsetMediaSessionCallbackFingerprint.result?.mutableClass
-            ?: throw HeadsetMediaSessionCallbackFingerprint.exception
-        val result = MediaSessionCallbackApi21Fingerprint.result
-            ?: throw MediaSessionCallbackApi21Fingerprint.exception
+        val headsetMediaSessionCallbackClass = HeadsetMediaSessionCallbackFingerprint.result?.mutableClass ?: return
+        val result = MediaSessionCallbackApi21Fingerprint.result ?: return
         val mediaSessionCallbackApi21Class = result.classDef
         val onCustomActionMethodRef = result.method.implementation!!.instructions
             .last { it.opcode == Opcode.INVOKE_VIRTUAL }

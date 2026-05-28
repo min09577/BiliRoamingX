@@ -22,11 +22,10 @@ import com.android.tools.smali.dexlib2.Opcode
 )
 object AutoLikePatch : BytecodePatch(setOf(SectionFingerprint)) {
     override fun execute(context: BytecodeContext) {
-        val clazz = SectionFingerprint.result?.mutableClass
-            ?: throw SectionFingerprint.exception
+        val clazz = SectionFingerprint.result?.mutableClass ?: return
         val likeMethod = context.classes.first { it.type == clazz.superclass }.virtualMethods.find { m ->
             m.parameterTypes.size == 1 && m.returnType == "V" && !AccessFlags.FINAL.isSet(m.accessFlags)
-        } ?: throw PatchException("can not found like method")
+        } ?: return
         val realLikeMethod = clazz.methods.first { m ->
             m.name == likeMethod.name && m.parameterTypes == likeMethod.parameterTypes
         }

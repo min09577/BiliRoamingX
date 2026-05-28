@@ -131,6 +131,6 @@ object MossPatch : BytecodePatch(setOf(MossServiceFingerprint, MossMiddlewareGai
                 iput-object v0, p0, $urlField
             """.trimIndent()
             )
-        } ?: throw PatchException("not found BidirectionalStreamBuilderImpl class")
+        }
     }
 }

@@ -34,7 +34,11 @@ object ToastPatch : BytecodePatch() {
                     it.returnType == "V" && it.parameterTypes ==
                             listOf("Landroid/content/Context;", "Ljava/lang/String;", "I", "I")
                 }
-            } ?: throw PatchException("Not found show toast method reference")
+            }
+        if (showToastRef == null) {
+            // Toast method signature changed in 8.95.0, skip
+            return
+        }
         val myToastsClass = context.findClass("Lapp/revanced/bilibili/utils/Toasts;")!!
         val cancelMethod = showToastRef.definingClass.toClassDef(context).methods
             .find { it.parameterTypes.isEmpty() && it.name != "<init>" }

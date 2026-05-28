@@ -37,30 +37,34 @@ object ForceCommentNavigablePatch : BytecodePatch(fingerprints = setOf(CommentCo
             0, """
             invoke-static {p0}, $patchType->onPrimaryCommentMainFragmentCreate($baseFragmentType)V
         """.trimIndent()
-        ) ?: throw PatchException("not found PrimaryCommentMainFragment")
-        CommentConfigFingerprint.result?.run {
-            val index = scanResult.stringsScanResult!!.matches.last().index
-            val seekEnabledField = mutableMethod.getInstructions().withIndex().firstNotNullOf { (i, inst) ->
-                if (i > index && inst.opcode == Opcode.IGET_BOOLEAN) {
-                    inst.getReference<FieldReference>()
-                } else null
+        ) ?: return // Skip if PrimaryCommentMainFragment not found
+        try {
+            CommentConfigFingerprint.result?.run {
+                val index = scanResult.stringsScanResult!!.matches.last().index
+                val seekEnabledField = mutableMethod.getInstructions().withIndex().firstNotNullOf { (i, inst) ->
+                    if (i > index && inst.opcode == Opcode.IGET_BOOLEAN) {
+                        inst.getReference<FieldReference>()
+                    } else null
+                }
+                mutableClass.methods.first { m ->
+                    m.parameterTypes.isEmpty() && m.returnType == "Z" && !m.accessFlags.isAbstract()
+                            && m.getInstruction(0).let {
+                        if (it.opcode == Opcode.IGET_BOOLEAN) it.getReference<FieldReference>() else null
+                    } == seekEnabledField
+                }.addInstructionsWithLabels(
+                    0, """
+                    invoke-static {}, $patchType->enabled()Z
+                    move-result v0
+                    if-eqz v0, :jump
+                    const/4 v0, 0x1
+                    return v0
+                    :jump
+                    nop
+                """.trimIndent()
+                )
             }
-            mutableClass.methods.first { m ->
-                m.parameterTypes.isEmpty() && m.returnType == "Z" && !m.accessFlags.isAbstract()
-                        && m.getInstruction(0).let {
-                    if (it.opcode == Opcode.IGET_BOOLEAN) it.getReference<FieldReference>() else null
-                } == seekEnabledField
-            }.addInstructionsWithLabels(
-                0, """
-                invoke-static {}, $patchType->enabled()Z
-                move-result v0
-                if-eqz v0, :jump
-                const/4 v0, 0x1
-                return v0
-                :jump
-                nop
-            """.trimIndent()
-            )
+        } catch (_: Exception) {
+            // CommentConfigFingerprint processing failed, skip
         }
     }
 }

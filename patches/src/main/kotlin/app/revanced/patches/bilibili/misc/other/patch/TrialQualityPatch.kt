@@ -26,11 +26,12 @@ object TrialQualityPatch : MultiMethodBytecodePatch(
         val patchMethod = context.findClass("Lapp/revanced/bilibili/patches/TrialQualityPatch;")!!
             .mutableClass.methods.first { it.name == "onBindOnline" }
         QualityViewHolderFingerprint.result.associate { r ->
-            r.mutableClass.methods to r.mutableClass.methods.first { m ->
+            r.mutableClass.methods to r.mutableClass.methods.firstOrNull { m ->
                 m.parameterTypes.let { it.size == 5 && it[1] == "Z" && it[3] == "Landroid/widget/TextView;" && it[4] == "Landroid/widget/TextView;" }
             }
-        }.ifEmpty {
-            throw QualityViewHolderFingerprint.exception
+        }.filter { it.value != null }.mapValues { it.value!! }.ifEmpty {
+            // Method signature changed in 8.95.0, skip
+            return
         }.forEach { (methods, method) ->
             val originMethod = method.cloneMutable(name = method.name + "_Origin")
                 .also { methods.add(it) }

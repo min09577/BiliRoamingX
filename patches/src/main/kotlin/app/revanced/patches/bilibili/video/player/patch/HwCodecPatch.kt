@@ -57,6 +57,6 @@ object HwCodecPatch : BytecodePatch(setOf(IjkMediaPlayerOptionsFingerprint)) {
                 )
                 indexOffset += 2
             }
-        } ?: throw IjkMediaPlayerOptionsFingerprint.exception
+        } ?: return // Skip if fingerprint not found
     }
 }
