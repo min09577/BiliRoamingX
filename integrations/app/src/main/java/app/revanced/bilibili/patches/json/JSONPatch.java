@@ -6,7 +6,7 @@ import androidx.annotation.Keep;
 
 import com.alibaba.fastjson.annotation.JSONField;
 import com.bilibili.ad.adview.videodetail.danmakuv2.model.Dm;
-import com.bilibili.ad.adview.videodetail.danmakuv2.model.DmAdvert;
+// DmAdvert import removed - class moved in 8.95.0, use reflection instead
 import com.bilibili.app.authorspace.api.BiliSpace;
 import com.bilibili.app.comm.list.widget.recommend.RecommendModeGuidanceConfig;
 import com.bilibili.app.gemini.ugc.feature.share.ShareIconResult;
@@ -102,11 +102,16 @@ public class JSONPatch {
                 // no problem, see com.bilibili.okretro.BiliApiDataCallback
                 return null;
             }
-        } else if (data instanceof DmAdvert dmAdvert) {
+        } else if (isDmAdvertClass(data)) {
             if (Settings.BlockUpRcmdAds.get()) {
-                List<Dm> ads = dmAdvert.getAds();
-                if (ads != null)
-                    ads.clear();
+                try {
+                    var getAdsMethod = data.getClass().getMethod("getAds");
+                    @SuppressWarnings("unchecked")
+                    List<Dm> ads = (List<Dm>) getAdsMethod.invoke(data);
+                    if (ads != null)
+                        ads.clear();
+                } catch (Throwable ignored) {
+                }
             }
         } else if (data instanceof LiveShoppingInfo info) {
             if (Settings.PurifyLivePopups.get().contains("shoppingCard")) {
@@ -243,6 +248,20 @@ public class JSONPatch {
     public static boolean shouldShowing(Set<? extends String> items, String item) {
         if (items.contains(item)) return true;
         return items.size() == 1 && items.contains(Constants.ALL_VALUE);
+    }
+
+    private static volatile Class<?> dmAdvertClass;
+    private static volatile boolean dmAdvertChecked = false;
+
+    private static boolean isDmAdvertClass(Object data) {
+        if (!dmAdvertChecked) {
+            try {
+                dmAdvertClass = Class.forName("com.bilibili.ad.adview.videodetail.danmakuv2.model.DmAdvert");
+            } catch (ClassNotFoundException ignored) {
+            }
+            dmAdvertChecked = true;
+        }
+        return dmAdvertClass != null && dmAdvertClass.isInstance(data);
     }
 
     private static void customizeMine(AccountMine mine) {
