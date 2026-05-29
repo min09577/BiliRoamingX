@@ -124,21 +124,31 @@ object PlayURLPlayViewUGC : MossHook<PlayViewReq, PlayViewReply>() {
             val bitrate = dashVideo.bandwidth / 1000 // kbps
             val width = dashVideo.width
             val height = dashVideo.height
-            val info = "$qualityName | $codecName | ${width}x${height} | ${bitrate}kbps"
-            Logger.debug { "CodecInfo: $info" }
-            Toasts.showShort(info)
-            // Show AV/BV info
+            val sb = StringBuilder("$qualityName | $codecName | ${width}x${height} | ${bitrate}kbps")
+            // Append AV/BV id
             if (Settings.ShowVideoAvBvId()) {
                 val view = VideoInfoHolder.current?.view
-                val avBvInfo = when (view) {
+                val avBv = when (view) {
                     is com.bapis.bilibili.app.view.v1.ViewReply -> "av${view.arc.aid}"
                     is ViewReply -> if (view.hasArc()) "av${view.arc.aid} / ${view.arc.bvid}" else null
                     else -> null
                 }
-                if (avBvInfo != null) {
-                    Toasts.showShort(avBvInfo)
-                }
+                if (avBv != null) sb.append("\n$avBv")
             }
+            // Append video stats
+            val view = VideoInfoHolder.current?.view
+            if (view is ViewReply && view.hasArc() && view.arc.hasStat()) {
+                val stat = view.arc.stat
+                val vt = if (stat.hasVt()) stat.vt.text else "--"
+                val danmaku = if (stat.hasDanmaku()) stat.danmaku.text else "--"
+                val like = stat.like
+                val coin = stat.coin
+                val fav = stat.fav
+                val reply = stat.reply
+                sb.append("\n▶ $vt | 弹幕 $danmaku | 👍 $like | 🪙 $coin | ⭐ $fav | 💬 $reply")
+            }
+            Logger.debug { "CodecInfo: $sb" }
+            Toasts.showLong(sb.toString())
         } catch (e: Exception) {
             Logger.error(e) { "CodecInfo, failed to show codec info" }
         }
