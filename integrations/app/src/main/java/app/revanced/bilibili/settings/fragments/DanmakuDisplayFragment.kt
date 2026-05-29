@@ -59,12 +59,40 @@ class DanmakuDisplayFragment : BaseWidgetSettingFragment() {
             max = 20
         ).let { content.addView(it.first); it.second }
 
+        // Time offset (-30s to +30s, 0 = no offset)
+        val timeOffset = Settings.DanmakuTimeOffset()
+        val timeOffsetTitle = string("biliroaming_danmaku_time_offset_title")
+        val timeOffsetIndicator = string("biliroaming_danmaku_time_offset_indicator")
+        val timeOffsetDefaultIndicator = string("biliroaming_default")
+        val timeOffsetItem = seekBarItem(
+            name = timeOffsetTitle,
+            current = timeOffset + 30,
+            indicator = timeOffsetIndicator,
+            zeroIndicator = timeOffsetDefaultIndicator,
+            max = 60
+        ).let { content.addView(it.first); it.second }
+
+        // Pool filter (0=all, 1=normal only, 2=subtitle only, 3=special only)
+        val filterPool = Settings.DanmakuFilterPool()
+        val poolTitle = string("biliroaming_danmaku_filter_pool_title")
+        val poolIndicator = string("biliroaming_danmaku_filter_pool_indicator")
+        val poolDefaultIndicator = string("biliroaming_danmaku_filter_pool_all")
+        val poolItem = seekBarItem(
+            name = poolTitle,
+            current = filterPool,
+            indicator = poolIndicator,
+            zeroIndicator = poolDefaultIndicator,
+            max = 3
+        ).let { content.addView(it.first); it.second }
+
         saveButton.onClick {
             Settings.DanmakuOpacity.save(opacityItem.progress)
             Settings.DanmakuMaxOnScreen.save(maxItem.progress)
             val fontProgress = fontSizeItem.progress
             val fontScale = if (fontProgress > 0) fontProgress / 10f else 0f
             Settings.DanmakuFontSizeScale.save(fontScale)
+            Settings.DanmakuTimeOffset.save(timeOffsetItem.progress - 30)
+            Settings.DanmakuFilterPool.save(poolItem.progress)
             parentFragmentManager.popBackStack()
         }
 

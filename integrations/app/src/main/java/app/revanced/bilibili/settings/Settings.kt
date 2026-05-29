@@ -187,6 +187,8 @@ object Settings {
     @JvmField val DanmakuOpacity = IntSetting(key = "danmaku_opacity", defValue = 0)
     @JvmField val DanmakuMaxOnScreen = IntSetting(key = "danmaku_max_on_screen", defValue = 0)
     @JvmField val DanmakuFontSizeScale = FloatSetting(key = "danmaku_font_size_scale", defValue = 0f)
+    @JvmField val DanmakuTimeOffset = IntSetting(key = "danmaku_time_offset", defValue = 0)
+    @JvmField val DanmakuFilterPool = IntSetting(key = "danmaku_filter_pool", defValue = 0)
     @JvmField val ShowCommentIpLocation = BooleanSetting(key = "show_comment_ip_location")
     @JvmField val ShowCommentFloor = BooleanSetting(key = "show_comment_floor")
     @JvmField val ShowCommentReplyCount = BooleanSetting(key = "show_comment_reply_count")

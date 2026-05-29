@@ -64,14 +64,20 @@ object DmSegMobile : MossHook<DmSegMobileReq, DmSegMobileReply>() {
         val opacity = Settings.DanmakuOpacity()
         val maxOnScreen = Settings.DanmakuMaxOnScreen()
         val fontSizeScale = Settings.DanmakuFontSizeScale()
-        val shouldFilter = filterRegex != null || minLength > 0 || maxOnScreen > 0
-        // Step 1: Filter by keyword/length/density
+        val timeOffset = Settings.DanmakuTimeOffset()
+        val filterPool = Settings.DanmakuFilterPool()
+        val shouldFilter = filterRegex != null || minLength > 0 || maxOnScreen > 0 || filterPool > 0
+        // Step 1: Filter by keyword/length/density/pool
         if (shouldFilter && reply != null) {
             val originalCount = reply.elemsCount
             var filtered = reply.elemsList.filter { elem ->
                 val content = elem.content
                 if (minLength > 0 && content.length < minLength) return@filter false
                 if (filterRegex != null && filterRegex.containsMatchIn(content)) return@filter false
+                // Pool filter: 1=normal only, 2=subtitle only, 3=special only
+                if (filterPool == 1 && elem.pool != 0) return@filter false
+                if (filterPool == 2 && elem.pool != 1) return@filter false
+                if (filterPool == 3 && elem.pool != 2) return@filter false
                 true
             }
             // Density control: randomly sample to max count
@@ -111,6 +117,10 @@ object DmSegMobile : MossHook<DmSegMobileReq, DmSegMobileReply>() {
                         .toInt() * 60 * 60
                     elem.action = "airborne:${totalSeconds * 1000}"
                 }
+            }
+            // Time offset: shift danmaku progress by offset (in seconds)
+            if (timeOffset != 0) {
+                elem.progress = (elem.progress + timeOffset * 1000).coerceAtLeast(0)
             }
         }
         return super.hookAfter(req, reply, error)
