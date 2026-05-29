@@ -188,6 +188,8 @@ object Settings {
     @JvmField val UnlockGif = BooleanSetting(key = "unlock_gif")
     @JvmField val TimeAirborne = BooleanSetting(key = "time_airborne")
     @JvmField val OldDmPanel = BooleanSetting(key = "old_dm_panel")
+    @JvmField val BlockEndpageCharge = BooleanSetting(key = "block_endpage_charge")
+    @JvmField val BlockRelatedGames = BooleanSetting(key = "block_related_games")
     // endregion
 
 

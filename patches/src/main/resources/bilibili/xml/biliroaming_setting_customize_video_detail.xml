@@ -119,6 +119,14 @@
             android:key="block_bangumi_page_ads"
             android:summary="@string/biliroaming_block_bangumi_page_ads_summary"
             android:title="@string/biliroaming_block_bangumi_page_ads_title" />
+        <androidx.preference.SwitchPreferenceCompat
+            android:key="block_endpage_charge"
+            android:summary="屏蔽视频播放结束时的充电鸣谢弹窗"
+            android:title="屏蔽充电鸣谢" />
+        <androidx.preference.SwitchPreferenceCompat
+            android:key="block_related_games"
+            android:summary="移除视频详情页中的游戏推广区域"
+            android:title="屏蔽相关游戏" />
     </androidx.preference.PreferenceCategory>
     <androidx.preference.PreferenceCategory
         android:key="category_video_detail_other"
