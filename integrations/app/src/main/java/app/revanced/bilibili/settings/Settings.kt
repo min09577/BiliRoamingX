@@ -184,6 +184,7 @@ object Settings {
     @JvmField val DanmakuFilterKeywords = StringSetSetting(key = "danmaku_filter_keywords")
     @JvmField val DanmakuFilterRegexMode = BooleanSetting(key = "danmaku_filter_regex_mode")
     @JvmField val DanmakuFilterMinLength = IntSetting(key = "danmaku_filter_min_length", defValue = 0)
+    @JvmField val ShowCodecInfo = BooleanSetting(key = "show_codec_info")
     @JvmField val FakeNotInMultiWindow = BooleanSetting(key = "fake_not_in_multi_window")
     @JvmField val BlockCommentFeedback = BooleanSetting(key = "block_comment_feedback")
     @JvmField val NotLockOrientation = BooleanSetting(key = "not_lock_orientation")

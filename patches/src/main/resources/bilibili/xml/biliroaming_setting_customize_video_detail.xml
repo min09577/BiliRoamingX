@@ -153,6 +153,10 @@
             android:summary="@string/biliroaming_danmaku_filter_summary"
             android:title="@string/biliroaming_danmaku_filter_title" />
         <androidx.preference.SwitchPreferenceCompat
+            android:key="show_codec_info"
+            android:summary="@string/biliroaming_show_codec_info_summary"
+            android:title="@string/biliroaming_show_codec_info_title" />
+        <androidx.preference.SwitchPreferenceCompat
             android:key="fake_not_in_multi_window"
             android:summary="@string/biliroaming_fake_not_in_multi_window_summary"
             android:title="@string/biliroaming_fake_not_in_multi_window_title" />
