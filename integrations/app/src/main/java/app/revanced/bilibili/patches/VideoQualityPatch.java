@@ -48,6 +48,10 @@ public class VideoQualityPatch {
             playViewReq.setFnval(Constants.MAX_FNVAL);
             playViewReq.setFourk(true);
         }
+        if (Settings.ForceHdr.get()) {
+            playViewReq.setFnval(Constants.MAX_FNVAL);
+            playViewReq.setFourk(true);
+        }
     }
 
     /**
@@ -59,6 +63,10 @@ public class VideoQualityPatch {
         int halfScreenQuality = halfScreenQuality();
         int fulledScreenQuality = getMatchedFullScreenQuality();
         if (halfScreenQuality != 0 || fulledScreenQuality != 0) {
+            playViewReq.setFnval(Constants.MAX_FNVAL);
+            playViewReq.setFourk(true);
+        }
+        if (Settings.ForceHdr.get()) {
             playViewReq.setFnval(Constants.MAX_FNVAL);
             playViewReq.setFourk(true);
         }
@@ -76,6 +84,11 @@ public class VideoQualityPatch {
         if (halfScreenQuality != 0 || fulledScreenQuality != 0) {
             videoVod.setFnval(Constants.MAX_FNVAL);
             videoVod.setFourk(true);
+        }
+        if (Settings.ForceHdr.get()) {
+            videoVod.setFnval(Constants.MAX_FNVAL);
+            videoVod.setFourk(true);
+            videoVod.setQn(125); // HDR quality
         }
     }
 

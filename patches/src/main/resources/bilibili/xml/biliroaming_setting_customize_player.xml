@@ -146,5 +146,9 @@
             android:key="force_hw_codec"
             android:summary="@string/biliroaming_force_hw_codec_summary"
             android:title="@string/biliroaming_force_hw_codec_title" />
+        <androidx.preference.SwitchPreferenceCompat
+            android:key="force_hdr"
+            android:summary="@string/biliroaming_force_hdr_summary"
+            android:title="@string/biliroaming_force_hdr_title" />
     </androidx.preference.PreferenceCategory>
 </androidx.preference.PreferenceScreen>
