@@ -506,7 +506,9 @@ object BangumiPlayUrlHook {
                 ConfType.CASTCONF.number,
                 ConfType.BACKGROUNDPLAY.number,
                 ConfType.SMALLWINDOW.number,
-                ConfType.LISTEN.number
+                ConfType.LISTEN.number,
+                ConfType.SCREENSHOT.number,
+                ConfType.RECORDSCREEN.number
             )) arcConfs[key] = supportedConf
         }
         if (!isDownloadUnite && !Accounts.isEffectiveVip

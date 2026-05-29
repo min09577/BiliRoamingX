@@ -35,6 +35,9 @@ class FilterCommentFragment : BiliRoamingBaseSettingFragment()
 @SettingFragment("biliroaming_setting_filter_danmaku")
 class FilterDanmakuFragment : BiliRoamingBaseSettingFragment()
 
+@SettingFragment("biliroaming_setting_danmaku_display")
+class DanmakuDisplaySettingsFragment : BiliRoamingBaseSettingFragment()
+
 @SettingFragment("biliroaming_setting_filter_dynamic_by_type")
 class FilterDynamicByTypeFragment : BiliRoamingBaseSettingFragment()
 

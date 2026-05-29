@@ -403,6 +403,15 @@
     <string name="biliroaming_danmaku_filter_summary">按关键词或正则表达式过滤弹幕，屏蔽剧透、广告、刷屏等</string>
     <string name="biliroaming_show_codec_info_title">显示视频编码信息</string>
     <string name="biliroaming_show_codec_info_summary">播放视频时显示编码格式、分辨率、码率等信息</string>
+    <string name="biliroaming_danmaku_display_title">弹幕显示调整</string>
+    <string name="biliroaming_danmaku_display_summary">调整弹幕透明度、密度、字号</string>
+    <string name="biliroaming_danmaku_opacity_title">弹幕透明度</string>
+    <string name="biliroaming_danmaku_opacity_indicator">%%d%%</string>
+    <string name="biliroaming_danmaku_max_title">同屏最大弹幕数</string>
+    <string name="biliroaming_danmaku_max_indicator">%%d 条</string>
+    <string name="biliroaming_danmaku_font_size_title">弹幕字号缩放</string>
+    <string name="biliroaming_danmaku_font_size_indicator">%%.1fx</string>
+    <string name="biliroaming_default">默认</string>
     <string name="biliroaming_route_title">应用内打开链接</string>
     <string name="biliroaming_route_hint">bilibili://video/928861104</string>
     <string name="biliroaming_share_log_title">分享日志</string>

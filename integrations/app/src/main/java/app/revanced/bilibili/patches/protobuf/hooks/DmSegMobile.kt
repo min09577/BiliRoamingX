@@ -61,16 +61,23 @@ object DmSegMobile : MossHook<DmSegMobileReq, DmSegMobileReply>() {
         val timeAirborne = Settings.TimeAirborne()
         val filterRegex = getFilterRegex()
         val minLength = Settings.DanmakuFilterMinLength()
-        val shouldFilter = filterRegex != null || minLength > 0
+        val opacity = Settings.DanmakuOpacity()
+        val maxOnScreen = Settings.DanmakuMaxOnScreen()
+        val fontSizeScale = Settings.DanmakuFontSizeScale()
+        val shouldFilter = filterRegex != null || minLength > 0 || maxOnScreen > 0
+        // Step 1: Filter by keyword/length/density
         if (shouldFilter && reply != null) {
             val originalCount = reply.elemsCount
-            val filtered = reply.elemsList.filter { elem ->
+            var filtered = reply.elemsList.filter { elem ->
                 val content = elem.content
-                // Filter by minimum length
                 if (minLength > 0 && content.length < minLength) return@filter false
-                // Filter by keyword/regex
                 if (filterRegex != null && filterRegex.containsMatchIn(content)) return@filter false
                 true
+            }
+            // Density control: randomly sample to max count
+            if (maxOnScreen > 0 && filtered.size > maxOnScreen) {
+                val step = filtered.size.toFloat() / maxOnScreen
+                filtered = (0 until maxOnScreen).map { i -> filtered[(i * step).toInt()] }
             }
             if (filtered.size < originalCount) {
                 reply.clearElems()
@@ -78,6 +85,7 @@ object DmSegMobile : MossHook<DmSegMobileReq, DmSegMobileReply>() {
                 Logger.debug { "DanmakuFilter, filtered ${originalCount - filtered.size}/$originalCount danmakus" }
             }
         }
+        // Step 2: Modify opacity and font size
         reply?.elemsList?.forEach { elem ->
             if (noColorfulDanmaku) {
                 if (!Utils.isHd())
@@ -85,6 +93,16 @@ object DmSegMobile : MossHook<DmSegMobileReq, DmSegMobileReply>() {
                 else {
                     elem.clearUnknownFields()
                 }
+            }
+            // Opacity: apply alpha to color (0xAARRGGBB)
+            if (opacity in 1..99) {
+                val alpha = (opacity * 255 / 100)
+                val rgb = elem.color and 0x00FFFFFF
+                elem.color = (alpha shl 24) or rgb
+            }
+            // Font size scale
+            if (fontSizeScale > 0f) {
+                elem.fontsize = (elem.fontsize * fontSizeScale).toInt().coerceIn(1, 255)
             }
             if (timeAirborne && !elem.action.startsWith("airborne:")) {
                 timePointRegex.find(elem.content)?.let {
