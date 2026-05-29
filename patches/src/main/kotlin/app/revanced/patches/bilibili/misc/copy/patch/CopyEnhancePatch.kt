@@ -103,7 +103,9 @@ object CopyEnhancePatch : MultiMethodBytecodePatch(
             move-result v0
             if-eqz v0, :jump
             move-object/from16 v0, p7
-            invoke-static {p0, p2, v0}, Lapp/revanced/bilibili/patches/CopyEnhancePatch;->onConversationCopy(Landroid/app/Activity;Lcom/bilibili/bplus/im/business/model/BaseTypedMessage;Landroid/widget/PopupWindow;)Z
+            move-object/from16 v1, p0
+            move-object/from16 v2, p2
+            invoke-static {v1, v2, v0}, Lapp/revanced/bilibili/patches/CopyEnhancePatch;->onConversationCopy(Landroid/app/Activity;Lcom/bilibili/bplus/im/business/model/BaseTypedMessage;Landroid/widget/PopupWindow;)Z
             move-result v0
             if-eqz v0, :jump
             return-void

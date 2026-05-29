@@ -205,6 +205,8 @@ object Settings {
     @JvmField val OldDmPanel = BooleanSetting(key = "old_dm_panel")
     @JvmField val BlockEndpageCharge = BooleanSetting(key = "block_endpage_charge")
     @JvmField val BlockRelatedGames = BooleanSetting(key = "block_related_games")
+    @JvmField val AutoExpandDesc = BooleanSetting(key = "auto_expand_desc")
+    @JvmField val HideFloatingButton = BooleanSetting(key = "hide_floating_button")
     // endregion
 
 
