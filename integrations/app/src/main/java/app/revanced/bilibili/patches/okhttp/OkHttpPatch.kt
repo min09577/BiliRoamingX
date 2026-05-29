@@ -41,6 +41,7 @@ object OkHttpPatch {
         ShareClick,
         Skin,
         Space,
+        SplashAd,
         Subtitle,
         UnlockEpisodesForPlay,
         Upgrade,

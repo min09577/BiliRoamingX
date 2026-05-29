@@ -45,6 +45,7 @@
 -keep interface app.revanced.bilibili.widget.*Listener { *; }
 
 #-keep class app.revanced.bilibili.** { *; }
+-keep class app.revanced.bilibili.patches.okhttp.** { *; }
 -keep class com.google.protobuf.*Ex { *; }
 
 -keep !abstract class * extends android.content.ContentProvider
