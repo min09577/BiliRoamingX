@@ -32,6 +32,9 @@ class DisplaySizeFragment : BiliRoamingBaseSettingFragment()
 @SettingFragment("biliroaming_setting_filter_comment")
 class FilterCommentFragment : BiliRoamingBaseSettingFragment()
 
+@SettingFragment("biliroaming_setting_filter_danmaku")
+class FilterDanmakuFragment : BiliRoamingBaseSettingFragment()
+
 @SettingFragment("biliroaming_setting_filter_dynamic_by_type")
 class FilterDynamicByTypeFragment : BiliRoamingBaseSettingFragment()
 

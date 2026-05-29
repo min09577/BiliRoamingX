@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.preference.PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <tv.danmaku.bili.widget.preference.BLRadioGroupEntrancePreference
+        android:fragment="app.revanced.bilibili.settings.fragments.FilterDanmakuByKeywordFragment"
+        android:key="danmaku_filter_keywords"
+        android:summary="@string/biliroaming_danmaku_filter_summary"
+        android:title="@string/biliroaming_danmaku_filter_title" />
+</androidx.preference.PreferenceScreen>
