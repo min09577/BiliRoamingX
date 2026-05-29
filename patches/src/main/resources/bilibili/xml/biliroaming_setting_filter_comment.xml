@@ -3,6 +3,10 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
     <androidx.preference.PreferenceCategory>
         <androidx.preference.SwitchPreferenceCompat
+            android:key="show_comment_ip_location"
+            android:summary="@string/biliroaming_show_comment_ip_summary"
+            android:title="@string/biliroaming_show_comment_ip_title" />
+        <androidx.preference.SwitchPreferenceCompat
             android:key="block_comment_only_at"
             android:title="@string/biliroaming_block_comment_only_at_title" />
         <androidx.preference.SwitchPreferenceCompat

@@ -15,6 +15,7 @@ import app.revanced.bilibili.utils.Utils
 import com.bapis.bilibili.app.playurl.v1.PlayAbilityConf
 import com.bapis.bilibili.app.playurl.v1.PlayViewReply
 import com.bapis.bilibili.app.playurl.v1.PlayViewReq
+import com.bapis.bilibili.app.viewunite.v1.ViewReply
 import com.bilibili.lib.moss.api.MossException
 import com.bilibili.video.videodetail.VideoDetailsActivity
 import com.google.protobuf.GeneratedMessageLite
@@ -126,6 +127,18 @@ object PlayURLPlayViewUGC : MossHook<PlayViewReq, PlayViewReply>() {
             val info = "$qualityName | $codecName | ${width}x${height} | ${bitrate}kbps"
             Logger.debug { "CodecInfo: $info" }
             Toasts.showShort(info)
+            // Show AV/BV info
+            if (Settings.ShowVideoAvBvId()) {
+                val view = VideoInfoHolder.current?.view
+                val avBvInfo = when (view) {
+                    is com.bapis.bilibili.app.view.v1.ViewReply -> "av${view.arc.aid}"
+                    is ViewReply -> if (view.hasArc()) "av${view.arc.aid} / ${view.arc.bvid}" else null
+                    else -> null
+                }
+                if (avBvInfo != null) {
+                    Toasts.showShort(avBvInfo)
+                }
+            }
         } catch (e: Exception) {
             Logger.error(e) { "CodecInfo, failed to show codec info" }
         }

@@ -156,6 +156,10 @@
             android:key="show_codec_info"
             android:summary="@string/biliroaming_show_codec_info_summary"
             android:title="@string/biliroaming_show_codec_info_title" />
+        <androidx.preference.SwitchPreferenceCompat
+            android:key="show_video_av_bv_id"
+            android:summary="@string/biliroaming_show_av_bv_summary"
+            android:title="@string/biliroaming_show_av_bv_title" />
         <tv.danmaku.bili.widget.preference.BLRadioGroupEntrancePreference
             android:fragment="app.revanced.bilibili.settings.fragments.DanmakuDisplaySettingsFragment"
             android:key="danmaku_display"

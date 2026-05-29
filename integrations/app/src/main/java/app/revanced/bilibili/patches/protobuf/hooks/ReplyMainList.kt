@@ -53,7 +53,26 @@ object ReplyMainList : ReplyListBase<MainListReq, MainListReply>() {
             filterReplies(reply)
         if (reply != null && !Utils.isHd() && Settings.UnlockGif())
             unlockGif(reply)
+        if (reply != null && Settings.ShowCommentIpLocation())
+            appendIpLocation(reply)
         return super.hookAfter(req, reply, error)
+    }
+
+    private fun appendIpLocation(reply: MainListReply) {
+        fun appendToReply(r: ReplyInfo) {
+            val location = r.replyControl.location
+            if (location.isNotEmpty() && !r.content.message.endsWith("[IP:$location]")) {
+                r.content.message = "${r.content.message}  [IP:$location]"
+            }
+        }
+        reply.repliesList.forEach { r ->
+            appendToReply(r)
+            r.repliesList.forEach { appendToReply(it) }
+        }
+        reply.topRepliesList.forEach { r ->
+            appendToReply(r)
+            r.repliesList.forEach { appendToReply(it) }
+        }
     }
 
     private fun unlockGif(reply: MainListReply) {

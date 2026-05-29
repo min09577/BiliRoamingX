@@ -405,6 +405,10 @@
     <string name="biliroaming_show_codec_info_summary">播放视频时显示编码格式、分辨率、码率等信息</string>
     <string name="biliroaming_danmaku_display_title">弹幕显示调整</string>
     <string name="biliroaming_danmaku_display_summary">调整弹幕透明度、密度、字号</string>
+    <string name="biliroaming_show_comment_ip_title">评论 IP 属地</string>
+    <string name="biliroaming_show_comment_ip_summary">在评论内容后显示 IP 归属地</string>
+    <string name="biliroaming_show_av_bv_title">显示 AV/BV 号</string>
+    <string name="biliroaming_show_av_bv_summary">播放时同时显示视频 AV/BV 号码</string>
     <string name="biliroaming_danmaku_opacity_title">弹幕透明度</string>
     <string name="biliroaming_danmaku_opacity_indicator">%%d%%</string>
     <string name="biliroaming_danmaku_max_title">同屏最大弹幕数</string>
