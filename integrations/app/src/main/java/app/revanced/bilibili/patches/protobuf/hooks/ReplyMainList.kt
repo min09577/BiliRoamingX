@@ -55,6 +55,10 @@ object ReplyMainList : ReplyListBase<MainListReq, MainListReply>() {
             unlockGif(reply)
         if (reply != null && Settings.ShowCommentIpLocation())
             appendIpLocation(reply)
+        if (reply != null && Settings.ShowCommentFloor())
+            appendFloorNumber(reply)
+        if (reply != null && Settings.ShowCommentReplyCount())
+            appendReplyCount(reply)
         return super.hookAfter(req, reply, error)
     }
 
@@ -72,6 +76,39 @@ object ReplyMainList : ReplyListBase<MainListReq, MainListReply>() {
         reply.topRepliesList.forEach { r ->
             appendToReply(r)
             r.repliesList.forEach { appendToReply(it) }
+        }
+    }
+
+    private fun appendFloorNumber(reply: MainListReply) {
+        var floor = 1
+        fun appendToReply(r: ReplyInfo) {
+            if (!r.content.message.startsWith("[${floor}楼]")) {
+                r.content.message = "[${floor}楼] ${r.content.message}"
+            }
+            floor++
+        }
+        reply.repliesList.forEach { r ->
+            appendToReply(r)
+            r.repliesList.forEach { appendToReply(it) }
+        }
+        reply.topRepliesList.forEach { r ->
+            appendToReply(r)
+            r.repliesList.forEach { appendToReply(it) }
+        }
+    }
+
+    private fun appendReplyCount(reply: MainListReply) {
+        fun appendToReply(r: ReplyInfo) {
+            val count = r.count
+            if (count > 0 && !r.content.message.contains("💬 $count")) {
+                r.content.message = "${r.content.message}  💬 $count"
+            }
+        }
+        reply.repliesList.forEach { r ->
+            appendToReply(r)
+        }
+        reply.topRepliesList.forEach { r ->
+            appendToReply(r)
         }
     }
 

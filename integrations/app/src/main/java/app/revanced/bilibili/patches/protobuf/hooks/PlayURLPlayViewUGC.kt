@@ -135,17 +135,31 @@ object PlayURLPlayViewUGC : MossHook<PlayViewReq, PlayViewReply>() {
                 }
                 if (avBv != null) sb.append("\n$avBv")
             }
-            // Append video stats
+            // Append video stats + UP info
             val view = VideoInfoHolder.current?.view
-            if (view is ViewReply && view.hasArc() && view.arc.hasStat()) {
-                val stat = view.arc.stat
-                val vt = if (stat.hasVt()) stat.vt.text else "--"
-                val danmaku = if (stat.hasDanmaku()) stat.danmaku.text else "--"
-                val like = stat.like
-                val coin = stat.coin
-                val fav = stat.fav
-                val reply = stat.reply
-                sb.append("\n▶ $vt | 弹幕 $danmaku | 👍 $like | 🪙 $coin | ⭐ $fav | 💬 $reply")
+            if (view is ViewReply && view.hasArc()) {
+                // UP主信息
+                if (view.hasOwner()) {
+                    val owner = view.owner
+                    val fans = owner.fansNum
+                    val fansText = when {
+                        fans >= 10000 -> "${fans / 10000}万"
+                        else -> "$fans"
+                    }
+                    sb.append("\n👤 MID:${owner.mid} | 粉丝 $fansText")
+                }
+                // 视频统计
+                if (view.arc.hasStat()) {
+                    val stat = view.arc.stat
+                    val vt = if (stat.hasVt()) stat.vt.text else "--"
+                    val danmaku = if (stat.hasDanmaku()) stat.danmaku.text else "--"
+                    val like = stat.like
+                    val coin = stat.coin
+                    val fav = stat.fav
+                    val reply = stat.reply
+                    val share = stat.share
+                    sb.append("\n▶ $vt | 弹幕 $danmaku | 👍 $like | 🪙 $coin | ⭐ $fav | 💬 $reply | ↗ $share")
+                }
             }
             Logger.debug { "CodecInfo: $sb" }
             Toasts.showLong(sb.toString())
