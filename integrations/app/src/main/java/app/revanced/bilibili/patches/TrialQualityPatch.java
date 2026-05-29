@@ -1,11 +1,13 @@
 package app.revanced.bilibili.patches;
 
+import android.net.Uri;
 import android.view.View;
 import android.widget.TextView;
 
 import androidx.annotation.Keep;
 
 import com.bapis.bilibili.app.playerunite.v1.PlayViewUniteReply;
+import com.bapis.bilibili.app.playurl.v1.DashItem;
 import com.bapis.bilibili.app.playurl.v1.PlayViewReply;
 import com.bapis.bilibili.app.playurl.v1.Stream;
 
@@ -19,6 +21,39 @@ public class TrialQualityPatch {
         return (int) ((dp * Utils.getContext().getResources().getDisplayMetrics().density) + 0.5f);
     }
 
+    /**
+     * Strip trial-limiting query parameters (deadline, expire) from URL.
+     * This removes the server-enforced time limit on trial stream URLs.
+     */
+    private static String stripTrialParams(String url) {
+        if (url == null || url.isEmpty()) return url;
+        try {
+            Uri uri = Uri.parse(url);
+            // Remove deadline and other time-limiting params
+            Uri.Builder builder = uri.buildUpon().clearQuery();
+            for (String key : uri.getQueryParameterNames()) {
+                if (!"deadline".equals(key) && !"dltime".equals(key)) {
+                    builder.appendQueryParameter(key, uri.getQueryParameter(key));
+                }
+            }
+            return builder.build().toString();
+        } catch (Exception e) {
+            // Failed to strip trial params, return original URL
+            return url;
+        }
+    }
+
+    private static void stripDashItemTrialParams(DashItem item) {
+        if (item == null) return;
+        item.setBaseUrl(stripTrialParams(item.getBaseUrl()));
+        var backupUrls = item.getBackupUrlList();
+        if (backupUrls != null && !backupUrls.isEmpty()) {
+            for (int i = 0; i < backupUrls.size(); i++) {
+                item.setBackupUrl(i, stripTrialParams(backupUrls.get(i)));
+            }
+        }
+    }
+
     public static void makeVipFree(PlayViewReply playViewReply) {
         playViewReply.clearAb();
         playViewReply.getVideoInfo().getStreamListList().stream().filter(Stream::hasDashVideo)
@@ -28,7 +63,25 @@ public class TrialQualityPatch {
                         streamInfo.setNeedVip(false);
                         streamInfo.setVipFree(true);
                     }
+                    // Strip trial URL params for unlimited quality
+                    if (Settings.UnlimitedTrialQuality.get()) {
+                        var dashVideo = e.getDashVideo();
+                        if (dashVideo != null) {
+                            dashVideo.setBaseUrl(stripTrialParams(dashVideo.getBaseUrl()));
+                            var backupUrls = dashVideo.getBackupUrlList();
+                            if (backupUrls != null && !backupUrls.isEmpty()) {
+                                for (int i = 0; i < backupUrls.size(); i++) {
+                                    dashVideo.setBackupUrl(i, stripTrialParams(backupUrls.get(i)));
+                                }
+                            }
+                        }
+                    }
                 });
+        // Strip audio stream trial params too
+        if (Settings.UnlimitedTrialQuality.get()) {
+            playViewReply.getVideoInfo().getDashAudioList()
+                    .forEach(TrialQualityPatch::stripDashItemTrialParams);
+        }
     }
 
     public static void makeVipFree(PlayViewUniteReply playViewUniteReply) {
@@ -40,7 +93,33 @@ public class TrialQualityPatch {
                         streamInfo.setNeedVip(false);
                         streamInfo.setVipFree(true);
                     }
+                    // Strip trial URL params for unlimited quality
+                    if (Settings.UnlimitedTrialQuality.get()) {
+                        var dashVideo = e.getDashVideo();
+                        if (dashVideo != null) {
+                            dashVideo.setBaseUrl(stripTrialParams(dashVideo.getBaseUrl()));
+                            var backupUrls = dashVideo.getBackupUrlList();
+                            if (backupUrls != null && !backupUrls.isEmpty()) {
+                                for (int i = 0; i < backupUrls.size(); i++) {
+                                    dashVideo.setBackupUrl(i, stripTrialParams(backupUrls.get(i)));
+                                }
+                            }
+                        }
+                    }
                 });
+        // Strip audio stream trial params too
+        if (Settings.UnlimitedTrialQuality.get()) {
+            playViewUniteReply.getVodInfo().getDashAudioList()
+                    .forEach(a -> {
+                        a.setBaseUrl(stripTrialParams(a.getBaseUrl()));
+                        var backupUrls = a.getBackupUrlList();
+                        if (backupUrls != null && !backupUrls.isEmpty()) {
+                            for (int i = 0; i < backupUrls.size(); i++) {
+                                a.setBackupUrl(i, stripTrialParams(backupUrls.get(i)));
+                            }
+                        }
+                    });
+        }
     }
 
     @Keep

@@ -33,6 +33,7 @@ object Settings {
     @JvmField val LongPressPlaybackSpeed = FloatSetting(key = "long_press_playback_speed")
     @JvmField val OverridePlaybackSpeed = StringSetting(key = "playback_speed_override", needReboot = true)
     @JvmField val TrialVipQuality = BooleanSetting(key = "trial_vip_quality")
+    @JvmField val UnlimitedTrialQuality = BooleanSetting(key = "unlimited_trial_quality")
     @JvmField val DisableSegmentedSection = BooleanSetting(key = "disable_segmented_section")
     @JvmField val DisableAutoNextPlay = BooleanSetting(key = "disable_auto_next_play")
     @JvmField val DisablePlayerLongPress = BooleanSetting(key = "disable_player_long_press")

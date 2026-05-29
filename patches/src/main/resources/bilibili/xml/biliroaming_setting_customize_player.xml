@@ -139,6 +139,10 @@
             android:summary="@string/biliroaming_trial_vip_quality_summary"
             android:title="@string/biliroaming_trial_vip_quality_title" />
         <androidx.preference.SwitchPreferenceCompat
+            android:key="unlimited_trial_quality"
+            android:summary="@string/biliroaming_unlimited_trial_quality_summary"
+            android:title="@string/biliroaming_unlimited_trial_quality_title" />
+        <androidx.preference.SwitchPreferenceCompat
             android:key="force_hw_codec"
             android:summary="@string/biliroaming_force_hw_codec_summary"
             android:title="@string/biliroaming_force_hw_codec_title" />

@@ -107,7 +107,7 @@ object BangumiPlayUrlHook {
     @JvmStatic
     fun hookPlayViewUniteBefore(req: PlayViewUniteReq) {
         VideoQualityPatch.unlockLimit(req)
-        if (Settings.TrialVipQuality() && !Accounts.isEffectiveVip) {
+        if ((Settings.TrialVipQuality() || Settings.UnlimitedTrialQuality()) && !Accounts.isEffectiveVip) {
             runCatching {
                 req.vod.isNeedTrial = true
             }.recoverCatching {
@@ -510,7 +510,7 @@ object BangumiPlayUrlHook {
             )) arcConfs[key] = supportedConf
         }
         if (!isDownloadUnite && !Accounts.isEffectiveVip
-            && Settings.TrialVipQuality()
+            && (Settings.TrialVipQuality() || Settings.UnlimitedTrialQuality())
         ) TrialQualityPatch.makeVipFree(playReply)
         if (Settings.RemoveVideoPopups().contains("other")) {
             playReply.viewInfo.toastsList.withIndex().filter { (_, toast) ->
@@ -621,6 +621,13 @@ object BangumiPlayUrlHook {
                 if (tryWatchPromptBar.buttonList.all { it.actionType != "pay" })
                     clearTryWatchPromptBar()
                 mutableExtToastMap.clear()
+                // Unlimited trial: also clear pay-type end pages and all restrictions
+                if (Settings.UnlimitedTrialQuality.get() && !Accounts.isEffectiveVip) {
+                    clearEndPage()
+                    clearPopWin()
+                    clearToast()
+                    clearTryWatchPromptBar()
+                }
             }
         }
         if (Settings.RemoveVideoPopups().contains("other"))

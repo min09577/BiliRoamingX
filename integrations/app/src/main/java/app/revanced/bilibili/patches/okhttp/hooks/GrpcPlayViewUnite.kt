@@ -28,7 +28,7 @@ object GrpcPlayViewUnite : BaseFakeClientGrpcHook() {
         val authIndex = newHeaders.indexOfFirst { it == "authorization" }
         if (authIndex != -1)
             newHeaders[authIndex + 1] = "identify_v1 ${getFinalAccessKey(false)}"
-        if ((Utils.isPink() || Utils.isPlay()) && Settings.TrialVipQuality() && !Accounts.isEffectiveVip) {
+        if ((Utils.isPink() || Utils.isPlay()) && (Settings.TrialVipQuality() || Settings.UnlimitedTrialQuality()) && !Accounts.isEffectiveVip) {
             val keyIndex = newHeaders.indexOfFirst { it == "x-bili-network-bin" }
             if (keyIndex == -1)
                 return Pair.create(url, newHeaders)

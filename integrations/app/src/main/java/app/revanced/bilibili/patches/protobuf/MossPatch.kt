@@ -169,7 +169,7 @@ object MossPatch {
         else if (url.endsWith(PLAY_VIEW_UNITE_API)) {
             if (Settings.UnlockAreaLimit() && Utils.isPlay())
                 fakeClient(Client.Pink, headers)
-            if ((Utils.isPink() || Utils.isPlay()) && Settings.TrialVipQuality() && !Accounts.isEffectiveVip)
+            if ((Utils.isPink() || Utils.isPlay()) && (Settings.TrialVipQuality() || Settings.UnlimitedTrialQuality()) && !Accounts.isEffectiveVip)
                 pinNetworkType(NetworkType.WIFI, headers)
         }
         if (url.endsWith(PLAY_VIEW_UNITE_API))

@@ -232,6 +232,8 @@
     <string name="biliroaming_custom_theme_summary">添加自定义主题颜色的功能（需从我的右上角调色盘图标进入）</string>
     <string name="biliroaming_trial_vip_quality_title">无限试用会员画质</string>
     <string name="biliroaming_trial_vip_quality_summary">只解决试用次数问题，能否试用取决于官方接口，仅支持粉版，如不生效，尝试将播放器版本切换为旧版。</string>
+    <string name="biliroaming_unlimited_trial_quality_title">无限使用原画观看</string>
+    <string name="biliroaming_unlimited_trial_quality_summary">在试用画质基础上，去除试看时间限制和播放地址过期参数，实现非会员无限观看原画。需同时开启“试用会员画质”。</string>
     <string name="biliroaming_unstable_feature_title">实验性</string>
     <string name="biliroaming_filter_story_title">竖屏模式视频过滤</string>
     <string name="biliroaming_skin_title">启用自制主题</string>
