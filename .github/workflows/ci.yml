@@ -1,3 +1,9 @@
+# Note: GitHub Packages (zjns/registry) requires a PAT with read:packages scope.
+# The default GITHUB_TOKEN cannot access cross-repo packages.
+# To fix: create a PAT at github.com/settings/tokens with read:packages scope,
+# then add it as a repo secret named GH_PACKAGES_TOKEN.
+# All actual APK builds are done locally; CI only produces patches.jar + integrations.apk.
+
 name: CI
 
 on:
@@ -49,9 +55,15 @@ jobs:
 
       - name: Build with gradle
         env:
-          GITHUB_TOKEN: ${{ github.token }}
+          GITHUB_TOKEN: ${{ secrets.GH_PACKAGES_TOKEN }}
           GITHUB_ACTOR: ${{ github.actor }}
-        run: ./gradlew --no-daemon -Dorg.gradle.jvmargs=-Xmx2g -Pversion=$VERSION dist
+        run: |
+          if [ -z "$GITHUB_TOKEN" ]; then
+            echo "Warning: GH_PACKAGES_TOKEN not set. Using default GITHUB_TOKEN."
+            echo "GitHub Packages cross-repo auth may fail. See workflow comments for details."
+            export GITHUB_TOKEN=${{ github.token }}
+          fi
+          ./gradlew --no-daemon -Dorg.gradle.jvmargs=-Xmx2g -Pversion=$VERSION dist
 
       - name: Upload artifacts
         uses: actions/upload-artifact@v4
