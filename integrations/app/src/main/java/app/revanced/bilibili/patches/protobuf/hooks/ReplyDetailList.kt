@@ -23,6 +23,15 @@ object ReplyDetailList : ReplyListBase<DetailListReq, DetailListReply>() {
             filterReply(reply)
         if (reply != null && !Utils.isHd() && Settings.UnlockGif())
             reply.root.unlockGif(scale = false)
+        if (reply != null && Settings.BlockWordSearch()) {
+            fun ReplyInfo.clearTopics() {
+                if (content.topicsCount > 0) {
+                    content.mutableTopicsMap.clear()
+                }
+            }
+            reply.root.clearTopics()
+            reply.root.repliesList.forEach { it.clearTopics() }
+        }
         return super.hookAfter(req, reply, error)
     }
 

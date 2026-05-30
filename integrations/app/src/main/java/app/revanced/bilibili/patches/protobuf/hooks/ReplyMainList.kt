@@ -59,6 +59,8 @@ object ReplyMainList : ReplyListBase<MainListReq, MainListReply>() {
             appendFloorNumber(reply)
         if (reply != null && Settings.ShowCommentReplyCount())
             appendReplyCount(reply)
+        if (reply != null && Settings.BlockWordSearch())
+            blockWordSearch(reply)
         return super.hookAfter(req, reply, error)
     }
 
@@ -118,6 +120,24 @@ object ReplyMainList : ReplyListBase<MainListReq, MainListReply>() {
         reply.voteTop.unlockGif()
         reply.topRepliesList.forEach { it.unlockGif() }
         reply.repliesList.forEach { it.unlockGif() }
+    }
+
+    private fun blockWordSearch(reply: MainListReply) {
+        fun ReplyInfo.clearTopics() {
+            if (content.topicsCount > 0) {
+                content.mutableTopicsMap.clear()
+            }
+        }
+        reply.repliesList.forEach { r ->
+            r.clearTopics()
+            r.repliesList.forEach { it.clearTopics() }
+        }
+        reply.topRepliesList.forEach { r ->
+            r.clearTopics()
+            r.repliesList.forEach { it.clearTopics() }
+        }
+        reply.upTop.repliesList.forEach { it.clearTopics() }
+        reply.adminTop.repliesList.forEach { it.clearTopics() }
     }
 
     private fun filterReplies(reply: MainListReply) {
