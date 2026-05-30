@@ -2,6 +2,7 @@ package app.revanced.bilibili.patches.okhttp.hooks
 
 import app.revanced.bilibili.patches.json.PegasusPatch
 import app.revanced.bilibili.patches.okhttp.ApiHook
+import app.revanced.bilibili.settings.Settings
 import app.revanced.bilibili.utils.Utils
 import app.revanced.bilibili.utils.Versions
 import app.revanced.bilibili.utils.toJSONObject
@@ -12,6 +13,9 @@ object FeedIndex : ApiHook() {
         Utils.getAb("ff_key_use_new_pegasus", false)
     }
 
+    private var cachedResponse: String? = null
+    private var lastFeedTime: Long = 0
+
     override fun shouldHook(url: String, status: Int): Boolean {
         return status.isOk && Versions.ge7_76_0() && url.contains("/x/v2/feed/index?")
                 && newPegasusEnabled
@@ -21,8 +25,20 @@ object FeedIndex : ApiHook() {
         val resp = response.toJSONObject()
         if (resp.optInt("code", -1) == 0) {
             val data = resp.optJSONObject("data")
-            if (data != null)
+            if (data != null) {
                 PegasusPatch.pegasusHook(data)
+                // Cache the filtered response for auto-refresh blocking
+                if (Settings.HomeDisableAutoRefresh()) {
+                    val now = System.currentTimeMillis()
+                    val cached = cachedResponse
+                    // If request within 5 seconds and we have a cached response, return cached
+                    if (cached != null && now - lastFeedTime < 5000) {
+                        return cached
+                    }
+                    lastFeedTime = now
+                    cachedResponse = resp.toString()
+                }
+            }
             return resp.toString()
         }
         return response
