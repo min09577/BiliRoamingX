@@ -4,6 +4,7 @@ import app.revanced.bilibili.patches.protobuf.MossHook
 import app.revanced.bilibili.settings.Settings
 import com.bapis.bilibili.app.view.v1.ContinuousPlayReply
 import com.bapis.bilibili.app.view.v1.ContinuousPlayReq
+import com.bapis.bilibili.app.view.v1.Relate
 import com.bilibili.lib.moss.api.MossException
 import com.google.protobuf.GeneratedMessageLite
 
@@ -19,6 +20,14 @@ object ViewContinuousPlay : MossHook<ContinuousPlayReq, ContinuousPlayReply>() {
     ): ContinuousPlayReply? {
         if (reply != null && Settings.DisableAutoNextPlay())
             reply.clearRelates()
+        // When loop play is enabled, inject current video as the next play target
+        if (reply != null && Settings.LoopPlay() && req.aid > 0) {
+            val loopRelate = Relate().apply {
+                aid = req.aid
+            }
+            reply.clearRelates()
+            reply.addRelates(loopRelate)
+        }
         return super.hookAfter(req, reply, error)
     }
 }

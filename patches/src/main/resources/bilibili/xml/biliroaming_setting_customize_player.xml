@@ -113,6 +113,10 @@
             android:key="disable_auto_next_play"
             android:title="@string/biliroaming_disable_auto_next_play_title" />
         <androidx.preference.SwitchPreferenceCompat
+            android:key="loop_play"
+            android:summary="@string/biliroaming_loop_play_summary"
+            android:title="@string/biliroaming_loop_play_title" />
+        <androidx.preference.SwitchPreferenceCompat
             android:key="scale_to_switch_ratio"
             android:summary="@string/biliroaming_scale_to_switch_ratio_summary"
             android:title="@string/biliroaming_scale_to_switch_ratio_title" />
