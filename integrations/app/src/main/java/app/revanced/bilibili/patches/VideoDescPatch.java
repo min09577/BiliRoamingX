@@ -1,12 +1,15 @@
 package app.revanced.bilibili.patches;
 
+import android.app.Activity;
 import android.view.View;
 import android.view.ViewGroup;
 
 import androidx.annotation.Keep;
 
+import app.revanced.bilibili.patches.main.ApplicationDelegate;
 import app.revanced.bilibili.settings.Settings;
 import app.revanced.bilibili.utils.Logger;
+import app.revanced.bilibili.utils.Utils;
 
 @Keep
 public class VideoDescPatch {
@@ -39,6 +42,40 @@ public class VideoDescPatch {
         if (Settings.AutoExpandDesc.get())
             return 9999;
         return original;
+    }
+
+    /**
+     * Called from bytecode patch on ExpandableLayout constructor.
+     * If AutoExpandDesc is enabled, expand the layout after init.
+     */
+    /**
+     * Called from Activity lifecycle to hide the floating mini-player button
+     * on the video detail page.
+     */
+    public static void hideFloatingButton() {
+        if (!Settings.HideFloatingButton.get()) return;
+        try {
+            Activity activity = ApplicationDelegate.getTopActivity();
+            if (activity == null || activity.isFinishing() || activity.isDestroyed()) return;
+            // Try float_window first, then mini_play_container
+            int floatWindowId = Utils.getResId("float_window", "id");
+            if (floatWindowId != 0) {
+                View floatView = activity.findViewById(floatWindowId);
+                if (floatView != null) {
+                    floatView.setVisibility(View.GONE);
+                    return;
+                }
+            }
+            int miniPlayId = Utils.getResId("mini_play_container", "id");
+            if (miniPlayId != 0) {
+                View miniView = activity.findViewById(miniPlayId);
+                if (miniView != null) {
+                    miniView.setVisibility(View.GONE);
+                }
+            }
+        } catch (Throwable e) {
+            Logger.error(e, () -> "VideoDescPatch: failed to hide floating button");
+        }
     }
 
     /**

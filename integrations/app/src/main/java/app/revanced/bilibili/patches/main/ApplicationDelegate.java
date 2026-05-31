@@ -53,6 +53,7 @@ import java.util.Objects;
 import app.revanced.bilibili.account.PassportChangeReceiver;
 import app.revanced.bilibili.patches.CustomThemePatch;
 import app.revanced.bilibili.patches.DpiPatch;
+import app.revanced.bilibili.patches.VideoDescPatch;
 import app.revanced.bilibili.patches.okhttp.BangumiSeasonHook;
 import app.revanced.bilibili.settings.Settings;
 import app.revanced.bilibili.utils.CrossProcessPreferences;
@@ -446,7 +447,10 @@ public abstract class ApplicationDelegate extends Application {
             printLifecycle(activity, "onActivityResumed", false);
             if (activity instanceof MainActivityV2)
                 VideoInfoHolder.clearCache();
-            else if (activity instanceof MediaViewerActivity) {
+            else if (activity.getClass().getName().contains("VideoDetailsActivity")) {
+                // Hide floating mini-player button if setting enabled
+                Utils.async(300L, VideoDescPatch::hideFloatingButton);
+            } else if (activity instanceof MediaViewerActivity) {
                 Window window = activity.getWindow();
                 View decorView = window.getDecorView();
                 decorView.setFitsSystemWindows(false);
