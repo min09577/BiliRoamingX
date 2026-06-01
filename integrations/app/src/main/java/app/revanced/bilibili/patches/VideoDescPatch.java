@@ -79,41 +79,54 @@ public class VideoDescPatch {
     }
 
     /**
-     * Called from bytecode patch on ExpandableLayout constructor.
-     * If AutoExpandDesc is enabled, expand the layout after init.
+     * Called from Activity lifecycle to auto-expand video description.
+     * Finds the ExpandableLayout by resource ID and triggers expansion.
      */
-    public static void onExpandableLayoutInit(View view) {
+    public static void autoExpandDesc() {
         if (!Settings.AutoExpandDesc.get()) return;
         try {
-            view.post(() -> {
+            Activity activity = ApplicationDelegate.getTopActivity();
+            if (activity == null || activity.isFinishing() || activity.isDestroyed()) return;
+            // Find ExpandableLayout by resource ID
+            int expandableLayoutId = Utils.getResId("expandable_layout", "id");
+            if (expandableLayoutId == 0) {
+                Logger.debug("VideoDescPatch: expandable_layout id not found");
+                return;
+            }
+            View expandableView = activity.findViewById(expandableLayoutId);
+            if (expandableView == null) {
+                Logger.debug("VideoDescPatch: expandable_layout view not found");
+                return;
+            }
+            expandableView.postDelayed(() -> {
                 try {
-                    // Try common expand methods via reflection
-                    var clazz = view.getClass();
+                    // Try reflection to call expand()/setExpanded(true) on the view
+                    var clazz = expandableView.getClass();
                     for (var m : clazz.getMethods()) {
-                        String name = m.getName().toLowerCase();
-                        if ((name.contains("expand") || name.contains("setexpanded"))
-                                && m.getParameterCount() == 0) {
-                            m.invoke(view);
+                        String name = m.getName();
+                        String nameLower = name.toLowerCase();
+                        if (nameLower.equals("expand") && m.getParameterCount() == 0) {
+                            m.invoke(expandableView);
+                            Logger.debug("VideoDescPatch: expanded via expand()");
                             return;
                         }
-                        if ((name.equals("setexpanded") || name.equals("setexpand"))
+                        if ((name.equals("setExpanded") || name.equals("setExpand"))
                                 && m.getParameterCount() == 1
                                 && m.getParameterTypes()[0] == boolean.class) {
-                            m.invoke(view, true);
+                            m.invoke(expandableView, true);
+                            Logger.debug("VideoDescPatch: expanded via " + name + "(true)");
                             return;
                         }
                     }
-                    // Fallback: if it's a ViewGroup, expand by removing max height
-                    if (view instanceof ViewGroup) {
-                        view.getLayoutParams().height = ViewGroup.LayoutParams.WRAP_CONTENT;
-                        view.requestLayout();
-                    }
+                    // Fallback: perform click on the expandable layout to trigger expansion
+                    expandableView.performClick();
+                    Logger.debug("VideoDescPatch: expanded via performClick()");
                 } catch (Throwable e) {
-                    Logger.error(e, () -> "VideoDescPatch: failed to expand on init");
+                    Logger.error(e, () -> "VideoDescPatch: failed to auto expand desc");
                 }
-            });
+            }, 500);
         } catch (Throwable e) {
-            Logger.error(e, () -> "VideoDescPatch: failed to post expand on init");
+            Logger.error(e, () -> "VideoDescPatch: failed to auto expand desc");
         }
     }
 }

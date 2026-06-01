@@ -450,6 +450,8 @@ public abstract class ApplicationDelegate extends Application {
             else if (activity.getClass().getName().contains("VideoDetailsActivity")) {
                 // Hide floating mini-player button if setting enabled
                 Utils.async(300L, VideoDescPatch::hideFloatingButton);
+                // Auto-expand video description if setting enabled
+                Utils.async(600L, VideoDescPatch::autoExpandDesc);
             } else if (activity instanceof MediaViewerActivity) {
                 Window window = activity.getWindow();
                 View decorView = window.getDecorView();
