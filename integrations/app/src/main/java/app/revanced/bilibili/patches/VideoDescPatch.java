@@ -90,12 +90,12 @@ public class VideoDescPatch {
             // Find ExpandableLayout by resource ID
             int expandableLayoutId = Utils.getResId("expandable_layout", "id");
             if (expandableLayoutId == 0) {
-                Logger.debug("VideoDescPatch: expandable_layout id not found");
+                Logger.debug(() -> "VideoDescPatch: expandable_layout id not found");
                 return;
             }
             View expandableView = activity.findViewById(expandableLayoutId);
             if (expandableView == null) {
-                Logger.debug("VideoDescPatch: expandable_layout view not found");
+                Logger.debug(() -> "VideoDescPatch: expandable_layout view not found");
                 return;
             }
             expandableView.postDelayed(() -> {
@@ -107,20 +107,20 @@ public class VideoDescPatch {
                         String nameLower = name.toLowerCase();
                         if (nameLower.equals("expand") && m.getParameterCount() == 0) {
                             m.invoke(expandableView);
-                            Logger.debug("VideoDescPatch: expanded via expand()");
+                            Logger.debug(() -> "VideoDescPatch: expanded via expand()");
                             return;
                         }
                         if ((name.equals("setExpanded") || name.equals("setExpand"))
                                 && m.getParameterCount() == 1
                                 && m.getParameterTypes()[0] == boolean.class) {
                             m.invoke(expandableView, true);
-                            Logger.debug("VideoDescPatch: expanded via " + name + "(true)");
+                            Logger.debug(() -> "VideoDescPatch: expanded via " + name + "(true)");
                             return;
                         }
                     }
                     // Fallback: perform click on the expandable layout to trigger expansion
                     expandableView.performClick();
-                    Logger.debug("VideoDescPatch: expanded via performClick()");
+                    Logger.debug(() -> "VideoDescPatch: expanded via performClick()");
                 } catch (Throwable e) {
                     Logger.error(e, () -> "VideoDescPatch: failed to auto expand desc");
                 }
