@@ -439,7 +439,7 @@
     <string name="biliroaming_comment_sort_time_title">评论区按时间排序</string>
     <string name="biliroaming_comment_sort_time_summary">评论区默认按时间排序（最新评论在前）</string>
     <string name="biliroaming_default_aspect_ratio_title">默认画面比例</string>
-    <string name="biliroaming_default_aspect_ratio_summary">设置视频默认画面比例（0=默认 1=适应 2=填充 3=4:3 4=16:9）</string>
+    <string name="biliroaming_default_aspect_ratio_summary">设置视频默认画面比例（0=默认 1=适应 2=填充）</string>
     <string name="biliroaming_aspect_ratio_default">默认</string>
     <string name="biliroaming_aspect_ratio_fit">适应</string>
     <string name="biliroaming_aspect_ratio_fill">填充</string>

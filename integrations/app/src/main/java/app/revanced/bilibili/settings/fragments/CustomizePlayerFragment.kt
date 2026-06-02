@@ -99,9 +99,7 @@ class CustomizePlayerFragment : BiliRoamingBaseSettingFragment() {
         val options = arrayOf(
             Utils.getString("biliroaming_aspect_ratio_default"),
             Utils.getString("biliroaming_aspect_ratio_fit"),
-            Utils.getString("biliroaming_aspect_ratio_fill"),
-            "4:3",
-            "16:9"
+            Utils.getString("biliroaming_aspect_ratio_fill")
         )
         AlertDialog.Builder(context)
             .setTitle(Utils.getString("biliroaming_default_aspect_ratio_title"))

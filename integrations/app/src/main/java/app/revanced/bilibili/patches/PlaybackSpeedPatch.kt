@@ -107,16 +107,14 @@ object PlaybackSpeedPatch {
         val aspectRatio = when (ratio) {
             1 -> AspectRatio.RATIO_ADJUST_CONTENT
             2 -> AspectRatio.RATIO_CENTER_CROP
-            3 -> AspectRatio.RATIO_4_3
-            4 -> AspectRatio.RATIO_16_9
             else -> return
         }
         try {
             playerCoreService.setAspectRatio(aspectRatio)
         } catch (_: Throwable) {
             try {
-                val playerService = playerCoreService.callMethod(PlayerHookProvider.getRenderServiceMethodName)
-                playerService?.callMethod(PlayerHookProvider.setAspectRatioMethodName, aspectRatio)
+                val playerService = playerCoreService.callMethod(app.revanced.bilibili.utils.PlayerHookProvider.getRenderServiceMethodName)
+                playerService?.callMethod(app.revanced.bilibili.utils.PlayerHookProvider.setAspectRatioMethodName, aspectRatio)
             } catch (_: Throwable) {}
         }
     }
