@@ -428,6 +428,10 @@
     <string name="biliroaming_danmaku_filter_pool_title">弹幕池过滤</string>
     <string name="biliroaming_danmaku_filter_pool_indicator">池%%d</string>
     <string name="biliroaming_danmaku_filter_pool_all">全部</string>
+    <string name="biliroaming_danmaku_speed_title">弹幕速度</string>
+    <string name="biliroaming_danmaku_speed_summary">自定义弹幕滚动速度，0为默认</string>
+    <string name="biliroaming_danmaku_area_title">弹幕显示区域</string>
+    <string name="biliroaming_danmaku_area_summary">自定义弹幕显示区域百分比，0为默认</string>
     <string name="biliroaming_default">默认</string>
     <string name="biliroaming_route_title">应用内打开链接</string>
     <string name="biliroaming_route_hint">bilibili://video/928861104</string>

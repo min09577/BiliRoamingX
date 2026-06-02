@@ -85,6 +85,30 @@ class DanmakuDisplayFragment : BaseWidgetSettingFragment() {
             max = 3
         ).let { content.addView(it.first); it.second }
 
+        // Danmaku speed (0 = system default, 1-10 = custom speed)
+        val danmakuSpeed = Settings.DanmakuSpeed()
+        val speedTitle = string("biliroaming_danmaku_speed_title")
+        val speedSummary = string("biliroaming_danmaku_speed_summary")
+        val speedItem = seekBarItem(
+            name = speedTitle,
+            current = danmakuSpeed,
+            indicator = "%%d",
+            zeroIndicator = "默认",
+            max = 10
+        ).let { content.addView(it.first); it.second }
+
+        // Danmaku area (0 = system default, 10-100 = custom area%)
+        val danmakuArea = Settings.DanmakuArea()
+        val areaTitle = string("biliroaming_danmaku_area_title")
+        val areaSummary = string("biliroaming_danmaku_area_summary")
+        val areaItem = seekBarItem(
+            name = areaTitle,
+            current = danmakuArea,
+            indicator = "%%d%%",
+            zeroIndicator = "默认",
+            max = 100
+        ).let { content.addView(it.first); it.second }
+
         saveButton.onClick {
             Settings.DanmakuOpacity.save(opacityItem.progress)
             Settings.DanmakuMaxOnScreen.save(maxItem.progress)
@@ -93,6 +117,8 @@ class DanmakuDisplayFragment : BaseWidgetSettingFragment() {
             Settings.DanmakuFontSizeScale.save(fontScale)
             Settings.DanmakuTimeOffset.save(timeOffsetItem.progress - 30)
             Settings.DanmakuFilterPool.save(poolItem.progress)
+            Settings.DanmakuSpeed.save(speedItem.progress)
+            Settings.DanmakuArea.save(areaItem.progress)
             parentFragmentManager.popBackStack()
         }
 

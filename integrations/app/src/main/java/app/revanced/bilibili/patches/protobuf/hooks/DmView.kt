@@ -55,6 +55,19 @@ object DmView : MossHook<DmViewReq, DmViewReply>() {
             }
             reply.clearUnknownFields()
         }
+        // Custom danmaku speed and area
+        if (reply != null) runCatchingOrNull {
+            val speed = Settings.DanmakuSpeed()
+            val area = Settings.DanmakuArea()
+            if (speed > 0 || area > 0) {
+                val playerConfig = reply.playerConfig
+                if (playerConfig.hasDanmukuDefaultPlayerConfig()) {
+                    val defaultConfig = playerConfig.danmukuDefaultPlayerConfig
+                    if (speed > 0) defaultConfig.playerDanmakuSpeed = speed
+                    if (area > 0) defaultConfig.playerDanmakuDomain = area / 100f
+                }
+            }
+        }
         if (Settings.OldDmPanel() && reply != null) runCatchingOrNull {
             val kv = reply.kv
             if (kv.isNotEmpty()) {
