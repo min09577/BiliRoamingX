@@ -542,4 +542,7 @@
 
     <string name="biliroaming_remember_video_position_title">记忆播放位置</string>
     <string name="biliroaming_remember_video_position_summary">自动记住每个视频的播放进度，下次打开时从上次位置继续播放</string>
+
+    <string name="biliroaming_live_auto_sign_title">直播间自动签到</string>
+    <string name="biliroaming_live_auto_sign_summary">进入直播间时自动签到获取奖励</string>
 </resources>

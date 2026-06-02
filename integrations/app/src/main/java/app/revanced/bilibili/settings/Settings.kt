@@ -23,7 +23,7 @@ object Settings {
     // endregion
 
 
-    // region Group: 播放�?
+    // region Group: 播放�?
     @JvmField val HalfScreenQuality = StringSetting(key = "half_screen_quality", defValue = "0")
     @JvmField val FullScreenQuality = StringSetting(key = "full_screen_quality", defValue = "0")
     @JvmField val MobileFullScreenQuality = StringSetting(key = "full_screen_quality_mobile", defValue = "0")
@@ -115,7 +115,7 @@ object Settings {
     // endregion
 
 
-    // region Group: 我的�?
+    // region Group: 我的�?
     @JvmField val DrawerStyle = StringSetting(key = "drawer_style_value", defValue = "0")
     @JvmField val PurifyDrawerRedDot = BooleanSetting(key = "purify_drawer_reddot")
     @JvmField val RemoveVipSection = BooleanSetting(key = "remove_vip_section")
@@ -128,7 +128,7 @@ object Settings {
     // endregion
 
 
-    // region Group: 直播�?
+    // region Group: 直播�?
     @JvmField val ForbidSwitchLiveRoom = BooleanSetting(key = "forbid_switch_live_room")
     @JvmField val DisableLiveRoomDoubleClick = BooleanSetting(key = "disable_live_room_double_click")
     @JvmField val PurifyLivePopups = StringSetSetting(key = "purify_live_popups")
@@ -138,10 +138,11 @@ object Settings {
     @JvmField val DisableAutoFloat = BooleanSetting(key = "disable_auto_float")
     @JvmField val RemoveLiveWatermark = BooleanSetting(key = "remove_live_watermark")
     @JvmField val LiveNoBlock = BooleanSetting(key = "live_no_block")
+    @JvmField val LiveAutoSign = BooleanSetting(key = "live_auto_sign")
     // endregion
 
 
-    // region Group: 视频详情�?
+    // region Group: 视频详情�?
     @JvmField val AutoLike = BooleanSetting(key = "auto_like")
     @JvmField val SaveCommentImage = BooleanSetting(key = "save_comment_image")
     @JvmField val UnlockPlayLimit = BooleanSetting(key = "play_arc_conf")
@@ -220,7 +221,7 @@ object Settings {
     // endregion
 
 
-    // region Group: 用户空间�?
+    // region Group: 用户空间�?
     @JvmField val FixSpace = BooleanSetting(key = "fix_space", defValue = true)
     @JvmField val CustomizeSpace = StringSetSetting(key = "customize_space")
     @JvmField val AddArticleTab = BooleanSetting(key = "add_article_tab")
@@ -229,7 +230,7 @@ object Settings {
     // endregion
 
 
-    // region Group: 搜索�?
+    // region Group: 搜索�?
     @JvmField @Deprecated("replaced by PurifySearchTypes") val PurifySearch = BooleanSetting(key = "purify_search")
     @JvmField val PurifySearchTypes = StringSetSetting(key = "purify_search_types")
     @JvmField val SearchBangumi = BooleanSetting(key = "search_area_bangumi")

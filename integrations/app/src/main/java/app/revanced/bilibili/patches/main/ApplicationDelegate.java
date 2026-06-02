@@ -54,6 +54,7 @@ import app.revanced.bilibili.account.PassportChangeReceiver;
 import app.revanced.bilibili.patches.CustomThemePatch;
 import app.revanced.bilibili.patches.DpiPatch;
 import app.revanced.bilibili.patches.LiveRoomPatch;
+import app.revanced.bilibili.patches.LiveSignPatch;
 import app.revanced.bilibili.patches.VideoDescPatch;
 import app.revanced.bilibili.patches.VideoPositionPatch;
 import app.revanced.bilibili.patches.okhttp.BangumiSeasonHook;
@@ -460,6 +461,8 @@ public abstract class ApplicationDelegate extends Application {
                 Utils.async(500L, LiveRoomPatch::removeLiveWatermark);
                 // Remove live room mosaic if setting enabled
                 Utils.async(600L, LiveRoomPatch::removeLiveMosaic);
+                // Auto sign-in to live room if setting enabled
+                Utils.async(800L, () -> LiveSignPatch.onLiveRoomResumed(activity));
             } else if (activity instanceof MediaViewerActivity) {
                 Window window = activity.getWindow();
                 View decorView = window.getDecorView();
