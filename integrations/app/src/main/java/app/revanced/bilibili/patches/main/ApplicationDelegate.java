@@ -55,6 +55,7 @@ import app.revanced.bilibili.patches.CustomThemePatch;
 import app.revanced.bilibili.patches.DpiPatch;
 import app.revanced.bilibili.patches.LiveRoomPatch;
 import app.revanced.bilibili.patches.VideoDescPatch;
+import app.revanced.bilibili.patches.VideoPositionPatch;
 import app.revanced.bilibili.patches.okhttp.BangumiSeasonHook;
 import app.revanced.bilibili.settings.Settings;
 import app.revanced.bilibili.utils.CrossProcessPreferences;
@@ -434,6 +435,7 @@ public abstract class ApplicationDelegate extends Application {
                     break;
                 }
             }
+            VideoPositionPatch.onPlayerDestroyed();
             VideoInfoHolder.removeCache(activity);
             Player.remove(activity);
         }
@@ -478,6 +480,7 @@ public abstract class ApplicationDelegate extends Application {
         @Override
         public void onActivityPaused(@NonNull Activity activity) {
             printLifecycle(activity, "onActivityPaused", false);
+            VideoPositionPatch.savePosition();
         }
 
         @Override

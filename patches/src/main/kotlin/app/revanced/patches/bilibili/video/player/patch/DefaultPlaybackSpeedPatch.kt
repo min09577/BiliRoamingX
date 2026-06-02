@@ -40,6 +40,7 @@ object DefaultPlaybackSpeedPatch : BytecodePatch(
                 invoke-static {p1, v$register}, Lapp/revanced/bilibili/patches/PlaybackSpeedPatch;->defaultSpeed(Ltv/danmaku/ijk/media/player/IMediaPlayer;F)F
                 move-result v$register
                 invoke-static {p0}, Lapp/revanced/bilibili/patches/PlaybackSpeedPatch;->setDefaultAspectRatio(Ljava/lang/Object;)V
+                invoke-static {p1}, Lapp/revanced/bilibili/patches/VideoPositionPatch;->onPlayerPrepared(Ltv/danmaku/ijk/media/player/IMediaPlayer;)V
             """.trimIndent()
             )
         } ?: throw PlayerOnPreparedFingerprint.exception

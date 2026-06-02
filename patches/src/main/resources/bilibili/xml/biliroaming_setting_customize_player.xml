@@ -125,6 +125,10 @@
             android:summary="@string/biliroaming_default_aspect_ratio_summary"
             android:title="@string/biliroaming_default_aspect_ratio_title" />
         <androidx.preference.SwitchPreferenceCompat
+            android:key="remember_video_position"
+            android:summary="@string/biliroaming_remember_video_position_summary"
+            android:title="@string/biliroaming_remember_video_position_title" />
+        <androidx.preference.SwitchPreferenceCompat
             android:key="disable_p2p_upload"
             android:summary="@string/biliroaming_disable_p2p_upload_summary"
             android:title="@string/biliroaming_disable_p2p_upload_title" />
