@@ -20,6 +20,10 @@
         <androidx.preference.SwitchPreferenceCompat
             android:key="block_comment_goods"
             android:title="@string/biliroaming_block_comment_goods_title" />
+        <androidx.preference.SwitchPreferenceCompat
+            android:key="comment_sort_by_time"
+            android:summary="@string/biliroaming_comment_sort_time_summary"
+            android:title="@string/biliroaming_comment_sort_time_title" />
         <androidx.preference.Preference
             android:fragment="app.revanced.bilibili.settings.fragments.FilterCommentByKeywordFragment"
             android:key="filter_comment_by_keyword"

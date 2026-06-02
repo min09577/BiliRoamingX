@@ -436,6 +436,8 @@
     <string name="biliroaming_danmaku_highlight_summary">匹配关键词的弹幕会变成醒目颜色</string>
     <string name="biliroaming_danmaku_highlight_color_title">高亮颜色</string>
     <string name="biliroaming_danmaku_highlight_color_summary">选择高亮弹幕的颜色</string>
+    <string name="biliroaming_comment_sort_time_title">评论区按时间排序</string>
+    <string name="biliroaming_comment_sort_time_summary">评论区默认按时间排序（最新评论在前）</string>
     <string name="biliroaming_default">默认</string>
     <string name="biliroaming_route_title">应用内打开链接</string>
     <string name="biliroaming_route_hint">bilibili://video/928861104</string>

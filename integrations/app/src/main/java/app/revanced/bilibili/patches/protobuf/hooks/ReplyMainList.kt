@@ -17,6 +17,9 @@ object ReplyMainList : ReplyListBase<MainListReq, MainListReply>() {
     override fun hookBefore(req: MainListReq): Any? {
         if (Settings.BlockVideoComment() && req.type == 1L)
             throw BusinessException(12061, "评论区已由漫游屏蔽")
+        if (Settings.CommentSortByTime()) {
+            req.modeValue = 2  // MAIN_LIST_TIME
+        }
         return null
     }
 
