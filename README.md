@@ -59,7 +59,17 @@ Based on BiliRoamingX v1.23.3, enhanced with AI-assisted development.
 
 ### Changelog
 
-#### 2026-06-02 (v1.32.0)
+#### 2026-06-02 (v1.34.0)
+- **New:** Danmaku keyword highlight — matching danmaku change to a prominent color (7 colors available)
+- **New:** Custom danmaku speed — control danmaku scroll speed (0-10 levels)
+- **New:** Danmaku display area — customize danmaku display area percentage (0-100%)
+- **Settings:** Danmaku display settings page with speed/area sliders and keyword highlight input
+
+#### 2026-06-02 (v1.32.0 ~ v1.33.0)
+- **v1.33.0:** Custom danmaku speed & display area — hooks DmViewReply to modify playerDanmakuSpeed and playerDanmakuDomain
+- **v1.32.0:** Live room watermark removal — recursive view tree traversal with resource ID matching
+- **v1.32.0:** Live room mosaic removal — removes overlay/mask views from live streams
+- **v1.32.0:** CID display in video codec info toast
 - **New:** Live room watermark removal — recursive view tree traversal with resource ID matching
 - **New:** Live room mosaic removal — removes overlay/mask views from live streams
 - **New:** CID display in video codec info toast
@@ -160,13 +170,23 @@ java -cp "$BC_JAR:$BCPKIX_JAR:revanced-cli.jar" app.revanced.cli.command.MainCom
 - 循环播放（播完自动重播）
 - **直播间去水印**
 - **直播间去马赛克遮罩**
+- **自定义弹幕速度**
+- **弹幕显示区域控制**
+- **弹幕关键词高亮**
 
 ### 更新日志
 
-#### 2026-06-02 (v1.32.0)
-- **新增：** 直播间去水印 — 递归视图树遍历 + 资源 ID 匹配移除左上角水印
-- **新增：** 直播间去马赛克 — 移除直播流中的遮罩/马赛克覆盖层
-- **新增：** 视频编码信息 Toast 显示 CID
+#### 2026-06-02 (v1.34.0)
+- **新增：** 弹幕关键词高亮 — 匹配关键词的弹幕会变成醒目颜色（支持7种颜色选择）
+- **新增：** 自定义弹幕速度 — 控制弹幕滚动速度（0-10级）
+- **新增：** 弹幕显示区域 — 自定义弹幕显示区域百分比（0-100%）
+- **设置：** 弹幕显示设置页面新增速度/区域滑块和关键词高亮输入框
+
+#### 2026-06-02 (v1.32.0 ~ v1.33.0)
+- **v1.33.0:** 自定义弹幕速度 & 显示区域 — hook DmViewReply 修改 playerDanmakuSpeed 和 playerDanmakuDomain
+- **v1.32.0:** 直播间去水印 — 递归视图树遍历 + 资源 ID 匹配移除左上角水印
+- **v1.32.0:** 直播间去马赛克 — 移除直播流中的遮罩/马赛克覆盖层
+- **v1.32.0:** 视频编码信息 Toast 显示 CID
 - **构建：** 70+ 补丁全部成功，BKS keystore 签名
 
 #### 2026-06-01 (v1.29.0 ~ v1.31.0)
@@ -246,14 +266,23 @@ BiliRoamingX v1.23.3 ベース、AI支援開発で増強。
 - ループ再生（終了後自動リプレイ）
 - **配信ルームウォーターマーク除去**
 - **配信ルームモザイク除去**
+- **カスタムタン幕速度**
+- **タン幕表示エリア制御**
+- **タン幕キーワードハイライト**
 
 ### 変更履歴
 
-#### 2026-06-02 (v1.32.0)
-- **新規：** 配信ルームウォーターマーク除去 — 再帰ビューツリートラバーサル + リソースIDマッチング
-- **新規：** 配信ルームモザイク除去 — 配信ストリームのオーバーレイ/マスクビューを除去
-- **新規：** ビデオコーデック情報ToastにCID表示
-- **ビルド：** 70+パッチ全て成功、BKS keystore署名
+#### 2026-06-02 (v1.34.0)
+- **新規：** タン幕キーワードハイライト — マッチするタン幕が目立つ色に変更（7色選択可能）
+- **新規：** カスタムタン幕速度 — タン幕スクロール速度制御（0-10レベル）
+- **新規：** タン幕表示エリア — タン幕表示エリアのパーセンテージをカスタマイズ（0-100%）
+- **設定：** タン幕表示設定ページに速度/エリアスライダーとキーワードハイライト入力追加
+
+#### 2026-06-02 (v1.32.0 ~ v1.33.0)
+- **v1.33.0：** カスタムタン幕速度 & 表示エリア — DmViewReplyをhookしてplayerDanmakuSpeedとplayerDanmakuDomainを変更
+- **v1.32.0：** 配信ルームウォーターマーク除去 — 再帰ビューツリートラバーサル + リソースIDマッチング
+- **v1.32.0：** 配信ルームモザイク除去 — 配信ストリームのオーバーレイ/マスクビューを除去
+- **v1.32.0：** ビデオコーデック情報ToastにCID表示
 
 #### 2026-06-01 (v1.29.0 ~ v1.31.0)
 - **v1.31.0：** ビデオ説明自動展開 — リフレクション経由でExpandableLayoutをhook
@@ -321,13 +350,23 @@ BiliRoamingX v1.23.3 기반, AI 보조 개발로 강화.
 - 루프 재생 (종료 후 자동 리플레이)
 - **방송 워터마크 제거**
 - **방송 모자이크 제거**
+- **사용자 정의 탄막 속도**
+- **탄막 표시 영역 제어**
+- **탄막 키워드 하이라이트**
 
 ### 변경 이력
 
-#### 2026-06-02 (v1.32.0)
-- **신규:** 방송 워터마크 제거 — 재귀 뷰 트리 순회 + 리소스ID 매칭으로 워터마크 제거
-- **신규:** 방송 모자이크 제거 — 방송 스트림의 오버레이/마스크 뷰 제거
-- **신규:** 비디오 코덱 정보 Toast에 CID 표시
+#### 2026-06-02 (v1.34.0)
+- **신규:** 탄막 키워드 하이라이트 — 일치하는 탄막이 눈에 띄는 색상으로 변경 (7가지 색상 선택 가능)
+- **신규:** 사용자 정의 탄막 속도 — 탄막 스크롤 속도 제어 (0-10 레벨)
+- **신규:** 탄막 표시 영역 — 탄막 표시 영역 비율 사용자 정의 (0-100%)
+- **설정:** 탄막 표시 설정 페이지에 속도/영역 슬라이더 및 키워드 하이라이트 입력 추가
+
+#### 2026-06-02 (v1.32.0 ~ v1.33.0)
+- **v1.33.0:** 사용자 정의 탄막 속도 & 표시 영역 — DmViewReply를 hook하여 playerDanmakuSpeed와 playerDanmakuDomain 수정
+- **v1.32.0:** 방송 워터마크 제거 — 재귀 뷰 트리 순회 + 리소스ID 매칭으로 워터마크 제거
+- **v1.32.0:** 방송 모자이크 제거 — 방송 스트림의 오버레이/마스크 뷰 제거
+- **v1.32.0:** 비디오 코덱 정보 Toast에 CID 표시
 - **빌드:** 70+ 패치 모두 성공, BKS keystore 서명
 
 #### 2026-06-01 (v1.29.0 ~ v1.31.0)
