@@ -456,6 +456,8 @@ public abstract class ApplicationDelegate extends Application {
             } else if (activity.getClass().getName().contains("LiveRoom")) {
                 // Remove live room watermark if setting enabled
                 Utils.async(500L, LiveRoomPatch::removeLiveWatermark);
+                // Remove live room mosaic if setting enabled
+                Utils.async(600L, LiveRoomPatch::removeLiveMosaic);
             } else if (activity instanceof MediaViewerActivity) {
                 Window window = activity.getWindow();
                 View decorView = window.getDecorView();

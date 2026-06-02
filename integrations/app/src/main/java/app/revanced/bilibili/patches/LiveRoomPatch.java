@@ -107,4 +107,67 @@ public class LiveRoomPatch {
             }
         }
     }
+
+    /**
+     * Called from Activity lifecycle to remove live room mosaic overlay.
+     * Hides the mosaic/遮罩 view that covers part of the live video.
+     */
+    public static void removeLiveMosaic() {
+        if (!Settings.RemoveLiveMask.get()) return;
+        try {
+            Activity activity = ApplicationDelegate.getTopActivity();
+            if (activity == null || activity.isFinishing() || activity.isDestroyed()) return;
+            // Try common mosaic resource IDs
+            String[] mosaicIds = {
+                "live_room_mosaic",
+                "live_mosaic_container",
+                "mosaic_view",
+                "live_mask_view",
+                "live_room_mask",
+                "live_cover_mask",
+                "iv_mosaic",
+                "fl_mosaic"
+            };
+            for (String idName : mosaicIds) {
+                int resId = Utils.getResId(idName, "id");
+                if (resId != 0) {
+                    View mosaicView = activity.findViewById(resId);
+                    if (mosaicView != null) {
+                        mosaicView.setVisibility(View.GONE);
+                        Logger.debug(() -> "LiveRoomPatch: hid mosaic view " + idName);
+                        return;
+                    }
+                }
+            }
+            // Fallback: traverse the view tree to find mosaic-like views
+            View decorView = activity.getWindow().getDecorView();
+            hideMosaicRecursive(decorView, 0);
+        } catch (Throwable e) {
+            Logger.error(e, () -> "LiveRoomPatch: failed to remove mosaic");
+        }
+    }
+
+    private static void hideMosaicRecursive(View view, int depth) {
+        if (depth > 8) return;
+        if (view instanceof ViewGroup) {
+            ViewGroup group = (ViewGroup) view;
+            for (int i = 0; i < group.getChildCount(); i++) {
+                View child = group.getChildAt(i);
+                // Check if this view's resource name contains "mosaic" or "mask"
+                try {
+                    String resName = "";
+                    if (child.getId() != View.NO_ID) {
+                        resName = child.getResources().getResourceEntryName(child.getId());
+                    }
+                    final String name = resName;
+                    if (name.contains("mosaic") || name.contains("mask")) {
+                        child.setVisibility(View.GONE);
+                        Logger.debug(() -> "LiveRoomPatch: hid mosaic by traversal: " + name);
+                        return;
+                    }
+                } catch (Throwable ignored) {}
+                hideMosaicRecursive(child, depth + 1);
+            }
+        }
+    }
 }
