@@ -66,6 +66,8 @@ object DmSegMobile : MossHook<DmSegMobileReq, DmSegMobileReply>() {
         val fontSizeScale = Settings.DanmakuFontSizeScale()
         val timeOffset = Settings.DanmakuTimeOffset()
         val filterPool = Settings.DanmakuFilterPool()
+        val highlightKeywords = Settings.DanmakuHighlightKeywords()
+        val highlightColor = Settings.DanmakuHighlightColor()
         val shouldFilter = filterRegex != null || minLength > 0 || maxOnScreen > 0 || filterPool > 0
         // Step 1: Filter by keyword/length/density/pool
         if (shouldFilter && reply != null) {
@@ -121,6 +123,13 @@ object DmSegMobile : MossHook<DmSegMobileReq, DmSegMobileReply>() {
             // Time offset: shift danmaku progress by offset (in seconds)
             if (timeOffset != 0) {
                 elem.progress = (elem.progress + timeOffset * 1000).coerceAtLeast(0)
+            }
+            // Highlight matching keywords
+            if (highlightKeywords.isNotEmpty()) {
+                val content = elem.content
+                if (highlightKeywords.any { content.contains(it, ignoreCase = true) }) {
+                    elem.color = highlightColor
+                }
             }
         }
         return super.hookAfter(req, reply, error)

@@ -192,6 +192,8 @@ object Settings {
     @JvmField val DanmakuFilterPool = IntSetting(key = "danmaku_filter_pool", defValue = 0)
     @JvmField val DanmakuSpeed = IntSetting(key = "danmaku_speed", defValue = 0)
     @JvmField val DanmakuArea = IntSetting(key = "danmaku_area", defValue = 0)
+    @JvmField val DanmakuHighlightKeywords = StringSetSetting(key = "danmaku_highlight_keywords")
+    @JvmField val DanmakuHighlightColor = IntSetting(key = "danmaku_highlight_color", defValue = 0xFFFF0000.toInt())
     @JvmField val ShowCommentIpLocation = BooleanSetting(key = "show_comment_ip_location")
     @JvmField val ShowCommentFloor = BooleanSetting(key = "show_comment_floor")
     @JvmField val ShowCommentReplyCount = BooleanSetting(key = "show_comment_reply_count")

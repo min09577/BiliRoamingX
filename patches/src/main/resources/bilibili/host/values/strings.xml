@@ -432,6 +432,10 @@
     <string name="biliroaming_danmaku_speed_summary">自定义弹幕滚动速度，0为默认</string>
     <string name="biliroaming_danmaku_area_title">弹幕显示区域</string>
     <string name="biliroaming_danmaku_area_summary">自定义弹幕显示区域百分比，0为默认</string>
+    <string name="biliroaming_danmaku_highlight_title">弹幕关键词高亮</string>
+    <string name="biliroaming_danmaku_highlight_summary">匹配关键词的弹幕会变成醒目颜色</string>
+    <string name="biliroaming_danmaku_highlight_color_title">高亮颜色</string>
+    <string name="biliroaming_danmaku_highlight_color_summary">选择高亮弹幕的颜色</string>
     <string name="biliroaming_default">默认</string>
     <string name="biliroaming_route_title">应用内打开链接</string>
     <string name="biliroaming_route_hint">bilibili://video/928861104</string>

@@ -109,6 +109,42 @@ class DanmakuDisplayFragment : BaseWidgetSettingFragment() {
             max = 100
         ).let { content.addView(it.first); it.second }
 
+        // Highlight keywords (comma-separated)
+        val highlightKeywords = Settings.DanmakuHighlightKeywords()
+        val highlightTitle = string("biliroaming_danmaku_highlight_title")
+        val highlightSummary = string("biliroaming_danmaku_highlight_summary")
+        val highlightItem = textInputWithButtonItem(
+            name = highlightTitle,
+            text = highlightKeywords.joinToString(","),
+            hint = "关键词1,关键词2,...",
+            buttonName = "清除"
+        ) { editText ->
+            editText.setText("")
+        }.let { content.addView(it.first); it.second }
+
+        // Highlight color (predefined options)
+        val highlightColors = intArrayOf(
+            0xFFFF0000.toInt(), // Red
+            0xFF00FF00.toInt(), // Green
+            0xFF0000FF.toInt(), // Blue
+            0xFFFFFF00.toInt(), // Yellow
+            0xFFFF00FF.toInt(), // Magenta
+            0xFF00FFFF.toInt(), // Cyan
+            0xFFFFA500.toInt(), // Orange
+        )
+        val highlightColorNames = arrayOf("红色", "绿色", "蓝色", "黄色", "品红", "青色", "橙色")
+        val currentColor = Settings.DanmakuHighlightColor()
+        val colorIndex = highlightColors.indexOf(currentColor).coerceAtLeast(0)
+        val colorTitle = string("biliroaming_danmaku_highlight_color_title")
+        val colorSummary = string("biliroaming_danmaku_highlight_color_summary")
+        val colorItem = textInputItem(
+            name = "$colorTitle (${highlightColorNames[colorIndex]})"
+        ).let {
+            content.addView(it.first)
+            it.second.setText(colorIndex.toString())
+            it.second
+        }
+
         saveButton.onClick {
             Settings.DanmakuOpacity.save(opacityItem.progress)
             Settings.DanmakuMaxOnScreen.save(maxItem.progress)
@@ -119,6 +155,16 @@ class DanmakuDisplayFragment : BaseWidgetSettingFragment() {
             Settings.DanmakuFilterPool.save(poolItem.progress)
             Settings.DanmakuSpeed.save(speedItem.progress)
             Settings.DanmakuArea.save(areaItem.progress)
+            val keywords = highlightItem.text.toString()
+                .split(",")
+                .map { it.trim() }
+                .filter { it.isNotEmpty() }
+                .toSet()
+            Settings.DanmakuHighlightKeywords.save(keywords)
+            val selectedColorIndex = colorItem.text.toString().toIntOrNull() ?: 0
+            if (selectedColorIndex in highlightColors.indices) {
+                Settings.DanmakuHighlightColor.save(highlightColors[selectedColorIndex])
+            }
             parentFragmentManager.popBackStack()
         }
 
