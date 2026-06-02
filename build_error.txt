@@ -1,0 +1,90 @@
+﻿To honour the JVM settings for this build a single-use Daemon process will be forked. For more on this, please refer to https://docs.gradle.org/8.10.2/userguide/gradle_daemon.html#sec:disabling_the_daemon in the Gradle documentation.
+Daemon will be stopped at the end of the build 
+Type-safe project accessors is an incubating feature.
+> Task :build-logic:checkKotlinGradlePluginConfigurationErrors
+> Task :build-logic:compileKotlin UP-TO-DATE
+> Task :build-logic:compileJava NO-SOURCE
+> Task :build-logic:pluginDescriptors UP-TO-DATE
+> Task :build-logic:processResources UP-TO-DATE
+> Task :build-logic:classes UP-TO-DATE
+> Task :build-logic:jar UP-TO-DATE
+> Task :integrations:app:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :integrations:ksp:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :integrations:extend:preBuild UP-TO-DATE
+> Task :integrations:dummy:preBuild UP-TO-DATE
+> Task :integrations:app:preBuild UP-TO-DATE
+> Task :integrations:extend:preReleaseBuild UP-TO-DATE
+> Task :integrations:dummy:preReleaseBuild UP-TO-DATE
+> Task :integrations:app:preReleaseBuild UP-TO-DATE
+> Task :integrations:dummy:generateReleaseResValues UP-TO-DATE
+> Task :integrations:extend:writeReleaseAarMetadata UP-TO-DATE
+> Task :integrations:dummy:generateReleaseResources UP-TO-DATE
+> Task :integrations:app:generateReleaseBuildConfig UP-TO-DATE
+> Task :integrations:extend:generateReleaseResValues UP-TO-DATE
+> Task :integrations:extend:generateReleaseResources UP-TO-DATE
+> Task :integrations:dummy:packageReleaseResources UP-TO-DATE
+> Task :integrations:extend:packageReleaseResources UP-TO-DATE
+> Task :integrations:extend:extractDeepLinksRelease UP-TO-DATE
+> Task :integrations:extend:processReleaseManifest UP-TO-DATE
+> Task :integrations:dummy:parseReleaseLocalResources UP-TO-DATE
+> Task :integrations:extend:compileReleaseLibraryResources UP-TO-DATE
+> Task :integrations:dummy:generateReleaseRFile UP-TO-DATE
+> Task :integrations:dummy:javaPreCompileRelease UP-TO-DATE
+> Task :integrations:extend:parseReleaseLocalResources UP-TO-DATE
+> Task :integrations:extend:generateReleaseRFile UP-TO-DATE
+> Task :integrations:extend:javaPreCompileRelease UP-TO-DATE
+> Task :integrations:ksp:compileKotlin UP-TO-DATE
+> Task :integrations:ksp:compileJava NO-SOURCE
+> Task :integrations:ksp:processResources UP-TO-DATE
+> Task :integrations:ksp:classes UP-TO-DATE
+> Task :integrations:ksp:jar UP-TO-DATE
+> Task :integrations:app:checkReleaseAarMetadata UP-TO-DATE
+> Task :integrations:app:mapReleaseSourceSetPaths UP-TO-DATE
+> Task :integrations:app:generateReleaseResources UP-TO-DATE
+> Task :integrations:app:mergeReleaseResources UP-TO-DATE
+> Task :integrations:app:packageReleaseResources UP-TO-DATE
+> Task :integrations:app:parseReleaseLocalResources UP-TO-DATE
+> Task :integrations:app:createReleaseCompatibleScreenManifests UP-TO-DATE
+> Task :integrations:app:extractDeepLinksRelease UP-TO-DATE
+> Task :integrations:app:processReleaseMainManifest UP-TO-DATE
+> Task :integrations:app:processReleaseManifest UP-TO-DATE
+> Task :integrations:app:processReleaseManifestForPackage UP-TO-DATE
+> Task :integrations:dummy:compileReleaseJavaWithJavac UP-TO-DATE
+> Task :integrations:dummy:bundleLibCompileToJarRelease UP-TO-DATE
+> Task :integrations:extend:compileReleaseJavaWithJavac UP-TO-DATE
+> Task :integrations:extend:bundleLibCompileToJarRelease UP-TO-DATE
+> Task :integrations:app:processReleaseResources UP-TO-DATE
+> Task :integrations:app:kspReleaseKotlin UP-TO-DATE
+> Task :integrations:app:compileReleaseKotlin UP-TO-DATE
+> Task :integrations:app:javaPreCompileRelease UP-TO-DATE
+
+> Task :integrations:app:compileReleaseJavaWithJavac
+.\gradlew.bat : C:\Users\Min\BiliRoamingX\integrations\app\src\main\java\app\revanced\bilibili\patches\LiveRoomPatch.ja
+va:101: ����: ��lambda ���ʽ���õı��ر������������ձ�����ʵ���ϵ����ձ���
+所在位置 行:1 字符: 119
++ ... liRoamingX; .\gradlew.bat :integrations:app:compileReleaseJavaWithJav ...
++                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (C:\Users\Min\Bi...��ʵ���ϵ����ձ���:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+                        Logger.debug(() -> "LiveRoomPatch: hid watermark by traversal: " + resName);
+                                                                                           ^
+ע: C:\Users\Min\BiliRoamingX\integrations\app\src\main\java\app\revanced\bilibili\patches\main\ApplicationDelegate.java
+ʹ�û򸲸����ѹ�ʱ�� API��
+ע: �й���ϸ��Ϣ, ��ʹ�� -Xlint:deprecation ���±��롣
+1 ������
+
+> Task :integrations:app:compileReleaseJavaWithJavac FAILED
+
+FAILURE: Build failed with an exception.
+
+* What went wrong:
+Execution failed for task ':integrations:app:compileReleaseJavaWithJavac'.
+> Compilation failed; see the compiler error output for details.
+
+* Try:
+> Run with --info option to get more log output.
+> Run with --scan to get full insights.
+
+BUILD FAILED in 1m 3s
+45 actionable tasks: 2 executed, 43 up-to-date

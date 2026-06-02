@@ -1,12 +1,18 @@
 package app.revanced.bilibili.patches;
 
+import android.app.Activity;
+import android.view.View;
+import android.view.ViewGroup;
+
 import androidx.annotation.Keep;
 
 import com.bilibili.bililive.room.ui.roomv3.player.container.LiveRoomPlayerContainerView;
 
+import app.revanced.bilibili.patches.main.ApplicationDelegate;
 import app.revanced.bilibili.settings.Settings;
 import app.revanced.bilibili.utils.Logger;
 import app.revanced.bilibili.utils.Reflex;
+import app.revanced.bilibili.utils.Utils;
 
 @Keep
 public class LiveRoomPatch {
@@ -40,5 +46,65 @@ public class LiveRoomPatch {
 
     public static boolean disableAutoFloat() {
         return Settings.DisableAutoFloat.get();
+    }
+
+    /**
+     * Called from Activity lifecycle to remove live room watermark overlay.
+     * Hides the watermark view (room number + logo) in the top-left corner.
+     */
+    public static void removeLiveWatermark() {
+        if (!Settings.RemoveLiveWatermark.get()) return;
+        try {
+            Activity activity = ApplicationDelegate.getTopActivity();
+            if (activity == null || activity.isFinishing() || activity.isDestroyed()) return;
+            // Try common watermark resource IDs
+            String[] watermarkIds = {
+                "live_room_watermark",
+                "live_watermark_container",
+                "rl_watermark",
+                "iv_watermark",
+                "live_room_cover_watermark"
+            };
+            for (String idName : watermarkIds) {
+                int resId = Utils.getResId(idName, "id");
+                if (resId != 0) {
+                    View watermarkView = activity.findViewById(resId);
+                    if (watermarkView != null) {
+                        watermarkView.setVisibility(View.GONE);
+                        Logger.debug(() -> "LiveRoomPatch: hid watermark view " + idName);
+                        return;
+                    }
+                }
+            }
+            // Fallback: traverse the view tree to find watermark-like views
+            View decorView = activity.getWindow().getDecorView();
+            hideWatermarkRecursive(decorView, 0);
+        } catch (Throwable e) {
+            Logger.error(e, () -> "LiveRoomPatch: failed to remove watermark");
+        }
+    }
+
+    private static void hideWatermarkRecursive(View view, int depth) {
+        if (depth > 8) return;
+        if (view instanceof ViewGroup) {
+            ViewGroup group = (ViewGroup) view;
+            for (int i = 0; i < group.getChildCount(); i++) {
+                View child = group.getChildAt(i);
+                // Check if this view's resource name contains "watermark"
+                try {
+                    String resName = "";
+                    if (child.getId() != View.NO_ID) {
+                        resName = child.getResources().getResourceEntryName(child.getId());
+                    }
+                    final String name = resName;
+                    if (name.contains("watermark")) {
+                        child.setVisibility(View.GONE);
+                        Logger.debug(() -> "LiveRoomPatch: hid watermark by traversal: " + name);
+                        return;
+                    }
+                } catch (Throwable ignored) {}
+                hideWatermarkRecursive(child, depth + 1);
+            }
+        }
     }
 }

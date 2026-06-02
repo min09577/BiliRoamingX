@@ -86,7 +86,7 @@ object PlayURLPlayViewUGC : MossHook<PlayViewReq, PlayViewReply>() {
             // Show codec info toast
             if (Settings.ShowCodecInfo() && req.download == 0 && req.cid != lastCodecInfoCid) {
                 lastCodecInfoCid = req.cid
-                showCodecInfo(reply)
+                showCodecInfo(reply, req.cid)
             }
             if (Utils.isHd() && Settings.NotLockOrientation()) {
                 val dashVideo = reply.videoInfo.streamListList.firstNotNullOfOrNull {
@@ -112,7 +112,7 @@ object PlayURLPlayViewUGC : MossHook<PlayViewReq, PlayViewReply>() {
         return super.hookAfter(req, reply, error)
     }
 
-    private fun showCodecInfo(reply: PlayViewReply) {
+    private fun showCodecInfo(reply: PlayViewReply, cid: Long) {
         try {
             val videoInfo = reply.videoInfo ?: return
             val quality = videoInfo.quality
@@ -135,6 +135,8 @@ object PlayURLPlayViewUGC : MossHook<PlayViewReq, PlayViewReply>() {
                 }
                 if (avBv != null) sb.append("\n$avBv")
             }
+            // Append CID
+            sb.append("\n📺 CID: $cid")
             // Append video stats + UP info
             val view = VideoInfoHolder.current?.view
             if (view is ViewReply && view.hasArc()) {

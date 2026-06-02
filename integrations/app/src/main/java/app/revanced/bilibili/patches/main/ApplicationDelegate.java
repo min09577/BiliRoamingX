@@ -53,6 +53,7 @@ import java.util.Objects;
 import app.revanced.bilibili.account.PassportChangeReceiver;
 import app.revanced.bilibili.patches.CustomThemePatch;
 import app.revanced.bilibili.patches.DpiPatch;
+import app.revanced.bilibili.patches.LiveRoomPatch;
 import app.revanced.bilibili.patches.VideoDescPatch;
 import app.revanced.bilibili.patches.okhttp.BangumiSeasonHook;
 import app.revanced.bilibili.settings.Settings;
@@ -452,6 +453,9 @@ public abstract class ApplicationDelegate extends Application {
                 Utils.async(300L, VideoDescPatch::hideFloatingButton);
                 // Auto-expand video description if setting enabled
                 Utils.async(600L, VideoDescPatch::autoExpandDesc);
+            } else if (activity.getClass().getName().contains("LiveRoom")) {
+                // Remove live room watermark if setting enabled
+                Utils.async(500L, LiveRoomPatch::removeLiveWatermark);
             } else if (activity instanceof MediaViewerActivity) {
                 Window window = activity.getWindow();
                 View decorView = window.getDecorView();
