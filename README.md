@@ -1,4 +1,4 @@
-<div align="center">
+﻿<div align="center">
 
 # BiliRoamingX (AI Enhanced Fork)
 
@@ -58,6 +58,10 @@ Based on BiliRoamingX v1.23.3, enhanced with AI-assisted development.
 - **Live room mosaic/overlay removal**
 
 ### Changelog
+
+#### 2026-06-02 (v1.36.0)
+- **New:** Default video aspect ratio — set default video aspect ratio (Default/Fit/Fill)
+- **Settings:** Added selection dialog in player settings
 
 #### 2026-06-02 (v1.35.0)
 - **New:** Comment sort by time — default comment sorting by time (newest first)
@@ -180,6 +184,10 @@ java -cp "$BC_JAR:$BCPKIX_JAR:revanced-cli.jar" app.revanced.cli.command.MainCom
 
 ### 更新日志
 
+#### 2026-06-02 (v1.36.0)
+- **新增：** 默认视频画面比例 — 设置视频默认画面比例（默认/适应/填充）
+- **设置：** 播放器设置页面新增选择对话框
+
 #### 2026-06-02 (v1.35.0)
 - **新增：** 评论区默认按时间排序 — 开启后评论区默认按时间排序（最新评论在前）
 - **设置：** 评论过滤设置页面新增开关
@@ -280,6 +288,10 @@ BiliRoamingX v1.23.3 ベース、AI支援開発で増強。
 
 ### 変更履歴
 
+#### 2026-06-02 (v1.36.0)
+- **新規：** デフォルトビデオアスペクト比 — デフォルトのビデオアスペクト比を設定（デフォルト/フィット/フィル）
+- **設定：** プレイヤー設定ページに選択ダイアログを追加
+
 #### 2026-06-02 (v1.35.0)
 - **新規：** コメント時間順ソート — 有効にするとコメントが時間順にソート（最新が最初）
 - **設定：** コメントフィルタ設定ページにスイッチを追加
@@ -368,6 +380,10 @@ BiliRoamingX v1.23.3 기반, AI 보조 개발로 강화.
 
 ### 변경 이력
 
+#### 2026-06-02 (v1.36.0)
+- **신규:** 기본 비디오 화면 비율 — 기본 비디오 화면 비율 설정 (기본/맞춤/채우기)
+- **설정:** 플레이어 설정 페이지에 선택 대화 상자 추가
+
 #### 2026-06-02 (v1.35.0)
 - **신규:** 댓글 시간순 정렬 — 활성화 시 댓글이 시간순으로 정렬 (최신이 먼저)
 - **설정:** 댓글 필터 설정 페이지에 스위치 추가
@@ -423,3 +439,4 @@ BiliRoamingX v1.23.3 기반, AI 보조 개발로 강화.
 - Releases: https://github.com/min09577/BiliRoamingX/releases
 - Bilibili: https://www.bilibili.com
 - ReVanced: https://revanced.app
+
