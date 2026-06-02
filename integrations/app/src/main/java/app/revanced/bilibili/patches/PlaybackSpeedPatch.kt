@@ -15,8 +15,12 @@ import app.revanced.bilibili.utils.Reflex
 import app.revanced.bilibili.utils.Utils
 import app.revanced.bilibili.utils.children
 import app.revanced.bilibili.utils.dp
+import app.revanced.bilibili.utils.callMethod
+import app.revanced.bilibili.utils.PlayerHookProvider.getAspectRatio
+import app.revanced.bilibili.utils.PlayerHookProvider.setAspectRatio
 import com.bilibili.video.story.StoryVideoActivity
 import tv.danmaku.ijk.media.player.IMediaPlayer
+import tv.danmaku.videoplayer.core.videoview.AspectRatio
 import java.lang.ref.WeakReference
 
 object PlaybackSpeedPatch {
@@ -93,6 +97,28 @@ object PlaybackSpeedPatch {
         } else if (defaultSpeed != 0f) {
             defaultSpeed
         } else speed
+    }
+
+    @Keep
+    @JvmStatic
+    fun setDefaultAspectRatio(playerCoreService: Any?) {
+        val ratio = Settings.DefaultAspectRatio()
+        if (ratio <= 0 || playerCoreService == null) return
+        val aspectRatio = when (ratio) {
+            1 -> AspectRatio.RATIO_ADJUST_CONTENT
+            2 -> AspectRatio.RATIO_CENTER_CROP
+            3 -> AspectRatio.RATIO_4_3
+            4 -> AspectRatio.RATIO_16_9
+            else -> return
+        }
+        try {
+            playerCoreService.setAspectRatio(aspectRatio)
+        } catch (_: Throwable) {
+            try {
+                val playerService = playerCoreService.callMethod(PlayerHookProvider.getRenderServiceMethodName)
+                playerService?.callMethod(PlayerHookProvider.setAspectRatioMethodName, aspectRatio)
+            } catch (_: Throwable) {}
+        }
     }
 
     @Keep

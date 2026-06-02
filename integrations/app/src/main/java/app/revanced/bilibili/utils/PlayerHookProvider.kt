@@ -9,7 +9,7 @@ import tv.danmaku.videoplayer.core.videoview.AspectRatio
 object PlayerHookProvider {
     @Keep
     @JvmStatic
-    private var getRenderServiceMethodName = ""
+    internal var getRenderServiceMethodName = ""
 
     @Keep
     @JvmStatic
@@ -17,7 +17,7 @@ object PlayerHookProvider {
 
     @Keep
     @JvmStatic
-    private var setAspectRatioMethodName = ""
+    internal var setAspectRatioMethodName = ""
 
     @Keep
     @JvmStatic

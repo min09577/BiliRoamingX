@@ -18,6 +18,7 @@ class CustomizePlayerFragment : BiliRoamingBaseSettingFragment() {
         findPreference<Preference>("long_press_speed")?.onClick { onPlaybackSpeedClick(true) }
         findPreference<Preference>("override_speed")?.onClick { onPlaybackSpeedOverrideClick() }
         findPreference<Preference>("custom_access_key")?.onClick { onCustomAccessKey() }
+        findPreference<Preference>("default_aspect_ratio")?.onClick { onAspectRatioClick() }
     }
 
     private fun onPlaybackSpeedClick(longPress: Boolean): Boolean {
@@ -91,6 +92,26 @@ class CustomizePlayerFragment : BiliRoamingBaseSettingFragment() {
                     }
                 }
             }.show()
+        return true
+    }
+
+    private fun onAspectRatioClick(): Boolean {
+        val options = arrayOf(
+            Utils.getString("biliroaming_aspect_ratio_default"),
+            Utils.getString("biliroaming_aspect_ratio_fit"),
+            Utils.getString("biliroaming_aspect_ratio_fill"),
+            "4:3",
+            "16:9"
+        )
+        AlertDialog.Builder(context)
+            .setTitle(Utils.getString("biliroaming_default_aspect_ratio_title"))
+            .setSingleChoiceItems(options, Settings.DefaultAspectRatio()) { dialog, which ->
+                Settings.DefaultAspectRatio.save(which)
+                dialog.dismiss()
+                Toasts.showShortWithId("biliroaming_save_ok")
+            }
+            .setNegativeButton(android.R.string.cancel, null)
+            .create().constraintSize().show()
         return true
     }
 
