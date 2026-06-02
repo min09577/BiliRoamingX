@@ -59,6 +59,10 @@ Based on BiliRoamingX v1.23.3, enhanced with AI-assisted development.
 
 ### Changelog
 
+#### 2026-06-02 (v1.35.0)
+- **New:** Comment sort by time — default comment sorting by time (newest first)
+- **Settings:** Added switch in comment filter settings
+
 #### 2026-06-02 (v1.34.0)
 - **New:** Danmaku keyword highlight — matching danmaku change to a prominent color (7 colors available)
 - **New:** Custom danmaku speed — control danmaku scroll speed (0-10 levels)
@@ -176,6 +180,10 @@ java -cp "$BC_JAR:$BCPKIX_JAR:revanced-cli.jar" app.revanced.cli.command.MainCom
 
 ### 更新日志
 
+#### 2026-06-02 (v1.35.0)
+- **新增：** 评论区默认按时间排序 — 开启后评论区默认按时间排序（最新评论在前）
+- **设置：** 评论过滤设置页面新增开关
+
 #### 2026-06-02 (v1.34.0)
 - **新增：** 弹幕关键词高亮 — 匹配关键词的弹幕会变成醒目颜色（支持7种颜色选择）
 - **新增：** 自定义弹幕速度 — 控制弹幕滚动速度（0-10级）
@@ -272,6 +280,10 @@ BiliRoamingX v1.23.3 ベース、AI支援開発で増強。
 
 ### 変更履歴
 
+#### 2026-06-02 (v1.35.0)
+- **新規：** コメント時間順ソート — 有効にするとコメントが時間順にソート（最新が最初）
+- **設定：** コメントフィルタ設定ページにスイッチを追加
+
 #### 2026-06-02 (v1.34.0)
 - **新規：** タン幕キーワードハイライト — マッチするタン幕が目立つ色に変更（7色選択可能）
 - **新規：** カスタムタン幕速度 — タン幕スクロール速度制御（0-10レベル）
@@ -355,6 +367,10 @@ BiliRoamingX v1.23.3 기반, AI 보조 개발로 강화.
 - **탄막 키워드 하이라이트**
 
 ### 변경 이력
+
+#### 2026-06-02 (v1.35.0)
+- **신규:** 댓글 시간순 정렬 — 활성화 시 댓글이 시간순으로 정렬 (최신이 먼저)
+- **설정:** 댓글 필터 설정 페이지에 스위치 추가
 
 #### 2026-06-02 (v1.34.0)
 - **신규:** 탄막 키워드 하이라이트 — 일치하는 탄막이 눈에 띄는 색상으로 변경 (7가지 색상 선택 가능)
