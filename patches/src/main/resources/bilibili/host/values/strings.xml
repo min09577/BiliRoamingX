@@ -558,6 +558,8 @@
     <string name="biliroaming_video_screenshot_summary">长按视频画面截取当前帧并保存到相册</string>
     <string name="biliroaming_video_screenshot_share_title">截图后分享</string>
     <string name="biliroaming_video_screenshot_share_summary">截图后自动弹出分享菜单</string>
+    <string name="biliroaming_video_loop_segment_title">A-B循环</string>
+    <string name="biliroaming_video_loop_segment_summary">设置循环起点和终点，反复播放某段内容（适合学习）</string>
 
     <string name="biliroaming_live_auto_sign_title">直播间自动签到</string>
     <string name="biliroaming_live_auto_sign_summary">进入直播间时自动签到获取奖励</string>

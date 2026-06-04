@@ -158,6 +158,10 @@
             android:summary="@string/biliroaming_video_screenshot_share_summary"
             android:title="@string/biliroaming_video_screenshot_share_title" />
         <androidx.preference.SwitchPreferenceCompat
+            android:key="video_loop_segment"
+            android:summary="@string/biliroaming_video_loop_segment_summary"
+            android:title="@string/biliroaming_video_loop_segment_title" />
+        <androidx.preference.SwitchPreferenceCompat
             android:key="disable_p2p_upload"
             android:summary="@string/biliroaming_disable_p2p_upload_summary"
             android:title="@string/biliroaming_disable_p2p_upload_title" />
