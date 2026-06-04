@@ -438,6 +438,8 @@
     <string name="biliroaming_danmaku_highlight_color_summary">选择高亮弹幕的颜色</string>
     <string name="biliroaming_comment_sort_time_title">评论区按时间排序</string>
     <string name="biliroaming_comment_sort_time_summary">评论区默认按时间排序（最新评论在前）</string>
+    <string name="biliroaming_comment_translate_title">评论翻译</string>
+    <string name="biliroaming_comment_translate_summary">长按评论可翻译为中文，支持Google和微软翻译服务</string>
     <string name="biliroaming_default_aspect_ratio_title">默认画面比例</string>
     <string name="biliroaming_default_aspect_ratio_summary">设置视频默认画面比例（0=默认 1=适应 2=填充）</string>
     <string name="biliroaming_aspect_ratio_default">默认</string>
