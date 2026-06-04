@@ -3,7 +3,7 @@
 # BiliRoamingX (AI Enhanced Fork)
 
 [![Source](https://img.shields.io/badge/Source-BiliRoamingX-blue)](https://github.com/BiliRoamingX/BiliRoamingX)
-[![Version](https://img.shields.io/badge/Version-1.32.0-green)](https://github.com/min09577/BiliRoamingX)
+[![Version](https://img.shields.io/badge/Version-1.39.0-green)](https://github.com/min09577/BiliRoamingX)
 [![AI](https://img.shields.io/badge/AI-Assisted-purple)](https://github.com/min09577/BiliRoamingX)
 
 </div>
