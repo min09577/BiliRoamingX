@@ -200,6 +200,10 @@ object Settings {
     @JvmField val RememberVideoPosition = BooleanSetting(key = "remember_video_position")
     @JvmField val VideoBookmark = BooleanSetting(key = "video_bookmark")
     @JvmField val CommentTranslate = BooleanSetting(key = "comment_translate")
+    @JvmField val AutoSkipIntro = BooleanSetting(key = "auto_skip_intro")
+    @JvmField val AutoSkipIntroDuration = IntSetting(key = "auto_skip_intro_duration", defValue = 0)
+    @JvmField val AutoSkipOutro = BooleanSetting(key = "auto_skip_outro")
+    @JvmField val AutoSkipOutroDuration = IntSetting(key = "auto_skip_outro_duration", defValue = 0)
 
     @JvmField val CommentSortByTime = BooleanSetting(key = "comment_sort_by_time")
     @JvmField val ShowCommentIpLocation = BooleanSetting(key = "show_comment_ip_location")

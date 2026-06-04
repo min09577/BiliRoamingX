@@ -133,6 +133,22 @@
             android:summary="@string/biliroaming_video_bookmark_summary"
             android:title="@string/biliroaming_video_bookmark_title" />
         <androidx.preference.SwitchPreferenceCompat
+            android:key="auto_skip_intro"
+            android:summary="@string/biliroaming_auto_skip_intro_summary"
+            android:title="@string/biliroaming_auto_skip_intro_title" />
+        <androidx.preference.Preference
+            android:key="auto_skip_intro_duration"
+            android:summary="@string/biliroaming_auto_skip_intro_duration_summary"
+            android:title="@string/biliroaming_auto_skip_intro_duration_title" />
+        <androidx.preference.SwitchPreferenceCompat
+            android:key="auto_skip_outro"
+            android:summary="@string/biliroaming_auto_skip_outro_summary"
+            android:title="@string/biliroaming_auto_skip_outro_title" />
+        <androidx.preference.Preference
+            android:key="auto_skip_outro_duration"
+            android:summary="@string/biliroaming_auto_skip_outro_duration_summary"
+            android:title="@string/biliroaming_auto_skip_outro_duration_title" />
+        <androidx.preference.SwitchPreferenceCompat
             android:key="disable_p2p_upload"
             android:summary="@string/biliroaming_disable_p2p_upload_summary"
             android:title="@string/biliroaming_disable_p2p_upload_title" />

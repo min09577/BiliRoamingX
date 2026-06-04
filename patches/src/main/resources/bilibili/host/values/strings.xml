@@ -546,6 +546,14 @@
     <string name="biliroaming_remember_video_position_summary">自动记住每个视频的播放进度，下次打开时从上次位置继续播放</string>
     <string name="biliroaming_video_bookmark_title">视频书签</string>
     <string name="biliroaming_video_bookmark_summary">在视频中添加带时间戳的书签和笔记，方便快速跳转到特定时刻</string>
+    <string name="biliroaming_auto_skip_intro_title">自动跳过片头</string>
+    <string name="biliroaming_auto_skip_intro_summary">自动跳过视频开头的片头部分</string>
+    <string name="biliroaming_auto_skip_intro_duration_title">片头时长（秒）</string>
+    <string name="biliroaming_auto_skip_intro_duration_summary">设置片头的时长，单位为秒</string>
+    <string name="biliroaming_auto_skip_outro_title">自动跳过片尾</string>
+    <string name="biliroaming_auto_skip_outro_summary">自动跳过视频结尾的片尾部分</string>
+    <string name="biliroaming_auto_skip_outro_duration_title">片尾时长（秒）</string>
+    <string name="biliroaming_auto_skip_outro_duration_summary">设置片尾的时长，单位为秒</string>
 
     <string name="biliroaming_live_auto_sign_title">直播间自动签到</string>
     <string name="biliroaming_live_auto_sign_summary">进入直播间时自动签到获取奖励</string>

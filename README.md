@@ -58,6 +58,7 @@ Based on BiliRoamingX v1.23.3, enhanced with AI-assisted development.
 - **Live room mosaic/overlay removal**
 - **Video bookmark**
 - **Comment translation**
+- **Auto-skip intro/outro**
 - **Danmaku keyword highlight**
 - **Custom danmaku speed**
 - **Danmaku display area control**
@@ -67,6 +68,7 @@ Based on BiliRoamingX v1.23.3, enhanced with AI-assisted development.
 #### 2026-06-04 (v1.39.0)
 - **New:** Video bookmark — add timestamped bookmarks and notes while watching videos for quick navigation
 - **New:** Comment translation — long press comments to translate to Chinese (Google/Microsoft)
+- **New:** Auto-skip intro/outro — automatically skip video intro and outro
 - **Settings:** Added toggles in player and comment settings
 
 #### 2026-06-02 (v1.38.0)
@@ -195,6 +197,7 @@ java -cp "$BC_JAR:$BCPKIX_JAR:revanced-cli.jar" app.revanced.cli.command.MainCom
 - **直播间去遮罩/马赛克**
 - **视频书签**
 - **评论翻译**
+- **自动跳过片头片尾**
 - **弹幕关键词高亮**
 - **自定义弹幕速度**
 - **弹幕显示区域控制**
@@ -204,6 +207,7 @@ java -cp "$BC_JAR:$BCPKIX_JAR:revanced-cli.jar" app.revanced.cli.command.MainCom
 #### 2026-06-04 (v1.39.0)
 - **新功能：** 视频书签 — 在视频中添加带时间戳的书签和笔记，方便快速跳转到特定时刻
 - **新功能：** 评论翻译 — 长按评论可翻译为中文，支持Google和微软翻译服务
+- **新功能：** 自动跳过片头片尾 — 自动跳过视频开头和结尾的片头片尾部分
 - **设置：** 播放器和评论设置中添加开关
 
 #### 2026-06-02 (v1.38.0)
@@ -315,6 +319,7 @@ BiliRoamingX v1.23.3 ベース、AI支援開発で強化。
 - **配信ルームモザイク/オーバーレイ削除**
 - **動画ブックマーク**
 - **コメント翻訳**
+- **自動イントロ/アウトロスキップ**
 - **弾幕キーワードハイライト**
 - **カスタム弾幕速度**
 - **弾幕表示エリア制御**
@@ -324,6 +329,7 @@ BiliRoamingX v1.23.3 ベース、AI支援開発で強化。
 #### 2026-06-04 (v1.39.0)
 - **新機能：** 動画ブックマーク — 動画視聴中にタイムスタンプ付きブックマークとメモを追加し、特定の場面に素早くジャンプ可能
 - **新機能：** コメント翻訳 — コメントを長押しで中国語に翻訳（Google/マイクロソフト）
+- **新機能：** 自動イントロ/アウトロスキップ — 動画のイントロとアウトロを自動的にスキップ
 - **設定：** プレイヤーとコメント設定にトグル追加
 
 #### 2026-06-02 (v1.38.0)
@@ -435,6 +441,7 @@ BiliRoamingX v1.23.3 기반, AI 지원 개발로 강화.
 - **라이브룸 모자이크/오버레이 제거**
 - **비디오 북마크**
 - **댓글 번역**
+- **자동 인트로/아웃로 건너뛰기**
 - **탄막 키워드 하이라이트**
 - **사용자 정의 탄막 속도**
 - **탄막 표시 영역 제어**
@@ -444,6 +451,7 @@ BiliRoamingX v1.23.3 기반, AI 지원 개발로 강화.
 #### 2026-06-04 (v1.39.0)
 - **새 기능:** 비디오 북마크 — 비디오 시청 중 타임스탬프가 있는 북마크와 메모를 추가하여 특정 장면으로 빠르게 이동
 - **새 기능:** 댓글 번역 — 댓글을 길게 눌러 중국어로 번역 (Google/마이크로소프트)
+- **새 기능:** 자동 인트로/아웃로 건너뛰기 — 비디오 인트로와 아웃로를 자동으로 건너뛰기
 - **설정:** 플레이어와 댓글 설정에 토글 추가
 
 #### 2026-06-02 (v1.38.0)
