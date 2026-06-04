@@ -207,6 +207,7 @@ object Settings {
     @JvmField val VideoScreenshot = BooleanSetting(key = "video_screenshot")
     @JvmField val VideoScreenshotShare = BooleanSetting(key = "video_screenshot_share")
     @JvmField val VideoLoopSegment = BooleanSetting(key = "video_loop_segment")
+    @JvmField val SpeedBadge = BooleanSetting(key = "speed_badge")
 
     @JvmField val CommentSortByTime = BooleanSetting(key = "comment_sort_by_time")
     @JvmField val ShowCommentIpLocation = BooleanSetting(key = "show_comment_ip_location")
