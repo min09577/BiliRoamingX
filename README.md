@@ -1,4 +1,4 @@
-﻿<div align="center">
+<div align="center">
 
 # BiliRoamingX (AI Enhanced Fork)
 
@@ -10,7 +10,7 @@
 
 ---
 
-## [English](#english) | [����](#����) | [�ձ��Z](#�ձ��Z) | [???](#???)
+## [English](#english) | [中文](#中文) | [日本語](#日本語) | [한국어](#한국어)
 
 ---
 
@@ -57,6 +57,9 @@ Based on BiliRoamingX v1.23.3, enhanced with AI-assisted development.
 - **Live room watermark removal**
 - **Live room mosaic/overlay removal**
 - **Video bookmark**
+- **Danmaku keyword highlight**
+- **Custom danmaku speed**
+- **Danmaku display area control**
 
 ### Changelog
 
@@ -65,66 +68,55 @@ Based on BiliRoamingX v1.23.3, enhanced with AI-assisted development.
 - **Settings:** Added toggle in player settings
 
 #### 2026-06-02 (v1.38.0)
-- **New:** Live room auto sign-in �� automatically sign in when entering live room to get daily rewards
-- **Settings:** Added toggle in live room settings page
-
-#### 2026-06-02 (v1.37.0)
-- **New:** Remember video playback position �� automatically save and restore playback position for each video
-- **Settings:** Added toggle in player settings
-
-
-#### 2026-06-02 (v1.38.0)
 - **New:** Live room auto sign-in — automatically sign in when entering live room to get daily rewards
 - **Settings:** Added toggle in live room settings page
 
 #### 2026-06-02 (v1.37.0)
 - **New:** Remember video playback position — automatically save and restore playback position for each video
 - **Settings:** Added toggle in player settings
+
 #### 2026-06-02 (v1.36.0)
-- **New:** Default video aspect ratio �� set default video aspect ratio (Default/Fit/Fill)
+- **New:** Default video aspect ratio — set default video aspect ratio (Default/Fit/Fill)
 - **Settings:** Added selection dialog in player settings
 
 #### 2026-06-02 (v1.35.0)
-- **New:** Comment sort by time �� default comment sorting by time (newest first)
+- **New:** Comment sort by time — default comment sorting by time (newest first)
 - **Settings:** Added switch in comment filter settings
 
 #### 2026-06-02 (v1.34.0)
-- **New:** Danmaku keyword highlight �� matching danmaku change to a prominent color (7 colors available)
-- **New:** Custom danmaku speed �� control danmaku scroll speed (0-10 levels)
-- **New:** Danmaku display area �� customize danmaku display area percentage (0-100%)
+- **New:** Danmaku keyword highlight — matching danmaku change to a prominent color (7 colors available)
+- **New:** Custom danmaku speed — control danmaku scroll speed (0-10 levels)
+- **New:** Danmaku display area — customize danmaku display area percentage (0-100%)
 - **Settings:** Danmaku display settings page with speed/area sliders and keyword highlight input
 
 #### 2026-06-02 (v1.32.0 ~ v1.33.0)
-- **v1.33.0:** Custom danmaku speed & display area �� hooks DmViewReply to modify playerDanmakuSpeed and playerDanmakuDomain
-- **v1.32.0:** Live room watermark removal �� recursive view tree traversal with resource ID matching
-- **v1.32.0:** Live room mosaic removal �� removes overlay/mask views from live streams
+- **v1.33.0:** Custom danmaku speed & display area — hooks DmViewReply to modify playerDanmakuSpeed and playerDanmakuDomain
+- **v1.32.0:** Live room watermark removal — recursive view tree traversal with resource ID matching
+- **v1.32.0:** Live room mosaic removal — removes overlay/mask views from live streams
 - **v1.32.0:** CID display in video codec info toast
-- **New:** Live room watermark removal �� recursive view tree traversal with resource ID matching
-- **New:** Live room mosaic removal �� removes overlay/mask views from live streams
-- **New:** CID display in video codec info toast
 - **Build:** Full 70+ patches build successful, signed with BKS keystore
 
 #### 2026-06-01 (v1.29.0 ~ v1.31.0)
-- **v1.31.0:** Video description auto-expand �� hooks ExpandableLayout via reflection to expand video description on load
-- **v1.31.0:** Hide floating button �� hides mini-player floating button on video detail page
-- **v1.30.0:** Loop play �� auto replay video when playback finishes (relates feed injection)
-- **v1.29.0:** Block comment search keywords �� hooks ReplyMainList to clear unwanted search topics
-- **v1.29.0:** Disable homepage auto-refresh �� prevents automatic content refresh on homepage
+- **v1.31.0:** Video description auto-expand — hooks ExpandableLayout via reflection to expand video description on load
+- **v1.31.0:** Hide floating button — hides mini-player floating button on video detail page
+- **v1.30.0:** Loop play — auto replay video when playback finishes (relates feed injection)
+- **v1.29.0:** Block comment search keywords — hooks ReplyMainList to clear unwanted search topics
+- **v1.29.0:** Disable homepage auto-refresh — prevents automatic content refresh on homepage
 
 #### 2026-05-30 (v1.28.0)
-- **Fix:** Register error in CopyEnhancePatch �� ConversationCopy injection used `invoke-static {p0, p2, v0}` where p0 mapped to v16+ (beyond 4-bit register limit). Fixed with `move-object/from16` to low registers
-- **Fix:** APK signing failure �� JDK 17 JCE refused to authenticate unsigned BouncyCastle in fat CLI jar. Solution: put standalone signed BC 1.77 JARs on classpath before CLI
-- **New:** Video description auto-expand (VideoDescExpandPatch) �� hooks ExpandableLayout to auto-expand video description
+- **Fix:** Register error in CopyEnhancePatch — ConversationCopy injection used `invoke-static {p0, p2, v0}` where p0 mapped to v16+ (beyond 4-bit register limit). Fixed with `move-object/from16` to low registers
+- **Fix:** APK signing failure — JDK 17 JCE refused to authenticate unsigned BouncyCastle in fat CLI jar. Solution: put standalone signed BC 1.77 JARs on classpath before CLI
+- **New:** Video description auto-expand (VideoDescExpandPatch) — hooks ExpandableLayout to auto-expand video description
 - **New:** Hide floating button option
 - **Build:** Full 70+ patches build successful with signing
 
 #### 2026-05-29 (v1.25.0 ~ v1.27.0)
-- **v1.27.0:** Force HDR quality toggle �� fnval=MAX_FNVAL, fourk=true, qn=125
+- **v1.27.0:** Force HDR quality toggle — fnval=MAX_FNVAL, fourk=true, qn=125
 - **v1.26.0:** Danmaku time offset (-30~+30s) + pool filter (0=all, 1=normal, 2=subtitle, 3=special)
-- **v1.25.0:** Video info panel enhancement �� UP MID, follower count, share count; Comment floor number + reply count display
+- **v1.25.0:** Video info panel enhancement — UP MID, follower count, share count; Comment floor number + reply count display
 - **New patches:** DanmakuKeywordFilter, ShowCodecInfo, DanmakuDisplay adjustments, Screenshot/Recording unlock, Comment IP location, AV/BV number display, Video statistics panel (play/danmaku/like/coin/fav/reply)
 
-#### 2026-05-28 (v1.23.3 �� v1.24.1)
+#### 2026-05-28 (v1.23.3 ~ v1.24.1)
 - **Critical fixes:** All 70+ patches adapted for bilibili 8.95.0
   - Fingerprint graceful degradation (return instead of throw on mismatch)
   - DmAdvert reflection fix (NoClassDefFoundError)
@@ -132,7 +124,7 @@ Based on BiliRoamingX v1.23.3, enhanced with AI-assisted development.
 - **New patches:** SplashAd (OkHttp hook), EndpageCharge (charging page block), RelatedGames (game recommendation block)
 - **Ad removal:** Full UI configuration completed (homepage, video detail, live room, dynamic, my page)
 
-#### 2026-05-27 (v1.23.3 �� Initial Fork)
+#### 2026-05-27 (v1.23.3 — Initial Fork)
 - Forked from BiliRoamingX/BiliRoamingX
 - Local build fix (copy libbiliroamingx.so to patches resources)
 - theseus_playlist_default_order fix for 8.95.0
@@ -159,329 +151,236 @@ java -cp "$BC_JAR:$BCPKIX_JAR:revanced-cli.jar" app.revanced.cli.command.MainCom
 
 ---
 
-<a name="����"></a>
-## ����
+<a name="中文"></a>
+## 中文
 
-### BiliRoamingX - AI ��ǿ��
+### BiliRoamingX - AI 增强版
 
-���� BiliRoamingX v1.23.3���� AI ����������ǿ��
+基于 BiliRoamingX v1.23.3，通过 AI 辅助开发进行增强。
 
-**Ŀ��汾��** �������� 8.95.0��Android 64λ��
+**目标版本：** 哔哩哔哩 8.95.0（Android 64位）
 
-**״̬��** 70+ ����ȫ���������������Ĺ�������֤
+**状态：** 70+ 补丁全部正常工作，所有核心功能已验证
 
-### ��������
-- ���������������
-- �Ƴ�ҳ���������桢���Ա�������ע��ť��
-- �Զ��岥���ٶȣ�Ĭ�� + �������٣�
-- �Զ���ֱ��/��ƵĬ�ϻ���
-- ǿ�� HDR ����
-- ��Ļ��ʽ���� + ����/����
-- ���������Ƶ������Ļ
-- �Զ���ȡ B ��
-- �������Ӿ���
-- �Ƽ������š���̬����
-- ��ɫģʽ��������
-- �������ۺ���Ƶ��Ϣ���� IP ���ء�¥��š��ظ�����
-- �����ⲿ������
-- ����������Σ�OkHttp API hook��
-- �����лҳ�� & ��Ϸ�Ƽ�����
-- �����Կ����ʣ��Ƴ� deadline ������
-- ��Ļ�ؼ��ʹ��ˣ����� + ���ı���
-- ��Ļ��ʾ���ƣ�͸���ȡ��ܶȡ��ֺš�ʱ��ƫ�ơ���Ļ�ع��ˣ�
-- ��Ƶ������Ϣ��ʾ�����������ֱ��ʡ����ʡ�CID��UP����Ϣ��
-- ��Ƶͳ����壨����������Ļ�������ޡ�Ͷ�ҡ��ղء���������
-- ��ͼ/¼������
-- ��Ƶ����Զ�չ�� + ���ظ�����ť
-- �Զ�����������
-- �������������ؼ���
-- ��ֹ��ҳ�Զ�ˢ��
-- ѭ�����ţ������Զ��ز���
-- **ֱ����ȥˮӡ**
-- **ֱ����ȥ����������**
-- **�Զ��嵯Ļ�ٶ�**
-- **��Ļ��ʾ�������**
-- **��Ļ�ؼ��ʸ���**
+### 功能列表
+- 解除番剧地区限制
+- 移除页面组件（广告、会员购、关注按钮等）
+- 自定义播放速度（默认 + 长按倍速）
+- 自定义直播/视频默认清晰度
+- 强制 HDR 画质
+- 字幕样式调整 + 导入/保存
+- 双指缩放视频铺满屏幕
+- 自动领取 B 币
+- 分享链接净化
+- 推荐、热门、动态过滤
+- 深色模式闪屏背景
+- 复制评论和视频信息（含 IP 归属地、楼层号、回复数）
+- 调用外部下载器
+- 闪屏广告移除（OkHttp API hook）
+- 充电结束页 & 游戏推荐屏蔽
+- 试用画质无限制（移除 deadline 参数）
+- 弹幕关键词过滤（正则 + 纯文本）
+- 弹幕显示控制（透明度、密度、字号、时间偏移、弹幕池过滤）
+- 视频编解码信息显示（编码、分辨率、码率、CID、UP主信息）
+- 视频统计面板（播放数、弹幕数、点赞、投币、收藏、评论数）
+- 截图/录屏解锁
+- 视频简介自动展开 + 隐藏浮动按钮
+- 自定义闪屏页
+- 屏蔽评论搜索关键词
+- 禁止首页自动刷新
+- 循环播放（播完自动重播）
+- **直播间去水印**
+- **直播间去遮罩/马赛克**
+- **视频书签**
+- **弹幕关键词高亮**
+- **自定义弹幕速度**
+- **弹幕显示区域控制**
 
-### ������־
+### 更新日志
 
+#### 2026-06-04 (v1.39.0)
+- **新功能：** 视频书签 — 在视频中添加带时间戳的书签和笔记，方便快速跳转到特定时刻
+- **设置：** 播放器设置中添加开关
 
 #### 2026-06-02 (v1.38.0)
-- **New:** Live room auto sign-in — automatically sign in when entering live room to get daily rewards
-- **Settings:** Added toggle in live room settings page
+- **新功能：** 直播间自动签到 — 进入直播间时自动签到获取每日奖励
+- **设置：** 直播间设置页面添加开关
 
 #### 2026-06-02 (v1.37.0)
-- **New:** Remember video playback position — automatically save and restore playback position for each video
-- **Settings:** Added toggle in player settings
+- **新功能：** 记忆播放位置 — 自动记住每个视频的播放进度，下次打开时从上次位置继续播放
+- **设置：** 播放器设置中添加开关
+
 #### 2026-06-02 (v1.36.0)
-- **������** Ĭ����Ƶ������� �� ������ƵĬ�ϻ��������Ĭ��/��Ӧ/��䣩
-- **���ã�** ����������ҳ������ѡ��Ի���
+- **新功能：** 默认视频宽高比 — 设置视频默认宽高比（默认/适应/填充）
+- **设置：** 播放器设置中添加选择对话框
 
 #### 2026-06-02 (v1.35.0)
-- **������** ������Ĭ�ϰ�ʱ������ �� ������������Ĭ�ϰ�ʱ����������������ǰ��
-- **���ã�** ���۹�������ҳ����������
+- **新功能：** 评论按时间排序 — 评论默认按时间排序（最新优先）
+- **设置：** 评论过滤设置中添加开关
 
 #### 2026-06-02 (v1.34.0)
-- **������** ��Ļ�ؼ��ʸ��� �� ƥ��ؼ��ʵĵ�Ļ������Ŀ��ɫ��֧��7����ɫѡ��
-- **������** �Զ��嵯Ļ�ٶ� �� ���Ƶ�Ļ�����ٶȣ�0-10����
-- **������** ��Ļ��ʾ���� �� �Զ��嵯Ļ��ʾ����ٷֱȣ�0-100%��
-- **���ã�** ��Ļ��ʾ����ҳ�������ٶ�/���򻬿�͹ؼ��ʸ��������
+- **新功能：** 弹幕关键词高亮 — 匹配关键词的弹幕变为醒目颜色（支持7种颜色选择）
+- **新功能：** 自定义弹幕速度 — 控制弹幕滚动速度（0-10级）
+- **新功能：** 弹幕显示区域 — 自定义弹幕显示区域百分比（0-100%）
+- **设置：** 弹幕显示设置页面，含速度/区域滑块和关键词高亮输入框
 
 #### 2026-06-02 (v1.32.0 ~ v1.33.0)
-- **v1.33.0:** �Զ��嵯Ļ�ٶ� & ��ʾ���� �� hook DmViewReply �޸� playerDanmakuSpeed �� playerDanmakuDomain
-- **v1.32.0:** ֱ����ȥˮӡ �� �ݹ���ͼ������ + ��Դ ID ƥ���Ƴ����Ͻ�ˮӡ
-- **v1.32.0:** ֱ����ȥ������ �� �Ƴ�ֱ�����е�����/�����˸��ǲ�
-- **v1.32.0:** ��Ƶ������Ϣ Toast ��ʾ CID
-- **������** 70+ ����ȫ���ɹ���BKS keystore ǩ��
+- **v1.33.0：** 自定义弹幕速度 & 显示区域 — hook DmViewReply 修改 playerDanmakuSpeed 和 playerDanmakuDomain
+- **v1.32.0：** 直播间去水印 — 递归遍历视图树 + 资源ID匹配移除右上角水印
+- **v1.32.0：** 直播间去遮罩 — 移除直播流中的蒙版/马赛克覆盖层
+- **v1.32.0：** 视频编解码信息 Toast 显示 CID
+- **构建：** 70+ 补丁全部构建成功，BKS keystore 签名
 
 #### 2026-06-01 (v1.29.0 ~ v1.31.0)
-- **v1.31.0��** ��Ƶ����Զ�չ�� �� ͨ������ hook ExpandableLayout������ʱ�Զ�չ����Ƶ����
-- **v1.31.0��** ���ظ�����ť �� ������Ƶ����ҳС�����Ÿ�����ť
-- **v1.30.0��** ѭ������ �� ��Ƶ�����Զ��ز���ע�� relates feed��
-- **v1.29.0��** �������������ؼ��� �� hook ReplyMainList �������Ҫ����������
-- **v1.29.0��** ��ֹ��ҳ�Զ�ˢ�� �� ��ֹ��ҳ�����Զ�ˢ��
+- **v1.31.0：** 视频简介自动展开 — 通过反射 hook ExpandableLayout，加载时自动展开视频简介
+- **v1.31.0：** 隐藏浮动按钮 — 隐藏视频详情页小窗播放浮动按钮
+- **v1.30.0：** 循环播放 — 视频播完自动重播（注入 relates feed）
+- **v1.29.0：** 屏蔽评论搜索关键词 — hook ReplyMainList 清除不需要的搜索话题
+- **v1.29.0：** 禁止首页自动刷新 — 阻止首页内容自动刷新
 
 #### 2026-05-30 (v1.28.0)
-- **�޸���** CopyEnhancePatch �Ĵ������� �� ConversationCopy ע�� `invoke-static {p0, p2, v0}` �� p0 ӳ�䵽 v16+ ���� 4-bit ���ƣ��� `move-object/from16` �����ͼĴ������
-- **�޸���** APK ǩ��ʧ�� �� JDK 17 JCE �ܾ���֤ CLI ��Ƕ��δǩ�� BouncyCastle��������ǩ���� BC 1.77 JAR ���� classpath ��ǰ����
-- **������** ��Ƶ����Զ�չ����VideoDescExpandPatch��
-- **������** ���ظ�����ťѡ��
+- **修复：** CopyEnhancePatch 寄存器错误 — ConversationCopy 注入使用 `invoke-static {p0, p2, v0}` 其中 p0 映射到 v16+（超出 4-bit 限制）。使用 `move-object/from16` 移动到低寄存器解决
+- **修复：** APK 签名失败 — JDK 17 JCE 拒绝验证 CLI jar 中嵌入的未签名 BouncyCastle。解决方法：将独立签名的 BC 1.77 JAR 放在 classpath 前面
+- **新功能：** 视频简介自动展开（VideoDescExpandPatch）
+- **新功能：** 隐藏浮动按钮选项
+- **构建：** 70+ 补丁全部构建成功并签名
 
 #### 2026-05-29 (v1.25.0 ~ v1.27.0)
-- **v1.27.0��** ǿ�� HDR ���ʿ��� �� fnval=MAX_FNVAL, fourk=true, qn=125
-- **v1.26.0��** ��Ļʱ��ƫ�ƣ�-30~+30s��+ ��Ļ�ع��ˣ�0=ȫ��, 1=��ͨ, 2=��Ļ, 3=���⣩
-- **v1.25.0��** ��Ƶ��Ϣ�����ǿ �� UP�� MID����˿����������������¥��� + �ظ�����ʾ
-- **�²�����** ��Ļ�ؼ��ʹ��ˡ�������Ϣ��ʾ����Ļ��ʾ��������ͼ/¼������������ IP ���ء�AV/BV ����ʾ����Ƶͳ�����
+- **v1.27.0：** 强制 HDR 画质开关 — fnval=MAX_FNVAL, fourk=true, qn=125
+- **v1.26.0：** 弹幕时间偏移（-30~+30s）+ 弹幕池过滤（0=全部, 1=普通, 2=字幕, 3=特殊）
+- **v1.25.0：** 视频信息面板增强 — UP主 MID、粉丝数、分享数；评论楼层号 + 回复数显示
+- **新补丁：** 弹幕关键词过滤、编解码信息显示、弹幕显示调整、截图/录屏解锁、评论 IP 归属地、AV/BV 号显示、视频统计面板
 
-#### 2026-05-28 (v1.23.3 �� v1.24.1)
-- **�ؼ��޸���** 70+ ����ȫ�������������� 8.95.0
-  - Fingerprint �ݴ�����ƥ��ʱ return ��� throw��
-  - DmAdvert �����޸���NoClassDefFoundError��
-  - VerifyError �޸������� goto ָ���޸ģ�
-- **�²�����** ����������Σ�OkHttp hook���������л���Ρ���Ϸ�Ƽ�����
-- **ȥ��棺** ȫ UI ������ɣ���ҳ����Ƶ���顢ֱ���䡢��̬���ҵ�ҳ��
+#### 2026-05-28 (v1.23.3 ~ v1.24.1)
+- **关键修复：** 70+ 补丁全部适配哔哩哔哩 8.95.0
+  - Fingerprint 优雅降级（不匹配时 return 而非 throw）
+  - DmAdvert 反射修复（NoClassDefFoundError）
+  - VerifyError 修复（禁用 goto 指令修改）
+- **新补丁：** 闪屏广告（OkHttp hook）、充电结束页、游戏推荐屏蔽
+- **去广告：** 全 UI 配置完成（首页、视频详情、直播间、动态、我的页）
 
-#### 2026-05-27 (v1.23.3 �� ��ʼ Fork)
-- �� BiliRoamingX/BiliRoamingX fork
-- ���ع����޸������� libbiliroamingx.so �� patches ��ԴĿ¼��
-- 8.95.0 theseus_playlist_default_order �޸�
-- PlayerSettingHelperFingerprint 8.95.0 �������޸�
-- 60+ ������ MuMu ģ��������֤ͨ��
-- README ������֧��
+#### 2026-05-27 (v1.23.3 — 初始 Fork)
+- 从 BiliRoamingX/BiliRoamingX fork
+- 本地构建修复（复制 libbiliroamingx.so 到 patches 资源目录）
+- 8.95.0 theseus_playlist_default_order 修复
+- PlayerSettingHelperFingerprint 8.95.0 兼容性修复
+- 60+ 补丁在 MuMu 模拟器验证通过
+- README 四语言支持
 
 ---
 
-<a name="�ձ��Z"></a>
-## �ձ��Z
+<a name="日本語"></a>
+## 日本語
 
-### BiliRoamingX - AI ������
+### BiliRoamingX - AI 強化版
 
-BiliRoamingX v1.23.3 �٩`����AI֧Ԯ�_�k�ǉ�����
+BiliRoamingX v1.23.3 ベース、AI支援開発で強化。
 
-**����Щ`�����** �ӥ�ӥ� 8.95.0��Android 64�ӥåȣ�
+**対象バージョン：** ビリビリ 8.95.0（Android 64ビット）
 
-**���Ʃ`������** 70+ �ѥå�ȫ�Ƅ����������C�ܗ��^�g��
+**ステータス：** 70+ パッチすべて正常動作、全コア機能検証済み
 
-### �C��
-- ���˥�������޽��
-- �ک`������ݩ`�ͥ���������ڸ桢VIP�Хʩ`���ե����`�ܥ���
-- �������������ٶȣ��ǥե���� + �LѺ�����٣�
-- ������������/�ӥǥ��ǥե���Ȼ��|
-- HDR���|����
-- ��Ļ���������{�� + ����ݩ`��/����
-- �ԥ�����`��ǻ��椤�äѤ��˥ӥǥ�����
-- B�������Ԅ��ܤ�ȡ��
-- ���Х�󥯾���
-- �������ᡢ�˚ݡ��ӑB�ե��륿���
-- ���`����`�ɥ��ץ�å��屳��
-- ������?�ӥǥ���󥳥ԩ`��IP���ڵء��ե������š����������ࣩ
-- �ⲿ��������`���`���ӳ���
-- ���ץ�å���ڸ�֥��å���OkHttp API hook��
-- ����`���󥰸��x�ک`�������`�प������֥��å�
-- �o��ԇ�����|��deadline�ѥ��`����ȥ��
-- ����Ļ���`��`�ɥե��륿����Ҏ���F + �ƥ����ȣ�
-- ����Ļ��ʾ������͸���ȡ��ܶȡ��ե���ȥ������������४�ե��åȡ��ש`��ե��륿��
-- �ӥǥ����`�ǥå�����ʾ�����`�ǥå�������ȡ��ӥåȥ�`�ȡ�CID��UP�����
-- �ӥǥ��yӋ�ѥͥ루������������Ļ���������͡������󡢤��ݤ���ꡢ����������
-- ������`�󥷥�å�/�h�����å����
-- �ӥǥ��h���Ԅ�չ�_ + �ե��`�ƥ��󥰥ܥ���Ǳ�ʾ
-- �������ॹ�ץ�å��廭��
-- �����ȗ������`��`�ɥ֥��å�
-- �۩`��ک`���ԄӸ��o��
-- ��`���������K�����Ԅӥ�ץ쥤��
-- **���ť�`�०���`���`�ީ`����ȥ**
-- **���ť�`��⥶������ȥ**
-- **�������ॿ��Ļ�ٶ�**
-- **����Ļ��ʾ���ꥢ����**
-- **����Ļ���`��`�ɥϥ��饤��**
+### 機能一覧
+- 番組エリア制限解除
+- ページコンポーネント削除（広告、VIP セクション、フォローボタンなど）
+- カスタム再生速度（デフォルト + 長押し倍速）
+- カスタム配信/動画デフォルト画質
+- HDR 画質強制
+- 字幕スタイル調整 + インポート/保存
+- ピンチズームで動画を全画面に表示
+- B コイン自動受け取り
+- シェアリンク净化
+- おすすめ、人気、動態フィルタリング
+- ダークモードスプラッシュ背景
+- コメントと動画情報のコピー（IP 所在地、フロア番号、返信数含む）
+- 外部ダウンローダー呼び出し
+- スプラッシュ広告削除（OkHttp API hook）
+- チャージング終了ページ & ゲームおすすめブロック
+- 試用画質無制限（deadline パラメータ削除）
+- 弾幕キーワードフィルタ（正規表現 + テキスト）
+- 弾幕表示制御（透明度、密度、フォントスケール、時間オフセット、弾幕プールフィルタ）
+- 動画コーデック情報表示（コーデック、解像度、ビットレート、CID、UP主情報）
+- 動画統計パネル（再生数、弾幕数、いいね、コイン、お気に入り、コメント数）
+- スクリーンショット/録画アンロック
+- 動画説明自動展開 + フローティングボタン非表示
+- カスタムスプラッシュスクリーン
+- コメント検索キーワードブロック
+- ホームページ自動更新無効
+- ループ再生（終了後自動リプレイ）
+- **配信ルームウォーターマーク削除**
+- **配信ルームモザイク/オーバーレイ削除**
+- **動画ブックマーク**
+- **弾幕キーワードハイライト**
+- **カスタム弾幕速度**
+- **弾幕表示エリア制御**
 
-### ����Ěs
+### 変更履歴
 
-
-#### 2026-06-02 (v1.38.0)
-- **New:** Live room auto sign-in — automatically sign in when entering live room to get daily rewards
-- **Settings:** Added toggle in live room settings page
-
-#### 2026-06-02 (v1.37.0)
-- **New:** Remember video playback position — automatically save and restore playback position for each video
-- **Settings:** Added toggle in player settings
-#### 2026-06-02 (v1.36.0)
-- **��Ҏ��** �ǥե���ȥӥǥ������ڥ��ȱ� �� �ǥե���ȤΥӥǥ������ڥ��ȱȤ��O�����ǥե����/�ե��å�/�ե��룩
-- **�O����** �ץ쥤��`�O���ک`�����x�k������������׷��
-
-#### 2026-06-02 (v1.35.0)
-- **��Ҏ��** �����ȕr�g혥��`�� �� �Є��ˤ���ȥ����Ȥ��r�g혤˥��`�ȣ����¤������
-- **�O����** �����ȥե��륿�O���ک`���˥����å���׷��
-
-#### 2026-06-02 (v1.34.0)
-- **��Ҏ��** ����Ļ���`��`�ɥϥ��饤�� �� �ޥå����륿��Ļ��Ŀ����ɫ�ˉ����7ɫ�x�k���ܣ�
-- **��Ҏ��** �������ॿ��Ļ�ٶ� �� ����Ļ�������`���ٶ�������0-10��٥룩
-- **��Ҏ��** ����Ļ��ʾ���ꥢ �� ����Ļ��ʾ���ꥢ�Υѩ`����Ʃ`���򥫥����ޥ�����0-100%��
-- **�O����** ����Ļ��ʾ�O���ک`�����ٶ�/���ꥢ���饤���`�ȥ��`��`�ɥϥ��饤������׷��
-
-#### 2026-06-02 (v1.32.0 ~ v1.33.0)
-- **v1.33.0��** �������ॿ��Ļ�ٶ� & ��ʾ���ꥢ �� DmViewReply��hook����playerDanmakuSpeed��playerDanmakuDomain����
-- **v1.32.0��** ���ť�`�०���`���`�ީ`����ȥ �� �َ��ӥ�`�ĥ�`�ȥ�Щ`���� + �꥽�`��ID�ޥå���
-- **v1.32.0��** ���ť�`��⥶������ȥ �� ���ť��ȥ�`��Υ��`�Щ`�쥤/�ޥ����ӥ�`���ȥ
-- **v1.32.0��** �ӥǥ����`�ǥå����Toast��CID��ʾ
-
-#### 2026-06-01 (v1.29.0 ~ v1.31.0)
-- **v1.31.0��** �ӥǥ��h���Ԅ�չ�_ �� ��ե쥯�����U�ɤ�ExpandableLayout��hook
-- **v1.31.0��** �ե��`�ƥ��󥰥ܥ���Ǳ�ʾ �� �ӥǥ�Ԕ���ک`���Υߥ˥ץ�`��`�ܥ���Ǳ�ʾ
-- **v1.30.0��** ��`������ �� �����K�˕r�Ԅӥ�ץ쥤��relates feedע�룩
-- **v1.29.0��** �����ȗ������`��`�ɥ֥��å� �� ReplyMainList��hook���Ɨ����ȥԥå��򥯥ꥢ
-- **v1.29.0��** �۩`��ک`���ԄӸ��o�� �� ����ƥ���ԄӸ��¤��ֹ
-
-#### 2026-05-30 (v1.28.0)
-- **������** CopyEnhancePatch�쥸��������` �� `invoke-static {p0, p2, v0}`��p0��v16+�˥ޥåԥ󥰣�4�ӥå����޳��^����`move-object/from16`�ǵ�λ�쥸�������ƄӤ��ƽ�Q
-- **������** APK����ʧ�� �� JDK 17 JCE��CLI���i��δ����BouncyCastle��ܷ񡣶��������g��BC 1.77 JAR��classpath��ǰ�������ä��ƽ�Q
-
-#### 2026-05-29 (v1.25.0 ~ v1.27.0)
-- **v1.27.0��** HDR���|���ƥȥ���
-- **v1.26.0��** ����Ļ�����४�ե��åȣ�-30~+30s��+ �ש`��ե��륿
-- **v1.25.0��** �ӥǥ����ѥͥ돊�� �� �����ȥե������� + ��������ʾ
-
-#### 2026-05-28 (v1.23.3 �� v1.24.1)
-- **��Ҫ������** 70+�ѥå���ӥ�ӥ� 8.95.0����ȫ�m��
-- **�¥ѥå���** ���ץ�å���ڸ�֥��å�������`���󥰸��x�֥��å������`�प������֥��å�
-
-#### 2026-05-27 (v1.23.3 �� ����Fork)
-- BiliRoamingX/BiliRoamingX����ե��`��
-- 60+�ѥå���MuMu���ߥ��`���`�Ǘ��^�g��
-
----
-
-<a name="???"></a>
-## ???
-
-### BiliRoamingX - AI ???
-
-BiliRoamingX v1.23.3 ??, AI ?? ??? ??.
-
-**?? ??:** ???? 8.95.0 (Android 64??)
-
-**??:** 70+ ?? ?? ?? ??, ?? ?? ?? ??
-
-### ??
-- ????? ?? ?? ??
-- ??? ???? ?? (??, VIP ??, ??? ??)
-- ??? ?? ?? ?? (?? + ?? ?? ??)
-- ??? ?? ??/??? ?? ??
-- HDR ?? ??
-- ?? ??? ?? + ????/??
-- ?? ??? ?? ?? ??? ??
-- B?? ?? ??
-- ?? ?? ??
-- ??, ??, ?? ???
-- ?? ?? ???? ??
-- ?? ? ??? ?? ?? (IP ??, ? ??, ?? ? ??)
-- ?? ???? ??
-- ???? ?? ?? (OkHttp API hook)
-- ?? ?? ??? & ?? ?? ??
-- ?? ?? ?? (deadline ???? ??)
-- ?? ??? ?? (??? + ???)
-- ?? ?? ?? (???, ??, ?? ??, ?? ???, ? ??)
-- ??? ?? ?? ?? (??, ???, ?????, CID, UP? ??)
-- ??? ?? ?? (???, ???, ???, ??, ????, ???)
-- ????/?? ?? ??
-- ??? ?? ?? ??? + ??? ?? ???
-- ??? ?? ???? ??
-- ?? ?? ??? ??
-- ???? ?? ???? ????
-- ?? ?? (?? ? ?? ????)
-- **?? ???? ??**
-- **?? ???? ??**
-- **??? ?? ?? ??**
-- **?? ?? ?? ??**
-- **?? ??? ?????**
-
-### ?? ??
-
+#### 2026-06-04 (v1.39.0)
+- **新機能：** 動画ブックマーク — 動画視聴中にタイムスタンプ付きブックマークとメモを追加し、特定の場面に素早くジャンプ可能
+- **設定：** プレイヤー設定にトグル追加
 
 #### 2026-06-02 (v1.38.0)
-- **New:** Live room auto sign-in — automatically sign in when entering live room to get daily rewards
-- **Settings:** Added toggle in live room settings page
+- **新機能：** 配信ルーム自動チェックイン — 配信ルーム入室時に自動チェックインして毎日報酬を取得
+- **設定：** 配信ルーム設定ページにトグル追加
 
 #### 2026-06-02 (v1.37.0)
-- **New:** Remember video playback position — automatically save and restore playback position for each video
-- **Settings:** Added toggle in player settings
+- **新機能：** 再生位置記憶 — 各動画の再生位置を自動記憶し、次回開いた時に前回の位置から再生再開
+- **設定：** プレイヤー設定にトグル追加
+
 #### 2026-06-02 (v1.36.0)
-- **??:** ?? ??? ?? ?? �� ?? ??? ?? ?? ?? (??/??/???)
-- **??:** ???? ?? ???? ?? ?? ?? ??
+- **新機能：** デフォルト動画アスペクト比 — 動画のデフォルトアスペクト比を設定（デフォルト/フィット/フィル）
+- **設定：** プレイヤー設定に選択ダイアログ追加
 
 #### 2026-06-02 (v1.35.0)
-- **??:** ?? ??? ?? �� ??? ? ??? ????? ?? (??? ??)
-- **??:** ?? ?? ?? ???? ??? ??
+- **新機能：** コメント時間順ソート — コメントをデフォルトで時間順ソート（最新優先）
+- **設定：** コメントフィルタ設定にスイッチ追加
 
 #### 2026-06-02 (v1.34.0)
-- **??:** ?? ??? ????? �� ???? ??? ?? ?? ???? ?? (7?? ?? ?? ??)
-- **??:** ??? ?? ?? ?? �� ?? ??? ?? ?? (0-10 ??)
-- **??:** ?? ?? ?? �� ?? ?? ?? ?? ??? ?? (0-100%)
-- **??:** ?? ?? ?? ???? ??/?? ???? ? ??? ????? ?? ??
+- **新機能：** 弾幕キーワードハイライト — キーワードにマッチする弾幕を目立つ色に変更（7色選択可能）
+- **新機能：** カスタム弾幕速度 — 弾幕スクロール速度を制御（0-10レベル）
+- **新機能：** 弾幕表示エリア — 弾幕表示エリアの割合をカスタマイズ（0-100%）
+- **設定：** 弾幕表示設定ページ（速度/エリアスライダー、キーワードハイライト入力）
 
 #### 2026-06-02 (v1.32.0 ~ v1.33.0)
-- **v1.33.0:** ??? ?? ?? ?? & ?? ?? �� DmViewReply? hook?? playerDanmakuSpeed? playerDanmakuDomain ??
-- **v1.32.0:** ?? ???? ?? �� ?? ? ?? ?? + ???ID ???? ???? ??
-- **v1.32.0:** ?? ???? ?? �� ?? ???? ????/??? ? ??
-- **v1.32.0:** ??? ?? ?? Toast? CID ??
-- **??:** 70+ ?? ?? ??, BKS keystore ??
+- **v1.33.0：** カスタム弾幕速度 & 表示エリア — DmViewReply を hook して playerDanmakuSpeed と playerDanmakuDomain を変更
+- **v1.32.0：** 配信ルームウォーターマーク削除 — 再帰的ビューツリートラバーサル + リソースIDマッチング
+- **v1.32.0：** 配信ルームモザイク削除 — 配信ストリームからオーバーレイ/マスクビューを削除
+- **v1.32.0：** 動画コーデック情報 Toast に CID 表示
+- **ビルド：** 70+ パッチすべてビルド成功、BKS keystore 署名
 
 #### 2026-06-01 (v1.29.0 ~ v1.31.0)
-- **v1.31.0:** ??? ?? ?? ??? �� ?????? ExpandableLayout hook
-- **v1.31.0:** ??? ?? ??? �� ??? ?? ??? ?????? ?? ??
-- **v1.30.0:** ?? ?? �� ?? ?? ? ?? ???? (relates feed ??)
-- **v1.29.0:** ?? ?? ??? ?? �� ReplyMainList? hook?? ?? ?? ???
-- **v1.29.0:** ???? ?? ???? ???? �� ??? ?? ???? ??
+- **v1.31.0：** 動画説明自動展開 — リフレクションで ExpandableLayout を hook、動画説明を自動展開
+- **v1.31.0：** フローティングボタン非表示 — 動画詳細ページのミニプレーヤーフローティングボタンを非表示
+- **v1.30.0：** ループ再生 — 再生終了時に動画を自動リプレイ（relates feed 注入）
+- **v1.29.0：** コメント検索キーワードブロック — ReplyMainList を hook して不要な検索トピックをクリア
+- **v1.29.0：** ホームページ自動更新無効 — ホームページコンテンツの自動更新を防止
 
 #### 2026-05-30 (v1.28.0)
-- **??:** CopyEnhancePatch ???? ?? �� `invoke-static {p0, p2, v0}`? p0? v16+? ?? (4?? ?? ??). `move-object/from16`?? ??
-- **??:** APK ?? ?? �� JDK 17 JCE? ??? BouncyCastle ??. ??? BC 1.77 JAR? classpathǰ��? ???? ??
+- **修正：** CopyEnhancePatch レジスタエラー — `invoke-static {p0, p2, v0}` で p0 が v16+ にマッピング（4ビット制限超過）。`move-object/from16` で低レジスタに移動して解決
+- **修正：** APK 署名失敗 — JDK 17 JCE が CLI jar に埋め込まれた未署名 BouncyCastle を拒否。独立署名済み BC 1.77 JAR を classpath 前に配置して解決
+- **新機能：** 動画説明自動展開（VideoDescExpandPatch）
+- **新機能：** フローティングボタン非表示オプション
+- **ビルド：** 70+ パッチすべてビルド成功、署名済み
 
 #### 2026-05-29 (v1.25.0 ~ v1.27.0)
-- **v1.27.0:** HDR ?? ?? ??
-- **v1.26.0:** ?? ?? ??? (-30~+30s) + ? ??
-- **v1.25.0:** ??? ?? ?? ?? �� ?? ? ?? + ?? ? ??
+- **v1.27.0：** HDR 画質強制トグル — fnval=MAX_FNVAL, fourk=true, qn=125
+- **v1.26.0：** 弾幕時間オフセット（-30~+30s）+ プールフィルタ（0=すべて, 1=通常, 2=字幕, 3=特殊）
+- **v1.25.0：** 動画情報パネル強化 — UP主 MID、フォロワー数、シェア数；コメントフロア番号 + 返信数表示
+- **新パッチ：** 弾幕キーワードフィルタ、コーデック情報表示、弾幕表示調整、スクリーンショット/録画アンロック、コメント IP 所在地、AV/BV 番号表示、動画統計パネル
 
-#### 2026-05-28 (v1.23.3 �� v1.24.1)
-- **?? ??:** ?? 70+ ??? bilibili 8.95.0? ??
-- **? ??:** ???? ?? ??, ?? ?? ??, ?? ?? ??
+#### 2026-05-28 (v1.23.3 ~ v1.24.1)
+- **重要な修正：** 70+ パッチすべてビリビリ 8.95.0 に適応
+  - Fingerprint グレースフルデグレード（不一致時に throw ではなく return）
+  - DmAdvert リフレクション修正（NoClassDefFoundError）
+  - VerifyError 修正（goto 命令変更を無効化）
+- **新パッチ：** スプラッシュ広告（OkHttp hook）、チャージング終了ページ、ゲームおすすめブロック
+- **広告削除：** 全 UI 設定完了（ホームページ、動画詳細、配信ルーム、動態、マイページ）
 
-#### 2026-05-27 (v1.23.3 �� ?? Fork)
-- BiliRoamingX/BiliRoamingX?? ??
-- 60+ ??? MuMu ??????? ???
-
----
-
-## Notes / ˵�� / ע����� / ????
-
-- Personal use version, for study and research only / ��������ѧϰ�о�ʹ�� / ���ˤ�ѧ��?�о��Τ� / ?? ?? ? ?? ??
-- Original project by Kofua (github.com/zjns)
-
-## Links / ���� / ��� / ??
-
-- Original: https://github.com/BiliRoamingX/BiliRoamingX
-- Fork: https://github.com/min09577/BiliRoamingX
-- Releases: https://github.com/min09577/BiliRoamingX/releases
-- Bilibili: https://www.bilibili.com
-- ReVanced: https://revanced.app
-
+#### 2026-05-27 (v1.23.3 — 初期 Fork)
+- BiliRoamingX/BiliRoamingX からフォーク
+- ローカルビルド修正（libbiliroamingx.so を patches リソースディレクトリにコピー）
+- 8.95.0 theseus_playlist_default_order 修正
+- PlayerSettingHelperFingerprint 8.95.0 互換性修正
+- 60+ パッチを MuMu エミュレータで検証
+- README 4言語サポート（CN
