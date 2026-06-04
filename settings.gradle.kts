@@ -5,6 +5,9 @@ enableFeaturePreview("TYPESAFE_PROJECT_ACCESSORS")
 pluginManagement {
     includeBuild("build-logic")
     repositories {
+        maven { url = uri("https://maven.aliyun.com/repository/google") }
+        maven { url = uri("https://maven.aliyun.com/repository/central") }
+        maven { url = uri("https://maven.aliyun.com/repository/gradle-plugin") }
         google()
         mavenCentral()
         mavenLocal()
@@ -17,6 +20,9 @@ dependencyResolutionManagement {
     val gprUser = settings.providers.gradleProperty("gpr.user")
     val gprKey = settings.providers.gradleProperty("gpr.key")
     repositories {
+        maven { url = uri("https://maven.aliyun.com/repository/google") }
+        maven { url = uri("https://maven.aliyun.com/repository/central") }
+        maven { url = uri("https://maven.aliyun.com/repository/public") }
         mavenCentral()
         mavenLocal()
         google()

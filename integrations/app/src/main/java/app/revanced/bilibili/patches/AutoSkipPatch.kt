@@ -2,12 +2,10 @@ package app.revanced.bilibili.patches
 
 import android.content.Context
 import androidx.annotation.Keep
-import app.revanced.bilibili.patches.main.Player
 import app.revanced.bilibili.patches.main.VideoInfoHolder
 import app.revanced.bilibili.settings.Settings
 import app.revanced.bilibili.utils.Logger
 import app.revanced.bilibili.utils.PlayerHookProvider.seekTo
-import app.revanced.bilibili.utils.Toasts
 
 @Keep
 object AutoSkipPatch {
@@ -25,7 +23,9 @@ object AutoSkipPatch {
         if (!Settings.AutoSkipIntro.get()) return
         if (player == null) return
 
-        val (cid, view) = VideoInfoHolder.current ?: return
+        val info = VideoInfoHolder.current ?: return
+        val cid = info.cid
+        val view = info.view ?: return
         val aid = when (view) {
             is com.bapis.bilibili.app.view.v1.ViewReply -> view.arc.aid
             is com.bapis.bilibili.app.viewunite.v1.ViewReply -> view.arc.aid
@@ -45,11 +45,11 @@ object AutoSkipPatch {
             val introDuration = Settings.AutoSkipIntroDuration.get()
             if (introDuration > 0) {
                 try {
-                    player.seekTo(introDuration * 1000L)
+                    player.seekTo(introDuration * 1000)
                     introSkipped = true
-                    Logger.debug("AutoSkipPatch: Skipped intro ${introDuration}s")
+                    Logger.debug { "AutoSkipPatch: Skipped intro ${introDuration}s" }
                 } catch (e: Throwable) {
-                    Logger.error(e, () -> "AutoSkipPatch: Failed to skip intro")
+                    Logger.error(e) { "AutoSkipPatch: Failed to skip intro" }
                 }
             }
         }
@@ -74,11 +74,11 @@ object AutoSkipPatch {
         if (remainingMs in 1..outroMs) {
             try {
                 // Seek to end, which will trigger next video or end
-                player.seekTo(duration - 100)
+                player.seekTo((duration - 100).toInt())
                 outroSkipped = true
-                Logger.debug("AutoSkipPatch: Skipped outro at ${currentPosition}ms")
+                Logger.debug { "AutoSkipPatch: Skipped outro at ${currentPosition}ms" }
             } catch (e: Throwable) {
-                Logger.error(e, () -> "AutoSkipPatch: Failed to skip outro")
+                Logger.error(e) { "AutoSkipPatch: Failed to skip outro" }
             }
         }
     }

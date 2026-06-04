@@ -35,11 +35,11 @@ object VideoBookmarkPatch {
         try {
             val bookmark = Bookmark(bvid, cid, currentPositionMs, note)
             saveBookmark(context, bookmark)
-            Logger.debug(() -> "VideoBookmarkPatch: added bookmark at ${formatTime(currentPositionMs)}")
+            Logger.debug { "VideoBookmarkPatch: added bookmark at ${formatTime(currentPositionMs)}" }
             Utils.runOnMainThread { Toast.makeText(context, "书签已添加: ${formatTime(currentPositionMs)}", Toast.LENGTH_SHORT).show() }
             return true
         } catch (e: Throwable) {
-            Logger.error(e, () -> "VideoBookmarkPatch: failed to add bookmark")
+            Logger.error(e) { "VideoBookmarkPatch: failed to add bookmark" }
             return false
         }
     }
@@ -55,7 +55,7 @@ object VideoBookmarkPatch {
             return allBookmarks.filter { it.bvid == bvid && it.cid == cid }
                 .sortedBy { it.timestamp }
         } catch (e: Throwable) {
-            Logger.error(e, () -> "VideoBookmarkPatch: failed to get bookmarks")
+            Logger.error(e) { "VideoBookmarkPatch: failed to get bookmarks" }
             return emptyList()
         }
     }
@@ -70,11 +70,11 @@ object VideoBookmarkPatch {
             val removed = allBookmarks.removeAll { it.bvid == bvid && it.cid == cid && it.timestamp == timestamp }
             if (removed) {
                 saveAllBookmarks(context, allBookmarks)
-                Logger.debug(() -> "VideoBookmarkPatch: deleted bookmark at ${formatTime(timestamp)}")
+                Logger.debug { "VideoBookmarkPatch: deleted bookmark at ${formatTime(timestamp)}" }
             }
             return removed
         } catch (e: Throwable) {
-            Logger.error(e, () -> "VideoBookmarkPatch: failed to delete bookmark")
+            Logger.error(e) { "VideoBookmarkPatch: failed to delete bookmark" }
             return false
         }
     }
@@ -98,7 +98,7 @@ object VideoBookmarkPatch {
                 .create()
             dialog.show()
         } catch (e: Throwable) {
-            Logger.error(e, () -> "VideoBookmarkPatch: failed to show dialog")
+            Logger.error(e) { "VideoBookmarkPatch: failed to show dialog" }
         }
     }
 
@@ -131,7 +131,7 @@ object VideoBookmarkPatch {
                 }
                 .show()
         } catch (e: Throwable) {
-            Logger.error(e, () -> "VideoBookmarkPatch: failed to show list")
+            Logger.error(e) { "VideoBookmarkPatch: failed to show list" }
         }
     }
 

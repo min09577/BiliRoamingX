@@ -32,7 +32,7 @@ object CommentTranslatePatch {
                 }
             }
         } catch (e: Throwable) {
-            Logger.error(e, () -> "CommentTranslatePatch: translation failed")
+            Logger.error(e) { "CommentTranslatePatch: translation failed" }
             Toasts.showShort("翻译失败: ${e.message}")
         }
     }
@@ -75,7 +75,7 @@ object CommentTranslatePatch {
      * Get the translator based on settings.
      */
     private fun getTranslator(): Translator {
-        return if (Settings.TranslateServer.get() == "microsoft") {
+        return if (Settings.SubtitleTranslateServer.get() == "microsoft") {
             MicrosoftTranslator
         } else {
             GoogleTranslator
