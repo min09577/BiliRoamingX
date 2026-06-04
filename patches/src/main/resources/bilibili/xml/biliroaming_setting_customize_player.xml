@@ -149,6 +149,15 @@
             android:summary="@string/biliroaming_auto_skip_outro_duration_summary"
             android:title="@string/biliroaming_auto_skip_outro_duration_title" />
         <androidx.preference.SwitchPreferenceCompat
+            android:key="video_screenshot"
+            android:summary="@string/biliroaming_video_screenshot_summary"
+            android:title="@string/biliroaming_video_screenshot_title" />
+        <androidx.preference.SwitchPreferenceCompat
+            android:key="video_screenshot_share"
+            android:dependency="video_screenshot"
+            android:summary="@string/biliroaming_video_screenshot_share_summary"
+            android:title="@string/biliroaming_video_screenshot_share_title" />
+        <androidx.preference.SwitchPreferenceCompat
             android:key="disable_p2p_upload"
             android:summary="@string/biliroaming_disable_p2p_upload_summary"
             android:title="@string/biliroaming_disable_p2p_upload_title" />

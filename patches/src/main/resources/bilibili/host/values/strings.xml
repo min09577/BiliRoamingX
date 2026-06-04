@@ -554,6 +554,10 @@
     <string name="biliroaming_auto_skip_outro_summary">自动跳过视频结尾的片尾部分</string>
     <string name="biliroaming_auto_skip_outro_duration_title">片尾时长（秒）</string>
     <string name="biliroaming_auto_skip_outro_duration_summary">设置片尾的时长，单位为秒</string>
+    <string name="biliroaming_video_screenshot_title">视频截图</string>
+    <string name="biliroaming_video_screenshot_summary">长按视频画面截取当前帧并保存到相册</string>
+    <string name="biliroaming_video_screenshot_share_title">截图后分享</string>
+    <string name="biliroaming_video_screenshot_share_summary">截图后自动弹出分享菜单</string>
 
     <string name="biliroaming_live_auto_sign_title">直播间自动签到</string>
     <string name="biliroaming_live_auto_sign_summary">进入直播间时自动签到获取奖励</string>

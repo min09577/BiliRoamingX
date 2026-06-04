@@ -204,6 +204,8 @@ object Settings {
     @JvmField val AutoSkipIntroDuration = IntSetting(key = "auto_skip_intro_duration", defValue = 0)
     @JvmField val AutoSkipOutro = BooleanSetting(key = "auto_skip_outro")
     @JvmField val AutoSkipOutroDuration = IntSetting(key = "auto_skip_outro_duration", defValue = 0)
+    @JvmField val VideoScreenshot = BooleanSetting(key = "video_screenshot")
+    @JvmField val VideoScreenshotShare = BooleanSetting(key = "video_screenshot_share")
 
     @JvmField val CommentSortByTime = BooleanSetting(key = "comment_sort_by_time")
     @JvmField val ShowCommentIpLocation = BooleanSetting(key = "show_comment_ip_location")
