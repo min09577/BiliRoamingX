@@ -71,7 +71,8 @@ public class LiveRoomPatch {
                     View watermarkView = activity.findViewById(resId);
                     if (watermarkView != null) {
                         watermarkView.setVisibility(View.GONE);
-                        Logger.debug(() -> "LiveRoomPatch: hid watermark view " + idName);
+                        final String capturedIdName = idName;
+                        Logger.debug(() -> "LiveRoomPatch: hid watermark view " + capturedIdName);
                         return;
                     }
                 }
@@ -134,7 +135,8 @@ public class LiveRoomPatch {
                     View mosaicView = activity.findViewById(resId);
                     if (mosaicView != null) {
                         mosaicView.setVisibility(View.GONE);
-                        Logger.debug(() -> "LiveRoomPatch: hid mosaic view " + idName);
+                        final String capturedIdName = idName;
+                        Logger.debug(() -> "LiveRoomPatch: hid mosaic view " + capturedIdName);
                         return;
                     }
                 }

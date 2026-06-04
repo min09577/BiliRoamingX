@@ -56,8 +56,13 @@ Based on BiliRoamingX v1.23.3, enhanced with AI-assisted development.
 - Loop play (auto replay on finish)
 - **Live room watermark removal**
 - **Live room mosaic/overlay removal**
+- **Video bookmark**
 
 ### Changelog
+
+#### 2026-06-04 (v1.39.0)
+- **New:** Video bookmark — add timestamped bookmarks and notes while watching videos for quick navigation
+- **Settings:** Added toggle in player settings
 
 #### 2026-06-02 (v1.38.0)
 - **New:** Live room auto sign-in �� automatically sign in when entering live room to get daily rewards

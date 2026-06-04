@@ -197,7 +197,8 @@ object Settings {
     @JvmField val DanmakuHighlightColor = IntSetting(key = "danmaku_highlight_color", defValue = 0xFFFF0000.toInt())
     @JvmField val DefaultAspectRatio = IntSetting(key = "default_aspect_ratio", defValue = 0)
     @JvmField val AutoPauseOnBackground = BooleanSetting(key = "auto_pause_on_background")
-        @JvmField val RememberVideoPosition = BooleanSetting(key = "remember_video_position")
+    @JvmField val RememberVideoPosition = BooleanSetting(key = "remember_video_position")
+    @JvmField val VideoBookmark = BooleanSetting(key = "video_bookmark")
 
     @JvmField val CommentSortByTime = BooleanSetting(key = "comment_sort_by_time")
     @JvmField val ShowCommentIpLocation = BooleanSetting(key = "show_comment_ip_location")

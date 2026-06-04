@@ -129,6 +129,10 @@
             android:summary="@string/biliroaming_remember_video_position_summary"
             android:title="@string/biliroaming_remember_video_position_title" />
         <androidx.preference.SwitchPreferenceCompat
+            android:key="video_bookmark"
+            android:summary="@string/biliroaming_video_bookmark_summary"
+            android:title="@string/biliroaming_video_bookmark_title" />
+        <androidx.preference.SwitchPreferenceCompat
             android:key="disable_p2p_upload"
             android:summary="@string/biliroaming_disable_p2p_upload_summary"
             android:title="@string/biliroaming_disable_p2p_upload_title" />
