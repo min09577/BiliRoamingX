@@ -61,6 +61,10 @@ object Settings {
         @JvmField val PlayerClock = BooleanSetting(key = "player_clock")
         @JvmField val VolumeBoost = BooleanSetting(key = "volume_boost")
         @JvmField val VolumeBoostLevel = IntSetting(key = "volume_boost_level", defValue = 100)
+        @JvmField val CommentDraft = BooleanSetting(key = "comment_draft")
+        @JvmField val VideoMirror = BooleanSetting(key = "video_mirror")
+        @JvmField val BrightnessLock = BooleanSetting(key = "brightness_lock")
+        @JvmField val NetworkIndicator = BooleanSetting(key = "network_indicator")
         // endregion
 
 

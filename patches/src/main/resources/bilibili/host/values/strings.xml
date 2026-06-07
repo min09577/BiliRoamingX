@@ -404,6 +404,14 @@
     <string name="biliroaming_volume_boost_summary">超过系统最大音量输出</string>
     <string name="biliroaming_volume_boost_level_title">增强等级</string>
     <string name="biliroaming_volume_boost_level_summary">音量增强百分比（100为原始，150为增强50%）</string>
+    <string name="biliroaming_comment_draft_title">评论草稿自动保存</string>
+    <string name="biliroaming_comment_draft_summary">退出评论框时自动保存草稿，下次打开自动恢复</string>
+    <string name="biliroaming_video_mirror_title">视频镜像翻转</string>
+    <string name="biliroaming_video_mirror_summary">水平翻转视频画面，适合舞蹈/教学视频</string>
+    <string name="biliroaming_brightness_lock_title">亮度锁定</string>
+    <string name="biliroaming_brightness_lock_summary">播放视频时锁定当前亮度，防止误触改变</string>
+    <string name="biliroaming_network_indicator_title">网络状态指示器</string>
+    <string name="biliroaming_network_indicator_summary">播放器上显示当前网络速度和延迟信息</string>
             <string name="biliroaming_ratio_fill_done">已放大到填满整个屏幕</string>
     <string name="biliroaming_ratio_restore_done">原始大小</string>
     <string name="biliroaming_remove_live_mask_title">移除马赛克遮罩</string>

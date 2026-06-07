@@ -149,6 +149,22 @@
                     android:key="volume_boost"
                     android:summary="@string/biliroaming_volume_boost_summary"
                     android:title="@string/biliroaming_volume_boost_title" />
+                <androidx.preference.SwitchPreferenceCompat
+                    android:key="comment_draft"
+                    android:summary="@string/biliroaming_comment_draft_summary"
+                    android:title="@string/biliroaming_comment_draft_title" />
+                <androidx.preference.SwitchPreferenceCompat
+                    android:key="video_mirror"
+                    android:summary="@string/biliroaming_video_mirror_summary"
+                    android:title="@string/biliroaming_video_mirror_title" />
+                <androidx.preference.SwitchPreferenceCompat
+                    android:key="brightness_lock"
+                    android:summary="@string/biliroaming_brightness_lock_summary"
+                    android:title="@string/biliroaming_brightness_lock_title" />
+                <androidx.preference.SwitchPreferenceCompat
+                    android:key="network_indicator"
+                    android:summary="@string/biliroaming_network_indicator_summary"
+                    android:title="@string/biliroaming_network_indicator_title" />
     </androidx.preference.PreferenceCategory>
 
     <androidx.preference.PreferenceCategory
