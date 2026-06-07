@@ -54,5 +54,9 @@
             android:key="live_room_auto_mute"
             android:summary="@string/biliroaming_live_room_auto_mute_summary"
             android:title="@string/biliroaming_live_room_auto_mute_title" />
+        <androidx.preference.SwitchPreferenceCompat
+            android:key="live_stream_clip"
+            android:summary="@string/biliroaming_live_stream_clip_summary"
+            android:title="@string/biliroaming_live_stream_clip_title" />
     </androidx.preference.PreferenceCategory>
 </androidx.preference.PreferenceScreen>

@@ -413,5 +413,9 @@ object Settings {
     @JvmField val LiveRoomAutoMute = BooleanSetting(key = "live_room_auto_mute")
     @JvmField val PlayerGestureBrightness = BooleanSetting(key = "player_gesture_brightness")
     @JvmField val DanmakuFilterByColor = StringSetSetting(key = "danmaku_filter_by_color")
+    @JvmField val DanmakuSendPreview = BooleanSetting(key = "danmaku_send_preview")
+    @JvmField val SubtitleDownload = BooleanSetting(key = "subtitle_download")
+    @JvmField val LiveStreamClip = BooleanSetting(key = "live_stream_clip")
+    @JvmField val PlayerPipSize = IntSetting(key = "player_pip_size", defValue = 0)
     // endregion
 }

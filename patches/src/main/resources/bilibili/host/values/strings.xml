@@ -751,4 +751,12 @@
     <string name="biliroaming_player_gesture_brightness_summary">在播放器左侧上下滑动调节屏幕亮度</string>
     <string name="biliroaming_danmaku_filter_by_color_title">按颜色过滤弹幕</string>
     <string name="biliroaming_danmaku_filter_by_color_summary">根据弹幕颜色过滤特定颜色的弹幕</string>
+    <string name="biliroaming_danmaku_send_preview_title">弹幕发送预览</string>
+    <string name="biliroaming_danmaku_send_preview_summary">发送前在屏幕上预览弹幕效果</string>
+    <string name="biliroaming_subtitle_download_title">字幕下载</string>
+    <string name="biliroaming_subtitle_download_summary">支持下载视频字幕文件（SRT/ASS/VTT）</string>
+    <string name="biliroaming_live_stream_clip_title">直播切片</string>
+    <string name="biliroaming_live_stream_clip_summary">将直播流录制为本地视频片段</string>
+    <string name="biliroaming_player_pip_size_title">画中画窗口大小</string>
+    <string name="biliroaming_player_pip_size_summary">自定义画中画窗口的大小（小/中/大）</string>
 </resources>
