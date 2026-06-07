@@ -711,4 +711,12 @@
     <string name="biliroaming_live_gift_merge_summary">合并短时间内相同礼物减少刷屏</string>
     <string name="biliroaming_playback_speed_step_title">调速步长自定义</string>
     <string name="biliroaming_playback_speed_step_summary">自定义每次调节播放速度的步长</string>
+    <string name="biliroaming_comment_gif_auto_play_title">评论GIF自动播放</string>
+    <string name="biliroaming_comment_gif_auto_play_summary">控制评论区GIF图片是否自动播放</string>
+    <string name="biliroaming_danmaku_batch_delete_title">弹幕批量删除</string>
+    <string name="biliroaming_danmaku_batch_delete_summary">在弹幕列表中支持批量选择和删除弹幕</string>
+    <string name="biliroaming_player_screenshot_format_title">截图格式设置</string>
+    <string name="biliroaming_player_screenshot_format_summary">设置播放器截图保存格式（PNG/JPG/WebP）</string>
+    <string name="biliroaming_live_room_auto_enter_title">直播间自动进入</string>
+    <string name="biliroaming_live_room_auto_enter_summary">启动时自动进入指定直播间（填入房间号或URL）</string>
 </resources>

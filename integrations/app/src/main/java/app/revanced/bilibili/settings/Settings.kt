@@ -393,5 +393,9 @@ object Settings {
     @JvmField val CustomColor = IntSetting(key = "biliroaming_custom_color", defValue = Color.WHITE)
     @JvmField val SkinJson = StringSetting(key = "skin_json", dependency = Skin)
     @JvmField val SelectedPlaybackSpeed = FloatSetting(key = "selected_playback_speed")
+    @JvmField val CommentGifAutoPlay = BooleanSetting(key = "comment_gif_auto_play")
+    @JvmField val DanmakuBatchDelete = BooleanSetting(key = "danmaku_batch_delete")
+    @JvmField val PlayerScreenshotFormat = IntSetting(key = "player_screenshot_format", defValue = 0)
+    @JvmField val LiveRoomAutoEnter = StringSetting(key = "live_room_auto_enter")
     // endregion
 }

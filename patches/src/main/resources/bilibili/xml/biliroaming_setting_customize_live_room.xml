@@ -46,5 +46,9 @@
             android:key="live_gift_merge"
             android:summary="@string/biliroaming_live_gift_merge_summary"
             android:title="@string/biliroaming_live_gift_merge_title" />
+        <EditTextPreference
+            android:key="live_room_auto_enter"
+            android:summary="@string/biliroaming_live_room_auto_enter_summary"
+            android:title="@string/biliroaming_live_room_auto_enter_title" />
     </androidx.preference.PreferenceCategory>
 </androidx.preference.PreferenceScreen>

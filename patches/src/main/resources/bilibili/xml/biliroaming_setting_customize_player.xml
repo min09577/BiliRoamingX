@@ -388,5 +388,9 @@
             android:key="playback_speed_step"
             android:summary="@string/biliroaming_playback_speed_step_summary"
             android:title="@string/biliroaming_playback_speed_step_title" />
+        <EditTextPreference
+            android:key="player_screenshot_format"
+            android:summary="@string/biliroaming_player_screenshot_format_summary"
+            android:title="@string/biliroaming_player_screenshot_format_title" />
     </androidx.preference.PreferenceCategory>
 </androidx.preference.PreferenceScreen>
