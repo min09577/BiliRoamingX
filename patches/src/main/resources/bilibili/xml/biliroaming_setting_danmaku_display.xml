@@ -13,4 +13,8 @@
             android:key="danmaku_batch_delete"
             android:summary="@string/biliroaming_danmaku_batch_delete_summary"
             android:title="@string/biliroaming_danmaku_batch_delete_title" />
+        <androidx.preference.SwitchPreferenceCompat
+            android:key="danmaku_batch_report"
+            android:summary="@string/biliroaming_danmaku_batch_report_summary"
+            android:title="@string/biliroaming_danmaku_batch_report_title" />
 </androidx.preference.PreferenceScreen>

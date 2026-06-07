@@ -719,4 +719,12 @@
     <string name="biliroaming_player_screenshot_format_summary">设置播放器截图保存格式（PNG/JPG/WebP）</string>
     <string name="biliroaming_live_room_auto_enter_title">直播间自动进入</string>
     <string name="biliroaming_live_room_auto_enter_summary">启动时自动进入指定直播间（填入房间号或URL）</string>
+    <string name="biliroaming_comment_image_auto_load_title">评论图片自动加载</string>
+    <string name="biliroaming_comment_image_auto_load_summary">关闭后仅显示占位图，点击后才加载，节省流量</string>
+    <string name="biliroaming_danmaku_batch_report_title">弹幕批量举报</string>
+    <string name="biliroaming_danmaku_batch_report_summary">在弹幕列表中支持批量选择和举报违规弹幕</string>
+    <string name="biliroaming_video_thumbnail_preview_title">缩略图预览</string>
+    <string name="biliroaming_video_thumbnail_preview_summary">进度条悬停时显示视频缩略图预览</string>
+    <string name="biliroaming_video_auto_pause_on_scroll_title">滚动自动暂停</string>
+    <string name="biliroaming_video_auto_pause_on_scroll_summary">在信息流中滚动时自动暂停正在播放的视频</string>
 </resources>

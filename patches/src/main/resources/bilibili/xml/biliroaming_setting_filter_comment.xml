@@ -40,5 +40,9 @@
             android:key="comment_gif_auto_play"
             android:summary="@string/biliroaming_comment_gif_auto_play_summary"
             android:title="@string/biliroaming_comment_gif_auto_play_title" />
+        <androidx.preference.SwitchPreferenceCompat
+            android:key="comment_image_auto_load"
+            android:summary="@string/biliroaming_comment_image_auto_load_summary"
+            android:title="@string/biliroaming_comment_image_auto_load_title" />
     </androidx.preference.PreferenceCategory>
 </androidx.preference.PreferenceScreen>

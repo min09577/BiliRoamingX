@@ -397,5 +397,9 @@ object Settings {
     @JvmField val DanmakuBatchDelete = BooleanSetting(key = "danmaku_batch_delete")
     @JvmField val PlayerScreenshotFormat = IntSetting(key = "player_screenshot_format", defValue = 0)
     @JvmField val LiveRoomAutoEnter = StringSetting(key = "live_room_auto_enter")
+    @JvmField val CommentImageAutoLoad = BooleanSetting(key = "comment_image_auto_load")
+    @JvmField val DanmakuBatchReport = BooleanSetting(key = "danmaku_batch_report")
+    @JvmField val VideoThumbnailPreview = BooleanSetting(key = "video_thumbnail_preview")
+    @JvmField val VideoAutoPauseOnScroll = BooleanSetting(key = "video_auto_pause_on_scroll")
     // endregion
 }
