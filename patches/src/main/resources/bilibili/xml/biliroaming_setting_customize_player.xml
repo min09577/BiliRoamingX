@@ -214,6 +214,10 @@
                     android:summary="@string/biliroaming_video_preload_summary"
                     android:title="@string/biliroaming_video_preload_title" />
     </androidx.preference.PreferenceCategory>
+                <androidx.preference.SwitchPreferenceCompat
+                    android:key="danmaku_shadow"
+                    android:summary="@string/biliroaming_danmaku_shadow_summary"
+                    android:title="@string/biliroaming_danmaku_shadow_title" />
 
     <androidx.preference.PreferenceCategory
         android:key="category_other"

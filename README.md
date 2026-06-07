@@ -637,3 +637,11 @@ BiliRoamingX v1.23.3 기반, AI 지원 개발로 강화.
 - ⚡ **弹幕速度跟随播放** / Danmaku Speed Sync / 弾幕速度同期 / 탄막 속도 동기화
 - 📥 **视频预加载** / Video Preload / 動画プリロード / 비디오 프리로드
 - 📑 **首页Tab排序** / Home Tab Reorder / ホームタブ並べ替え / 홈 탭 정렬
+
+### v1.50.0 (2026-06-07)
+
+**New Features / 新功能 / 新機能 / 새 기능:**
+- 🔤 **字幕字体自定义** / Subtitle Font / 字幕フォント / 자막 글꼴
+- 👆 **双击自定义动作** / Double Tap Action / ダブルタップアクション / 더블탭 액션
+- 💧 **视频自定义水印** / Video Watermark / 動画ウォーターマーク / 비디오 워터마크
+- 🌑 **弹幕文字阴影** / Danmaku Shadow / 弾幕シャドウ / 탄막 그림자

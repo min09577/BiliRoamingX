@@ -446,6 +446,14 @@
     <string name="biliroaming_video_preload_summary">控制视频预加载行为，节省流量或提升流畅度</string>
     <string name="biliroaming_home_tab_reorder_title">首页Tab排序</string>
     <string name="biliroaming_home_tab_reorder_summary">自定义首页底部Tab栏的顺序</string>
+    <string name="biliroaming_subtitle_font_title">字幕字体</string>
+    <string name="biliroaming_subtitle_font_summary">自定义字幕显示字体（默认/黑体/宋体/楷体）</string>
+    <string name="biliroaming_double_tap_action_title">双击自定义动作</string>
+    <string name="biliroaming_double_tap_action_summary">自定义双击视频区域的动作（点赞/收藏/截图）</string>
+    <string name="biliroaming_video_watermark_title">视频自定义水印</string>
+    <string name="biliroaming_video_watermark_summary">截图时自动添加自定义文字水印</string>
+    <string name="biliroaming_danmaku_shadow_title">弹幕文字阴影</string>
+    <string name="biliroaming_danmaku_shadow_summary">为弹幕添加文字阴影效果，增强可读性</string>
             <string name="biliroaming_ratio_fill_done">已放大到填满整个屏幕</string>
     <string name="biliroaming_ratio_restore_done">原始大小</string>
     <string name="biliroaming_remove_live_mask_title">移除马赛克遮罩</string>

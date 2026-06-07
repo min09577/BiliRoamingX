@@ -81,6 +81,10 @@ object Settings {
         @JvmField val DanmakuSpeedSync = BooleanSetting(key = "danmaku_speed_sync")
         @JvmField val VideoPreload = BooleanSetting(key = "video_preload")
         @JvmField val HomeTabReorder = BooleanSetting(key = "home_tab_reorder")
+        @JvmField val SubtitleFont = StringSetting(key = "subtitle_font", defValue = "default")
+        @JvmField val DoubleTapAction = IntSetting(key = "double_tap_action", defValue = 0)
+        @JvmField val VideoWatermark = BooleanSetting(key = "video_watermark")
+        @JvmField val DanmakuShadow = BooleanSetting(key = "danmaku_shadow")
         // endregion
 
 
