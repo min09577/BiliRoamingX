@@ -416,5 +416,9 @@
             android:key="player_pip_size"
             android:summary="@string/biliroaming_player_pip_size_summary"
             android:title="@string/biliroaming_player_pip_size_title" />
+        <EditTextPreference
+            android:key="player_screenshot_quality"
+            android:summary="@string/biliroaming_player_screenshot_quality_summary"
+            android:title="@string/biliroaming_player_screenshot_quality_title" />
     </androidx.preference.PreferenceCategory>
 </androidx.preference.PreferenceScreen>

@@ -417,5 +417,9 @@ object Settings {
     @JvmField val SubtitleDownload = BooleanSetting(key = "subtitle_download")
     @JvmField val LiveStreamClip = BooleanSetting(key = "live_stream_clip")
     @JvmField val PlayerPipSize = IntSetting(key = "player_pip_size", defValue = 0)
+    @JvmField val LiveDanmakuFont = IntSetting(key = "live_danmaku_font", defValue = 0)
+    @JvmField val AutoSkipFiller = BooleanSetting(key = "auto_skip_filler")
+    @JvmField val PlayerScreenshotQuality = IntSetting(key = "player_screenshot_quality", defValue = 100)
+    @JvmField val VideoAutoShare = BooleanSetting(key = "video_auto_share")
     // endregion
 }

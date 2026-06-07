@@ -201,5 +201,13 @@
             android:key="video_auto_save"
             android:summary="@string/biliroaming_video_auto_save_summary"
             android:title="@string/biliroaming_video_auto_save_title" />
+        <androidx.preference.SwitchPreferenceCompat
+            android:key="auto_skip_filler"
+            android:summary="@string/biliroaming_auto_skip_filler_summary"
+            android:title="@string/biliroaming_auto_skip_filler_title" />
+        <androidx.preference.SwitchPreferenceCompat
+            android:key="video_auto_share"
+            android:summary="@string/biliroaming_video_auto_share_summary"
+            android:title="@string/biliroaming_video_auto_share_title" />
     </androidx.preference.PreferenceCategory>
 </androidx.preference.PreferenceScreen>

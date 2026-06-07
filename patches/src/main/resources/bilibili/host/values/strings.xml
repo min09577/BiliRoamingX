@@ -759,4 +759,12 @@
     <string name="biliroaming_live_stream_clip_summary">将直播流录制为本地视频片段</string>
     <string name="biliroaming_player_pip_size_title">画中画窗口大小</string>
     <string name="biliroaming_player_pip_size_summary">自定义画中画窗口的大小（小/中/大）</string>
+    <string name="biliroaming_live_danmaku_font_title">直播弹幕字体</string>
+    <string name="biliroaming_live_danmaku_font_summary">自定义直播弹幕的字体大小（独立于视频弹幕）</string>
+    <string name="biliroaming_auto_skip_filler_title">自动跳过花絮</string>
+    <string name="biliroaming_auto_skip_filler_summary">自动跳过正片前后的花絮、预告、广告</string>
+    <string name="biliroaming_player_screenshot_quality_title">截图质量设置</string>
+    <string name="biliroaming_player_screenshot_quality_summary">调节截图压缩质量（1-100），数值越高质量越好</string>
+    <string name="biliroaming_video_auto_share_title">视频自动分享</string>
+    <string name="biliroaming_video_auto_share_summary">播放视频后自动复制分享链接到剪贴板</string>
 </resources>
