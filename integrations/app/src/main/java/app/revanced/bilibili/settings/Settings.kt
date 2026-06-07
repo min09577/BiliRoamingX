@@ -64,7 +64,6 @@ object Settings {
         @JvmField val CommentDraft = BooleanSetting(key = "comment_draft")
         @JvmField val VideoMirror = BooleanSetting(key = "video_mirror")
         @JvmField val BrightnessLock = BooleanSetting(key = "brightness_lock")
-        @JvmField val NetworkIndicator = BooleanSetting(key = "network_indicator")
         @JvmField val CommentHighlightUp = BooleanSetting(key = "comment_highlight_up")
         @JvmField val AutoRotate = BooleanSetting(key = "auto_rotate")
         @JvmField val DanmakuMerge = BooleanSetting(key = "danmaku_merge")

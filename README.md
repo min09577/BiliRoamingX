@@ -606,3 +606,10 @@ BiliRoamingX v1.23.3 기반, AI 지원 개발로 강화.
 - 🔄 **自动横屏播放** - 全屏时自动切换横屏
 - 🔀 **合并重复弹幕** - 减少相同内容弹幕
 - 🔒 **防误触锁定** - 锁定屏幕触摸，双击解锁
+
+### v1.46.0 (2026-06-07)
+
+**修复:**
+- 修复 PlayerClockPatch 和 VolumeBoostPatch 文件丢失
+- 删除 NetworkIndicator（与 PlaybackStatsOverlay 重复）
+- 验证所有新功能无重复
