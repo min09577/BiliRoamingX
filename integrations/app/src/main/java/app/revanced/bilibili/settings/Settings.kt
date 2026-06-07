@@ -405,5 +405,9 @@ object Settings {
     @JvmField val DanmakuSendAnimation = BooleanSetting(key = "danmaku_send_animation")
     @JvmField val PlayerBackgroundDim = IntSetting(key = "player_background_dim", defValue = 0)
     @JvmField val VideoAutoNext = BooleanSetting(key = "video_auto_next")
+    @JvmField val DanmakuFilterByUser = StringSetSetting(key = "danmaku_filter_by_user")
+    @JvmField val PlayerGestureVolume = BooleanSetting(key = "player_gesture_volume")
+    @JvmField val VideoAutoSave = BooleanSetting(key = "video_auto_save")
+    @JvmField val CommentAutoReply = StringSetting(key = "comment_auto_reply")
     // endregion
 }

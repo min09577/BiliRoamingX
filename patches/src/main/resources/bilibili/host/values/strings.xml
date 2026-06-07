@@ -735,4 +735,12 @@
     <string name="biliroaming_player_background_dim_summary">调节播放器背景的变暗程度（0-100）</string>
     <string name="biliroaming_video_auto_next_title">自动播放下一集</string>
     <string name="biliroaming_video_auto_next_summary">当前视频播放结束后自动播放下一集</string>
+    <string name="biliroaming_danmaku_filter_by_user_title">按用户过滤弹幕</string>
+    <string name="biliroaming_danmaku_filter_by_user_summary">根据用户ID过滤特定用户的弹幕</string>
+    <string name="biliroaming_player_gesture_volume_title">手势调节音量</string>
+    <string name="biliroaming_player_gesture_volume_summary">在播放器右侧上下滑动调节音量</string>
+    <string name="biliroaming_video_auto_save_title">视频自动收藏</string>
+    <string name="biliroaming_video_auto_save_summary">播放视频时自动添加到稍后再看列表</string>
+    <string name="biliroaming_comment_auto_reply_title">评论自动回复模板</string>
+    <string name="biliroaming_comment_auto_reply_summary">在评论区快速插入预设回复模板</string>
 </resources>

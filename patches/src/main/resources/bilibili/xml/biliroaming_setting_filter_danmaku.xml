@@ -5,4 +5,8 @@
         android:key="danmaku_filter_keywords"
         android:summary="@string/biliroaming_danmaku_filter_summary"
         android:title="@string/biliroaming_danmaku_filter_title" />
+        <androidx.preference.SwitchPreferenceCompat
+            android:key="danmaku_filter_by_user"
+            android:summary="@string/biliroaming_danmaku_filter_by_user_summary"
+            android:title="@string/biliroaming_danmaku_filter_by_user_title" />
 </androidx.preference.PreferenceScreen>

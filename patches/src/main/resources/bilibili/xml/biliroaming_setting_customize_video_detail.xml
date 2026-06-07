@@ -197,5 +197,9 @@
             android:key="video_auto_next"
             android:summary="@string/biliroaming_video_auto_next_summary"
             android:title="@string/biliroaming_video_auto_next_title" />
+        <androidx.preference.SwitchPreferenceCompat
+            android:key="video_auto_save"
+            android:summary="@string/biliroaming_video_auto_save_summary"
+            android:title="@string/biliroaming_video_auto_save_title" />
     </androidx.preference.PreferenceCategory>
 </androidx.preference.PreferenceScreen>
