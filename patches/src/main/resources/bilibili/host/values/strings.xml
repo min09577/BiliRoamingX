@@ -394,6 +394,16 @@
     <string name="biliroaming_screenshot_timestamp_summary">截图时在右下角添加视频时间戳水印</string>
     <string name="biliroaming_swipe_gesture_custom_title">滑动手势自定义</string>
     <string name="biliroaming_swipe_gesture_custom_summary">自定义左右滑动调节亮度和音量的行为</string>
+    <string name="biliroaming_auto_night_mode_title">自动深色模式</string>
+    <string name="biliroaming_auto_night_mode_summary">根据日出日落时间自动切换深色模式</string>
+    <string name="biliroaming_quality_badge_title">画质徽章</string>
+    <string name="biliroaming_quality_badge_summary">播放器上显示当前视频画质信息</string>
+    <string name="biliroaming_player_clock_title">播放器时钟</string>
+    <string name="biliroaming_player_clock_summary">播放视频时在角落显示当前时间</string>
+    <string name="biliroaming_volume_boost_title">音量增强</string>
+    <string name="biliroaming_volume_boost_summary">超过系统最大音量输出</string>
+    <string name="biliroaming_volume_boost_level_title">增强等级</string>
+    <string name="biliroaming_volume_boost_level_summary">音量增强百分比（100为原始，150为增强50%）</string>
             <string name="biliroaming_ratio_fill_done">已放大到填满整个屏幕</string>
     <string name="biliroaming_ratio_restore_done">原始大小</string>
     <string name="biliroaming_remove_live_mask_title">移除马赛克遮罩</string>

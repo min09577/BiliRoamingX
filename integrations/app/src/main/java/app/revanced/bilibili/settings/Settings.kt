@@ -56,6 +56,11 @@ object Settings {
         @JvmField val LoopInterval = IntSetting(key = "loop_interval", defValue = 0)
         @JvmField val ScreenshotTimestamp = BooleanSetting(key = "screenshot_timestamp")
         @JvmField val SwipeGestureCustom = BooleanSetting(key = "swipe_gesture_custom")
+        @JvmField val AutoNightMode = BooleanSetting(key = "auto_night_mode")
+        @JvmField val QualityBadge = BooleanSetting(key = "quality_badge")
+        @JvmField val PlayerClock = BooleanSetting(key = "player_clock")
+        @JvmField val VolumeBoost = BooleanSetting(key = "volume_boost")
+        @JvmField val VolumeBoostLevel = IntSetting(key = "volume_boost_level", defValue = 100)
         // endregion
 
 

@@ -133,6 +133,22 @@
                     android:key="swipe_gesture_custom"
                     android:summary="@string/biliroaming_swipe_gesture_custom_summary"
                     android:title="@string/biliroaming_swipe_gesture_custom_title" />
+                <androidx.preference.SwitchPreferenceCompat
+                    android:key="auto_night_mode"
+                    android:summary="@string/biliroaming_auto_night_mode_summary"
+                    android:title="@string/biliroaming_auto_night_mode_title" />
+                <androidx.preference.SwitchPreferenceCompat
+                    android:key="quality_badge"
+                    android:summary="@string/biliroaming_quality_badge_summary"
+                    android:title="@string/biliroaming_quality_badge_title" />
+                <androidx.preference.SwitchPreferenceCompat
+                    android:key="player_clock"
+                    android:summary="@string/biliroaming_player_clock_summary"
+                    android:title="@string/biliroaming_player_clock_title" />
+                <androidx.preference.SwitchPreferenceCompat
+                    android:key="volume_boost"
+                    android:summary="@string/biliroaming_volume_boost_summary"
+                    android:title="@string/biliroaming_volume_boost_title" />
     </androidx.preference.PreferenceCategory>
 
     <androidx.preference.PreferenceCategory
