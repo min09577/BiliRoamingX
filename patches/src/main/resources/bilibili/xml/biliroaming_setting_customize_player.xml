@@ -218,6 +218,18 @@
                     android:key="danmaku_shadow"
                     android:summary="@string/biliroaming_danmaku_shadow_summary"
                     android:title="@string/biliroaming_danmaku_shadow_title" />
+                <androidx.preference.SwitchPreferenceCompat
+                    android:key="comment_image_save_enhanced"
+                    android:summary="@string/biliroaming_comment_image_save_enhanced_summary"
+                    android:title="@string/biliroaming_comment_image_save_enhanced_title" />
+                <androidx.preference.SwitchPreferenceCompat
+                    android:key="live_danmaku_filter"
+                    android:summary="@string/biliroaming_live_danmaku_filter_summary"
+                    android:title="@string/biliroaming_live_danmaku_filter_title" />
+                <androidx.preference.SwitchPreferenceCompat
+                    android:key="comment_expand_all"
+                    android:summary="@string/biliroaming_comment_expand_all_summary"
+                    android:title="@string/biliroaming_comment_expand_all_title" />
 
     <androidx.preference.PreferenceCategory
         android:key="category_other"

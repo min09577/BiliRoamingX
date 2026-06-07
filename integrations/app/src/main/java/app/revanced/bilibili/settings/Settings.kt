@@ -85,6 +85,13 @@ object Settings {
         @JvmField val DoubleTapAction = IntSetting(key = "double_tap_action", defValue = 0)
         @JvmField val VideoWatermark = BooleanSetting(key = "video_watermark")
         @JvmField val DanmakuShadow = BooleanSetting(key = "danmaku_shadow")
+        @JvmField val AutoSkipAds = BooleanSetting(key = "auto_skip_ads")
+        @JvmField val VideoChapters = BooleanSetting(key = "video_chapters")
+        @JvmField val CommentSortHot = BooleanSetting(key = "comment_sort_hot")
+        @JvmField val ProgressBarColor = IntSetting(key = "progress_bar_color", defValue = 0)
+        @JvmField val CommentImageSaveEnhanced = BooleanSetting(key = "comment_image_save_enhanced")
+        @JvmField val LiveDanmakuFilter = BooleanSetting(key = "live_danmaku_filter")
+        @JvmField val CommentExpandAll = BooleanSetting(key = "comment_expand_all")
         // endregion
 
 

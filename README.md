@@ -645,3 +645,11 @@ BiliRoamingX v1.23.3 기반, AI 지원 개발로 강화.
 - 👆 **双击自定义动作** / Double Tap Action / ダブルタップアクション / 더블탭 액션
 - 💧 **视频自定义水印** / Video Watermark / 動画ウォーターマーク / 비디오 워터마크
 - 🌑 **弹幕文字阴影** / Danmaku Shadow / 弾幕シャドウ / 탄막 그림자
+
+### v1.51.0 (2026-06-08)
+
+**New Features / 新功能 / 新機能 / 새 기능:**
+- 🎨 **进度条颜色自定义** / Progress Bar Color / プログレスバーカラー / 프로그레스바 색상
+- 📸 **评论图片增强保存** / Comment Image Save / コメント画像保存 / 댓글 이미지 저장
+- 🔇 **直播弹幕过滤** / Live Danmaku Filter / ライブ弾幕フィルタ / 라이브 탄막 필터
+- 📖 **一键展开评论** / Comment Expand All / コメント全展開 / 댓글 모두 펼치기
