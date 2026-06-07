@@ -205,6 +205,14 @@
                     android:key="live_gift_block"
                     android:summary="@string/biliroaming_live_gift_block_summary"
                     android:title="@string/biliroaming_live_gift_block_title" />
+                <androidx.preference.SwitchPreferenceCompat
+                    android:key="danmaku_speed_sync"
+                    android:summary="@string/biliroaming_danmaku_speed_sync_summary"
+                    android:title="@string/biliroaming_danmaku_speed_sync_title" />
+                <androidx.preference.SwitchPreferenceCompat
+                    android:key="video_preload"
+                    android:summary="@string/biliroaming_video_preload_summary"
+                    android:title="@string/biliroaming_video_preload_title" />
     </androidx.preference.PreferenceCategory>
 
     <androidx.preference.PreferenceCategory

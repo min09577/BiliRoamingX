@@ -438,6 +438,14 @@
     <string name="biliroaming_comment_filter_level_summary">过滤低于指定等级用户的评论（0=不过滤）</string>
     <string name="biliroaming_live_gift_block_title">直播间礼物特效屏蔽</string>
     <string name="biliroaming_live_gift_block_summary">屏蔽直播间礼物动画特效，减少干扰</string>
+    <string name="biliroaming_danmaku_send_color_title">弹幕发送颜色</string>
+    <string name="biliroaming_danmaku_send_color_summary">自定义发送弹幕的颜色（默认白色）</string>
+    <string name="biliroaming_danmaku_speed_sync_title">弹幕速度跟随播放</string>
+    <string name="biliroaming_danmaku_speed_sync_summary">弹幕滚动速度自动跟随播放速度倍率调整</string>
+    <string name="biliroaming_video_preload_title">视频预加载</string>
+    <string name="biliroaming_video_preload_summary">控制视频预加载行为，节省流量或提升流畅度</string>
+    <string name="biliroaming_home_tab_reorder_title">首页Tab排序</string>
+    <string name="biliroaming_home_tab_reorder_summary">自定义首页底部Tab栏的顺序</string>
             <string name="biliroaming_ratio_fill_done">已放大到填满整个屏幕</string>
     <string name="biliroaming_ratio_restore_done">原始大小</string>
     <string name="biliroaming_remove_live_mask_title">移除马赛克遮罩</string>

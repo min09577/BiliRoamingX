@@ -629,3 +629,11 @@ BiliRoamingX v1.23.3 기반, AI 지원 개발로 강화.
 - ⏸️ **断点续播提醒** / Auto Resume / 自動再開 / 자동 재개
 - 📊 **评论等级过滤** / Comment Level Filter / コメントレベルフィルタ / 댓글 레벨 필터
 - 🎁 **直播间礼物屏蔽** / Live Gift Block / ライブギフトブロック / 라이브 선물 차단
+
+### v1.49.0 (2026-06-07)
+
+**New Features / 新功能 / 新機能 / 새 기능:**
+- 🎨 **弹幕发送颜色** / Danmaku Send Color / 弾幕送信カラー / 탄막 전송 색상
+- ⚡ **弹幕速度跟随播放** / Danmaku Speed Sync / 弾幕速度同期 / 탄막 속도 동기화
+- 📥 **视频预加载** / Video Preload / 動画プリロード / 비디오 프리로드
+- 📑 **首页Tab排序** / Home Tab Reorder / ホームタブ並べ替え / 홈 탭 정렬

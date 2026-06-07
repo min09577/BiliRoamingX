@@ -77,6 +77,10 @@ object Settings {
         @JvmField val AutoResume = BooleanSetting(key = "auto_resume")
         @JvmField val CommentFilterLevel = IntSetting(key = "comment_filter_level", defValue = 0)
         @JvmField val LiveGiftBlock = BooleanSetting(key = "live_gift_block")
+        @JvmField val DanmakuSendColor = IntSetting(key = "danmaku_send_color", defValue = 0xFFFFFF)
+        @JvmField val DanmakuSpeedSync = BooleanSetting(key = "danmaku_speed_sync")
+        @JvmField val VideoPreload = BooleanSetting(key = "video_preload")
+        @JvmField val HomeTabReorder = BooleanSetting(key = "home_tab_reorder")
         // endregion
 
 
