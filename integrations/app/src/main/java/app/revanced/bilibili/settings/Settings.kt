@@ -421,5 +421,9 @@ object Settings {
     @JvmField val AutoSkipFiller = BooleanSetting(key = "auto_skip_filler")
     @JvmField val PlayerScreenshotQuality = IntSetting(key = "player_screenshot_quality", defValue = 100)
     @JvmField val VideoAutoShare = BooleanSetting(key = "video_auto_share")
+    @JvmField val CommentStickerKeyboard = BooleanSetting(key = "comment_sticker_keyboard")
+    @JvmField val DanmakuSendHistory = BooleanSetting(key = "danmaku_send_history")
+    @JvmField val PlayerControlLayout = IntSetting(key = "player_control_layout", defValue = 0)
+    @JvmField val LiveRoomBackground = IntSetting(key = "live_room_background", defValue = 0)
     // endregion
 }

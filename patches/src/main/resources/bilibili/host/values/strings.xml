@@ -767,4 +767,12 @@
     <string name="biliroaming_player_screenshot_quality_summary">调节截图压缩质量（1-100），数值越高质量越好</string>
     <string name="biliroaming_video_auto_share_title">视频自动分享</string>
     <string name="biliroaming_video_auto_share_summary">播放视频后自动复制分享链接到剪贴板</string>
+    <string name="biliroaming_comment_sticker_keyboard_title">贴纸键盘增强</string>
+    <string name="biliroaming_comment_sticker_keyboard_summary">在评论输入框旁添加B站特色贴纸快速选择面板</string>
+    <string name="biliroaming_danmaku_send_history_title">弹幕发送历史</string>
+    <string name="biliroaming_danmaku_send_history_summary">记录最近发送的弹幕，方便快速重发</string>
+    <string name="biliroaming_player_control_layout_title">控制栏布局</string>
+    <string name="biliroaming_player_control_layout_summary">调整播放器控制按钮的排列和显示（默认/紧凑/精简）</string>
+    <string name="biliroaming_live_room_background_title">直播间背景</string>
+    <string name="biliroaming_live_room_background_summary">设置直播间的背景样式（默认/纯黑/纯白/自定义）</string>
 </resources>

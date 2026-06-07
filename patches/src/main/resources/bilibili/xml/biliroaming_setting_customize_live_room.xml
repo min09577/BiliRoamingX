@@ -62,5 +62,9 @@
             android:key="live_danmaku_font"
             android:summary="@string/biliroaming_live_danmaku_font_summary"
             android:title="@string/biliroaming_live_danmaku_font_title" />
+        <EditTextPreference
+            android:key="live_room_background"
+            android:summary="@string/biliroaming_live_room_background_summary"
+            android:title="@string/biliroaming_live_room_background_title" />
     </androidx.preference.PreferenceCategory>
 </androidx.preference.PreferenceScreen>

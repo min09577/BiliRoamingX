@@ -420,5 +420,9 @@
             android:key="player_screenshot_quality"
             android:summary="@string/biliroaming_player_screenshot_quality_summary"
             android:title="@string/biliroaming_player_screenshot_quality_title" />
+        <EditTextPreference
+            android:key="player_control_layout"
+            android:summary="@string/biliroaming_player_control_layout_summary"
+            android:title="@string/biliroaming_player_control_layout_title" />
     </androidx.preference.PreferenceCategory>
 </androidx.preference.PreferenceScreen>

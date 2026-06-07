@@ -29,4 +29,8 @@
             android:key="danmaku_send_preview"
             android:summary="@string/biliroaming_danmaku_send_preview_summary"
             android:title="@string/biliroaming_danmaku_send_preview_title" />
+        <androidx.preference.SwitchPreferenceCompat
+            android:key="danmaku_send_history"
+            android:summary="@string/biliroaming_danmaku_send_history_summary"
+            android:title="@string/biliroaming_danmaku_send_history_title" />
 </androidx.preference.PreferenceScreen>
