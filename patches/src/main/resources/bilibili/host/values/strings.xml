@@ -703,4 +703,12 @@
 
     <string name="biliroaming_live_auto_sign_title">直播间自动签到</string>
     <string name="biliroaming_live_auto_sign_summary">进入直播间时自动签到获取奖励</string>
+    <string name="biliroaming_comment_anonymous_mode_title">匿名评论模式</string>
+    <string name="biliroaming_comment_anonymous_mode_summary">发评论时隐藏用户身份信息</string>
+    <string name="biliroaming_danmaku_send_duration_title">弹幕显示时长</string>
+    <string name="biliroaming_danmaku_send_duration_summary">控制弹幕飘过速度，值越小越快</string>
+    <string name="biliroaming_live_gift_merge_title">直播礼物合并</string>
+    <string name="biliroaming_live_gift_merge_summary">合并短时间内相同礼物减少刷屏</string>
+    <string name="biliroaming_playback_speed_step_title">调速步长自定义</string>
+    <string name="biliroaming_playback_speed_step_summary">自定义每次调节播放速度的步长</string>
 </resources>

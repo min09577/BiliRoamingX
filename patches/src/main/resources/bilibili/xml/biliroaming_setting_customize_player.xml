@@ -384,5 +384,9 @@
             android:key="player_overlay_opacity"
             android:summary="@string/biliroaming_player_overlay_opacity_summary"
             android:title="@string/biliroaming_player_overlay_opacity_title" />
+        <EditTextPreference
+            android:key="playback_speed_step"
+            android:summary="@string/biliroaming_playback_speed_step_summary"
+            android:title="@string/biliroaming_playback_speed_step_title" />
     </androidx.preference.PreferenceCategory>
 </androidx.preference.PreferenceScreen>

@@ -300,6 +300,10 @@ object Settings {
     @JvmField val AddArticleTab = BooleanSetting(key = "add_article_tab")
     @JvmField val IgnoreBlacklist = BooleanSetting(key = "ignore_blacklist")
     @JvmField val UidCopyNoPrefix = BooleanSetting(key = "uid_copy_no_prefix")
+    @JvmField val CommentAnonymousMode = BooleanSetting(key = "comment_anonymous_mode")
+    @JvmField val DanmakuSendDuration = IntSetting(key = "danmaku_send_duration", defValue = 0)
+    @JvmField val LiveGiftMerge = BooleanSetting(key = "live_gift_merge")
+    @JvmField val PlaybackSpeedStep = FloatSetting(key = "playback_speed_step", defValue = 0.25f)
     // endregion
 
 

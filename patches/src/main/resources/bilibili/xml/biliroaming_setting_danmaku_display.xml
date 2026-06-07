@@ -5,4 +5,8 @@
         android:key="danmaku_display"
         android:summary="@string/biliroaming_danmaku_display_summary"
         android:title="@string/biliroaming_danmaku_display_title" />
+        <EditTextPreference
+            android:key="danmaku_send_duration"
+            android:summary="@string/biliroaming_danmaku_send_duration_summary"
+            android:title="@string/biliroaming_danmaku_send_duration_title" />
 </androidx.preference.PreferenceScreen>
