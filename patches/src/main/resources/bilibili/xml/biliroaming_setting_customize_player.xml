@@ -230,6 +230,14 @@
                     android:key="comment_expand_all"
                     android:summary="@string/biliroaming_comment_expand_all_summary"
                     android:title="@string/biliroaming_comment_expand_all_title" />
+                <androidx.preference.SwitchPreferenceCompat
+                    android:key="video_speed_presets"
+                    android:summary="@string/biliroaming_video_speed_presets_summary"
+                    android:title="@string/biliroaming_video_speed_presets_title" />
+                <androidx.preference.SwitchPreferenceCompat
+                    android:key="live_auto_reconnect"
+                    android:summary="@string/biliroaming_live_auto_reconnect_summary"
+                    android:title="@string/biliroaming_live_auto_reconnect_title" />
 
     <androidx.preference.PreferenceCategory
         android:key="category_other"

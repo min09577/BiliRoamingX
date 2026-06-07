@@ -653,3 +653,11 @@ BiliRoamingX v1.23.3 기반, AI 지원 개발로 강화.
 - 📸 **评论图片增强保存** / Comment Image Save / コメント画像保存 / 댓글 이미지 저장
 - 🔇 **直播弹幕过滤** / Live Danmaku Filter / ライブ弾幕フィルタ / 라이브 탄막 필터
 - 📖 **一键展开评论** / Comment Expand All / コメント全展開 / 댓글 모두 펼치기
+
+### v1.52.0 (2026-06-08)
+
+**New Features / 新功能 / 新機能 / 새 기능:**
+- ⏩ **播放速度预设** / Speed Presets / 速度プリセット / 속도 프리셋
+- 📍 **字幕位置调整** / Subtitle Position / 字幕位置 / 자막 위치
+- 📝 **评论字体大小** / Comment Font Size / コメントフォントサイズ / 댓글 글꼴 크기
+- 🔄 **直播自动重连** / Live Auto Reconnect / ライブ自動再接続 / 라이브 자동 재연결

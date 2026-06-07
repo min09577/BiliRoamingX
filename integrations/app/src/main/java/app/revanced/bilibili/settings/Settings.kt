@@ -92,6 +92,10 @@ object Settings {
         @JvmField val CommentImageSaveEnhanced = BooleanSetting(key = "comment_image_save_enhanced")
         @JvmField val LiveDanmakuFilter = BooleanSetting(key = "live_danmaku_filter")
         @JvmField val CommentExpandAll = BooleanSetting(key = "comment_expand_all")
+        @JvmField val VideoSpeedPresets = BooleanSetting(key = "video_speed_presets")
+        @JvmField val SubtitlePosition = IntSetting(key = "subtitle_position", defValue = 0)
+        @JvmField val CommentFontSize = IntSetting(key = "comment_font_size", defValue = 0)
+        @JvmField val LiveAutoReconnect = BooleanSetting(key = "live_auto_reconnect")
         // endregion
 
 
