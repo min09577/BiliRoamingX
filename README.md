@@ -680,6 +680,34 @@ BiliRoamingX v1.23.3 기반, AI 지원 개발로 강화.
 
 ---
 
+## v1.60.0 (2026-06-07)
+
+### 🇨🇳 中文
+- **按用户过滤弹幕** — 根据用户ID过滤特定用户的弹幕
+- **手势调节音量** — 在播放器右侧上下滑动调节音量
+- **视频自动收藏** — 播放视频时自动添加到稍后再看列表
+- **评论自动回复模板** — 在评论区快速插入预设回复模板
+
+### 🇯🇵 日本語
+- **ユーザー別弾幕フィルター** — ユーザーIDで特定ユーザーの弾幕をフィルタリング
+- **ジェスチャー音量調整** — プレーヤー右側で上下スワイプして音量調整
+- **動画自動お気に入り** — 動画再生時に自動で「後で見る」に追加
+- **コメント自動返信テンプレート** — コメント欄にテンプレートをすばやく挿入
+
+### 🇰🇷 한국어
+- **사용자별 弹幕 필터** — 사용자 ID로 특정 사용자의 弹幕 필터링
+- **제스처 음량 조절** — 플레이어 오른쪽에서 위아래로 스와이프하여 음량 조절
+- **동영상 자동 북마크** — 동영상 재생 시 자동으로 나중에 보기 목록에 추가
+- **댓글 자동 회신 템플릿** — 댓글 섹션에 템플릿을 빠르게 삽입
+
+### 🇺🇸 English
+- **Danmaku Filter by User** — Filter danmaku by specific user IDs
+- **Gesture Volume Control** — Swipe up/down on right side to adjust volume
+- **Video Auto-Save** — Auto-add played videos to watch later list
+- **Comment Auto-Reply Template** — Quick insert preset reply templates in comments
+
+---
+
 ## v1.59.0 (2026-06-07)
 
 ### 🇨🇳 中文
