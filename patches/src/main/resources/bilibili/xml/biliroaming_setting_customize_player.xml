@@ -246,6 +246,22 @@
                     android:key="danmaku_font_outline"
                     android:summary="@string/biliroaming_danmaku_font_outline_summary"
                     android:title="@string/biliroaming_danmaku_font_outline_title" />
+                <androidx.preference.SwitchPreferenceCompat
+                    android:key="player_brightness_memory"
+                    android:summary="@string/biliroaming_player_brightness_memory_summary"
+                    android:title="@string/biliroaming_player_brightness_memory_title" />
+                <androidx.preference.SwitchPreferenceCompat
+                    android:key="video_rotation_lock"
+                    android:summary="@string/biliroaming_video_rotation_lock_summary"
+                    android:title="@string/biliroaming_video_rotation_lock_title" />
+                <androidx.preference.SwitchPreferenceCompat
+                    android:key="comment_sort_newest"
+                    android:summary="@string/biliroaming_comment_sort_newest_summary"
+                    android:title="@string/biliroaming_comment_sort_newest_title" />
+                <androidx.preference.SwitchPreferenceCompat
+                    android:key="danmaku_area_top"
+                    android:summary="@string/biliroaming_danmaku_area_top_summary"
+                    android:title="@string/biliroaming_danmaku_area_top_title" />
 
     <androidx.preference.PreferenceCategory
         android:key="category_other"

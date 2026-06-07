@@ -669,3 +669,11 @@ BiliRoamingX v1.23.3 기반, AI 지원 개발로 강화.
 - 💬 **评论回复高亮** / Comment Reply Highlight / コメント返信ハイライト / 댓글 답글 강조
 - ✏️ **弹幕字体轮廓** / Danmaku Font Outline / 弾幕フォントアウトライン / 탄막 폰트 외곽선
 - 🔁 **视频循环次数** / Video Loop Count / 動画ループ回数 / 비디오 반복 횟수
+
+### v1.54.0 (2026-06-08)
+
+**New Features / 新功能 / 新機能 / 새 기능:**
+- 🔆 **亮度记忆** / Brightness Memory / 輝度記憶 / 밝기 기억
+- 🔄 **旋转锁定** / Rotation Lock / 回転ロック / 회전 잠금
+- 📅 **评论按最新排序** / Comment Sort Newest / コメント新着順 / 댓글 최신순
+- ⬆️ **弹幕顶部显示** / Danmaku Area Top / 弾幕上部表示 / 탄막 상단 표시

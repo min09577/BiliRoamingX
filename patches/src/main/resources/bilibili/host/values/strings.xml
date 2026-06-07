@@ -484,6 +484,14 @@
     <string name="biliroaming_danmaku_font_outline_summary">为弹幕文字添加轮廓线，增强可读性</string>
     <string name="biliroaming_video_loop_count_title">视频循环次数</string>
     <string name="biliroaming_video_loop_count_summary">限制视频循环播放的次数（0=无限循环）</string>
+    <string name="biliroaming_player_brightness_memory_title">亮度记忆</string>
+    <string name="biliroaming_player_brightness_memory_summary">记住每个视频的亮度设置</string>
+    <string name="biliroaming_video_rotation_lock_title">旋转锁定</string>
+    <string name="biliroaming_video_rotation_lock_summary">锁定视频旋转方向，防止误触改变</string>
+    <string name="biliroaming_comment_sort_newest_title">评论按最新排序</string>
+    <string name="biliroaming_comment_sort_newest_summary">评论默认按发布时间倒序排列</string>
+    <string name="biliroaming_danmaku_area_top_title">弹幕顶部显示</string>
+    <string name="biliroaming_danmaku_area_top_summary">允许弹幕在视频顶部区域显示</string>
             <string name="biliroaming_ratio_fill_done">已放大到填满整个屏幕</string>
     <string name="biliroaming_ratio_restore_done">原始大小</string>
     <string name="biliroaming_remove_live_mask_title">移除马赛克遮罩</string>

@@ -100,6 +100,10 @@ object Settings {
         @JvmField val CommentReplyHighlight = BooleanSetting(key = "comment_reply_highlight")
         @JvmField val DanmakuFontOutline = BooleanSetting(key = "danmaku_font_outline")
         @JvmField val VideoLoopCount = IntSetting(key = "video_loop_count", defValue = 0)
+        @JvmField val PlayerBrightnessMemory = BooleanSetting(key = "player_brightness_memory")
+        @JvmField val VideoRotationLock = BooleanSetting(key = "video_rotation_lock")
+        @JvmField val CommentSortNewest = BooleanSetting(key = "comment_sort_newest")
+        @JvmField val DanmakuAreaTop = BooleanSetting(key = "danmaku_area_top")
         // endregion
 
 
