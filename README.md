@@ -3,7 +3,7 @@
 # BiliRoamingX (AI Enhanced Fork)
 
 [![Source](https://img.shields.io/badge/Source-BiliRoamingX-blue)](https://github.com/BiliRoamingX/BiliRoamingX)
-[![Version](https://img.shields.io/badge/Version-1.39.0-green)](https://github.com/min09577/BiliRoamingX)
+[![Version](https://img.shields.io/badge/Version-1.40.0-green)](https://github.com/min09577/BiliRoamingX)
 [![AI](https://img.shields.io/badge/AI-Assisted-purple)](https://github.com/min09577/BiliRoamingX)
 
 </div>
@@ -23,7 +23,7 @@ Based on BiliRoamingX v1.23.3, enhanced with AI-assisted development.
 
 **Target Version:** Bilibili 8.95.0 (Android 64-bit)
 
-**Status:** 70+ patches working, all core features verified
+**Status:** 70+ patches working, new PiP and gesture features added, all core features verified
 
 **Build:** See [Build Instructions](#build-en) below
 
@@ -62,14 +62,20 @@ Based on BiliRoamingX v1.23.3, enhanced with AI-assisted development.
 - **Danmaku keyword highlight**
 - **Custom danmaku speed**
 - **Danmaku display area control**
+- **A-B loop segment (repeat video segment)**
+- **Video screenshot**
+- **Speed badge (show speed on player)**
+- **Auto-enter PiP (Picture-in-Picture)**
+- **Custom PiP aspect ratio**
+- **Custom double-tap seek time**
 
 ### Changelog
 
-#### 2026-06-04 (v1.39.0)
-- **New:** Video bookmark — add timestamped bookmarks and notes while watching videos for quick navigation
-- **New:** Comment translation — long press comments to translate to Chinese (Google/Microsoft)
-- **New:** Auto-skip intro/outro — automatically skip video intro and outro
-- **Settings:** Added toggles in player and comment settings
+#### 2026-06-07 (v1.40.0)
+- **New:** Auto-enter PiP — automatically enter Picture-in-Picture mode when pressing Home or switching apps
+- **New:** Custom PiP aspect ratio — set PiP video aspect ratio (Default/16:9/4:3/1:1)
+- **New:** Custom double-tap seek time — customize double-tap left/right seek seconds (default 10s)
+- **Settings:** Added toggles and options in player settings
 
 #### 2026-06-02 (v1.38.0)
 - **New:** Live room auto sign-in — automatically sign in when entering live room to get daily rewards
@@ -201,8 +207,16 @@ java -cp "$BC_JAR:$BCPKIX_JAR:revanced-cli.jar" app.revanced.cli.command.MainCom
 - **弹幕关键词高亮**
 - **自定义弹幕速度**
 - **弹幕显示区域控制**
+- **A-B 循环片段 (重复播放视频片段)**
+- **视频截图**
+- **倍速徽章 (播放器显示速度)**
+- **自动进入小窗 (画中画)**
+- **自定义小窗宽高比**
+- **自定义双击快进/快退时间**
 
 ### 更新日志
+
+- **设置：** 播放器设置中添加开关和选项
 
 #### 2026-06-04 (v1.39.0)
 - **新功能：** 视频书签 — 在视频中添加带时间戳的书签和笔记，方便快速跳转到特定时刻
@@ -323,8 +337,15 @@ BiliRoamingX v1.23.3 ベース、AI支援開発で強化。
 - **弾幕キーワードハイライト**
 - **カスタム弾幕速度**
 - **弾幕表示エリア制御**
+- **A-B ループセグメント (動画セグメントの反復再生)**
+- **動画スクリーンショット**
+- **スピードバッジ (プレーヤーに速度表示)**
+- **自動PiP (ピクチャーインピクチャー) 移行**
+- **カスタムPiPアスペクト比**
+- **カスタムダブルタップシーク時間**
 
 ### 変更履歴
+
 
 #### 2026-06-04 (v1.39.0)
 - **新機能：** 動画ブックマーク — 動画視聴中にタイムスタンプ付きブックマークとメモを追加し、特定の場面に素早くジャンプ可能
@@ -445,10 +466,38 @@ BiliRoamingX v1.23.3 기반, AI 지원 개발로 강화.
 - **탄막 키워드 하이라이트**
 - **사용자 정의 탄막 속도**
 - **탄막 표시 영역 제어**
+- **A-B 반복 세그먼트 (비디오 구간 반복 재생)**
+- **비디오 스크린샷**
+- **속도 배지 (플레이어에 속도 표시)**
+- **자동 PiP (픽처 인 픽처) 진입**
+- **사용자 정의 PiP 종횡비**
+- **사용자 정의 더블탭 시크 시간**
 
 ### 변경 이력
 
-#### 2026-06-04 (v1.39.0)
+#### 2026-06-07 (v1.40.0)
+- **New:** Auto-enter PiP — automatically enter Picture-in-Picture mode when pressing Home or switching apps
+- **New:** Custom PiP aspect ratio — set PiP video aspect ratio (Default/16:9/4:3/1:1)
+- **New:** Custom double-tap seek time — customize double-tap left/right seek seconds (default 10s)
+- **Settings:** Added toggles and options in player settings
+
+#### 2026-06-07 (v1.40.0)
+- **新功能：** 自动进入小窗 — 按 Home 键或切换应用时自动进入画中画模式
+- **新功能：** 自定义小窗宽高比 — 设置画中画模式下视频宽高比 (默认/16:9/4:3/1:1)
+- **新功能：** 自定义双击快进/快退时间 — 自定义双击视频左右两侧快进/快退秒数 (默认 10秒)
+- **设置：** 播放器设置中添加开关和选项
+
+#### 2026-06-07 (v1.40.0)
+- **新機能：** 自動PiP移行 — Homeキー押下やアプリ切り替え時に自動的にピクチャーインピクチャーモードに移行
+- **新機能：** カスタムPiPアスペクト比 — PiPモードでの動画アスペクト比を設定 (デフォルト/16:9/4:3/1:1)
+- **新機能：** カスタムダブルタップシーク時間 — 動画左右のダブルタップでのシーク秒数をカスタマイズ (デフォルト10秒)
+- **設定：** プレイヤー設定にトグルとオプションを追加
+
+#### 2026-06-07 (v1.40.0)
+- **새 기능:** 자동 PiP 진입 — 홈 키 누르기 또는 앱 전환 시 자동으로 픽처 인 픽처 모드 진입
+- **새 기능:** 사용자 정의 PiP 종횡비 — PiP 모드에서 비디오 종횡비 설정 (기본/16:9/4:3/1:1)
+- **새 기능:** 사용자 정의 더블탭 시크 시간 — 비디오 좌우 더블탭 시 빠른 앞으로/뒤로 가기 초 설정 (기본 10초)
+- **설정:** 플레이어 설정에 토글 및 옵션 추가
 - **새 기능:** 비디오 북마크 — 비디오 시청 중 타임스탬프가 있는 북마크와 메모를 추가하여 특정 장면으로 빠르게 이동
 - **새 기능:** 댓글 번역 — 댓글을 길게 눌러 중국어로 번역 (Google/마이크로소프트)
 - **새 기능:** 자동 인트로/아웃로 건너뛰기 — 비디오 인트로와 아웃로를 자동으로 건너뛰기

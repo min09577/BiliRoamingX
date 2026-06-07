@@ -510,13 +510,25 @@
         <item>云视听小电视、免流引导、投资UP主、跳转应用等</item>
     </string-array>
     <string-array name="biliroaming_purify_search_type_entries">
-        <item>默认关键词</item>
-        <item>热搜</item>
-        <item>发现</item>
-    </string-array>
-    <string-array name="biliroaming_purify_search_type_values">
-        <item>words</item>
-        <item>trending</item>
-        <item>recommend</item>
-    </string-array>
-</resources>
+            <item>默认关键词</item>
+            <item>热搜</item>
+            <item>发现</item>
+        </string-array>
+        <string-array name="biliroaming_purify_search_type_values">
+            <item>words</item>
+            <item>trending</item>
+            <item>recommend</item>
+        </string-array>
+        <string-array name="biliroaming_pip_aspect_ratio_entries">
+            <item>默认</item>
+            <item>16:9</item>
+            <item>4:3</item>
+            <item>1:1</item>
+        </string-array>
+        <string-array name="biliroaming_pip_aspect_ratio_values">
+            <item>0</item>
+            <item>1</item>
+            <item>2</item>
+            <item>3</item>
+        </string-array>
+    </resources>

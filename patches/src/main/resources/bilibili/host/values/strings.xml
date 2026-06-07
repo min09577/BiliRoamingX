@@ -365,8 +365,15 @@
     <string name="biliroaming_enable_doc_provider_summary">允许三方APP（例如MT管理器）通过访问外部存储的方式访问私有存储下的文件</string>
     <string name="biliroaming_disable_player_long_press_title">禁止长按倍速播放</string>
     <string name="biliroaming_scale_to_switch_ratio_title">重定义双指缩放手势</string>
-    <string name="biliroaming_scale_to_switch_ratio_summary">将双指缩放功能重定义为切换画面尺寸（适应/填充）</string>
-    <string name="biliroaming_ratio_fill_done">已放大到填满整个屏幕</string>
+        <string name="biliroaming_scale_to_switch_ratio_summary">将双指缩放功能重定义为切换画面尺寸（适应/填充）</string>
+        <string name="biliroaming_auto_enter_pip_title">自动进入小窗</string>
+        <string name="biliroaming_auto_enter_pip_summary">按Home键或切换应用时自动进入画中画模式</string>
+        <string name="biliroaming_pip_aspect_ratio_title">小窗宽高比</string>
+        <string name="biliroaming_pip_aspect_ratio_summary">设置画中画模式下的视频宽高比（默认/16:9/4:3/1:1）</string>
+        <string name="biliroaming_double_tap_seek_time_title">双击快进/快退时间</string>
+            <string name="biliroaming_double_tap_seek_time_summary">双击视频左右两侧快进/快退的秒数（默认10秒）</string>
+            <string name="biliroaming_double_tap_seek_time_hint">输入秒数，例如：10</string>
+            <string name="biliroaming_ratio_fill_done">已放大到填满整个屏幕</string>
     <string name="biliroaming_ratio_restore_done">原始大小</string>
     <string name="biliroaming_remove_live_mask_title">移除马赛克遮罩</string>
     <string name="biliroaming_remove_live_mask_summary">移除部分直播间官方添加的屏幕内容马赛克遮罩</string>
@@ -443,9 +450,13 @@
     <string name="biliroaming_default_aspect_ratio_title">默认画面比例</string>
     <string name="biliroaming_default_aspect_ratio_summary">设置视频默认画面比例（0=默认 1=适应 2=填充）</string>
     <string name="biliroaming_aspect_ratio_default">默认</string>
-    <string name="biliroaming_aspect_ratio_fit">适应</string>
-    <string name="biliroaming_aspect_ratio_fill">填充</string>
-    <string name="biliroaming_default">默认</string>
+        <string name="biliroaming_aspect_ratio_fit">适应</string>
+        <string name="biliroaming_aspect_ratio_fill">填充</string>
+        <string name="biliroaming_pip_aspect_ratio_default">默认</string>
+        <string name="biliroaming_pip_aspect_ratio_16_9">16:9</string>
+        <string name="biliroaming_pip_aspect_ratio_4_3">4:3</string>
+        <string name="biliroaming_pip_aspect_ratio_1_1">1:1</string>
+        <string name="biliroaming_default">默认</string>
     <string name="biliroaming_route_title">应用内打开链接</string>
     <string name="biliroaming_route_hint">bilibili://video/928861104</string>
     <string name="biliroaming_share_log_title">分享日志</string>

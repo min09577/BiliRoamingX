@@ -89,9 +89,26 @@
             android:summary="@string/biliroaming_remember_playback_speed_summary"
             android:title="@string/biliroaming_remember_playback_speed_title" />
         <androidx.preference.SwitchPreferenceCompat
-            android:key="speed_badge"
-            android:summary="@string/biliroaming_speed_badge_summary"
-            android:title="@string/biliroaming_speed_badge_title" />
+                    android:key="speed_badge"
+                    android:summary="@string/biliroaming_speed_badge_summary"
+                    android:title="@string/biliroaming_speed_badge_title" />
+                <androidx.preference.SwitchPreferenceCompat
+                    android:key="auto_enter_pip"
+                    android:summary="@string/biliroaming_auto_enter_pip_summary"
+                    android:title="@string/biliroaming_auto_enter_pip_title" />
+                <tv.danmaku.bili.widget.preference.BLRadioGroupEntrancePreference
+                    android:fragment="app.revanced.bilibili.settings.fragments.PipAspectRatioFragment"
+                    android:key="pip_aspect_ratio"
+                    android:persistent="true"
+                    android:title="@string/biliroaming_pip_aspect_ratio_title"
+                    app:migration_settings_type="none"
+                    app:radioDefaultValue="0"
+                    app:radioEntries="@array/biliroaming_pip_aspect_ratio_entries"
+                    app:radioEntryValues="@array/biliroaming_pip_aspect_ratio_values" />
+                <androidx.preference.Preference
+                    android:key="double_tap_seek_time"
+                    android:summary="@string/biliroaming_double_tap_seek_time_summary"
+                    android:title="@string/biliroaming_double_tap_seek_time_title" />
     </androidx.preference.PreferenceCategory>
 
     <androidx.preference.PreferenceCategory

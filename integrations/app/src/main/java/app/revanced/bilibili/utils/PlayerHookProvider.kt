@@ -98,7 +98,22 @@ object PlayerHookProvider {
     /**
      * @receiver player service instance
      */
+    @JvmStatic
     fun Any.seekTo(position: Int) {
         callMethod(seekToMethodName, position, false)
+    }
+
+    /**
+     * Call arbitrary method on player/service via reflection
+     * @receiver player instance
+     */
+    @JvmStatic
+    fun Any.callMethodFromHook(methodName: String, vararg args: Any?): Any? {
+        try {
+            return callMethod(methodName, *args)
+        } catch (e: Throwable) {
+            Logger.error(e) { "PlayerHookProvider: failed to call $methodName" }
+            return null
+        }
     }
 }

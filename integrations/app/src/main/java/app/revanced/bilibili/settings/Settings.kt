@@ -45,7 +45,10 @@ object Settings {
     @JvmField val AccessKeyMain = StringSetting(key = "access_key_main")
     @JvmField val AccessKeyThailand = StringSetting(key = "access_key_th")
     @JvmField val RememberPlaybackSpeed = BooleanSetting(key = "remember_playback_speed")
-    // endregion
+        @JvmField val AutoEnterPip = BooleanSetting(key = "auto_enter_pip")
+        @JvmField val PipAspectRatio = IntSetting(key = "pip_aspect_ratio", defValue = 0)
+        @JvmField val DoubleTapSeekTime = IntSetting(key = "double_tap_seek_time", defValue = 10)
+        // endregion
 
 
     // region Group: 首页

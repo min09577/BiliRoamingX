@@ -13,13 +13,14 @@ import app.revanced.bilibili.utils.*
 @SettingFragment("biliroaming_setting_customize_player")
 class CustomizePlayerFragment : BiliRoamingBaseSettingFragment() {
     override fun onCreatePreferences(savedInstanceState: Bundle?, rootKey: String?) {
-        super.onCreatePreferences(savedInstanceState, rootKey)
-        findPreference<Preference>("default_speed")?.onClick { onPlaybackSpeedClick(false) }
-        findPreference<Preference>("long_press_speed")?.onClick { onPlaybackSpeedClick(true) }
-        findPreference<Preference>("override_speed")?.onClick { onPlaybackSpeedOverrideClick() }
-        findPreference<Preference>("custom_access_key")?.onClick { onCustomAccessKey() }
-        findPreference<Preference>("default_aspect_ratio")?.onClick { onAspectRatioClick() }
-    }
+            super.onCreatePreferences(savedInstanceState, rootKey)
+            findPreference<Preference>("default_speed")?.onClick { onPlaybackSpeedClick(false) }
+            findPreference<Preference>("long_press_speed")?.onClick { onPlaybackSpeedClick(true) }
+            findPreference<Preference>("override_speed")?.onClick { onPlaybackSpeedOverrideClick() }
+            findPreference<Preference>("custom_access_key")?.onClick { onCustomAccessKey() }
+            findPreference<Preference>("default_aspect_ratio")?.onClick { onAspectRatioClick() }
+            findPreference<Preference>("double_tap_seek_time")?.onClick { onDoubleTapSeekTimeClick() }
+        }
 
     private fun onPlaybackSpeedClick(longPress: Boolean): Boolean {
         val titleId = if (longPress) "biliroaming_long_press_speed_title"
@@ -114,18 +115,53 @@ class CustomizePlayerFragment : BiliRoamingBaseSettingFragment() {
     }
 
     private fun onCustomAccessKey(): Boolean {
-        val layout = hostContext.inflateLayout("biliroaming_dialog_access_key")
-        val mainEdit = layout.findView<EditText>("biliroaming_key_main")
-        val thEdit = layout.findView<EditText>("biliroaming_key_th")
-        mainEdit.setText(Settings.AccessKeyMain())
-        thEdit.setText(Settings.AccessKeyThailand())
-        AlertDialog.Builder(context)
-            .setView(layout)
-            .setTitle(Utils.getString("biliroaming_custom_access_key_title"))
-            .setPositiveButton(android.R.string.ok) { _, _ ->
-                Settings.AccessKeyMain.save(mainEdit.text.toString().trim())
-                Settings.AccessKeyThailand.save(thEdit.text.toString().trim())
-            }.create().constraintSize(-1).show()
-        return true
+            val layout = hostContext.inflateLayout("biliroaming_dialog_access_key")
+            val mainEdit = layout.findView<EditText>("biliroaming_key_main")
+            val thEdit = layout.findView<EditText>("biliroaming_key_th")
+            mainEdit.setText(Settings.AccessKeyMain())
+            thEdit.setText(Settings.AccessKeyThailand())
+            AlertDialog.Builder(context)
+                .setView(layout)
+                .setTitle(Utils.getString("biliroaming_custom_access_key_title"))
+                .setPositiveButton(android.R.string.ok) { _, _ ->
+                    Settings.AccessKeyMain.save(mainEdit.text.toString().trim())
+                    Settings.AccessKeyThailand.save(thEdit.text.toString().trim())
+                }.create().constraintSize(-1).show()
+            return true
+        }
+
+        private fun onDoubleTapSeekTimeClick(): Boolean {
+                val editText = EditText(context)
+                editText.inputType = InputType.TYPE_CLASS_NUMBER
+                editText.hint = Utils.getString("biliroaming_double_tap_seek_time_hint")
+                val currentVal = Settings.DoubleTapSeekTime()
+                if (currentVal != null) {
+                    editText.setText(currentVal.toString())
+                }
+                AlertDialog.Builder(context)
+                    .setTitle(Utils.getString("biliroaming_double_tap_seek_time_title"))
+                    .setView(editText)
+                    .setPositiveButton(android.R.string.ok, null)
+                    .setNegativeButton(android.R.string.cancel, null)
+                    .create().constraintSize().onShow {
+                        getButton(Dialog.BUTTON_POSITIVE)?.onClick {
+                            val text = editText.text.toString().trim()
+                            if (text.isEmpty()) {
+                                Settings.DoubleTapSeekTime.restoreToDefault()
+                                dismiss()
+                                Toasts.showShortWithId("biliroaming_save_ok")
+                                return@onClick
+                            }
+                            val time = text.toIntOrNull()
+                            if (time == null || time <= 0) {
+                                Toasts.showShortWithId("biliroaming_speed_invalid")
+                            } else {
+                                Settings.DoubleTapSeekTime.save(time)
+                                Toasts.showShortWithId("biliroaming_save_ok")
+                                dismiss()
+                            }
+                        }
+                    }.show()
+                return true
+            }
     }
-}
