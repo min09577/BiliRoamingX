@@ -680,6 +680,34 @@ BiliRoamingX v1.23.3 기반, AI 지원 개발로 강화.
 
 ---
 
+## v1.62.0 (2026-06-07)
+
+### 🇨🇳 中文
+- **弹幕发送预览** — 发送前在屏幕上预览弹幕效果（字体、颜色、位置）
+- **字幕下载** — 支持下载视频字幕文件（SRT/ASS/VTT格式）
+- **直播切片** — 将直播流录制为本地视频片段
+- **画中画窗口大小** — 自定义画中画窗口的大小（小/中/大）
+
+### 🇯🇵 日本語
+- **弾幕送信プレビュー** — 送信前に画面上で弾幕の効果をプレビュー
+- **字幕ダウンロード** — 動画の字幕ファイルをダウンロード可能（SRT/ASS/VTT）
+- **ライブクリップ** — ライブストリームをローカル動画クリップとして録画
+- **ピクチャインピクチャサイズ** — PiPウィンドウのサイズをカスタマイズ
+
+### 🇰🇷 한국어
+- **弹幕 전송 미리보기** — 전송 전 화면에서 弹幕 효과 미리보기
+- **자막 다운로드** — 동영상 자막 파일 다운로드 지원 (SRT/ASS/VTT)
+- **라이브 클립** — 라이브 스트림을 로컬 비디오 클립으로 녹화
+- **화면 속 화면 크기** — PiP 창 크기 사용자 정의 (작음/보통/큼)
+
+### 🇺🇸 English
+- **Danmaku Send Preview** — Preview danmaku effect on screen before sending
+- **Subtitle Download** — Download video subtitles (SRT/ASS/VTT format)
+- **Live Stream Clip** — Record live stream as local video clip
+- **PiP Window Size** — Customize picture-in-picture window size
+
+---
+
 ## v1.61.0 (2026-06-07)
 
 ### 🇨🇳 中文
