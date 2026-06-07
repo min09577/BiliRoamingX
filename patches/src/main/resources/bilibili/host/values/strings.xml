@@ -420,6 +420,16 @@
     <string name="biliroaming_danmaku_merge_summary">合并内容相同的弹幕，减少屏幕拥挤</string>
     <string name="biliroaming_touch_lock_title">防误触锁定</string>
     <string name="biliroaming_touch_lock_summary">播放时锁定屏幕触摸，防止误操作（双击解锁）</string>
+    <string name="biliroaming_player_battery_title">播放器电量显示</string>
+    <string name="biliroaming_player_battery_summary">播放视频时在角落显示当前电量百分比</string>
+    <string name="biliroaming_danmaku_font_border_title">弹幕文字描边</string>
+    <string name="biliroaming_danmaku_font_border_summary">为弹幕文字添加描边效果，增强可读性</string>
+    <string name="biliroaming_comment_collapse_title">长评论自动折叠</string>
+    <string name="biliroaming_comment_collapse_summary">超过指定行数的评论自动折叠，点击展开</string>
+    <string name="biliroaming_comment_collapse_lines_title">折叠行数</string>
+    <string name="biliroaming_comment_collapse_lines_summary">评论超过多少行时自动折叠（默认5行）</string>
+    <string name="biliroaming_video_crop_title">视频裁剪去黑边</string>
+    <string name="biliroaming_video_crop_summary">自动裁剪视频黑边，填充整个播放区域</string>
             <string name="biliroaming_ratio_fill_done">已放大到填满整个屏幕</string>
     <string name="biliroaming_ratio_restore_done">原始大小</string>
     <string name="biliroaming_remove_live_mask_title">移除马赛克遮罩</string>

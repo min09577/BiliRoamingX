@@ -68,6 +68,11 @@ object Settings {
         @JvmField val AutoRotate = BooleanSetting(key = "auto_rotate")
         @JvmField val DanmakuMerge = BooleanSetting(key = "danmaku_merge")
         @JvmField val TouchLock = BooleanSetting(key = "touch_lock")
+        @JvmField val PlayerBattery = BooleanSetting(key = "player_battery")
+        @JvmField val DanmakuFontBorder = BooleanSetting(key = "danmaku_font_border")
+        @JvmField val CommentCollapse = BooleanSetting(key = "comment_collapse")
+        @JvmField val CommentCollapseLines = IntSetting(key = "comment_collapse_lines", defValue = 5)
+        @JvmField val VideoCrop = BooleanSetting(key = "video_crop")
         // endregion
 
 

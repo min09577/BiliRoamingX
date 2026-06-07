@@ -613,3 +613,11 @@ BiliRoamingX v1.23.3 기반, AI 지원 개발로 강화.
 - 修复 PlayerClockPatch 和 VolumeBoostPatch 文件丢失
 - 删除 NetworkIndicator（与 PlaybackStatsOverlay 重复）
 - 验证所有新功能无重复
+
+### v1.47.0 (2026-06-07)
+
+**New Features / 新功能 / 新機能 / 새 기능:**
+- 🔋 **播放器电量显示** / Player Battery / プレイヤー電池表示 / 플레이어 배터리 표시
+- ✏️ **弹幕文字描边** / Danmaku Font Border / 弾幕フォントボーダー / 탄막 폰트 테두리
+- 📄 **长评论自动折叠** / Comment Collapse / コメント折りたたみ / 댓글 접기
+- ✂️ **视频裁剪去黑边** / Video Crop / 動画クロップ / 비디오 크롭

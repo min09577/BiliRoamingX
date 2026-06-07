@@ -177,6 +177,22 @@
                     android:key="touch_lock"
                     android:summary="@string/biliroaming_touch_lock_summary"
                     android:title="@string/biliroaming_touch_lock_title" />
+                <androidx.preference.SwitchPreferenceCompat
+                    android:key="player_battery"
+                    android:summary="@string/biliroaming_player_battery_summary"
+                    android:title="@string/biliroaming_player_battery_title" />
+                <androidx.preference.SwitchPreferenceCompat
+                    android:key="danmaku_font_border"
+                    android:summary="@string/biliroaming_danmaku_font_border_summary"
+                    android:title="@string/biliroaming_danmaku_font_border_title" />
+                <androidx.preference.SwitchPreferenceCompat
+                    android:key="comment_collapse"
+                    android:summary="@string/biliroaming_comment_collapse_summary"
+                    android:title="@string/biliroaming_comment_collapse_title" />
+                <androidx.preference.SwitchPreferenceCompat
+                    android:key="video_crop"
+                    android:summary="@string/biliroaming_video_crop_summary"
+                    android:title="@string/biliroaming_video_crop_title" />
     </androidx.preference.PreferenceCategory>
 
     <androidx.preference.PreferenceCategory
