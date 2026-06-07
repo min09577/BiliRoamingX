@@ -396,5 +396,9 @@
             android:key="video_thumbnail_preview"
             android:summary="@string/biliroaming_video_thumbnail_preview_summary"
             android:title="@string/biliroaming_video_thumbnail_preview_title" />
+        <EditTextPreference
+            android:key="player_background_dim"
+            android:summary="@string/biliroaming_player_background_dim_summary"
+            android:title="@string/biliroaming_player_background_dim_title" />
     </androidx.preference.PreferenceCategory>
 </androidx.preference.PreferenceScreen>

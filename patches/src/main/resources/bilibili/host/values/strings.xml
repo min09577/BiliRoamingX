@@ -727,4 +727,12 @@
     <string name="biliroaming_video_thumbnail_preview_summary">进度条悬停时显示视频缩略图预览</string>
     <string name="biliroaming_video_auto_pause_on_scroll_title">滚动自动暂停</string>
     <string name="biliroaming_video_auto_pause_on_scroll_summary">在信息流中滚动时自动暂停正在播放的视频</string>
+    <string name="biliroaming_danmaku_font_style_title">弹幕字体样式</string>
+    <string name="biliroaming_danmaku_font_style_summary">自定义弹幕文字样式（默认/粗体/斜体/粗斜体）</string>
+    <string name="biliroaming_danmaku_send_animation_title">弹幕发送动画</string>
+    <string name="biliroaming_danmaku_send_animation_summary">新发送的弹幕带有入场动画效果</string>
+    <string name="biliroaming_player_background_dim_title">播放器背景变暗</string>
+    <string name="biliroaming_player_background_dim_summary">调节播放器背景的变暗程度（0-100）</string>
+    <string name="biliroaming_video_auto_next_title">自动播放下一集</string>
+    <string name="biliroaming_video_auto_next_summary">当前视频播放结束后自动播放下一集</string>
 </resources>

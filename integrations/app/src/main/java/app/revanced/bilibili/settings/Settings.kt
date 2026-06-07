@@ -401,5 +401,9 @@ object Settings {
     @JvmField val DanmakuBatchReport = BooleanSetting(key = "danmaku_batch_report")
     @JvmField val VideoThumbnailPreview = BooleanSetting(key = "video_thumbnail_preview")
     @JvmField val VideoAutoPauseOnScroll = BooleanSetting(key = "video_auto_pause_on_scroll")
+    @JvmField val DanmakuFontStyle = IntSetting(key = "danmaku_font_style", defValue = 0)
+    @JvmField val DanmakuSendAnimation = BooleanSetting(key = "danmaku_send_animation")
+    @JvmField val PlayerBackgroundDim = IntSetting(key = "player_background_dim", defValue = 0)
+    @JvmField val VideoAutoNext = BooleanSetting(key = "video_auto_next")
     // endregion
 }
