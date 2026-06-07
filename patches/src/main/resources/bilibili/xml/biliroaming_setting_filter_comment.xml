@@ -48,5 +48,9 @@
             android:key="comment_auto_reply"
             android:summary="@string/biliroaming_comment_auto_reply_summary"
             android:title="@string/biliroaming_comment_auto_reply_title" />
+        <androidx.preference.SwitchPreferenceCompat
+            android:key="comment_emoji_keyboard"
+            android:summary="@string/biliroaming_comment_emoji_keyboard_summary"
+            android:title="@string/biliroaming_comment_emoji_keyboard_title" />
     </androidx.preference.PreferenceCategory>
 </androidx.preference.PreferenceScreen>

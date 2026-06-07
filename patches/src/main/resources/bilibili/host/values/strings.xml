@@ -743,4 +743,12 @@
     <string name="biliroaming_video_auto_save_summary">播放视频时自动添加到稍后再看列表</string>
     <string name="biliroaming_comment_auto_reply_title">评论自动回复模板</string>
     <string name="biliroaming_comment_auto_reply_summary">在评论区快速插入预设回复模板</string>
+    <string name="biliroaming_comment_emoji_keyboard_title">表情键盘增强</string>
+    <string name="biliroaming_comment_emoji_keyboard_summary">在评论输入框旁添加常用表情快速选择面板</string>
+    <string name="biliroaming_live_room_auto_mute_title">直播间自动静音</string>
+    <string name="biliroaming_live_room_auto_mute_summary">进入直播间时自动静音，避免突然声音打扰</string>
+    <string name="biliroaming_player_gesture_brightness_title">手势调节亮度</string>
+    <string name="biliroaming_player_gesture_brightness_summary">在播放器左侧上下滑动调节屏幕亮度</string>
+    <string name="biliroaming_danmaku_filter_by_color_title">按颜色过滤弹幕</string>
+    <string name="biliroaming_danmaku_filter_by_color_summary">根据弹幕颜色过滤特定颜色的弹幕</string>
 </resources>

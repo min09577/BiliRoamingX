@@ -409,5 +409,9 @@ object Settings {
     @JvmField val PlayerGestureVolume = BooleanSetting(key = "player_gesture_volume")
     @JvmField val VideoAutoSave = BooleanSetting(key = "video_auto_save")
     @JvmField val CommentAutoReply = StringSetting(key = "comment_auto_reply")
+    @JvmField val CommentEmojiKeyboard = BooleanSetting(key = "comment_emoji_keyboard")
+    @JvmField val LiveRoomAutoMute = BooleanSetting(key = "live_room_auto_mute")
+    @JvmField val PlayerGestureBrightness = BooleanSetting(key = "player_gesture_brightness")
+    @JvmField val DanmakuFilterByColor = StringSetSetting(key = "danmaku_filter_by_color")
     // endregion
 }
