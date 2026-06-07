@@ -385,6 +385,15 @@
     <string name="biliroaming_stats_buffer">缓冲</string>
     <string name="biliroaming_stats_bitrate">码率</string>
     <string name="biliroaming_stats_speed">网速</string>
+    <string name="biliroaming_watch_stats_title">观看统计</string>
+    <string name="biliroaming_watch_stats_summary">记录每日和总观看时长，在个人空间显示</string>
+    <string name="biliroaming_loop_interval_title">循环间隔时间</string>
+    <string name="biliroaming_loop_interval_summary">循环播放时每次重复之间的暂停秒数（0表示无间隔）</string>
+    <string name="biliroaming_loop_interval_hint">输入间隔秒数，例如：3</string>
+    <string name="biliroaming_screenshot_timestamp_title">截图添加时间戳</string>
+    <string name="biliroaming_screenshot_timestamp_summary">截图时在右下角添加视频时间戳水印</string>
+    <string name="biliroaming_swipe_gesture_custom_title">滑动手势自定义</string>
+    <string name="biliroaming_swipe_gesture_custom_summary">自定义左右滑动调节亮度和音量的行为</string>
             <string name="biliroaming_ratio_fill_done">已放大到填满整个屏幕</string>
     <string name="biliroaming_ratio_restore_done">原始大小</string>
     <string name="biliroaming_remove_live_mask_title">移除马赛克遮罩</string>

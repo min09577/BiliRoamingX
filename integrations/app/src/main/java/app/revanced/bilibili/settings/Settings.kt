@@ -52,6 +52,10 @@ object Settings {
         @JvmField val QuickFavorite = BooleanSetting(key = "quick_favorite")
         @JvmField val CommentPinchZoom = BooleanSetting(key = "comment_pinch_zoom")
         @JvmField val ShareWithTimestamp = BooleanSetting(key = "share_with_timestamp")
+        @JvmField val WatchStats = BooleanSetting(key = "watch_stats")
+        @JvmField val LoopInterval = IntSetting(key = "loop_interval", defValue = 0)
+        @JvmField val ScreenshotTimestamp = BooleanSetting(key = "screenshot_timestamp")
+        @JvmField val SwipeGestureCustom = BooleanSetting(key = "swipe_gesture_custom")
         // endregion
 
 

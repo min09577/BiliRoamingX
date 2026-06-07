@@ -117,6 +117,22 @@
                     android:key="share_with_timestamp"
                     android:summary="@string/biliroaming_share_with_timestamp_summary"
                     android:title="@string/biliroaming_share_with_timestamp_title" />
+                <androidx.preference.SwitchPreferenceCompat
+                    android:key="watch_stats"
+                    android:summary="@string/biliroaming_watch_stats_summary"
+                    android:title="@string/biliroaming_watch_stats_title" />
+                <androidx.preference.Preference
+                    android:key="loop_interval"
+                    android:summary="@string/biliroaming_loop_interval_summary"
+                    android:title="@string/biliroaming_loop_interval_title" />
+                <androidx.preference.SwitchPreferenceCompat
+                    android:key="screenshot_timestamp"
+                    android:summary="@string/biliroaming_screenshot_timestamp_summary"
+                    android:title="@string/biliroaming_screenshot_timestamp_title" />
+                <androidx.preference.SwitchPreferenceCompat
+                    android:key="swipe_gesture_custom"
+                    android:summary="@string/biliroaming_swipe_gesture_custom_summary"
+                    android:title="@string/biliroaming_swipe_gesture_custom_title" />
     </androidx.preference.PreferenceCategory>
 
     <androidx.preference.PreferenceCategory
