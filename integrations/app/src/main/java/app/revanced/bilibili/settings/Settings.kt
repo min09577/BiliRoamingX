@@ -104,6 +104,10 @@ object Settings {
         @JvmField val VideoRotationLock = BooleanSetting(key = "video_rotation_lock")
         @JvmField val CommentSortNewest = BooleanSetting(key = "comment_sort_newest")
         @JvmField val DanmakuAreaTop = BooleanSetting(key = "danmaku_area_top")
+        @JvmField val VideoCacheSize = IntSetting(key = "video_cache_size", defValue = 0)
+        @JvmField val CommentImagePreview = BooleanSetting(key = "comment_image_preview")
+        @JvmField val DanmakuSendPosition = IntSetting(key = "danmaku_send_position", defValue = 0)
+        @JvmField val PlayerOverlayOpacity = IntSetting(key = "player_overlay_opacity", defValue = 100)
         // endregion
 
 

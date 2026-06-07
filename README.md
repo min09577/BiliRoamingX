@@ -677,3 +677,32 @@ BiliRoamingX v1.23.3 기반, AI 지원 개발로 강화.
 - 🔄 **旋转锁定** / Rotation Lock / 回転ロック / 회전 잠금
 - 📅 **评论按最新排序** / Comment Sort Newest / コメント新着順 / 댓글 최신순
 - ⬆️ **弹幕顶部显示** / Danmaku Area Top / 弾幕上部表示 / 탄막 상단 표시
+
+---
+
+## v1.55.0 (2026-06-07)
+
+### 🇨🇳 中文
+- **视频缓存大小设置** — 自定义视频缓存上限，节省存储空间
+- **评论图片预览增强** — 长按评论图片支持保存、分享、复制链接
+- **弹幕发送位置设置** — 设置新发送弹幕的显示位置（顶部/底部/滚动）
+- **播放器覆盖层透明度** — 调整播放器控制覆盖层的透明度
+
+### 🇯🇵 日本語
+- **動画キャッシュサイズ設定** — 動画キャッシュの上限をカスタマイズし、ストレージを節約
+- **コメント画像プレビュー強化** — コメント画像の長押しで保存・共有・リンクコピー
+- **弾幕送信位置設定** — 新しい弾幕の表示位置を設定（上/下/スクロール）
+- **プレーヤーオーバーレイ透明度** — プレーヤー制御オーバーレイの透明度を調整
+
+### 🇰🇷 한국어
+- **동영상 캐시 크기 설정** — 동영상 캐시 상한을 사용자 정의하여 저장 공간 절약
+- **댓글 이미지 미리보기 강화** — 댓글 이미지 길게 눌러 저장, 공유, 링크 복사
+- **弹幕 전송 위치 설정** — 새 弹幕 표시 위치 설정 (상단/하단/스크롤)
+- **플레이어 오버레이 투명도** — 플레이어 제어 오버레이 투명도 조절
+
+### 🇺🇸 English
+- **Video Cache Size Setting** — Customize video cache limit to save storage
+- **Comment Image Preview Enhancement** — Long press comment images to save, share, or copy link
+- **Danmaku Send Position Setting** — Set display position for new danmaku (top/bottom/scroll)
+- **Player Overlay Opacity** — Adjust transparency of player control overlay
+

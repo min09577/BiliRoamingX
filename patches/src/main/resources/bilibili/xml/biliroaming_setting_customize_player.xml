@@ -262,6 +262,10 @@
                     android:key="danmaku_area_top"
                     android:summary="@string/biliroaming_danmaku_area_top_summary"
                     android:title="@string/biliroaming_danmaku_area_top_title" />
+                <androidx.preference.SwitchPreferenceCompat
+                    android:key="comment_image_preview"
+                    android:summary="@string/biliroaming_comment_image_preview_summary"
+                    android:title="@string/biliroaming_comment_image_preview_title" />
 
     <androidx.preference.PreferenceCategory
         android:key="category_other"
@@ -368,5 +372,17 @@
             android:key="force_hdr"
             android:summary="@string/biliroaming_force_hdr_summary"
             android:title="@string/biliroaming_force_hdr_title" />
+        <EditTextPreference
+            android:key="video_cache_size"
+            android:summary="@string/biliroaming_video_cache_size_summary"
+            android:title="@string/biliroaming_video_cache_size_title" />
+        <SwitchPreferenceCompat
+            android:key="danmaku_send_position"
+            android:summary="@string/biliroaming_danmaku_send_position_summary"
+            android:title="@string/biliroaming_danmaku_send_position_title" />
+        <EditTextPreference
+            android:key="player_overlay_opacity"
+            android:summary="@string/biliroaming_player_overlay_opacity_summary"
+            android:title="@string/biliroaming_player_overlay_opacity_title" />
     </androidx.preference.PreferenceCategory>
 </androidx.preference.PreferenceScreen>

@@ -492,6 +492,14 @@
     <string name="biliroaming_comment_sort_newest_summary">评论默认按发布时间倒序排列</string>
     <string name="biliroaming_danmaku_area_top_title">弹幕顶部显示</string>
     <string name="biliroaming_danmaku_area_top_summary">允许弹幕在视频顶部区域显示</string>
+    <string name="biliroaming_video_cache_size_title">视频缓存大小</string>
+    <string name="biliroaming_video_cache_size_summary">设置视频缓存大小（MB），0为默认</string>
+    <string name="biliroaming_comment_image_preview_title">评论图片预览</string>
+    <string name="biliroaming_comment_image_preview_summary">点击评论图片可放大预览，支持缩放查看</string>
+    <string name="biliroaming_danmaku_send_position_title">弹幕发送位置</string>
+    <string name="biliroaming_danmaku_send_position_summary">选择弹幕发送位置（滚动/顶部/底部）</string>
+    <string name="biliroaming_player_overlay_opacity_title">叠加层透明度</string>
+    <string name="biliroaming_player_overlay_opacity_summary">调节播放器叠加层（时钟/电量等）的透明度</string>
             <string name="biliroaming_ratio_fill_done">已放大到填满整个屏幕</string>
     <string name="biliroaming_ratio_restore_done">原始大小</string>
     <string name="biliroaming_remove_live_mask_title">移除马赛克遮罩</string>
