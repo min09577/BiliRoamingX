@@ -680,6 +680,34 @@ BiliRoamingX v1.23.3 기반, AI 지원 개발로 강화.
 
 ---
 
+## v1.58.0 (2026-06-07)
+
+### 🇨🇳 中文
+- **评论图片自动加载控制** — 关闭后仅显示占位图，点击后才加载，节省流量
+- **弹幕批量举报** — 在弹幕列表中支持批量选择和举报违规弹幕
+- **缩略图预览** — 进度条悬停时显示视频缩略图预览
+- **滚动自动暂停** — 在信息流中滚动时自动暂停正在播放的视频
+
+### 🇯🇵 日本語
+- **コメント画像自動読み込み制御** — オフにするとプレースホルダーのみ表示、タップで読み込み
+- **弾幕一括通報** — 弾幕リストで一括選択・違反通報に対応
+- **サムネイルプレビュー** — プログレスバーにカーソルを合わせるとサムネイル表示
+- **スクロール自動一時停止** — フィードスクロール時に再生中の動画を自動停止
+
+### 🇰🇷 한국어
+- **댓글 이미지 자동 로드 제어** — 끄면 자리표시 이미지만 표시, 탭 시 로드
+- **弹幕 일괄 신고** — 弹幕 목록에서 일괄 선택 및 위반 신고 지원
+- **썸네일 미리보기** — 진행률 표시줄에 마우스를 올리면 썸네일 표시
+- **스크롤 자동 일시정지** — 피드 스크롤 시 재생 중인 동영상 자동 일시정지
+
+### 🇺🇸 English
+- **Comment Image Auto-Load Control** — Show placeholder only, load on tap to save data
+- **Danmaku Batch Report** — Batch select and report violating danmaku
+- **Thumbnail Preview** — Show video thumbnail on progress bar hover
+- **Auto-Pause on Scroll** — Auto-pause playing video when scrolling in feed
+
+---
+
 ## v1.57.0 (2026-06-07)
 
 ### 🇨🇳 中文
