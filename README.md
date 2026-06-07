@@ -680,6 +680,34 @@ BiliRoamingX v1.23.3 기반, AI 지원 개발로 강화.
 
 ---
 
+## v1.56.0 (2026-06-07)
+
+### 🇨🇳 中文
+- **匿名评论模式** — 发评论时隐藏用户身份信息，保护隐私
+- **弹幕显示时长调节** — 控制弹幕飘过速度，值越小越快
+- **直播礼物合并** — 合并短时间内相同礼物减少刷屏
+- **调速步长自定义** — 自定义每次调节播放速度的步长（0.05x~1.0x）
+
+### 🇯🇵 日本語
+- **匿名コメントモード** — コメント投稿時にユーザー情報を非表示
+- **弾幕表示時間調整** — 弾幕のスクロール速度を制御（小さいほど速い）
+- **ライブギフト統合** — 短時間の同じギフトを統合して表示
+- **速度調整ステップカスタマイズ** — 再生速度の調整ステップを設定（0.05x～1.0x）
+
+### 🇰🇷 한국어
+- **익명 댓글 모드** — 댓글 작성 시 사용자 정보 숨기기
+- **弹幕 표시 시간 조절** — 弹幕 스크롤 속도 제어 (값이 작을수록 빠름)
+- **라이브 선물 병합** — 짧은 시간 내 같은 선물을 병합하여 표시
+- **재생 속도 단계 사용자 정의** — 재생 속도 조절 단계 설정 (0.05x~1.0x)
+
+### 🇺🇸 English
+- **Anonymous Comment Mode** — Hide user identity when posting comments
+- **Danmaku Display Duration** — Control danmaku scroll speed (smaller = faster)
+- **Live Gift Merge** — Merge identical gifts within a short time window
+- **Playback Speed Step Customization** — Customize speed adjustment step (0.05x~1.0x)
+
+---
+
 ## v1.55.0 (2026-06-07)
 
 ### 🇨🇳 中文
