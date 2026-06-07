@@ -412,6 +412,14 @@
     <string name="biliroaming_brightness_lock_summary">播放视频时锁定当前亮度，防止误触改变</string>
     <string name="biliroaming_network_indicator_title">网络状态指示器</string>
     <string name="biliroaming_network_indicator_summary">播放器上显示当前网络速度和延迟信息</string>
+    <string name="biliroaming_comment_highlight_up_title">高亮UP主评论</string>
+    <string name="biliroaming_comment_highlight_up_summary">UP主发布的评论使用醒目颜色高亮显示</string>
+    <string name="biliroaming_auto_rotate_title">自动横屏播放</string>
+    <string name="biliroaming_auto_rotate_summary">进入全屏播放时自动切换为横屏模式</string>
+    <string name="biliroaming_danmaku_merge_title">合并重复弹幕</string>
+    <string name="biliroaming_danmaku_merge_summary">合并内容相同的弹幕，减少屏幕拥挤</string>
+    <string name="biliroaming_touch_lock_title">防误触锁定</string>
+    <string name="biliroaming_touch_lock_summary">播放时锁定屏幕触摸，防止误操作（双击解锁）</string>
             <string name="biliroaming_ratio_fill_done">已放大到填满整个屏幕</string>
     <string name="biliroaming_ratio_restore_done">原始大小</string>
     <string name="biliroaming_remove_live_mask_title">移除马赛克遮罩</string>

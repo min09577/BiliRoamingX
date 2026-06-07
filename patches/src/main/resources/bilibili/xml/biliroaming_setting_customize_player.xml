@@ -165,6 +165,22 @@
                     android:key="network_indicator"
                     android:summary="@string/biliroaming_network_indicator_summary"
                     android:title="@string/biliroaming_network_indicator_title" />
+                <androidx.preference.SwitchPreferenceCompat
+                    android:key="comment_highlight_up"
+                    android:summary="@string/biliroaming_comment_highlight_up_summary"
+                    android:title="@string/biliroaming_comment_highlight_up_title" />
+                <androidx.preference.SwitchPreferenceCompat
+                    android:key="auto_rotate"
+                    android:summary="@string/biliroaming_auto_rotate_summary"
+                    android:title="@string/biliroaming_auto_rotate_title" />
+                <androidx.preference.SwitchPreferenceCompat
+                    android:key="danmaku_merge"
+                    android:summary="@string/biliroaming_danmaku_merge_summary"
+                    android:title="@string/biliroaming_danmaku_merge_title" />
+                <androidx.preference.SwitchPreferenceCompat
+                    android:key="touch_lock"
+                    android:summary="@string/biliroaming_touch_lock_summary"
+                    android:title="@string/biliroaming_touch_lock_title" />
     </androidx.preference.PreferenceCategory>
 
     <androidx.preference.PreferenceCategory
