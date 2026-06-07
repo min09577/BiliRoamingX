@@ -680,6 +680,34 @@ BiliRoamingX v1.23.3 기반, AI 지원 개발로 강화.
 
 ---
 
+## v1.63.0 (2026-06-07)
+
+### 🇨🇳 中文
+- **直播弹幕字体** — 自定义直播弹幕的字体大小（独立于视频弹幕设置）
+- **自动跳过花絮** — 自动跳过正片前后的花絮、预告、广告
+- **截图质量设置** — 调节截图压缩质量（1-100），数值越高质量越好
+- **视频自动分享** — 播放视频后自动复制分享链接到剪贴板
+
+### 🇯🇵 日本語
+- **ライブ弾幕フォント** — ライブ弾幕のフォントサイズをカスタマイズ
+- **花絮自動スキップ** — 本編前後の予告、広告、花絮を自動スキップ
+- **スクリーンショット品質設定** — スクリーンショットの圧縮品質を調整（1-100）
+- **動画自動共有** — 動画再生後にクリップボードに共有URLを自動コピー
+
+### 🇰🇷 한국어
+- **라이브 弹幕 글꼴** — 라이브 弹幕 글꼴 크기 사용자 정의 (동영상 弹幕과 독립적)
+- **预告 자동 건너뛰기** — 본편 전후의 예고, 광고, 부가 내용 자동 건너뛰기
+- **스크린샷 품질 설정** — 스크린샷 압축 품질 조절 (1-100, 높을수록 좋음)
+- **동영상 자동 공유** — 동영상 재생 후 공유 URL 자동 복사
+
+### 🇺🇸 English
+- **Live Danmaku Font** — Customize live danmaku font size (independent from video danmaku)
+- **Auto Skip Filler** — Auto-skip previews, credits, and ads around main content
+- **Screenshot Quality Setting** — Adjust screenshot compression quality (1-100)
+- **Video Auto-Share** — Auto-copy share URL to clipboard after playing video
+
+---
+
 ## v1.62.0 (2026-06-07)
 
 ### 🇨🇳 中文
