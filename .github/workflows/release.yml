@@ -1,0 +1,82 @@
+name: Release
+
+on:
+  push:
+    tags:
+      - 'v*'
+
+permissions:
+  contents: write
+
+jobs:
+  build-and-release:
+    name: Build & Release
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          submodules: 'recursive'
+
+      - name: Set up JDK
+        uses: actions/setup-java@v4
+        with:
+          distribution: 'temurin'
+          java-version: '17'
+
+      - name: Cache gradle
+        uses: actions/cache@v4
+        with:
+          path: |
+            ~/.gradle/caches
+            ~/.gradle/wrapper
+          key: ${{ runner.os }}-gradle-${{ hashFiles('**/*.gradle*', '**/gradle-wrapper.properties', 'gradle/*.versions.toml') }}
+          restore-keys: |
+            ${{ runner.os }}-gradle-
+
+      - name: Retrieve version
+        id: version
+        run: |
+          TAG=${GITHUB_REF#refs/tags/}
+          echo "tag=$TAG" >> $GITHUB_OUTPUT
+          version=`awk -F "=" '$1 == "version" {print $2}' gradle.properties`
+          echo "version=$version" >> $GITHUB_OUTPUT
+
+      - name: Build with gradle
+        env:
+          GITHUB_TOKEN: ${{ secrets.GH_PACKAGES_TOKEN }}
+          GITHUB_ACTOR: ${{ github.actor }}
+        run: |
+          if [ -z "$GITHUB_TOKEN" ]; then
+            export GITHUB_TOKEN=${{ github.token }}
+          fi
+          ./gradlew --no-daemon -Dorg.gradle.jvmargs=-Xmx2g -Pversion=${{ steps.version.outputs.version }} dist
+
+      - name: Prepare release assets
+        run: |
+          mkdir -p release_assets
+          find build -name "*.jar" -exec cp {} release_assets/ \;
+          find build -name "*.apk" -exec cp {} release_assets/ \;
+          ls -la release_assets/
+
+      - name: Create GitHub Release
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: ${{ steps.version.outputs.tag }}
+          name: BiliRoamingX ${{ steps.version.outputs.tag }}
+          draft: false
+          prerelease: false
+          files: release_assets/*
+          body: |
+            ## BiliRoamingX ${{ steps.version.outputs.tag }}
+
+            ### 📥 Download
+            - Download the APK from the assets below
+            - Patch it against Bilibili 8.95.0 (Android 64-bit)
+
+            ### 📋 Changelog
+            See [README.md](https://github.com/min09577/BiliRoamingX/blob/main/README.md) for detailed changelog.
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
