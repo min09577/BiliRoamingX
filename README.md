@@ -680,6 +680,34 @@ BiliRoamingX v1.23.3 기반, AI 지원 개발로 강화.
 
 ---
 
+## v1.64.0 (2026-06-07)
+
+### 🇨🇳 中文
+- **评论区贴纸键盘增强** — 在评论输入框旁添加B站特色贴纸快速选择面板
+- **弹幕发送历史** — 记录最近发送的弹幕，方便快速重发
+- **播放器控制栏布局** — 调整播放器控制按钮的排列和显示（默认/紧凑/精简）
+- **直播间背景自定义** — 设置直播间的背景样式（默认/纯黑/纯白/自定义）
+
+### 🇯🇵 日本語
+- **コメントステッカーキーボード強化** — コメント入力欄にBilibiliステッカーパネルを追加
+- **弾幕送信履歴** — 最近送信した弾mouthを記録し、再送信を簡単にする
+- **プレーヤーコントロールレイアウト** — コントロールボタンの配置を調整（デフォルト/コンパクト/ミニマル）
+- **ライブルーム背景カスタマイズ** — ライブルームの背景スタイルを設定
+
+### 🇰🇷 한국어
+- **댓글 스티커 키보드 강화** — 댓글 입력란에 Bilibili 스티커 패널 추가
+- **弹幕 전송 기록** — 최근 전송한 弹幕 기록으로 빠른 재전송
+- **플레이어 컨트롤 레이아웃** — 컨트롤 버튼 배치 조정 (기본/컴팩트/미니멀)
+- **라이브룸 배경 사용자 정의** — 라이브룸 배경 스타일 설정 (기본/검정/흰색/사용자 정의)
+
+### 🇺🇸 English
+- **Comment Sticker Keyboard Enhancement** — Add Bilibili sticker panel in comment input
+- **Danmaku Send History** — Record recent danmaku for quick resend
+- **Player Control Layout** — Customize control button layout (default/compact/minimal)
+- **Live Room Background Customization** — Set live room background style
+
+---
+
 ## v1.63.0 (2026-06-07)
 
 ### 🇨🇳 中文
