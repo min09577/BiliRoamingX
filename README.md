@@ -680,6 +680,34 @@ BiliRoamingX v1.23.3 기반, AI 지원 개발로 강화.
 
 ---
 
+## v1.59.0 (2026-06-07)
+
+### 🇨🇳 中文
+- **弹幕字体样式** — 自定义弹幕文字样式（默认/粗体/斜体/粗斜体）
+- **弹幕发送动画** — 新发送的弹幕带有入场动画效果（淡入+滑入）
+- **播放器背景变暗** — 调节播放器背景的变暗程度（0-100%）
+- **自动播放下一集** — 当前视频播放结束后自动播放下一集
+
+### 🇯🇵 日本語
+- **弾幕フォントスタイル** — 弾幕テキストのスタイルをカスタマイズ
+- **弾幕送信アニメーション** — 新規弾幕にイントロアニメーション
+- **プレーヤー背景暗転** — プレーヤー背景の暗さを調整（0-100%）
+- **自動再生次回** — 現在の動画終了後に自動で次回を再生
+
+### 🇰🇷 한국어
+- **弹幕 글꼴 스타일** — 弹幕 텍스트 스타일 사용자 정의
+- **弹幕 전송 애니메이션** — 새 弹幕에 입장 애니메이션 효과
+- **플레이어 배경 어둡게** — 플레이어 배경 어둡기 조절 (0-100%)
+- **자동 재생 다음 회** — 현재 동영상 종료 후 자동으로 다음 회 재생
+
+### 🇺🇸 English
+- **Danmaku Font Style** — Customize danmaku text style (bold/italic/bold-italic)
+- **Danmaku Send Animation** — Entrance animation for new danmaku
+- **Player Background Dim** — Adjust player background dimness (0-100%)
+- **Auto Play Next Episode** — Auto-play next episode when current video ends
+
+---
+
 ## v1.58.0 (2026-06-07)
 
 ### 🇨🇳 中文
