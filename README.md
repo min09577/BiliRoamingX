@@ -680,6 +680,34 @@ BiliRoamingX v1.23.3 기반, AI 지원 개발로 강화.
 
 ---
 
+## v1.61.0 (2026-06-07)
+
+### 🇨🇳 中文
+- **评论区表情键盘增强** — 在评论输入框旁添加常用表情快速选择面板
+- **直播间自动静音** — 进入直播间时自动静音，避免突然声音打扰
+- **手势调节亮度** — 在播放器左侧上下滑动调节屏幕亮度
+- **按颜色过滤弹幕** — 根据弹幕颜色过滤特定颜色的弹幕
+
+### 🇯🇵 日本語
+- **コメント絵文字キーボード強化** — コメント入力欄に常用絵文字パネルを追加
+- **ライブルーム自動ミュート** — ライブルーム入室時に自動ミュート
+- **ジェスチャー明るさ調整** — プレーヤー左側で上下スワイプして明るさ調整
+- **色別弾幕フィルター** — 弹幕の色で特定色をフィルタリング
+
+### 🇰🇷 한국어
+- **댓글 이모지 키보드 강화** — 댓글 입력란에 자주 쓰는 이모지 패널 추가
+- **라이브룸 자동 음소거** — 라이브룸 입장 시 자동 음소거
+- **제스처 밝기 조절** — 플레이어 왼쪽에서 위아래로 스와이프하여 밝기 조절
+- **색상별 弹幕 필터** — 弹幕 색상으로 특정 색상을 필터링
+
+### 🇺🇸 English
+- **Comment Emoji Keyboard Enhancement** — Add quick emoji selection panel in comment input
+- **Live Room Auto-Mute** — Auto-mute when entering live room
+- **Gesture Brightness Control** — Swipe up/down on left side to adjust brightness
+- **Danmaku Filter by Color** — Filter danmaku by specific colors
+
+---
+
 ## v1.60.0 (2026-06-07)
 
 ### 🇨🇳 中文
