@@ -661,3 +661,11 @@ BiliRoamingX v1.23.3 기반, AI 지원 개발로 강화.
 - 📍 **字幕位置调整** / Subtitle Position / 字幕位置 / 자막 위치
 - 📝 **评论字体大小** / Comment Font Size / コメントフォントサイズ / 댓글 글꼴 크기
 - 🔄 **直播自动重连** / Live Auto Reconnect / ライブ自動再接続 / 라이브 자동 재연결
+
+### v1.53.0 (2026-06-08)
+
+**New Features / 新功能 / 新機能 / 새 기능:**
+- ⏱️ **长按播放速度** / Long Press Speed / 長押し速度 / 길게 누르기 속도
+- 💬 **评论回复高亮** / Comment Reply Highlight / コメント返信ハイライト / 댓글 답글 강조
+- ✏️ **弹幕字体轮廓** / Danmaku Font Outline / 弾幕フォントアウトライン / 탄막 폰트 외곽선
+- 🔁 **视频循环次数** / Video Loop Count / 動画ループ回数 / 비디오 반복 횟수

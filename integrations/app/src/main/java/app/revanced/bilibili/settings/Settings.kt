@@ -96,6 +96,10 @@ object Settings {
         @JvmField val SubtitlePosition = IntSetting(key = "subtitle_position", defValue = 0)
         @JvmField val CommentFontSize = IntSetting(key = "comment_font_size", defValue = 0)
         @JvmField val LiveAutoReconnect = BooleanSetting(key = "live_auto_reconnect")
+        @JvmField val PlayerLongPressSpeed = FloatSetting(key = "player_long_press_speed", defValue = 0f)
+        @JvmField val CommentReplyHighlight = BooleanSetting(key = "comment_reply_highlight")
+        @JvmField val DanmakuFontOutline = BooleanSetting(key = "danmaku_font_outline")
+        @JvmField val VideoLoopCount = IntSetting(key = "video_loop_count", defValue = 0)
         // endregion
 
 

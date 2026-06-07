@@ -238,6 +238,14 @@
                     android:key="live_auto_reconnect"
                     android:summary="@string/biliroaming_live_auto_reconnect_summary"
                     android:title="@string/biliroaming_live_auto_reconnect_title" />
+                <androidx.preference.SwitchPreferenceCompat
+                    android:key="comment_reply_highlight"
+                    android:summary="@string/biliroaming_comment_reply_highlight_summary"
+                    android:title="@string/biliroaming_comment_reply_highlight_title" />
+                <androidx.preference.SwitchPreferenceCompat
+                    android:key="danmaku_font_outline"
+                    android:summary="@string/biliroaming_danmaku_font_outline_summary"
+                    android:title="@string/biliroaming_danmaku_font_outline_title" />
 
     <androidx.preference.PreferenceCategory
         android:key="category_other"

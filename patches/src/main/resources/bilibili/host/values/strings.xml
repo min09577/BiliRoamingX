@@ -476,6 +476,14 @@
     <string name="biliroaming_comment_font_size_summary">自定义评论文字大小（默认跟随系统）</string>
     <string name="biliroaming_live_auto_reconnect_title">直播自动重连</string>
     <string name="biliroaming_live_auto_reconnect_summary">直播间断线时自动重新连接</string>
+    <string name="biliroaming_player_long_press_speed_title">长按播放速度</string>
+    <string name="biliroaming_player_long_press_speed_summary">自定义长按屏幕时的播放速度倍率</string>
+    <string name="biliroaming_comment_reply_highlight_title">评论回复高亮</string>
+    <string name="biliroaming_comment_reply_highlight_summary">高亮显示评论中的回复内容</string>
+    <string name="biliroaming_danmaku_font_outline_title">弹幕字体轮廓</string>
+    <string name="biliroaming_danmaku_font_outline_summary">为弹幕文字添加轮廓线，增强可读性</string>
+    <string name="biliroaming_video_loop_count_title">视频循环次数</string>
+    <string name="biliroaming_video_loop_count_summary">限制视频循环播放的次数（0=无限循环）</string>
             <string name="biliroaming_ratio_fill_done">已放大到填满整个屏幕</string>
     <string name="biliroaming_ratio_restore_done">原始大小</string>
     <string name="biliroaming_remove_live_mask_title">移除马赛克遮罩</string>
