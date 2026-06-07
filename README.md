@@ -680,6 +680,34 @@ BiliRoamingX v1.23.3 기반, AI 지원 개발로 강화.
 
 ---
 
+## v1.57.0 (2026-06-07)
+
+### 🇨🇳 中文
+- **评论GIF自动播放** — 控制评论区GIF图片是否自动播放，节省流量
+- **弹幕批量删除** — 在弹幕列表中支持批量选择和删除弹幕
+- **截图格式设置** — 自定义播放器截图保存格式（PNG/JPG/WebP）
+- **直播间自动进入** — 启动时自动进入指定直播间（填入房间号或URL）
+
+### 🇯🇵 日本語
+- **コメントGIF自動再生** — コメント欄のGIF画像の自動再生を制御
+- **弾幕一括削除** — 弾幕リストで一括選択・削除に対応
+- **スクリーンショット形式設定** — プレーヤーの保存形式をカスタマイズ（PNG/JPG/WebP）
+- **ライブルーム自動入室** — 起動時に指定ルームへ自動入室
+
+### 🇰🇷 한국어
+- **댓글 GIF 자동 재생** — 댓글 섹션의 GIF 이미지 자동 재생 제어
+- **弹幕 일괄 삭제** — 弹幕 목록에서 일괄 선택 및 삭제 지원
+- **스크린샷 형식 설정** — 플레이어 스크린샷 저장 형식 사용자 정의 (PNG/JPG/WebP)
+- **라이브룸 자동 입장** — 시작 시 지정된 라이브룸에 자동 입장
+
+### 🇺🇸 English
+- **Comment GIF Auto-Play** — Control GIF auto-play in comment section
+- **Danmaku Batch Delete** — Batch select and delete danmaku in list
+- **Screenshot Format Setting** — Customize screenshot save format (PNG/JPG/WebP)
+- **Live Room Auto-Enter** — Auto-enter specified live room on app start
+
+---
+
 ## v1.56.0 (2026-06-07)
 
 ### 🇨🇳 中文
