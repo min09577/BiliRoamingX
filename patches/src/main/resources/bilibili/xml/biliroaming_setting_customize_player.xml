@@ -109,6 +109,14 @@
                     android:key="double_tap_seek_time"
                     android:summary="@string/biliroaming_double_tap_seek_time_summary"
                     android:title="@string/biliroaming_double_tap_seek_time_title" />
+                <androidx.preference.SwitchPreferenceCompat
+                    android:key="playback_stats_overlay"
+                    android:summary="@string/biliroaming_playback_stats_overlay_summary"
+                    android:title="@string/biliroaming_playback_stats_overlay_title" />
+                <androidx.preference.SwitchPreferenceCompat
+                    android:key="share_with_timestamp"
+                    android:summary="@string/biliroaming_share_with_timestamp_summary"
+                    android:title="@string/biliroaming_share_with_timestamp_title" />
     </androidx.preference.PreferenceCategory>
 
     <androidx.preference.PreferenceCategory

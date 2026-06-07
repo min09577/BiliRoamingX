@@ -48,6 +48,10 @@ object Settings {
         @JvmField val AutoEnterPip = BooleanSetting(key = "auto_enter_pip")
         @JvmField val PipAspectRatio = IntSetting(key = "pip_aspect_ratio", defValue = 0)
         @JvmField val DoubleTapSeekTime = IntSetting(key = "double_tap_seek_time", defValue = 10)
+        @JvmField val PlaybackStatsOverlay = BooleanSetting(key = "playback_stats_overlay")
+        @JvmField val QuickFavorite = BooleanSetting(key = "quick_favorite")
+        @JvmField val CommentPinchZoom = BooleanSetting(key = "comment_pinch_zoom")
+        @JvmField val ShareWithTimestamp = BooleanSetting(key = "share_with_timestamp")
         // endregion
 
 
