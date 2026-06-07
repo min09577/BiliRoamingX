@@ -430,6 +430,14 @@
     <string name="biliroaming_comment_collapse_lines_summary">评论超过多少行时自动折叠（默认5行）</string>
     <string name="biliroaming_video_crop_title">视频裁剪去黑边</string>
     <string name="biliroaming_video_crop_summary">自动裁剪视频黑边，填充整个播放区域</string>
+    <string name="biliroaming_danmaku_send_font_title">弹幕发送字号</string>
+    <string name="biliroaming_danmaku_send_font_summary">自定义发送弹幕时的字号大小（默认25）</string>
+    <string name="biliroaming_auto_resume_title">断点续播提醒</string>
+    <string name="biliroaming_auto_resume_summary">重新打开视频时提醒上次播放位置，一键跳转</string>
+    <string name="biliroaming_comment_filter_level_title">评论等级过滤</string>
+    <string name="biliroaming_comment_filter_level_summary">过滤低于指定等级用户的评论（0=不过滤）</string>
+    <string name="biliroaming_live_gift_block_title">直播间礼物特效屏蔽</string>
+    <string name="biliroaming_live_gift_block_summary">屏蔽直播间礼物动画特效，减少干扰</string>
             <string name="biliroaming_ratio_fill_done">已放大到填满整个屏幕</string>
     <string name="biliroaming_ratio_restore_done">原始大小</string>
     <string name="biliroaming_remove_live_mask_title">移除马赛克遮罩</string>

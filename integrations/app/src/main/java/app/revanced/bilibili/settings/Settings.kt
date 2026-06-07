@@ -73,6 +73,10 @@ object Settings {
         @JvmField val CommentCollapse = BooleanSetting(key = "comment_collapse")
         @JvmField val CommentCollapseLines = IntSetting(key = "comment_collapse_lines", defValue = 5)
         @JvmField val VideoCrop = BooleanSetting(key = "video_crop")
+        @JvmField val DanmakuSendFont = IntSetting(key = "danmaku_send_font", defValue = 25)
+        @JvmField val AutoResume = BooleanSetting(key = "auto_resume")
+        @JvmField val CommentFilterLevel = IntSetting(key = "comment_filter_level", defValue = 0)
+        @JvmField val LiveGiftBlock = BooleanSetting(key = "live_gift_block")
         // endregion
 
 

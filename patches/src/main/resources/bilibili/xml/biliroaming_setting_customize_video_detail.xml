@@ -106,6 +106,10 @@
             android:fragment="app.revanced.bilibili.settings.fragments.FilterCommentFragment"
             android:key="fragment_filter_comment"
             android:title="@string/biliroaming_filter_comment_title" />
+        <androidx.preference.SwitchPreferenceCompat
+            android:key="comment_filter_level"
+            android:summary="@string/biliroaming_comment_filter_level_summary"
+            android:title="@string/biliroaming_comment_filter_level_title" />
     </androidx.preference.PreferenceCategory>
     <androidx.preference.PreferenceCategory
         android:key="category_video_detail_ad"

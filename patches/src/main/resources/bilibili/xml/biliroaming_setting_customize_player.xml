@@ -193,6 +193,18 @@
                     android:key="video_crop"
                     android:summary="@string/biliroaming_video_crop_summary"
                     android:title="@string/biliroaming_video_crop_title" />
+                <androidx.preference.Preference
+                    android:key="danmaku_send_font"
+                    android:summary="@string/biliroaming_danmaku_send_font_summary"
+                    android:title="@string/biliroaming_danmaku_send_font_title" />
+                <androidx.preference.SwitchPreferenceCompat
+                    android:key="auto_resume"
+                    android:summary="@string/biliroaming_auto_resume_summary"
+                    android:title="@string/biliroaming_auto_resume_title" />
+                <androidx.preference.SwitchPreferenceCompat
+                    android:key="live_gift_block"
+                    android:summary="@string/biliroaming_live_gift_block_summary"
+                    android:title="@string/biliroaming_live_gift_block_title" />
     </androidx.preference.PreferenceCategory>
 
     <androidx.preference.PreferenceCategory
