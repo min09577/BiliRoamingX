@@ -426,5 +426,9 @@ object Settings {
     @JvmField val PlayerProgressBarStyle = IntSetting(key = "player_progress_bar_style", defValue = 0)
     @JvmField val HomeShortcut = StringSetSetting(key = "home_shortcut")
     @JvmField val VideoEndAction = IntSetting(key = "video_end_action", defValue = 0)
+    @JvmField val DanmakuBlockByUser = StringSetSetting(key = "danmaku_block_by_user")
+    @JvmField val PlayerGestureSeek = BooleanSetting(key = "player_gesture_seek")
+    @JvmField val VideoAutoPauseDetect = BooleanSetting(key = "video_auto_pause_detect")
+    @JvmField val CommentGifSticker = BooleanSetting(key = "comment_gif_sticker")
     // endregion
 }

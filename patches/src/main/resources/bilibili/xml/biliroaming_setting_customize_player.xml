@@ -436,5 +436,9 @@
             android:key="player_progress_bar_style"
             android:summary="@string/biliroaming_player_progress_bar_style_summary"
             android:title="@string/biliroaming_player_progress_bar_style_title" />
+        <androidx.preference.SwitchPreferenceCompat
+            android:key="player_gesture_seek"
+            android:summary="@string/biliroaming_player_gesture_seek_summary"
+            android:title="@string/biliroaming_player_gesture_seek_title" />
     </androidx.preference.PreferenceCategory>
 </androidx.preference.PreferenceScreen>

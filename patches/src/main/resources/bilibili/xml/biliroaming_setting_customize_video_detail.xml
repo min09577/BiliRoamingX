@@ -225,5 +225,9 @@
             android:key="video_end_action"
             android:summary="@string/biliroaming_video_end_action_summary"
             android:title="@string/biliroaming_video_end_action_title" />
+        <androidx.preference.SwitchPreferenceCompat
+            android:key="video_auto_pause_detect"
+            android:summary="@string/biliroaming_video_auto_pause_detect_summary"
+            android:title="@string/biliroaming_video_auto_pause_detect_title" />
     </androidx.preference.PreferenceCategory>
 </androidx.preference.PreferenceScreen>
