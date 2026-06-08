@@ -783,4 +783,12 @@
     <string name="biliroaming_audio_only_mode_summary">只播放声音不显示画面，节省流量和性能</string>
     <string name="biliroaming_mini_player_size_title">迷你播放器大小</string>
     <string name="biliroaming_mini_player_size_summary">调整迷你播放器（小窗）的尺寸（默认/小/中/大）</string>
+    <string name="biliroaming_dynamic_auto_refresh_title">动态自动刷新</string>
+    <string name="biliroaming_dynamic_auto_refresh_summary">进入动态页面时自动刷新内容</string>
+    <string name="biliroaming_comment_voice_input_title">评论语音输入</string>
+    <string name="biliroaming_comment_voice_input_summary">支持在评论区使用语音转文字输入</string>
+    <string name="biliroaming_video_download_quality_title">下载画质选择</string>
+    <string name="biliroaming_video_download_quality_summary">自定义视频下载的画质（默认/360P/480P/720P/1080P/4K）</string>
+    <string name="biliroaming_live_danmaku_color_title">直播弹幕颜色</string>
+    <string name="biliroaming_live_danmaku_color_summary">设置直播间发送弹幕的默认颜色</string>
 </resources>

@@ -70,5 +70,9 @@
             android:key="live_room_gift_effect"
             android:summary="@string/biliroaming_live_room_gift_effect_summary"
             android:title="@string/biliroaming_live_room_gift_effect_title" />
+        <EditTextPreference
+            android:key="live_danmaku_color"
+            android:summary="@string/biliroaming_live_danmaku_color_summary"
+            android:title="@string/biliroaming_live_danmaku_color_title" />
     </androidx.preference.PreferenceCategory>
 </androidx.preference.PreferenceScreen>

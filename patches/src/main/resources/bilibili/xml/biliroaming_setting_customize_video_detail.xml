@@ -213,5 +213,13 @@
             android:key="mini_player_size"
             android:summary="@string/biliroaming_mini_player_size_summary"
             android:title="@string/biliroaming_mini_player_size_title" />
+        <androidx.preference.SwitchPreferenceCompat
+            android:key="dynamic_auto_refresh"
+            android:summary="@string/biliroaming_dynamic_auto_refresh_summary"
+            android:title="@string/biliroaming_dynamic_auto_refresh_title" />
+        <EditTextPreference
+            android:key="video_download_quality"
+            android:summary="@string/biliroaming_video_download_quality_summary"
+            android:title="@string/biliroaming_video_download_quality_title" />
     </androidx.preference.PreferenceCategory>
 </androidx.preference.PreferenceScreen>

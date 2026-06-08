@@ -56,5 +56,9 @@
             android:key="comment_sticker_keyboard"
             android:summary="@string/biliroaming_comment_sticker_keyboard_summary"
             android:title="@string/biliroaming_comment_sticker_keyboard_title" />
+        <androidx.preference.SwitchPreferenceCompat
+            android:key="comment_voice_input"
+            android:summary="@string/biliroaming_comment_voice_input_summary"
+            android:title="@string/biliroaming_comment_voice_input_title" />
     </androidx.preference.PreferenceCategory>
 </androidx.preference.PreferenceScreen>

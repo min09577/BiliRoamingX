@@ -20,7 +20,6 @@ object Settings {
     @JvmField val UposHost = StringSetting(key = "upos_host")
     @JvmField val SaveThailandHistory =
         BooleanSetting(key = "save_th_history", defValue = true, dependency = UnlockAreaLimit)
-    // endregion
 
 
     // region Group: 播放�?
@@ -108,7 +107,6 @@ object Settings {
         @JvmField val CommentImagePreview = BooleanSetting(key = "comment_image_preview")
         @JvmField val DanmakuSendPosition = IntSetting(key = "danmaku_send_position", defValue = 0)
         @JvmField val PlayerOverlayOpacity = IntSetting(key = "player_overlay_opacity", defValue = 100)
-    // endregion
 
 
     // region Group: 首页
@@ -151,7 +149,6 @@ object Settings {
     @JvmField val BlockPopularLive = BooleanSetting(key = "block_popular_live")
     @JvmField val BlockHomeRecentUsed = BooleanSetting(key = "block_home_recent_used")
     @JvmField val PegasusCoverRatio = StringSetting(key = "pegasus_cover_ratio", defValue = "0", needReboot = true)
-    // endregion
 
 
     // region Group: 动态页
@@ -175,7 +172,6 @@ object Settings {
     @JvmField val DynRmCm = BooleanSetting(key = "dynamic_rm_cm")
     @JvmField val DynRmStory = BooleanSetting(key = "dynamic_rm_story")
     @JvmField val DynNoUpRecall = BooleanSetting(key = "dynamic_no_up_recall", needReboot = true)
-    // endregion
 
 
     // region Group: 我的�?
@@ -188,7 +184,6 @@ object Settings {
     @JvmField val AddChannel = BooleanSetting(key = "add_channel", needReboot = true)
     @JvmField val AddPodcast = BooleanSetting(key = "add_podcast")
     @JvmField val BlockTips = BooleanSetting(key = "block_tips")
-    // endregion
 
 
     // region Group: 直播�?
@@ -202,7 +197,6 @@ object Settings {
     @JvmField val RemoveLiveWatermark = BooleanSetting(key = "remove_live_watermark")
     @JvmField val LiveNoBlock = BooleanSetting(key = "live_no_block")
     @JvmField val LiveAutoSign = BooleanSetting(key = "live_auto_sign")
-    // endregion
 
 
     // region Group: 视频详情�?
@@ -291,7 +285,6 @@ object Settings {
     @JvmField val AutoExpandDesc = BooleanSetting(key = "auto_expand_desc")
     @JvmField val HideFloatingButton = BooleanSetting(key = "hide_floating_button")
     @JvmField val LoopPlay = BooleanSetting(key = "loop_play")
-    // endregion
 
 
     // region Group: 用户空间�?
@@ -304,7 +297,6 @@ object Settings {
     @JvmField val DanmakuSendDuration = IntSetting(key = "danmaku_send_duration", defValue = 0)
     @JvmField val LiveGiftMerge = BooleanSetting(key = "live_gift_merge")
     @JvmField val PlaybackSpeedStep = FloatSetting(key = "playback_speed_step", defValue = 0.25f)
-    // endregion
 
 
     // region Group: 搜索�?
@@ -318,7 +310,6 @@ object Settings {
     @JvmField val FilterSearchUp = StringSetSetting(key = "filter_search_up")
     @JvmField val FilterSearchUpRegexMode = BooleanSetting(key = "filter_search_up_regex")
     @JvmField val FilterSearchUid = StringSetSetting(key = "filter_search_uid")
-    // endregion
 
 
     // region Group: 字幕
@@ -335,7 +326,6 @@ object Settings {
     @JvmField val SubtitleOffset = IntSetting(key = "subtitle_offset")
     @JvmField val SubtitleTranslateServer = StringSetting(key = "subtitle_translate_server", defValue = "microsoft")
     @JvmField val SubtitleImportSave = BooleanSetting(key = "subtitle_import_save")
-    // endregion
 
 
     // region Group: 杂项
@@ -384,7 +374,6 @@ object Settings {
     })
     @JvmField val DisallowCollectPrivacyInfo = BooleanSetting(key = "disallow_collect_privacy_info", needReboot = true)
     @JvmField val DisableWebViewNonOfficialAlert = BooleanSetting(key = "disable_non_official_alert")
-    // endregion
 
 
     // region Group: 非配置项
@@ -429,5 +418,9 @@ object Settings {
     @JvmField val LiveRoomGiftEffect = BooleanSetting(key = "live_room_gift_effect")
     @JvmField val AudioOnlyMode = BooleanSetting(key = "audio_only_mode")
     @JvmField val MiniPlayerSize = IntSetting(key = "mini_player_size", defValue = 0)
+    @JvmField val DynamicAutoRefresh = BooleanSetting(key = "dynamic_auto_refresh")
+    @JvmField val CommentVoiceInput = BooleanSetting(key = "comment_voice_input")
+    @JvmField val VideoDownloadQuality = IntSetting(key = "video_download_quality", defValue = 0)
+    @JvmField val LiveDanmakuColor = IntSetting(key = "live_danmaku_color", defValue = 0)
     // endregion
 }
