@@ -77,5 +77,13 @@
             android:key="home_shortcut"
             android:summary="@string/biliroaming_home_shortcut_summary"
             android:title="@string/biliroaming_home_shortcut_title" />
+        <androidx.preference.SwitchPreferenceCompat
+            android:key="home_widget_custom"
+            android:summary="@string/biliroaming_home_widget_custom_summary"
+            android:title="@string/biliroaming_home_widget_custom_title" />
+        <androidx.preference.SwitchPreferenceCompat
+            android:key="home_feed_cache"
+            android:summary="@string/biliroaming_home_feed_cache_summary"
+            android:title="@string/biliroaming_home_feed_cache_title" />
     </androidx.preference.PreferenceCategory>
 </androidx.preference.PreferenceScreen>

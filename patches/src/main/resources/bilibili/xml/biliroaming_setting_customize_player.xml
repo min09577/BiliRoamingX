@@ -440,5 +440,13 @@
             android:key="player_gesture_seek"
             android:summary="@string/biliroaming_player_gesture_seek_summary"
             android:title="@string/biliroaming_player_gesture_seek_title" />
+        <EditTextPreference
+            android:key="player_subtitle_sync"
+            android:summary="@string/biliroaming_player_subtitle_sync_summary"
+            android:title="@string/biliroaming_player_subtitle_sync_title" />
+        <EditTextPreference
+            android:key="player_gesture_double_tap"
+            android:summary="@string/biliroaming_player_gesture_double_tap_summary"
+            android:title="@string/biliroaming_player_gesture_double_tap_title" />
     </androidx.preference.PreferenceCategory>
 </androidx.preference.PreferenceScreen>

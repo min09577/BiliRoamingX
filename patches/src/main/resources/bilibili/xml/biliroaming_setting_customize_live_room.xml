@@ -74,5 +74,13 @@
             android:key="live_danmaku_color"
             android:summary="@string/biliroaming_live_danmaku_color_summary"
             android:title="@string/biliroaming_live_danmaku_color_title" />
+        <androidx.preference.SwitchPreferenceCompat
+            android:key="live_auto_record"
+            android:summary="@string/biliroaming_live_auto_record_summary"
+            android:title="@string/biliroaming_live_auto_record_title" />
+        <EditTextPreference
+            android:key="live_danmaku_speed"
+            android:summary="@string/biliroaming_live_danmaku_speed_summary"
+            android:title="@string/biliroaming_live_danmaku_speed_title" />
     </androidx.preference.PreferenceCategory>
 </androidx.preference.PreferenceScreen>

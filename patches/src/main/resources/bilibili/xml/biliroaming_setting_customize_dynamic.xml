@@ -62,5 +62,13 @@
             android:key="dynamic_auto_scroll"
             android:summary="@string/biliroaming_dynamic_auto_scroll_summary"
             android:title="@string/biliroaming_dynamic_auto_scroll_title" />
+        <androidx.preference.SwitchPreferenceCompat
+            android:key="dynamic_auto_like"
+            android:summary="@string/biliroaming_dynamic_auto_like_summary"
+            android:title="@string/biliroaming_dynamic_auto_like_title" />
+        <androidx.preference.SwitchPreferenceCompat
+            android:key="dynamic_pin_top"
+            android:summary="@string/biliroaming_dynamic_pin_top_summary"
+            android:title="@string/biliroaming_dynamic_pin_top_title" />
     </androidx.preference.PreferenceCategory>
 </androidx.preference.PreferenceScreen>

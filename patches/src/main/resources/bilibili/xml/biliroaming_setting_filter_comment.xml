@@ -68,5 +68,17 @@
             android:key="comment_auto_pin"
             android:summary="@string/biliroaming_comment_auto_pin_summary"
             android:title="@string/biliroaming_comment_auto_pin_title" />
+        <androidx.preference.SwitchPreferenceCompat
+            android:key="comment_image_compress"
+            android:summary="@string/biliroaming_comment_image_compress_summary"
+            android:title="@string/biliroaming_comment_image_compress_title" />
+        <EditTextPreference
+            android:key="comment_sort_default"
+            android:summary="@string/biliroaming_comment_sort_default_summary"
+            android:title="@string/biliroaming_comment_sort_default_title" />
+        <androidx.preference.SwitchPreferenceCompat
+            android:key="comment_auto_like"
+            android:summary="@string/biliroaming_comment_auto_like_summary"
+            android:title="@string/biliroaming_comment_auto_like_title" />
     </androidx.preference.PreferenceCategory>
 </androidx.preference.PreferenceScreen>

@@ -233,5 +233,21 @@
             android:key="video_auto_download"
             android:summary="@string/biliroaming_video_auto_download_summary"
             android:title="@string/biliroaming_video_auto_download_title" />
+        <androidx.preference.SwitchPreferenceCompat
+            android:key="video_auto_speed"
+            android:summary="@string/biliroaming_video_auto_speed_summary"
+            android:title="@string/biliroaming_video_auto_speed_title" />
+        <androidx.preference.SwitchPreferenceCompat
+            android:key="video_smart_preload"
+            android:summary="@string/biliroaming_video_smart_preload_summary"
+            android:title="@string/biliroaming_video_smart_preload_title" />
+        <androidx.preference.SwitchPreferenceCompat
+            android:key="video_auto_resume"
+            android:summary="@string/biliroaming_video_auto_resume_summary"
+            android:title="@string/biliroaming_video_auto_resume_title" />
+        <EditTextPreference
+            android:key="video_auto_quality"
+            android:summary="@string/biliroaming_video_auto_quality_summary"
+            android:title="@string/biliroaming_video_auto_quality_title" />
     </androidx.preference.PreferenceCategory>
 </androidx.preference.PreferenceScreen>
