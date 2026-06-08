@@ -679,6 +679,141 @@ BiliRoamingX v1.23.3 기반, AI 지원 개발로 강화.
 - ⬆️ **弹幕顶部显示** / Danmaku Area Top / 弾幕上部表示 / 탄막 상단 표시
 
 ---
+## v1.89.0 (2026-06-08)
+### 🇨🇳 中文
+- **控制栏动画** — 启用播放器控制栏的显示/隐藏动画
+- **智能分辨率** — 根据屏幕尺寸自动选择最佳分辨率
+- **首页已读标记** — 标记已浏览的信息流内容
+- **动态自动回复** — 自动回复指定动态的评论
+
+### 🇯🇵 日本語
+- **コントロールアニメーション** — プレーヤーコントロールバーの表示/非表示アニメーション
+- **スマート解像度** — 画面サイズに基づいて最適な解像度を自動選択
+- **既読マーカー** — 閲覧済みフィードコンテンツにマーカーを付ける
+- **動的自動返信** — 指定動的のコメントに自動返信
+
+### 🇰🇷 한국어
+- **컨트롤 애니메이션** — 플레이어 컨트롤바 표시/숨기기 애니메이션
+- **스마트 해상도** — 화면 크기에 따라 최적 해상도 자동 선택
+- **읽음 표시** —浏览한 피드 콘텐츠에 읽음 표시
+- **동적 자동 답변** — 지정 동적 댓글에 자동 답변
+
+### 🇺🇸 English
+- **Control Animation** — Enable player control bar show/hide animation
+- **Smart Resolution** — Auto-select best resolution based on screen size
+- **Mark as Read** — Mark browsed feed content as read
+- **Dynamic Auto-Reply** — Auto-reply to specified dynamic comments
+
+---
+
+## v1.88.0 (2026-06-08)
+### 🇨🇳 中文
+- **直播间自动全屏** — 进入直播间时自动切换到全屏模式
+- **动态全部点赞** — 一键点赞当前页面所有动态
+- **评论置顶优先** — 评论区优先显示置顶评论
+- **发送弹幕字体** — 自定义发送弹幕时使用的字体
+
+### 🇯🇵 日本語
+- **ライブ自動フルスクリーン** — ライブルーム入場時に自動フルスクリーン
+- **動的全いいね** — 現在のページの全動的にワンクリックいいね
+- **コメントピン留め優先** — コメント欄でピン留めコメントを優先表示
+- **弾幕送信フォント** — 弾幕送信時のフォントをカスタマイズ
+
+### 🇰🇷 한국어
+- **라이브 자동 전체화면** — 라이브룸 입장 시 자동 전체화면 전환
+- **동적 전체 좋아요** — 현재 페이지 모든 동적에 좋아요
+- **댓글 고정 우선** — 댓글란에서 고정 댓글 우선 표시
+- **弹幕 전송 글꼴** — 弹幕 전송 시 사용할 글꼴 사용자 정의
+
+### 🇺🇸 English
+- **Live Auto-Fullscreen** — Auto-switch to fullscreen when entering live room
+- **Dynamic Like All** — One-click like all dynamics on current page
+- **Comment Pinned First** — Show pinned comments first in comment section
+- **Danmaku Send Font** — Customize font for sending danmaku
+
+---
+
+## v1.87.0 (2026-06-08)
+### 🇨🇳 中文
+- **评论关键词高亮** — 高亮显示包含指定关键词的评论
+- **弹幕背景透明度** — 调节弹幕文字背景的透明度
+- **播放器夜间模式** — 播放器启用夜间模式护眼配色
+- **低电量自动暂停** — 电量低于指定值时自动暂停视频
+
+### 🇯🇵 日本語
+- **コメントキーワードハイライト** — 指定キーワードを含むコメントをハイライト
+- **弾幕背景透明度** — 弾幕テキスト背景の透明度を調整
+- **プレーヤーナイトモード** — プレーヤーのアイケアナイトモード
+- **低バッテリー自動一時停止** — バッテリーが指定値以下で自動一時停止
+
+### 🇰🇷 한국어
+- **댓글 키워드 강조** — 지정 키워드가 포함된 댓글 강조 표시
+- **弹幕 배경 투명도** — 弹幕 텍스트 배경 투명도 조절
+- **플레이어 야간 모드** — 플레이어 아이케어 야간 모드
+- **저배터리 자동 일시정지** — 배터리 지정 수치 이하 시 자동 일시정지
+
+### 🇺🇸 English
+- **Comment Keyword Highlight** — Highlight comments containing specified keywords
+- **Danmaku Background Opacity** — Adjust danmaku text background opacity
+- **Player Night Mode** — Player eye-care night mode
+- **Auto-Pause on Low Battery** — Auto-pause video when battery is below threshold
+
+---
+
+## v1.86.0 (2026-06-08)
+### 🇨🇳 中文
+- **屏蔽表情弹幕** — 屏蔽直播间纯表情弹幕
+- **首页自动加载更多** — 首页信息流自动加载更多内容
+- **动态自动收藏** — 自动收藏浏览过的优质动态
+- **搜索自动过滤** — 自动过滤搜索结果中的指定关键词
+
+### 🇯🇵 日本語
+- **絵文字弾幕ブロック** — ライブの絵文字のみの弾幕をブロック
+- **自動読み込み** — ホームフィードの自動追加読み込み
+- **動的自動ブックマーク** — 閲覧した高品質動的を自動ブックマーク
+- **検索自動フィルター** — 指定キーワードで検索結果を自動フィルタリング
+
+### 🇰🇷 한국어
+- **이모티콘 弹幕 차단** — 라이브 순수 이모티콘 弹幕 차단
+- **자동 더 보기** — 홈 피드 자동 추가 로드
+- **동적 자동 북마크** —浏览한 우수 동적 자동 북마크
+- **검색 자동 필터** — 지정 키워드로 검색 결과 자동 필터링
+
+### 🇺🇸 English
+- **Block Emoji Danmaku** — Block emoji-only danmaku in live streams
+- **Auto Load More** — Auto-load more content in home feed
+- **Dynamic Auto-Bookmark** — Auto-bookmark quality dynamics
+- **Search Auto-Filter** — Auto-filter search results by specified keywords
+
+---
+
+## v1.85.0 (2026-06-08)
+### 🇨🇳 中文
+- **表情自动补全** — 输入表情关键词时自动显示表情候选
+- **弹幕位置自定义** — 自定义弹幕显示的垂直位置
+- **捏合缩放手势** — 支持捏合手势缩放播放器画面
+- **自动跳过片尾** — 自动跳过视频结尾的片尾部分
+
+### 🇯🇵 日本語
+- **絵文字自動補完** — 絵文字キーワード入力時に候補を自動表示
+- **弾幕位置カスタマイズ** — 弾幕の垂直位置をカスタマイズ
+- **ピンチズームジェスチャー** — ピンチジェスチャーでプレーヤーをズーム
+- **エンド自動スキップ** — 動画終了部分を自動スキップ
+
+### 🇰🇷 한국어
+- **이모티콘 자동 완성** — 이모티콘 키워드 입력 시 후보 자동 표시
+- **弹幕 위치 사용자 정의** — 弹幕 수직 위치 사용자 정의
+- **핀치 줌 제스처** — 핀치 제스처로 플레이어 줌
+- **엔드 자동 건너뛰기** — 동영상 끝부분 자동 건너뛰기
+
+### 🇺🇸 English
+- **Emoji Auto-Complete** — Show emoji candidates when typing emoji keywords
+- **Danmaku Position Custom** — Customize danmaku vertical position
+- **Pinch Zoom Gesture** — Support pinch gesture to zoom player
+- **Auto Skip Ending** — Auto-skip video ending portion
+
+---
+
 ## v1.84.0 (2026-06-08)
 ### 🇨🇳 中文
 - **智能暂停** — 检测到用户注意力分散时自动暂停
