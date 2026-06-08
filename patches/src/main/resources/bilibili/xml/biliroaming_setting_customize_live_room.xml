@@ -82,5 +82,13 @@
             android:key="live_danmaku_speed"
             android:summary="@string/biliroaming_live_danmaku_speed_summary"
             android:title="@string/biliroaming_live_danmaku_speed_title" />
+        <EditTextPreference
+            android:key="live_danmaku_filter_keywords"
+            android:summary="@string/biliroaming_live_danmaku_filter_keywords_summary"
+            android:title="@string/biliroaming_live_danmaku_filter_keywords_title" />
+        <androidx.preference.SwitchPreferenceCompat
+            android:key="live_room_auto_follow"
+            android:summary="@string/biliroaming_live_room_auto_follow_summary"
+            android:title="@string/biliroaming_live_room_auto_follow_title" />
     </androidx.preference.PreferenceCategory>
 </androidx.preference.PreferenceScreen>
