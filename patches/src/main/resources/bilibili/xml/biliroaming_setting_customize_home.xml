@@ -109,5 +109,13 @@
             android:key="home_feed_mark_read"
             android:summary="@string/biliroaming_home_feed_mark_read_summary"
             android:title="@string/biliroaming_home_feed_mark_read_title" />
+        <androidx.preference.SwitchPreferenceCompat
+            android:key="home_feed_auto_night"
+            android:summary="@string/biliroaming_home_feed_auto_night_summary"
+            android:title="@string/biliroaming_home_feed_auto_night_title" />
+        <androidx.preference.SwitchPreferenceCompat
+            android:key="home_feed_auto_scroll"
+            android:summary="@string/biliroaming_home_feed_auto_scroll_summary"
+            android:title="@string/biliroaming_home_feed_auto_scroll_title" />
     </androidx.preference.PreferenceCategory>
 </androidx.preference.PreferenceScreen>

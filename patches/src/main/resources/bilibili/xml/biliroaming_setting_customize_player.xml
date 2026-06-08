@@ -484,5 +484,17 @@
             android:key="player_control_animation"
             android:summary="@string/biliroaming_player_control_animation_summary"
             android:title="@string/biliroaming_player_control_animation_title" />
+        <androidx.preference.SwitchPreferenceCompat
+            android:key="player_gesture_shake"
+            android:summary="@string/biliroaming_player_gesture_shake_summary"
+            android:title="@string/biliroaming_player_gesture_shake_title" />
+        <androidx.preference.SwitchPreferenceCompat
+            android:key="player_screenshot_share"
+            android:summary="@string/biliroaming_player_screenshot_share_summary"
+            android:title="@string/biliroaming_player_screenshot_share_title" />
+        <androidx.preference.SwitchPreferenceCompat
+            android:key="player_gesture_shake_undo"
+            android:summary="@string/biliroaming_player_gesture_shake_undo_summary"
+            android:title="@string/biliroaming_player_gesture_shake_undo_title" />
     </androidx.preference.PreferenceCategory>
 </androidx.preference.PreferenceScreen>

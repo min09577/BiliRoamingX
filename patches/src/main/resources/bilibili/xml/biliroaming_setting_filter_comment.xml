@@ -116,5 +116,17 @@
             android:key="comment_sort_pinned"
             android:summary="@string/biliroaming_comment_sort_pinned_summary"
             android:title="@string/biliroaming_comment_sort_pinned_title" />
+        <androidx.preference.SwitchPreferenceCompat
+            android:key="comment_auto_translate_live"
+            android:summary="@string/biliroaming_comment_auto_translate_live_summary"
+            android:title="@string/biliroaming_comment_auto_translate_live_title" />
+        <androidx.preference.SwitchPreferenceCompat
+            android:key="comment_sort_by_length"
+            android:summary="@string/biliroaming_comment_sort_by_length_summary"
+            android:title="@string/biliroaming_comment_sort_by_length_title" />
+        <androidx.preference.SwitchPreferenceCompat
+            android:key="comment_highlight_vip"
+            android:summary="@string/biliroaming_comment_highlight_vip_summary"
+            android:title="@string/biliroaming_comment_highlight_vip_title" />
     </androidx.preference.PreferenceCategory>
 </androidx.preference.PreferenceScreen>

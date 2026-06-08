@@ -46,5 +46,9 @@
             android:key="search_auto_filter"
             android:summary="@string/biliroaming_search_auto_filter_summary"
             android:title="@string/biliroaming_search_auto_filter_title" />
+        <androidx.preference.SwitchPreferenceCompat
+            android:key="search_auto_correction"
+            android:summary="@string/biliroaming_search_auto_correction_summary"
+            android:title="@string/biliroaming_search_auto_correction_title" />
     </androidx.preference.PreferenceCategory>
 </androidx.preference.PreferenceScreen>
