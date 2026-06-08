@@ -679,6 +679,34 @@ BiliRoamingX v1.23.3 기반, AI 지원 개발로 강화.
 - ⬆️ **弹幕顶部显示** / Danmaku Area Top / 弾幕上部表示 / 탄막 상단 표시
 
 ---
+## v1.65.0 (2026-06-07)
+
+### 🇨🇳 中文
+- **视频缓冲大小** — 控制视频预加载缓冲时长（默认/低/中/高/极限）
+- **屏蔽礼物特效** — 隐藏直播间全屏礼物特效动画，减少干扰
+- **纯音频模式** — 只播放声音不显示画面，节省流量和性能
+- **迷你播放器大小** — 调整迷你播放器（小窗）的尺寸
+
+### 🇯🇵 日本語
+- **動画バッファサイズ** — 動画のプリロードバッファ時間を制御
+- **ギフトエフェクト屏蔽** — ライブルームのフルスクリーンギフトエフェクトを非表示
+- **オーディオンリーモード** - 音声のみ再生、画面非表示でトラフィックとパフォーマンスを節約
+- **ミニプレーヤーサイズ** — ミニプレーヤー（小窓）のサイズを調整
+
+### 🇰🇷 한국어
+- **동영상 버퍼 크기** — 동영상 프리로드 버퍼 시간 제어
+- **선물 효과 차단** — 라이브룸 전체 화면 선물 효과 애니메이션 숨기기
+- **오디오 전용 모드** — 소리만 재생, 화면 표시 안 함
+- **미니 플레이어 크기** — 미니 플레이어(작은 창) 크기 조정
+
+### 🇺🇸 English
+- **Video Buffer Size** — Control video preload buffer duration (default/low/medium/high/extreme)
+- **Block Gift Effect** — Hide live room full-screen gift effect animations
+- **Audio Only Mode** — Play audio only, hide video to save bandwidth and performance
+- **Mini Player Size** — Adjust mini player (small window) size
+
+---
+
 
 ## v1.64.0 (2026-06-07)
 
