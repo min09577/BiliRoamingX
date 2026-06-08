@@ -679,6 +679,141 @@ BiliRoamingX v1.23.3 기반, AI 지원 개발로 강화.
 - ⬆️ **弹幕顶部显示** / Danmaku Area Top / 弾幕上部表示 / 탄막 상단 표시
 
 ---
+## v1.84.0 (2026-06-08)
+### 🇨🇳 中文
+- **智能暂停** — 检测到用户注意力分散时自动暂停
+- **截图自动保存** — 播放器截图后自动保存到相册
+- **首页随机打乱** — 随机打乱首页信息流顺序
+- **动态刷新间隔** — 设置动态页面自动刷新的时间间隔
+
+### 🇯🇵 日本語
+- **スマート一時停止** — ユーザーの注意散漫を検出して自動一時停止
+- **スクリーンショット自動保存** — プレーヤースクリーンショットを自動でギャラリーに保存
+- **フィードシャッフル** — ホームフィードの順序をランダムシャッフル
+- **動的更新間隔** — 動的ページの自動更新間隔を設定
+
+### 🇰🇷 한국어
+- **스마트 일시정지** — 사용자 주의 분산 감지 시 자동 일시정지
+- **스크린샷 자동 저장** — 플레이어 스크린샷 자동으로 갤러리에 저장
+- **피드 셔플** — 홈 피드 순서 랜덤 셔플
+- **동적 새로고침 간격** — 동적 페이지 자동 새로고침 간격 설정
+
+### 🇺🇸 English
+- **Smart Pause** — Auto-pause when user attention is detected as distracted
+- **Screenshot Auto-Save** — Auto-save player screenshots to gallery
+- **Home Feed Shuffle** — Randomly shuffle home feed order
+- **Dynamic Refresh Interval** — Set dynamic page auto-refresh interval
+
+---
+
+## v1.83.0 (2026-06-08)
+### 🇨🇳 中文
+- **直播间自动送礼** — 进入直播间时自动送出免费礼物
+- **动态自动静音** — 浏览动态视频时自动静音播放
+- **评论自动删除** — 自动删除已发送的过期评论
+- **弹幕去重过滤** — 自动过滤重复内容的弹幕
+
+### 🇯🇵 日本語
+- **ライブ自動ギフト** — ライブルーム入場時に無料ギフトを自動送信
+- **動的自動ミュート** — 動的動画浏览時に自動ミュート再生
+- **コメント自動削除** — 送信済みの期限切れコメントを自動削除
+- **弾幕重複フィルター** — 重複コンテンツの弾幕を自動フィルタリング
+
+### 🇰🇷 한국어
+- **라이브 자동 선물** — 라이브룸 입장 시 무료 선물 자동 전송
+- **동적 자동 음소거** — 동적 동영상浏览 시 자동 음소거 재생
+- **댓글 자동 삭제** — 보낸 만료된 댓글 자동 삭제
+- **弹幕 중복 필터** — 중복 콘텐츠 弹幕 자동 필터링
+
+### 🇺🇸 English
+- **Live Auto-Gift** — Auto-send free gifts when entering live room
+- **Dynamic Auto-Mute** — Auto-mute when browsing dynamic videos
+- **Comment Auto-Delete** — Auto-delete expired sent comments
+- **Danmaku Dedup Filter** — Auto-filter duplicate danmaku content
+
+---
+
+## v1.82.0 (2026-06-08)
+### 🇨🇳 中文
+- **高亮自己的评论** — 在评论区高亮显示自己的评论
+- **弹幕速度微调** — 微调弹幕的滚动速度
+- **控制栏透明度** — 调节播放器控制栏的透明度
+- **锁屏自动暂停** — 锁屏时自动暂停视频播放
+
+### 🇯🇵 日本語
+- **自分のコメントハイライト** — コメント欄で自分のコメントをハイライト表示
+- **弾幕速度微調整** — 弾幕のスクロール速度を微調整
+- **コントロール透明度** — プレーヤーコントロールバーの透明度を調整
+- **ロック画面自動一時停止** — ロック画面時に動画を自動一時停止
+
+### 🇰🇷 한국어
+- **내 댓글 강조** — 댓글란에서 내 댓글 강조 표시
+- **弹幕 속도 미세 조정** — 弹幕 스크롤 속도 미세 조정
+- **컨트롤 투명도** — 플레이어 컨트롤바 투명도 조절
+- **잠금화면 자동 일시정지** — 잠금화면 시 동영상 자동 일시정지
+
+### 🇺🇸 English
+- **Highlight Self Comments** — Highlight your own comments in comment section
+- **Danmaku Speed Fine-Tune** — Fine-tune danmaku scroll speed
+- **Control Opacity** — Adjust player control bar opacity
+- **Auto-Pause on Lock** — Auto-pause video when screen is locked
+
+---
+
+## v1.81.0 (2026-06-08)
+### 🇨🇳 中文
+- **直播弹幕合并** — 合并显示相同内容的直播弹幕
+- **首页无限滚动** — 首页信息流启用无限滚动加载
+- **动态自动屏蔽** — 自动屏蔽不良动态内容
+- **搜索历史自动清除** — 自动清除搜索历史记录
+
+### 🇯🇵 日本語
+- **ライブ弾幕マージ** — 同じ内容のライブ弾幕をマージ表示
+- **無限スクロール** — ホームフィードの無限スクロール読み込みを有効化
+- **動的自動ブロック** — 不良動的コンテンツを自動ブロック
+- **検索履歴自動クリア** — 検索履歴を自動クリア
+
+### 🇰🇷 한국어
+- **라이브 弹幕 병합** — 동일 내용의 라이브 弹幕 병합 표시
+- **무한 스크롤** — 홈 피드 무한 스크롤 로드 활성화
+- **동적 자동 차단** — 불량 동적 콘텐츠 자동 차단
+- **검색 기록 자동 삭제** — 검색 기록 자동 삭제
+
+### 🇺🇸 English
+- **Live Danmaku Merge** — Merge same-content live danmaku display
+- **Infinite Scroll** — Enable infinite scroll loading for home feed
+- **Dynamic Auto-Block** — Auto-block inappropriate dynamic content
+- **Search History Auto-Clear** — Auto-clear search history
+
+---
+
+## v1.80.0 (2026-06-08)
+### 🇨🇳 中文
+- **评论草稿自动保存** — 自动保存未发送的评论草稿
+- **弹幕发送确认** — 发送弹幕前显示确认对话框
+- **三击手势自定义** — 自定义三击播放器的行为
+- **自动跳过预告** — 自动跳过视频开头的预告片段
+
+### 🇯🇵 日本語
+- **コメント下書き自動保存** — 未送信のコメント下書きを自動保存
+- **弾幕送信確認** — 弾幕送信前に確認ダイアログを表示
+- **トリプルタップジェスチャー** — プレーヤーのトリプルタップ動作をカスタマイズ
+- **予告自動スキップ** — 動画冒頭の予告を自動スキップ
+
+### 🇰🇷 한국어
+- **댓글 초안 자동 저장** — 미전송 댓글 초안 자동 저장
+- **弹幕 전송 확인** — 弹幕 전송 전 확인 대화상자 표시
+- **트리플탭 제스처** — 플레이어 트리플탭 동작 사용자 정의
+- **예고 자동 건너뛰기** — 동영상 시작 시 예고 자동 건너뛰기
+
+### 🇺🇸 English
+- **Comment Draft Auto-Save** — Auto-save unsent comment drafts
+- **Danmaku Send Confirm** — Show confirmation dialog before sending danmaku
+- **Triple Tap Gesture** — Customize triple-tap player behavior
+- **Auto Skip Preview** — Auto-skip video opening previews
+
+---
+
 ## v1.79.0 (2026-06-08)
 ### 🇨🇳 中文
 - **章节自动跳过** — 自动跳过视频中不感兴趣的章节
