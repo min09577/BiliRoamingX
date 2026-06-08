@@ -261,5 +261,17 @@
             android:key="video_chapters_auto_skip"
             android:summary="@string/biliroaming_video_chapters_auto_skip_summary"
             android:title="@string/biliroaming_video_chapters_auto_skip_title" />
+        <androidx.preference.SwitchPreferenceCompat
+            android:key="video_auto_skip_preview"
+            android:summary="@string/biliroaming_video_auto_skip_preview_summary"
+            android:title="@string/biliroaming_video_auto_skip_preview_title" />
+        <androidx.preference.SwitchPreferenceCompat
+            android:key="video_auto_pause_on_lock"
+            android:summary="@string/biliroaming_video_auto_pause_on_lock_summary"
+            android:title="@string/biliroaming_video_auto_pause_on_lock_title" />
+        <androidx.preference.SwitchPreferenceCompat
+            android:key="video_smart_pause"
+            android:summary="@string/biliroaming_video_smart_pause_summary"
+            android:title="@string/biliroaming_video_smart_pause_title" />
     </androidx.preference.PreferenceCategory>
 </androidx.preference.PreferenceScreen>

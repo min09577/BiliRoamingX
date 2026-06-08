@@ -460,5 +460,17 @@
             android:key="player_brightness_auto"
             android:summary="@string/biliroaming_player_brightness_auto_summary"
             android:title="@string/biliroaming_player_brightness_auto_title" />
+        <EditTextPreference
+            android:key="player_gesture_triple_tap"
+            android:summary="@string/biliroaming_player_gesture_triple_tap_summary"
+            android:title="@string/biliroaming_player_gesture_triple_tap_title" />
+        <EditTextPreference
+            android:key="player_control_opacity"
+            android:summary="@string/biliroaming_player_control_opacity_summary"
+            android:title="@string/biliroaming_player_control_opacity_title" />
+        <androidx.preference.SwitchPreferenceCompat
+            android:key="player_screenshot_auto_save"
+            android:summary="@string/biliroaming_player_screenshot_auto_save_summary"
+            android:title="@string/biliroaming_player_screenshot_auto_save_title" />
     </androidx.preference.PreferenceCategory>
 </androidx.preference.PreferenceScreen>

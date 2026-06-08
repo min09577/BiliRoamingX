@@ -82,5 +82,17 @@
             android:key="dynamic_auto_save"
             android:summary="@string/biliroaming_dynamic_auto_save_summary"
             android:title="@string/biliroaming_dynamic_auto_save_title" />
+        <androidx.preference.SwitchPreferenceCompat
+            android:key="dynamic_auto_block"
+            android:summary="@string/biliroaming_dynamic_auto_block_summary"
+            android:title="@string/biliroaming_dynamic_auto_block_title" />
+        <androidx.preference.SwitchPreferenceCompat
+            android:key="dynamic_auto_mute"
+            android:summary="@string/biliroaming_dynamic_auto_mute_summary"
+            android:title="@string/biliroaming_dynamic_auto_mute_title" />
+        <EditTextPreference
+            android:key="dynamic_auto_refresh_interval"
+            android:summary="@string/biliroaming_dynamic_auto_refresh_interval_summary"
+            android:title="@string/biliroaming_dynamic_auto_refresh_interval_title" />
     </androidx.preference.PreferenceCategory>
 </androidx.preference.PreferenceScreen>

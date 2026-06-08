@@ -93,5 +93,13 @@
             android:key="home_feed_sort"
             android:summary="@string/biliroaming_home_feed_sort_summary"
             android:title="@string/biliroaming_home_feed_sort_title" />
+        <androidx.preference.SwitchPreferenceCompat
+            android:key="home_feed_infinite_scroll"
+            android:summary="@string/biliroaming_home_feed_infinite_scroll_summary"
+            android:title="@string/biliroaming_home_feed_infinite_scroll_title" />
+        <androidx.preference.SwitchPreferenceCompat
+            android:key="home_feed_shuffle"
+            android:summary="@string/biliroaming_home_feed_shuffle_summary"
+            android:title="@string/biliroaming_home_feed_shuffle_title" />
     </androidx.preference.PreferenceCategory>
 </androidx.preference.PreferenceScreen>
