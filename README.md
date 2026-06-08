@@ -679,6 +679,141 @@ BiliRoamingX v1.23.3 기반, AI 지원 개발로 강화.
 - ⬆️ **弹幕顶部显示** / Danmaku Area Top / 弾幕上部表示 / 탄막 상단 표시
 
 ---
+## v2.10.0 (2026-06-08)
+### 🇨🇳 中文
+- **控制栏自动淡出** — 播放器控制栏自动淡出隐藏
+- **智能码率选择** — 根据网络状况智能选择视频码率
+- **定时夜间主题** — 按时间计划自动切换首页夜间主题
+- **动态自动置顶自己** — 自动置顶自己发布的动态
+
+### 🇯🇵 日本語
+- **コントロール自動フェードアウト** — プレーヤーコントロールバーを自動フェードアウト
+- **スマートビットレート** — ネットワーク状況に基づいてビットレートをスマート選択
+- **スケジュールナイトテーマ** — 時間計画に基づいてナイトテーマを自動切替
+- **自分の動的自動ピン留め** — 自分が投稿した動的を自動ピン留め
+
+### 🇰🇷 한국어
+- **컨트롤 자동 페이드아웃** — 플레이어 컨트롤바 자동 페이드아웃
+- **스마트 비트레이트** — 네트워크 상태에 따라 비트레이트 스마트 선택
+- **스케줄 야간 테마** — 시간 계획에 따라 야간 테마 자동 전환
+- **내 동적 자동 고정** — 내가 게시한 동적 자동 고정
+
+### 🇺🇸 English
+- **Control Auto-Fade** — Player control bar auto-fade out
+- **Smart Bitrate** — Smart video bitrate selection based on network
+- **Night Theme Schedule** — Auto-switch night theme on schedule
+- **Dynamic Self-Pin** — Auto-pin your own posted dynamics
+
+---
+
+## v2.09.0 (2026-06-08)
+### 🇨🇳 中文
+- **画中画自动进入** — 直播间自动进入画中画模式
+- **自动归档旧动态** — 自动归档超过指定天数的旧动态
+- **评论全部展开** — 自动展开所有折叠的评论
+- **发送弹幕字体族** — 选择发送弹幕时使用的字体族
+
+### 🇯🇵 日本語
+- **PiP自動入場** — ライブルーム自動でPiPモードに入る
+- **古い動的自動アーカイブ** — 指定日数超えた古い動的を自動アーカイブ
+- **コメント全展開** — 折りたたまれたコメントを全て自動展開
+- **弾幕送信フォントファミリー** — 弾幕送信時のフォントファミリーを選択
+
+### 🇰🇷 한국어
+- **PiP 자동 진입** — 라이브룸 자동으로 PiP 모드 진입
+- **오래된 동적 자동 아카이브** — 지정 일수 초과한 오래된 동적 자동 아카이브
+- **댓글 모두 펼치기** — 접힌 댓글 모두 자동 펼치기
+- **弹幕 전송 글꼴 패밀리** — 弹幕 전송 시 글꼴 패밀리 선택
+
+### 🇺🇸 English
+- **Auto-Enter PiP** — Auto-enter picture-in-picture in live room
+- **Archive Old Dynamics** — Auto-archive dynamics older than specified days
+- **Expand All Comments** — Auto-expand all folded comments
+- **Danmaku Send Font Family** — Choose font family for sending danmaku
+
+---
+
+## v2.08.0 (2026-06-08)
+### 🇨🇳 中文
+- **高亮回复评论** — 高亮显示有新回复的评论
+- **弹幕行高** — 调整弹幕文字的行高
+- **截图格式自定义** — 自定义截图的保存格式
+- **静音自动暂停** — 检测到环境静音时自动暂停
+
+### 🇯🇵 日本語
+- **返信コメントハイライト** — 新しい返信があるコメントをハイライト
+- **弾幕行高** — 弾幕テキストの行高を調整
+- **スクリーンショットフォーマット** — スクリーンショットの保存フォーマットをカスタマイズ
+- **サイレンス自動一時停止** — 環境の沈黙を検出して自動一時停止
+
+### 🇰🇷 한국어
+- **회신 댓글 강조** — 새 회신이 있는 댓글 강조 표시
+- **弹幕 줄 높이** — 弹幕 텍스트 줄 높이 조절
+- **스크린샷 형식 사용자 정의** — 스크린샷 저장 형식 사용자 정의
+- **무음 자동 일시정지** — 환경 무음 감지 시 자동 일시정지
+
+### 🇺🇸 English
+- **Highlight Reply Comments** — Highlight comments with new replies
+- **Danmaku Line Height** — Adjust danmaku text line height
+- **Screenshot Format Custom** — Customize screenshot save format
+- **Auto-Pause on Silence** — Auto-pause when silence is detected
+
+---
+
+## v2.07.0 (2026-06-08)
+### 🇨🇳 中文
+- **合并相似弹幕** — 合并直播间相似内容的弹幕
+- **首页夜间主题** — 自动切换首页为夜间主题
+- **屏蔽敏感动态** — 自动屏蔽包含敏感内容的动态
+- **搜索热门补全** — 搜索时显示热门搜索词补全
+
+### 🇯🇵 日本語
+- **類似弾幕マージ** — ライブの類似内容の弾幕をマージ
+- **ホームナイトテーマ** — ホームのナイトテーマを自動切替
+- **敏感動的ブロック** — 機密性の高い動的コンテンツを自動ブロック
+- **検索トレンド補完** — 検索時にトレンド検索語を補完表示
+
+### 🇰🇷 한국어
+- **유사 弹幕 병합** — 라이브 유사 내용 弹幕 병합
+- **홈 야간 테마** — 홈 야간 테마 자동 전환
+- **민감 동적 차단** — 민감한 동적 콘텐츠 자동 차단
+- **검색 트렌드 완성** — 검색 시 트렌드 검색어 완성 표시
+
+### 🇺🇸 English
+- **Merge Similar Danmaku** — Merge similar danmaku in live streams
+- **Home Night Theme** — Auto-switch home to night theme
+- **Block Sensitive Dynamics** — Auto-block sensitive dynamic content
+- **Search Trending Complete** — Show trending search terms in auto-complete
+
+---
+
+## v2.06.0 (2026-06-08)
+### 🇨🇳 中文
+- **评论自动翻译** — 自动翻译外语评论内容
+- **弹幕字间距** — 调整弹幕文字的字母间距
+- **双击速度设置** — 自定义双击快进/快退的速度
+- **自动跳过中插广告** — 自动跳过视频中间的广告片段
+
+### 🇯🇵 日本語
+- **コメント自動翻訳** — 外国語コメントを自動翻訳
+- **弾幕文字間隔** — 弾幕テキストの文字間隔を調整
+- **ダブルタップ速度** — ダブルタップ早送り/巻き戻しの速度をカスタマイズ
+- **ミッドロール広告自動スキップ** — 動画の中間広告を自動スキップ
+
+### 🇰🇷 한국어
+- **댓글 자동 번역** — 외국어 댓글 자동 번역
+- **弹幕 자간** — 弹幕 텍스트 자간 조절
+- **더블탭 속도** — 더블탭 빨리감기/되감기 속도 사용자 정의
+- **중간 광고 자동 건너뛰기** — 동영상 중간 광고 자동 건너뛰기
+
+### 🇺🇸 English
+- **Comment Auto-Translate** — Auto-translate foreign comments
+- **Danmaku Letter Spacing** — Adjust danmaku text letter spacing
+- **Double Tap Speed** — Customize double-tap seek speed
+- **Auto Skip Midroll Ads** — Auto-skip midroll video ads
+
+---
+
 ## v2.04.0 (2026-06-08)
 ### 🇨🇳 中文
 - **智能画质选择** — 根据网络速度智能选择最佳画质
