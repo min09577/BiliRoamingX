@@ -108,7 +108,7 @@ object Settings {
         @JvmField val CommentImagePreview = BooleanSetting(key = "comment_image_preview")
         @JvmField val DanmakuSendPosition = IntSetting(key = "danmaku_send_position", defValue = 0)
         @JvmField val PlayerOverlayOpacity = IntSetting(key = "player_overlay_opacity", defValue = 100)
-        // endregion
+    // endregion
 
 
     // region Group: 首页
@@ -359,7 +359,7 @@ object Settings {
                 Utils.async { deleteModuleResources() }
             } else {
                 deleteModuleResources()
-            }
+        }
         })
     @JvmField val MusicNotification = BooleanSetting(key = "music_notification", needReboot = true)
     @JvmField val PurifyShare = BooleanSetting(key = "purify_share")
@@ -380,7 +380,7 @@ object Settings {
             Utils.async { clearSplashConfigCache() }
         } else {
             clearSplashConfigCache()
-        }
+    }
     })
     @JvmField val DisallowCollectPrivacyInfo = BooleanSetting(key = "disallow_collect_privacy_info", needReboot = true)
     @JvmField val DisableWebViewNonOfficialAlert = BooleanSetting(key = "disable_non_official_alert")
@@ -425,5 +425,9 @@ object Settings {
     @JvmField val DanmakuSendHistory = BooleanSetting(key = "danmaku_send_history")
     @JvmField val PlayerControlLayout = IntSetting(key = "player_control_layout", defValue = 0)
     @JvmField val LiveRoomBackground = IntSetting(key = "live_room_background", defValue = 0)
+    @JvmField val VideoBufferSize = IntSetting(key = "video_buffer_size", defValue = 0)
+    @JvmField val LiveRoomGiftEffect = BooleanSetting(key = "live_room_gift_effect")
+    @JvmField val AudioOnlyMode = BooleanSetting(key = "audio_only_mode")
+    @JvmField val MiniPlayerSize = IntSetting(key = "mini_player_size", defValue = 0)
     // endregion
 }

@@ -209,5 +209,9 @@
             android:key="video_auto_share"
             android:summary="@string/biliroaming_video_auto_share_summary"
             android:title="@string/biliroaming_video_auto_share_title" />
+        <EditTextPreference
+            android:key="mini_player_size"
+            android:summary="@string/biliroaming_mini_player_size_summary"
+            android:title="@string/biliroaming_mini_player_size_title" />
     </androidx.preference.PreferenceCategory>
 </androidx.preference.PreferenceScreen>

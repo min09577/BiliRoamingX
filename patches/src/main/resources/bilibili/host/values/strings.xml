@@ -775,4 +775,12 @@
     <string name="biliroaming_player_control_layout_summary">调整播放器控制按钮的排列和显示（默认/紧凑/精简）</string>
     <string name="biliroaming_live_room_background_title">直播间背景</string>
     <string name="biliroaming_live_room_background_summary">设置直播间的背景样式（默认/纯黑/纯白/自定义）</string>
+    <string name="biliroaming_video_buffer_size_title">视频缓冲大小</string>
+    <string name="biliroaming_video_buffer_size_summary">控制视频预加载缓冲时长（默认/低/中/高/极限）</string>
+    <string name="biliroaming_live_room_gift_effect_title">屏蔽礼物特效</string>
+    <string name="biliroaming_live_room_gift_effect_summary">隐藏直播间全屏礼物特效动画，减少干扰</string>
+    <string name="biliroaming_audio_only_mode_title">纯音频模式</string>
+    <string name="biliroaming_audio_only_mode_summary">只播放声音不显示画面，节省流量和性能</string>
+    <string name="biliroaming_mini_player_size_title">迷你播放器大小</string>
+    <string name="biliroaming_mini_player_size_summary">调整迷你播放器（小窗）的尺寸（默认/小/中/大）</string>
 </resources>

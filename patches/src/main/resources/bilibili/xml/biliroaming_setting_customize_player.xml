@@ -424,5 +424,13 @@
             android:key="player_control_layout"
             android:summary="@string/biliroaming_player_control_layout_summary"
             android:title="@string/biliroaming_player_control_layout_title" />
+        <EditTextPreference
+            android:key="video_buffer_size"
+            android:summary="@string/biliroaming_video_buffer_size_summary"
+            android:title="@string/biliroaming_video_buffer_size_title" />
+        <androidx.preference.SwitchPreferenceCompat
+            android:key="audio_only_mode"
+            android:summary="@string/biliroaming_audio_only_mode_summary"
+            android:title="@string/biliroaming_audio_only_mode_title" />
     </androidx.preference.PreferenceCategory>
 </androidx.preference.PreferenceScreen>

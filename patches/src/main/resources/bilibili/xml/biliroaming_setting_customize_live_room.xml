@@ -66,5 +66,9 @@
             android:key="live_room_background"
             android:summary="@string/biliroaming_live_room_background_summary"
             android:title="@string/biliroaming_live_room_background_title" />
+        <androidx.preference.SwitchPreferenceCompat
+            android:key="live_room_gift_effect"
+            android:summary="@string/biliroaming_live_room_gift_effect_summary"
+            android:title="@string/biliroaming_live_room_gift_effect_title" />
     </androidx.preference.PreferenceCategory>
 </androidx.preference.PreferenceScreen>
