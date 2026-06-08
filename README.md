@@ -679,6 +679,137 @@ BiliRoamingX v1.23.3 기반, AI 지원 개발로 강화.
 - ⬆️ **弹幕顶部显示** / Danmaku Area Top / 弾幕上部表示 / 탄막 상단 표시
 
 ---
+## v2.04.0 (2026-06-08)
+### 🇨🇳 中文
+- **智能画质选择** — 根据网络速度智能选择最佳画质
+- **首页聚焦刷新** — 首页获得焦点时自动刷新内容
+- **动态评论置顶** — 自动置顶动态下的优质评论
+
+### 🇯🇵 日本語
+- **スマート画質選択** — ネットワーク速度に基づいて最適な画質を自動選択
+- **フォーカス更新** — ホームがフォーカスされた時にコンテンツを自動更新
+- **動的コメントピン留め** — 動的の高品質コメントを自動ピン留め
+
+### 🇰🇷 한국어
+- **스마트 화질 선택** — 네트워크 속도에 따라 최적 화질 자동 선택
+- **포커스 새로고침** — 홈 포커스 시 콘텐츠 자동 새로고침
+- **동적 댓글 고정** — 동적优质评论 자동 고정
+
+### 🇺🇸 English
+- **Smart Quality** — Auto-select best quality based on network speed
+- **Refresh on Focus** — Auto-refresh content when home gains focus
+- **Dynamic Pin Comment** — Auto-pin quality comments on dynamics
+
+---
+
+## v2.03.0 (2026-06-08)
+### 🇨🇳 中文
+- **动态关键词屏蔽** — 按关键词屏蔽动态内容
+- **短评论自动展开** — 自动展开过短的折叠评论
+- **弹幕全屏预览** — 发送弹幕前全屏预览效果
+- **控制栏淡出时间** — 设置播放器控制栏的淡出时间
+
+### 🇯🇵 日本語
+- **動的キーワードブロック** — キーワードで動的コンテンツをブロック
+- **短コメント自動展開** — 短い折りたたみコメントを自動展開
+- **弾幕フルスクリーンプレビュー** — 弾幕送信前にフルスクリーンプレビュー
+- **フェードアウト時間** — プレーヤーコントロールバーのフェードアウト時間を設定
+
+### 🇰🇷 한국어
+- **동적 키워드 차단** — 키워드로 동적 콘텐츠 차단
+- **짧은 댓글 자동 펼치기** — 짧은 접힌 댓글 자동 펼치기
+- **弹幕 전체화면 미리보기** — 弹幕 전송 전 전체화면 미리보기
+- **페이드아웃 시간** — 플레이어 컨트롤바 페이드아웃 시간 설정
+
+### 🇺🇸 English
+- **Dynamic Block Keywords** — Block dynamic content by keywords
+- **Auto-Expand Short Comments** — Auto-expand short folded comments
+- **Danmaku Full Preview** — Full-screen preview before sending danmaku
+- **Control Fade-Out Time** — Set player control bar fade-out time
+
+---
+
+## v2.02.0 (2026-06-08)
+### 🇨🇳 中文
+- **高亮新评论** — 高亮显示新发布的评论
+- **弹幕字体粗细自定义** — 自定义弹幕文字的粗细程度
+- **截图保存路径** — 自定义播放器截图的保存路径
+- **直播间批量关注** — 一键关注直播间所有主播
+
+### 🇯🇵 日本語
+- **新着コメントハイライト** — 新規コメントをハイライト表示
+- **弾幕フォントウェイトカスタマイズ** — 弾幕テキストの太さをカスタマイズ
+- **スクリーンショット保存パス** — プレーヤースクリーンショットの保存パスをカスタマイズ
+- **ライブ一括フォロー** — ライブルームの全ホストをワンクリックフォロー
+
+### 🇰🇷 한국어
+- **새 댓글 강조** — 새로 게시된 댓글 강조 표시
+- **弹幕 글꼴 두께 사용자 정의** — 弹幕 텍스트 두께 사용자 정의
+- **스크린샷 저장 경로** — 플레이어 스크린샷 저장 경로 사용자 정의
+- **라이브 일괄 팔로우** — 라이브룸 모든 호스트 원클릭 팔로우
+
+### 🇺🇸 English
+- **Highlight New Comments** — Highlight newly posted comments
+- **Danmaku Font Weight Custom** — Customize danmaku text thickness
+- **Screenshot Save Path** — Customize player screenshot save path
+- **Live Batch Follow** — One-click follow all hosts in live room
+
+---
+
+## v2.01.0 (2026-06-08)
+### 🇨🇳 中文
+- **直播弹幕速度控制** — 控制直播间弹幕的滚动速度
+- **定时夜间模式** — 按时间计划自动切换首页夜间模式
+- **自动删除旧动态** — 自动删除超过指定天数的旧动态
+- **搜索历史补全** — 搜索时自动补全历史搜索记录
+
+### 🇯🇵 日本語
+- **ライブ弾幕速度制御** — ライブ弾幕のスクロール速度を制御
+- **スケジュールナイトモード** — 時間計画に基づいてナイトモードを自動切替
+- **古い動的自動削除** — 指定日数を超えた古い動的を自動削除
+- **検索履歴自動補完** — 検索時に検索履歴を自動補完
+
+### 🇰🇷 한국어
+- **라이브 弹幕 속도 제어** — 라이브 弹幕 스크롤 속도 제어
+- **스케줄 야간 모드** — 시간 계획에 따라 야간 모드 자동 전환
+- **오래된 동적 자동 삭제** — 지정 일수 초과한 오래된 동적 자동 삭제
+- **검색 기록 자동 완성** — 검색 시 검색 기록 자동 완성
+
+### 🇺🇸 English
+- **Live Danmaku Speed Control** — Control live danmaku scroll speed
+- **Night Mode Schedule** — Auto-switch night mode on schedule
+- **Auto-Delete Old Dynamics** — Auto-delete dynamics older than specified days
+- **Search History Complete** — Auto-complete with search history
+
+---
+
+## v2.00.0 (2026-06-08)
+### 🇨🇳 中文
+- **评论自动置顶** — 发送评论后自动将其置顶显示
+- **暂停时隐藏弹幕** — 视频暂停时自动隐藏弹幕显示
+- **旋转手势** — 支持旋转手势调整播放器画面方向
+- **片段自动循环** — 自动循环播放视频中的指定片段
+
+### 🇯🇵 日本語
+- **コメント自動ピン留め** — コメント送信後に自動ピン留め表示
+- **一時停止時弾幕非表示** — 動画一時停止時に弾幕を自動非表示
+- **ローテーションジェスチャー** — ジェスチャーでプレーヤーの向きを調整
+- **セグメント自動リピート** — 動画の指定セグメントを自動リピート再生
+
+### 🇰🇷 한국어
+- **댓글 자동 고정** — 댓글 전송 후 자동 고정 표시
+- **일시정지 시 弹幕 숨기기** — 동영상 일시정지 시 弹幕 자동 숨기기
+- **회전 제스처** — 제스처로 플레이어 방향 조절
+- **세그먼트 자동 반복** — 동영상 지정 세그먼트 자동 반복 재생
+
+### 🇺🇸 English
+- **Comment Auto-Pin** — Auto-pin comments after posting
+- **Hide Danmaku on Pause** — Auto-hide danmaku when video is paused
+- **Rotate Gesture** — Gesture to adjust player orientation
+- **Auto-Repeat Segment** — Auto-repeat specified video segment
+
+---
+
 ## v1.99.0 (2026-06-08)
 ### 🇨🇳 中文
 - **控制手势模式** — 自定义播放器控制手势的触发模式
