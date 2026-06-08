@@ -104,5 +104,17 @@
             android:key="comment_auto_delete"
             android:summary="@string/biliroaming_comment_auto_delete_summary"
             android:title="@string/biliroaming_comment_auto_delete_title" />
+        <androidx.preference.SwitchPreferenceCompat
+            android:key="comment_emoji_auto_complete"
+            android:summary="@string/biliroaming_comment_emoji_auto_complete_summary"
+            android:title="@string/biliroaming_comment_emoji_auto_complete_title" />
+        <EditTextPreference
+            android:key="comment_highlight_keyword"
+            android:summary="@string/biliroaming_comment_highlight_keyword_summary"
+            android:title="@string/biliroaming_comment_highlight_keyword_title" />
+        <androidx.preference.SwitchPreferenceCompat
+            android:key="comment_sort_pinned"
+            android:summary="@string/biliroaming_comment_sort_pinned_summary"
+            android:title="@string/biliroaming_comment_sort_pinned_title" />
     </androidx.preference.PreferenceCategory>
 </androidx.preference.PreferenceScreen>

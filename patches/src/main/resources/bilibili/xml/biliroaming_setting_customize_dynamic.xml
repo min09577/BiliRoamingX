@@ -94,5 +94,17 @@
             android:key="dynamic_auto_refresh_interval"
             android:summary="@string/biliroaming_dynamic_auto_refresh_interval_summary"
             android:title="@string/biliroaming_dynamic_auto_refresh_interval_title" />
+        <androidx.preference.SwitchPreferenceCompat
+            android:key="dynamic_auto_bookmark"
+            android:summary="@string/biliroaming_dynamic_auto_bookmark_summary"
+            android:title="@string/biliroaming_dynamic_auto_bookmark_title" />
+        <androidx.preference.SwitchPreferenceCompat
+            android:key="dynamic_auto_like_all"
+            android:summary="@string/biliroaming_dynamic_auto_like_all_summary"
+            android:title="@string/biliroaming_dynamic_auto_like_all_title" />
+        <androidx.preference.SwitchPreferenceCompat
+            android:key="dynamic_auto_reply"
+            android:summary="@string/biliroaming_dynamic_auto_reply_summary"
+            android:title="@string/biliroaming_dynamic_auto_reply_title" />
     </androidx.preference.PreferenceCategory>
 </androidx.preference.PreferenceScreen>

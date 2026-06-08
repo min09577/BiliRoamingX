@@ -101,5 +101,13 @@
             android:key="home_feed_shuffle"
             android:summary="@string/biliroaming_home_feed_shuffle_summary"
             android:title="@string/biliroaming_home_feed_shuffle_title" />
+        <androidx.preference.SwitchPreferenceCompat
+            android:key="home_feed_auto_load_more"
+            android:summary="@string/biliroaming_home_feed_auto_load_more_summary"
+            android:title="@string/biliroaming_home_feed_auto_load_more_title" />
+        <androidx.preference.SwitchPreferenceCompat
+            android:key="home_feed_mark_read"
+            android:summary="@string/biliroaming_home_feed_mark_read_summary"
+            android:title="@string/biliroaming_home_feed_mark_read_title" />
     </androidx.preference.PreferenceCategory>
 </androidx.preference.PreferenceScreen>

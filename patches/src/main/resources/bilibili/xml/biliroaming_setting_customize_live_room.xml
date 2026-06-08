@@ -98,5 +98,13 @@
             android:key="live_room_auto_gift"
             android:summary="@string/biliroaming_live_room_auto_gift_summary"
             android:title="@string/biliroaming_live_room_auto_gift_title" />
+        <androidx.preference.SwitchPreferenceCompat
+            android:key="live_danmaku_block_emoji"
+            android:summary="@string/biliroaming_live_danmaku_block_emoji_summary"
+            android:title="@string/biliroaming_live_danmaku_block_emoji_title" />
+        <androidx.preference.SwitchPreferenceCompat
+            android:key="live_room_auto_enter_fullscreen"
+            android:summary="@string/biliroaming_live_room_auto_enter_fullscreen_summary"
+            android:title="@string/biliroaming_live_room_auto_enter_fullscreen_title" />
     </androidx.preference.PreferenceCategory>
 </androidx.preference.PreferenceScreen>

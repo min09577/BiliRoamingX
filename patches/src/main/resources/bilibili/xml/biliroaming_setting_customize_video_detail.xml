@@ -273,5 +273,17 @@
             android:key="video_smart_pause"
             android:summary="@string/biliroaming_video_smart_pause_summary"
             android:title="@string/biliroaming_video_smart_pause_title" />
+        <androidx.preference.SwitchPreferenceCompat
+            android:key="video_auto_skip_ending"
+            android:summary="@string/biliroaming_video_auto_skip_ending_summary"
+            android:title="@string/biliroaming_video_auto_skip_ending_title" />
+        <EditTextPreference
+            android:key="video_auto_pause_on_battery"
+            android:summary="@string/biliroaming_video_auto_pause_on_battery_summary"
+            android:title="@string/biliroaming_video_auto_pause_on_battery_title" />
+        <androidx.preference.SwitchPreferenceCompat
+            android:key="video_smart_resolution"
+            android:summary="@string/biliroaming_video_smart_resolution_summary"
+            android:title="@string/biliroaming_video_smart_resolution_title" />
     </androidx.preference.PreferenceCategory>
 </androidx.preference.PreferenceScreen>

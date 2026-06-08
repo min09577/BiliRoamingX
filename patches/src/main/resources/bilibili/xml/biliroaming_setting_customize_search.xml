@@ -42,5 +42,9 @@
             android:key="search_history_clear"
             android:summary="@string/biliroaming_search_history_clear_summary"
             android:title="@string/biliroaming_search_history_clear_title" />
+        <EditTextPreference
+            android:key="search_auto_filter"
+            android:summary="@string/biliroaming_search_auto_filter_summary"
+            android:title="@string/biliroaming_search_auto_filter_title" />
     </androidx.preference.PreferenceCategory>
 </androidx.preference.PreferenceScreen>
