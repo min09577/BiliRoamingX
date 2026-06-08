@@ -679,6 +679,34 @@ BiliRoamingX v1.23.3 기반, AI 지원 개발로 강화.
 - ⬆️ **弹幕顶部显示** / Danmaku Area Top / 弾幕上部表示 / 탄막 상단 표시
 
 ---
+## v1.69.0 (2026-06-08)
+
+### 🇨🇳 中文
+- **智能弹幕过滤** — 自动过滤低质量弹幕（纯数字、重复、过短）
+- **评论自动置顶** — 发送评论后自动将其置顶显示
+- **视频自动下载** — 收藏视频后自动下载到本地
+- **动态自动滚动** — 动态页面自动滚动加载更多内容
+
+### 🇯🇵 日本語
+- **スマート弾幕フィルター** — 低品質弾幕を自動フィルタリング（数字のみ、繰り返し、短すぎる）
+- **コメント自動ピン留め** — コメント送信後に自動でピン留め表示
+- **動画自動ダウンロード** — 動画をお気に入り後に自動でローカルにダウンロード
+- **動的自動スクロール** — 動的ページで自動スクロールしてさらに読み込み
+
+### 🇰🇷 한국어
+- **스마트 弹幕 필터** — 저품질 弹幕 자동 필터링 (숫자만, 반복, 너무 짧은 것)
+- **댓글 자동 고정** — 댓글 전송 후 자동으로 상단 고정 표시
+- **동영상 자동 다운로드** — 동영상 즐겨찾기 후 자동으로 로컬에 다운로드
+- **동적 자동 스크롤** — 동적 페이지에서 자동 스크롤하여 더 많은 내용 로드
+
+### 🇺🇸 English
+- **Smart Danmaku Filter** — Auto-filter low-quality danmaku (numbers-only, repeats, too short)
+- **Comment Auto-Pin** — Auto-pin comments after posting
+- **Video Auto-Download** — Auto-download videos to local storage after favoriting
+- **Dynamic Auto-Scroll** — Auto-scroll dynamic page to load more content
+
+---
+
 ## v1.68.0 (2026-06-08)
 
 ### 🇨🇳 中文
