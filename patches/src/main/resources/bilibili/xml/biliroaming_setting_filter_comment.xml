@@ -84,10 +84,6 @@
             android:key="comment_sort_reverse"
             android:summary="@string/biliroaming_comment_sort_reverse_summary"
             android:title="@string/biliroaming_comment_sort_reverse_title" />
-        <androidx.preference.SwitchPreferenceCompat
-            android:key="comment_auto_fold"
-            android:summary="@string/biliroaming_comment_auto_fold_summary"
-            android:title="@string/biliroaming_comment_auto_fold_title" />
         <EditTextPreference
             android:key="comment_line_spacing"
             android:summary="@string/biliroaming_comment_line_spacing_summary"
@@ -129,10 +125,6 @@
             android:summary="@string/biliroaming_comment_highlight_vip_summary"
             android:title="@string/biliroaming_comment_highlight_vip_title" />
         <androidx.preference.SwitchPreferenceCompat
-            android:key="comment_auto_collapse_old"
-            android:summary="@string/biliroaming_comment_auto_collapse_old_summary"
-            android:title="@string/biliroaming_comment_auto_collapse_old_title" />
-        <androidx.preference.SwitchPreferenceCompat
             android:key="comment_highlight_moderator"
             android:summary="@string/biliroaming_comment_highlight_moderator_summary"
             android:title="@string/biliroaming_comment_highlight_moderator_title" />
@@ -140,10 +132,6 @@
             android:key="comment_sort_by_reply"
             android:summary="@string/biliroaming_comment_sort_by_reply_summary"
             android:title="@string/biliroaming_comment_sort_by_reply_title" />
-        <androidx.preference.SwitchPreferenceCompat
-            android:key="comment_auto_pin_top"
-            android:summary="@string/biliroaming_comment_auto_pin_top_summary"
-            android:title="@string/biliroaming_comment_auto_pin_top_title" />
         <androidx.preference.SwitchPreferenceCompat
             android:key="comment_highlight_new"
             android:summary="@string/biliroaming_comment_highlight_new_summary"

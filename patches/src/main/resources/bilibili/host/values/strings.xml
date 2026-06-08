@@ -799,8 +799,6 @@
     <string name="biliroaming_home_shortcut_summary">在首页添加常用功能快捷入口</string>
     <string name="biliroaming_video_end_action_title">视频结束动作</string>
     <string name="biliroaming_video_end_action_summary">视频播放结束时的行为（默认/自动重播/退出/下一集）</string>
-    <string name="biliroaming_danmaku_block_by_user_title">按用户屏蔽弹幕</string>
-    <string name="biliroaming_danmaku_block_by_user_summary">屏蔽指定用户ID发送的弹幕</string>
     <string name="biliroaming_player_gesture_seek_title">手势快进快退</string>
     <string name="biliroaming_player_gesture_seek_summary">在播放器左右滑动快进/快退</string>
     <string name="biliroaming_video_auto_pause_detect_title">离开自动暂停</string>
@@ -857,8 +855,6 @@
     <string name="biliroaming_video_auto_quality_summary">根据网络状况自动选择最佳画质</string>
     <string name="biliroaming_comment_sort_reverse_title">评论逆序排列</string>
     <string name="biliroaming_comment_sort_reverse_summary">将评论区按逆序排列显示</string>
-    <string name="biliroaming_danmaku_shadow_style_title">弹幕阴影样式</string>
-    <string name="biliroaming_danmaku_shadow_style_summary">自定义弹幕文字的阴影效果</string>
     <string name="biliroaming_player_gesture_long_press_title">长按手势自定义</string>
     <string name="biliroaming_player_gesture_long_press_summary">自定义长按播放器的行为</string>
     <string name="biliroaming_video_auto_skip_credits_title">自动跳过片尾</string>
@@ -871,8 +867,6 @@
     <string name="biliroaming_dynamic_auto_forward_summary">浏览动态时自动转发优质内容</string>
     <string name="biliroaming_search_auto_suggest_title">搜索智能建议</string>
     <string name="biliroaming_search_auto_suggest_summary">搜索时显示智能补全建议</string>
-    <string name="biliroaming_comment_auto_fold_title">评论自动折叠</string>
-    <string name="biliroaming_comment_auto_fold_summary">自动折叠过长的评论内容</string>
     <string name="biliroaming_danmaku_send_delay_title">弹幕发送延迟</string>
     <string name="biliroaming_danmaku_send_delay_summary">设置弹幕发送的延迟时间</string>
     <string name="biliroaming_player_control_auto_hide_title">控制栏自动隐藏</string>
@@ -965,8 +959,6 @@
     <string name="biliroaming_dynamic_auto_like_all_summary">一键点赞当前页面所有动态</string>
     <string name="biliroaming_comment_sort_pinned_title">评论置顶优先</string>
     <string name="biliroaming_comment_sort_pinned_summary">评论区优先显示置顶评论</string>
-    <string name="biliroaming_danmaku_send_font_custom_title">发送弹幕字体</string>
-    <string name="biliroaming_danmaku_send_font_custom_summary">自定义发送弹幕时使用的字体</string>
     <string name="biliroaming_player_control_animation_title">控制栏动画</string>
     <string name="biliroaming_player_control_animation_summary">启用播放器控制栏的显示/隐藏动画</string>
     <string name="biliroaming_video_smart_resolution_title">智能分辨率</string>
@@ -987,10 +979,6 @@
     <string name="biliroaming_live_danmaku_font_size_summary">调整直播间弹幕的字体大小</string>
     <string name="biliroaming_home_feed_auto_night_title">首页自动夜间模式</string>
     <string name="biliroaming_home_feed_auto_night_summary">根据时间自动切换首页夜间模式</string>
-    <string name="biliroaming_dynamic_auto_pin_title">动态自动置顶</string>
-    <string name="biliroaming_dynamic_auto_pin_summary">发布动态时自动置顶</string>
-    <string name="biliroaming_search_auto_correction_title">搜索自动纠正</string>
-    <string name="biliroaming_search_auto_correction_summary">自动纠正搜索中的拼写错误</string>
     <string name="biliroaming_comment_sort_by_length_title">评论按长度排序</string>
     <string name="biliroaming_comment_sort_by_length_summary">按评论内容长度排序显示</string>
     <string name="biliroaming_danmaku_send_queue_title">弹幕发送队列</string>
@@ -1015,8 +1003,6 @@
     <string name="biliroaming_home_feed_auto_scroll_summary">首页信息流自动缓慢滚动浏览</string>
     <string name="biliroaming_dynamic_auto_block_user_title">动态自动屏蔽用户</string>
     <string name="biliroaming_dynamic_auto_block_user_summary">自动屏蔽发布不良动态的用户</string>
-    <string name="biliroaming_comment_auto_collapse_old_title">自动折叠旧评论</string>
-    <string name="biliroaming_comment_auto_collapse_old_summary">自动折叠发布时间较久的评论</string>
     <string name="biliroaming_danmaku_send_cooldown_title">弹幕发送冷却</string>
     <string name="biliroaming_danmaku_send_cooldown_summary">设置弹幕发送的冷却时间间隔</string>
     <string name="biliroaming_player_gesture_volume_step_title">音量手势步长</string>
@@ -1033,8 +1019,6 @@
     <string name="biliroaming_search_auto_suggest_limit_summary">设置搜索自动补全建议的最大数量</string>
     <string name="biliroaming_comment_highlight_moderator_title">高亮管理员评论</string>
     <string name="biliroaming_comment_highlight_moderator_summary">高亮显示管理员/版主的评论</string>
-    <string name="biliroaming_danmaku_font_outline_width_title">弹幕描边宽度</string>
-    <string name="biliroaming_danmaku_font_outline_width_summary">调整弹幕文字的描边宽度</string>
     <string name="biliroaming_player_screenshot_notification_title">截图通知提示</string>
     <string name="biliroaming_player_screenshot_notification_summary">截图成功后显示通知提示</string>
     <string name="biliroaming_video_auto_pause_on_notification_title">通知自动暂停</string>
@@ -1045,18 +1029,10 @@
     <string name="biliroaming_dynamic_auto_repost_summary">自动转发优质动态内容</string>
     <string name="biliroaming_comment_sort_by_reply_title">评论按回复数排序</string>
     <string name="biliroaming_comment_sort_by_reply_summary">按评论的回复数量排序显示</string>
-    <string name="biliroaming_danmaku_send_confirm_dialog_title">弹幕发送确认框</string>
-    <string name="biliroaming_danmaku_send_confirm_dialog_summary">发送弹幕前显示确认对话框</string>
     <string name="biliroaming_player_control_gesture_title">控制手势模式</string>
     <string name="biliroaming_player_control_gesture_summary">自定义播放器控制手势的触发模式</string>
     <string name="biliroaming_video_smart_buffer_title">智能缓冲策略</string>
     <string name="biliroaming_video_smart_buffer_summary">根据网络状况智能调整缓冲策略</string>
-    <string name="biliroaming_home_feed_auto_night_mode_title">首页自动护眼</string>
-    <string name="biliroaming_home_feed_auto_night_mode_summary">根据环境光线自动切换首页护眼模式</string>
-    <string name="biliroaming_dynamic_auto_pin_top_title">动态自动置顶</string>
-    <string name="biliroaming_dynamic_auto_pin_top_summary">发布动态时自动置顶显示</string>
-    <string name="biliroaming_comment_auto_pin_top_title">评论自动置顶</string>
-    <string name="biliroaming_comment_auto_pin_top_summary">发送评论后自动将其置顶显示</string>
     <string name="biliroaming_danmaku_hide_on_pause_title">暂停时隐藏弹幕</string>
     <string name="biliroaming_danmaku_hide_on_pause_summary">视频暂停时自动隐藏弹幕显示</string>
     <string name="biliroaming_player_gesture_rotate_title">旋转手势</string>
@@ -1065,16 +1041,12 @@
     <string name="biliroaming_video_auto_repeat_segment_summary">自动循环播放视频中的指定片段</string>
     <string name="biliroaming_live_danmaku_speed_control_title">直播弹幕速度控制</string>
     <string name="biliroaming_live_danmaku_speed_control_summary">控制直播间弹幕的滚动速度</string>
-    <string name="biliroaming_home_feed_auto_night_schedule_title">定时夜间模式</string>
-    <string name="biliroaming_home_feed_auto_night_schedule_summary">按时间计划自动切换首页夜间模式</string>
     <string name="biliroaming_dynamic_auto_delete_old_title">自动删除旧动态</string>
     <string name="biliroaming_dynamic_auto_delete_old_summary">自动删除超过指定天数的旧动态</string>
     <string name="biliroaming_search_auto_complete_history_title">搜索历史补全</string>
     <string name="biliroaming_search_auto_complete_history_summary">搜索时自动补全历史搜索记录</string>
     <string name="biliroaming_comment_highlight_new_title">高亮新评论</string>
     <string name="biliroaming_comment_highlight_new_summary">高亮显示新发布的评论</string>
-    <string name="biliroaming_danmaku_font_weight_custom_title">弹幕字体粗细自定义</string>
-    <string name="biliroaming_danmaku_font_weight_custom_summary">自定义弹幕文字的粗细程度</string>
     <string name="biliroaming_player_screenshot_path_title">截图保存路径</string>
     <string name="biliroaming_player_screenshot_path_summary">自定义播放器截图的保存路径</string>
     <string name="biliroaming_live_room_auto_follow_all_title">直播间批量关注</string>
@@ -1083,14 +1055,10 @@
     <string name="biliroaming_dynamic_auto_block_keyword_summary">按关键词屏蔽动态内容</string>
     <string name="biliroaming_comment_auto_expand_short_title">自动展开短评论</string>
     <string name="biliroaming_comment_auto_expand_short_summary">自动展开过短的折叠评论</string>
-    <string name="biliroaming_danmaku_send_preview_full_title">弹幕全屏预览</string>
-    <string name="biliroaming_danmaku_send_preview_full_summary">发送弹幕前全屏预览效果</string>
     <string name="biliroaming_player_control_fade_out_title">控制栏淡出时间</string>
     <string name="biliroaming_player_control_fade_out_summary">设置播放器控制栏的淡出时间</string>
     <string name="biliroaming_video_smart_quality_title">智能画质选择</string>
     <string name="biliroaming_video_smart_quality_summary">根据网络速度智能选择最佳画质</string>
     <string name="biliroaming_home_feed_auto_refresh_on_focus_title">首页聚焦刷新</string>
     <string name="biliroaming_home_feed_auto_refresh_on_focus_summary">首页获得焦点时自动刷新内容</string>
-    <string name="biliroaming_dynamic_auto_pin_comment_title">动态评论置顶</string>
-    <string name="biliroaming_dynamic_auto_pin_comment_summary">自动置顶动态下的优质评论</string>
 </resources>

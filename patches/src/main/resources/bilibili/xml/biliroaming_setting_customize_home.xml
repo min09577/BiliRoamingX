@@ -122,14 +122,6 @@
             android:summary="@string/biliroaming_home_feed_auto_refresh_interval_summary"
             android:title="@string/biliroaming_home_feed_auto_refresh_interval_title" />
         <androidx.preference.SwitchPreferenceCompat
-            android:key="home_feed_auto_night_mode"
-            android:summary="@string/biliroaming_home_feed_auto_night_mode_summary"
-            android:title="@string/biliroaming_home_feed_auto_night_mode_title" />
-        <androidx.preference.SwitchPreferenceCompat
-            android:key="home_feed_auto_night_schedule"
-            android:summary="@string/biliroaming_home_feed_auto_night_schedule_summary"
-            android:title="@string/biliroaming_home_feed_auto_night_schedule_title" />
-        <androidx.preference.SwitchPreferenceCompat
             android:key="home_feed_auto_refresh_on_focus"
             android:summary="@string/biliroaming_home_feed_auto_refresh_on_focus_summary"
             android:title="@string/biliroaming_home_feed_auto_refresh_on_focus_title" />

@@ -127,10 +127,6 @@
             android:summary="@string/biliroaming_dynamic_auto_repost_summary"
             android:title="@string/biliroaming_dynamic_auto_repost_title" />
         <androidx.preference.SwitchPreferenceCompat
-            android:key="dynamic_auto_pin_top"
-            android:summary="@string/biliroaming_dynamic_auto_pin_top_summary"
-            android:title="@string/biliroaming_dynamic_auto_pin_top_title" />
-        <androidx.preference.SwitchPreferenceCompat
             android:key="dynamic_auto_delete_old"
             android:summary="@string/biliroaming_dynamic_auto_delete_old_summary"
             android:title="@string/biliroaming_dynamic_auto_delete_old_title" />
