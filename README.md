@@ -679,6 +679,141 @@ BiliRoamingX v1.23.3 기반, AI 지원 개발로 강화.
 - ⬆️ **弹幕顶部显示** / Danmaku Area Top / 弾幕上部表示 / 탄막 상단 표시
 
 ---
+## v1.79.0 (2026-06-08)
+### 🇨🇳 中文
+- **章节自动跳过** — 自动跳过视频中不感兴趣的章节
+- **亮度自动调节** — 根据环境光线自动调节播放器亮度
+- **首页排序方式** — 自定义首页信息流的排序方式
+- **动态自动保存** — 自动保存浏览过的动态内容
+
+### 🇯🇵 日本語
+- **チャプター自動スキップ** — 興味のないチャプターを自動スキップ
+- **明るさ自動調整** — 環境光に基づいてプレーヤーの明るさを自動調整
+- **フィードソート** — ホームフィードのソート方法をカスタマイズ
+- **動的自動保存** — 閲覧した動的コンテンツを自動保存
+
+### 🇰🇷 한국어
+- **챕터 자동 건너뛰기** — 관심 없는 챕터 자동 건너뛰기
+- **밝기 자동 조절** — 주변 광선에 따라 플레이어 밝기 자동 조절
+- **피드 정렬 방식** — 홈 피드 정렬 방식 사용자 정의
+- **동적 자동 저장** —浏览한 동적 콘텐츠 자동 저장
+
+### 🇺🇸 English
+- **Auto Skip Chapters** — Auto-skip uninteresting video chapters
+- **Auto Brightness** — Auto-adjust player brightness based on ambient light
+- **Home Feed Sort** — Customize home feed sorting method
+- **Dynamic Auto-Save** — Auto-save browsed dynamic content
+
+---
+
+## v1.78.0 (2026-06-08)
+### 🇨🇳 中文
+- **直播间自动关注** — 进入直播间时自动关注主播
+- **动态自动翻译** — 自动翻译外语动态内容
+- **评论行间距** — 调整评论区文字的行间距
+- **弹幕字体粗细** — 调整弹幕文字的粗细程度
+
+### 🇯🇵 日本語
+- **ライブ自動フォロー** — ライブルーム入場時に自動フォロー
+- **動的自動翻訳** — 外国語動的コンテンツを自動翻訳
+- **コメント行間隔** — コメントテキストの行間隔を調整
+- **弾幕フォントウェイト** — 弾幕テキストの太さを調整
+
+### 🇰🇷 한국어
+- **라이브 자동 팔로우** — 라이브룸 입장 시 자동 팔로우
+- **동적 자동 번역** — 외국어 동적 콘텐츠 자동 번역
+- **댓글 줄 간격** — 댓글 텍스트 줄 간격 조절
+- **弹幕 글꼴 두께** — 弹幕 텍스트 두께 조절
+
+### 🇺🇸 English
+- **Live Auto-Follow** — Auto-follow host when entering live room
+- **Dynamic Auto-Translate** — Auto-translate foreign dynamic content
+- **Comment Line Spacing** — Adjust comment text line spacing
+- **Danmaku Font Weight** — Adjust danmaku text thickness
+
+---
+
+## v1.77.0 (2026-06-08)
+### 🇨🇳 中文
+- **评论自动折叠** — 自动折叠过长的评论内容
+- **弹幕发送延迟** — 设置弹幕发送的延迟时间
+- **控制栏自动隐藏** — 设置播放器控制栏自动隐藏时间
+- **来电自动暂停** — 接到来电时自动暂停视频播放
+
+### 🇯🇵 日本語
+- **コメント自動折りたたみ** — 長いコメントを自動折りたたみ
+- **弾幕送信遅延** — 弾幕送信の遅延時間を設定
+- **コントロール自動非表示** — コントロールバーの自動非表示時間を設定
+- **着信自動一時停止** — 着信時に動画を自動一時停止
+
+### 🇰🇷 한국어
+- **댓글 자동 접기** — 긴 댓글 자동 접기
+- **弹幕 전송 지연** — 弹幕 전송 지연 시간 설정
+- **컨트롤 자동 숨기기** — 컨트롤바 자동 숨기기 시간 설정
+- **수신 자동 일시정지** — 수신 시 동영상 자동 일시정지
+
+### 🇺🇸 English
+- **Comment Auto-Fold** — Auto-fold long comments
+- **Danmaku Send Delay** — Set danmaku send delay time
+- **Control Auto-Hide** — Set player control bar auto-hide time
+- **Auto-Pause on Call** — Auto-pause video when receiving a call
+
+---
+
+## v1.76.0 (2026-06-08)
+### 🇨🇳 中文
+- **直播弹幕关键词过滤** — 按关键词过滤直播间弹幕
+- **首页自动刷新** — 首页信息流自动定时刷新
+- **动态自动转发** — 浏览动态时自动转发优质内容
+- **搜索智能建议** — 搜索时显示智能补全建议
+
+### 🇯🇵 日本語
+- **ライブ弾幕キーワードフィルター** — キーワードでライブ弾幕をフィルタリング
+- **フィード自動更新** — ホームフィードを自動的に定期更新
+- **動的自動転送** — 優れた動的コンテンツを自動転送
+- **検索スマートサジェスト** — 検索時にスマート補完候補を表示
+
+### 🇰🇷 한국어
+- **라이브 弹幕 키워드 필터** — 키워드로 라이브 弹幕 필터링
+- **피드 자동 새로고침** — 홈 피드 자동 정기 새로고침
+- **동적 자동 전달** — 우수한 동적 콘텐츠 자동 전달
+- **검색 스마트 제안** — 검색 시 스마트 자동완성 제안 표시
+
+### 🇺🇸 English
+- **Live Danmaku Keyword Filter** — Filter live danmaku by keywords
+- **Home Feed Auto-Refresh** — Auto-refresh home feed periodically
+- **Dynamic Auto-Forward** — Auto-forward quality dynamic content
+- **Search Smart Suggest** — Show smart auto-complete suggestions in search
+
+---
+
+## v1.75.0 (2026-06-08)
+### 🇨🇳 中文
+- **评论逆序排列** — 将评论区按逆序排列显示
+- **弹幕阴影样式** — 自定义弹幕文字的阴影效果
+- **长按手势自定义** — 自定义长按播放器的行为
+- **自动跳过片尾** — 自动跳过视频片尾字幕部分
+
+### 🇯🇵 日本語
+- **コメント逆順ソート** — コメント欄を逆順にソート表示
+- **弾幕シャドウスタイル** — 弾幕テキストのシャドウ効果をカスタマイズ
+- **ロングプレスジェスチャー** — プレーヤーのロングプレス動作をカスタマイズ
+- **エンドクレジット自動スキップ** — 動画のエンドクレジットを自動スキップ
+
+### 🇰🇷 한국어
+- **댓글 역순 정렬** — 댓글란 역순 정렬 표시
+- **弹幕 그림자 스타일** — 弹幕 텍스트 그림자 효과 사용자 정의
+- **길게 누르기 제스처** — 플레이어 길게 누르기 동작 사용자 정의
+- **엔드크레딧 자동 건너뛰기** — 동영상 엔드크레딧 자동 건너뛰기
+
+### 🇺🇸 English
+- **Comment Reverse Sort** — Sort comments in reverse order
+- **Danmaku Shadow Style** — Customize danmaku text shadow effect
+- **Long Press Gesture** — Customize long-press player behavior
+- **Auto Skip Credits** — Auto-skip video end credits
+
+---
+
 ## v1.74.0 (2026-06-08)
 ### 🇨🇳 中文
 - **动态置顶** — 将自己的动态置顶显示
