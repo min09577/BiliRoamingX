@@ -508,5 +508,17 @@
             android:key="player_control_gesture"
             android:summary="@string/biliroaming_player_control_gesture_summary"
             android:title="@string/biliroaming_player_control_gesture_title" />
+        <androidx.preference.SwitchPreferenceCompat
+            android:key="player_gesture_rotate"
+            android:summary="@string/biliroaming_player_gesture_rotate_summary"
+            android:title="@string/biliroaming_player_gesture_rotate_title" />
+        <EditTextPreference
+            android:key="player_screenshot_path"
+            android:summary="@string/biliroaming_player_screenshot_path_summary"
+            android:title="@string/biliroaming_player_screenshot_path_title" />
+        <EditTextPreference
+            android:key="player_control_fade_out"
+            android:summary="@string/biliroaming_player_control_fade_out_summary"
+            android:title="@string/biliroaming_player_control_fade_out_title" />
     </androidx.preference.PreferenceCategory>
 </androidx.preference.PreferenceScreen>

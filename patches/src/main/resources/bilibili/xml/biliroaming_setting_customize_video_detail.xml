@@ -309,5 +309,13 @@
             android:key="video_smart_buffer"
             android:summary="@string/biliroaming_video_smart_buffer_summary"
             android:title="@string/biliroaming_video_smart_buffer_title" />
+        <androidx.preference.SwitchPreferenceCompat
+            android:key="video_auto_repeat_segment"
+            android:summary="@string/biliroaming_video_auto_repeat_segment_summary"
+            android:title="@string/biliroaming_video_auto_repeat_segment_title" />
+        <androidx.preference.SwitchPreferenceCompat
+            android:key="video_smart_quality"
+            android:summary="@string/biliroaming_video_smart_quality_summary"
+            android:title="@string/biliroaming_video_smart_quality_title" />
     </androidx.preference.PreferenceCategory>
 </androidx.preference.PreferenceScreen>
