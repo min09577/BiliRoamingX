@@ -164,5 +164,17 @@
             android:key="comment_accessibility_mode"
             android:summary="@string/biliroaming_comment_accessibility_mode_summary"
             android:title="@string/biliroaming_comment_accessibility_mode_title" />
+        <androidx.preference.SwitchPreferenceCompat
+            android:key="comment_export_import"
+            android:summary="@string/biliroaming_comment_export_import_summary"
+            android:title="@string/biliroaming_comment_export_import_title" />
+        <androidx.preference.SwitchPreferenceCompat
+            android:key="comment_medal_display"
+            android:summary="@string/biliroaming_comment_medal_display_summary"
+            android:title="@string/biliroaming_comment_medal_display_title" />
+        <androidx.preference.SwitchPreferenceCompat
+            android:key="comment_chart_display"
+            android:summary="@string/biliroaming_comment_chart_display_summary"
+            android:title="@string/biliroaming_comment_chart_display_title" />
     </androidx.preference.PreferenceCategory>
 </androidx.preference.PreferenceScreen>

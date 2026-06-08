@@ -174,5 +174,17 @@
             android:key="dynamic_accessibility_mode"
             android:summary="@string/biliroaming_dynamic_accessibility_mode_summary"
             android:title="@string/biliroaming_dynamic_accessibility_mode_title" />
+        <androidx.preference.SwitchPreferenceCompat
+            android:key="dynamic_backup_restore"
+            android:summary="@string/biliroaming_dynamic_backup_restore_summary"
+            android:title="@string/biliroaming_dynamic_backup_restore_title" />
+        <androidx.preference.SwitchPreferenceCompat
+            android:key="dynamic_achievement_tracker"
+            android:summary="@string/biliroaming_dynamic_achievement_tracker_summary"
+            android:title="@string/biliroaming_dynamic_achievement_tracker_title" />
+        <androidx.preference.SwitchPreferenceCompat
+            android:key="dynamic_monthly_report"
+            android:summary="@string/biliroaming_dynamic_monthly_report_summary"
+            android:title="@string/biliroaming_dynamic_monthly_report_title" />
     </androidx.preference.PreferenceCategory>
 </androidx.preference.PreferenceScreen>

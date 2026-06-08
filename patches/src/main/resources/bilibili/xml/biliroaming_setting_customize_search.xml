@@ -66,5 +66,9 @@
             android:key="search_accessibility_mode"
             android:summary="@string/biliroaming_search_accessibility_mode_summary"
             android:title="@string/biliroaming_search_accessibility_mode_title" />
+        <androidx.preference.SwitchPreferenceCompat
+            android:key="search_statistics_panel"
+            android:summary="@string/biliroaming_search_statistics_panel_summary"
+            android:title="@string/biliroaming_search_statistics_panel_title" />
     </androidx.preference.PreferenceCategory>
 </androidx.preference.PreferenceScreen>

@@ -564,5 +564,21 @@
             android:key="player_gpu_monitor"
             android:summary="@string/biliroaming_player_gpu_monitor_summary"
             android:title="@string/biliroaming_player_gpu_monitor_title" />
+        <androidx.preference.SwitchPreferenceCompat
+            android:key="player_split_screen_mode"
+            android:summary="@string/biliroaming_player_split_screen_mode_summary"
+            android:title="@string/biliroaming_player_split_screen_mode_title" />
+        <androidx.preference.SwitchPreferenceCompat
+            android:key="player_account_switch"
+            android:summary="@string/biliroaming_player_account_switch_summary"
+            android:title="@string/biliroaming_player_account_switch_title" />
+        <androidx.preference.SwitchPreferenceCompat
+            android:key="player_diamond_badge"
+            android:summary="@string/biliroaming_player_diamond_badge_summary"
+            android:title="@string/biliroaming_player_diamond_badge_title" />
+        <androidx.preference.SwitchPreferenceCompat
+            android:key="player_task_progress"
+            android:summary="@string/biliroaming_player_task_progress_summary"
+            android:title="@string/biliroaming_player_task_progress_title" />
     </androidx.preference.PreferenceCategory>
 </androidx.preference.PreferenceScreen>

@@ -341,5 +341,17 @@
             android:key="video_storage_manager"
             android:summary="@string/biliroaming_video_storage_manager_summary"
             android:title="@string/biliroaming_video_storage_manager_title" />
+        <androidx.preference.SwitchPreferenceCompat
+            android:key="video_clipboard_manager"
+            android:summary="@string/biliroaming_video_clipboard_manager_summary"
+            android:title="@string/biliroaming_video_clipboard_manager_title" />
+        <androidx.preference.SwitchPreferenceCompat
+            android:key="video_profile_quick_view"
+            android:summary="@string/biliroaming_video_profile_quick_view_summary"
+            android:title="@string/biliroaming_video_profile_quick_view_title" />
+        <androidx.preference.SwitchPreferenceCompat
+            android:key="video_silver_quality"
+            android:summary="@string/biliroaming_video_silver_quality_summary"
+            android:title="@string/biliroaming_video_silver_quality_title" />
     </androidx.preference.PreferenceCategory>
 </androidx.preference.PreferenceScreen>
