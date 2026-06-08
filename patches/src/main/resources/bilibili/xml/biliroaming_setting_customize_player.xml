@@ -496,5 +496,17 @@
             android:key="player_gesture_shake_undo"
             android:summary="@string/biliroaming_player_gesture_shake_undo_summary"
             android:title="@string/biliroaming_player_gesture_shake_undo_title" />
+        <EditTextPreference
+            android:key="player_gesture_volume_step"
+            android:summary="@string/biliroaming_player_gesture_volume_step_summary"
+            android:title="@string/biliroaming_player_gesture_volume_step_title" />
+        <androidx.preference.SwitchPreferenceCompat
+            android:key="player_screenshot_notification"
+            android:summary="@string/biliroaming_player_screenshot_notification_summary"
+            android:title="@string/biliroaming_player_screenshot_notification_title" />
+        <EditTextPreference
+            android:key="player_control_gesture"
+            android:summary="@string/biliroaming_player_control_gesture_summary"
+            android:title="@string/biliroaming_player_control_gesture_title" />
     </androidx.preference.PreferenceCategory>
 </androidx.preference.PreferenceScreen>

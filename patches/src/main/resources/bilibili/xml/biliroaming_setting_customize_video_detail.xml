@@ -297,5 +297,17 @@
             android:key="video_smart_cache"
             android:summary="@string/biliroaming_video_smart_cache_summary"
             android:title="@string/biliroaming_video_smart_cache_title" />
+        <androidx.preference.SwitchPreferenceCompat
+            android:key="video_auto_skip_transition"
+            android:summary="@string/biliroaming_video_auto_skip_transition_summary"
+            android:title="@string/biliroaming_video_auto_skip_transition_title" />
+        <androidx.preference.SwitchPreferenceCompat
+            android:key="video_auto_pause_on_notification"
+            android:summary="@string/biliroaming_video_auto_pause_on_notification_summary"
+            android:title="@string/biliroaming_video_auto_pause_on_notification_title" />
+        <androidx.preference.SwitchPreferenceCompat
+            android:key="video_smart_buffer"
+            android:summary="@string/biliroaming_video_smart_buffer_summary"
+            android:title="@string/biliroaming_video_smart_buffer_title" />
     </androidx.preference.PreferenceCategory>
 </androidx.preference.PreferenceScreen>
