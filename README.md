@@ -679,6 +679,141 @@ BiliRoamingX v1.23.3 기반, AI 지원 개발로 강화.
 - ⬆️ **弹幕顶部显示** / Danmaku Area Top / 弾幕上部表示 / 탄막 상단 표시
 
 ---
+## v2.17.0 (2026-06-08)
+### 🇨🇳 中文
+- **GPU监控** — 在播放器上显示GPU使用率
+- **存储管理器** — 管理视频缓存和下载的存储空间
+- **内存缓存** — 优化首页信息流的内存缓存策略
+- **动态无障碍模式** — 为视障用户优化动态浏览体验
+
+### 🇯🇵 日本語
+- **GPUモニター** — プレーヤーにGPU使用率を表示
+- **ストレージマネージャー** — 動画キャッシュとダウンロードのストレージを管理
+- **メモリキャッシュ** — ホームフィードのメモリキャッシュを最適化
+- **動的アクセシビリティ** — 視覚障害者の動的浏览体験を最適化
+
+### 🇰🇷 한국어
+- **GPU 모니터** — 플레이어에 GPU 사용률 표시
+- **저장소 관리자** — 동영상 캐시와 다운로드 저장소 관리
+- **메모리 캐시** — 홈 피드 메모리 캐시 최적화
+- **동적 접근성 모드** — 시각 장애인의 동적浏览 경험 최적화
+
+### 🇺🇸 English
+- **GPU Monitor** — Display GPU usage on player
+- **Storage Manager** — Manage video cache and download storage
+- **Memory Cache** — Optimize home feed memory cache
+- **Dynamic Accessibility** — Optimize dynamic browsing for visually impaired
+
+---
+
+## v2.16.0 (2026-06-08)
+### 🇨🇳 中文
+- **性能模式** — 首页启用性能优化模式
+- **动态语音旁白** — 为动态内容添加语音旁白
+- **评论无障碍模式** — 为视障用户优化评论阅读体验
+- **弹幕颜色对比度** — 增强弹幕文字的颜色对比度
+
+### 🇯🇵 日本語
+- **パフォーマンスモード** — ホームのパフォーマンス最適化モード
+- **動的ボイスオーバー** — 動的コンテンツにボイスオーバーを追加
+- **コメントアクセシビリティ** — 視覚障害者のコメント阅读体験を最適化
+- **弾幕カラーコントラスト** — 弾幕テキストのカラーコントラストを強化
+
+### 🇰🇷 한국어
+- **성능 모드** — 홈 성능 최적화 모드
+- **동적 보이스오버** — 동적 콘텐츠에 보이스오버 추가
+- **댓글 접근성 모드** — 시각 장애인의 댓글阅读 경험 최적화
+- **弹幕 색상 대비** — 弹幕 텍스트 색상 대비 강화
+
+### 🇺🇸 English
+- **Performance Mode** — Enable home performance optimization
+- **Dynamic Voice Over** — Add voice over to dynamic content
+- **Comment Accessibility** — Optimize comment reading for visually impaired
+- **Danmaku Color Contrast** — Enhance danmaku text color contrast
+
+---
+
+## v2.15.0 (2026-06-08)
+### 🇨🇳 中文
+- **评论字体无障碍** — 根据系统字体大小自动调整评论
+- **弹幕高对比度** — 启用弹幕高对比度显示模式
+- **延迟显示** — 在播放器上显示网络延迟
+- **网速测试** — 播放视频时实时测试网络速度
+
+### 🇯🇵 日本語
+- **コメントフォントアクセシビリティ** — システムフォントサイズに基づいてコメントを自動調整
+- **弾幕ハイコントラスト** — 弾幕のハイコントラスト表示モード
+- **レイテンシー表示** — プレーヤーにネットワーク遅延を表示
+- **ネットワーク速度テスト** — 動画再生中にリアルタイムでネットワーク速度をテスト
+
+### 🇰🇷 한국어
+- **댓글 글꼴 접근성** — 시스템 글꼴 크기에 따라 댓글 자동 조절
+- **弹幕 고대비** — 弹幕 고대비 표시 모드
+- **지연 시간 표시** — 플레이어에 네트워크 지연 시간 표시
+- **네트워크 속도 테스트** — 동영상 재생 중 실시간 네트워크 속도 테스트
+
+### 🇺🇸 English
+- **Comment Font Accessibility** — Auto-adjust comments based on system font size
+- **Danmaku High Contrast** — Enable danmaku high contrast display mode
+- **Latency Display** — Display network latency on player
+- **Network Speed Test** — Real-time network speed test during video playback
+
+---
+
+## v2.14.0 (2026-06-08)
+### 🇨🇳 中文
+- **电池温度显示** — 在播放器上显示设备电池温度
+- **折叠屏布局** — 为折叠屏设备优化首页布局
+- **动态语音朗读** — 使用语音合成朗读动态内容
+- **搜索无障碍模式** — 为视障用户优化搜索体验
+
+### 🇯🇵 日本語
+- **バッテリー温度表示** — プレーヤーにデバイスのバッテリー温度を表示
+- **折りたたみ画面レイアウト** — 折りたたみデバイス用にホームレイアウトを最適化
+- **動的テキスト読み上げ** — 音声合成で動的コンテンツを読み上げ
+- **検索アクセシビリティ** — 視覚障害者の検索体験を最適化
+
+### 🇰🇷 한국어
+- **배터리 온도 표시** — 플레이어에 기기 배터리 온도 표시
+- **접이식 화면 레이아웃** — 접이식 기기에 홈 레이아웃 최적화
+- **동적 텍스트 읽기** — 음성 합성으로 동적 콘텐츠 읽기
+- **검색 접근성 모드** — 시각 장애인의 검색 경험 최적화
+
+### 🇺🇸 English
+- **Battery Temperature** — Display device battery temperature on player
+- **Foldable Layout** — Optimize home layout for foldable devices
+- **Dynamic Text-to-Speech** — Read dynamic content with speech synthesis
+- **Search Accessibility** — Optimize search experience for visually impaired
+
+---
+
+## v2.13.0 (2026-06-08)
+### 🇨🇳 中文
+- **触觉反馈** — 播放器操作时启用触觉振动反馈
+- **弹幕无障碍模式** — 为视障用户优化弹幕显示
+- **帧率显示** — 在播放器上显示实时帧率
+- **带宽监控** — 实时监控视频播放的带宽使用
+
+### 🇯🇵 日本語
+- **触覚フィードバック** — プレーヤー操作時に触覚振動フィードバックを有効化
+- **弾幕アクセシビリティ** — 視覚障害者の弾幕表示を最適化
+- **FPS表示** — プレーヤーにリアルタイムFPSを表示
+- **帯域幅モニター** — 動画再生の帯域幅使用をリアルタイム監視
+
+### 🇰🇷 한국어
+- **햅틱 피드백** — 플레이어 조작 시 햅틱 진동 피드백 활성화
+- **弹幕 접근성 모드** — 시각 장애인의 弹幕 표시 최적화
+- **FPS 표시** — 플레이어에 실시간 FPS 표시
+- **대역폭 모니터** — 동영상 재생 대역폭 사용 실시간 모니터링
+
+### 🇺🇸 English
+- **Haptic Feedback** — Enable haptic vibration feedback on player actions
+- **Danmaku Accessibility** — Optimize danmaku display for visually impaired
+- **FPS Display** — Display real-time FPS on player
+- **Bandwidth Monitor** — Real-time bandwidth monitoring during playback
+
+---
+
 ## v2.12.0 (2026-06-08)
 ### 🇨🇳 中文
 - **截图分享路径** — 自定义截图分享的默认保存路径
