@@ -329,5 +329,17 @@
             android:key="video_smart_bitrate"
             android:summary="@string/biliroaming_video_smart_bitrate_summary"
             android:title="@string/biliroaming_video_smart_bitrate_title" />
+        <androidx.preference.SwitchPreferenceCompat
+            android:key="video_bandwidth_monitor"
+            android:summary="@string/biliroaming_video_bandwidth_monitor_summary"
+            android:title="@string/biliroaming_video_bandwidth_monitor_title" />
+        <androidx.preference.SwitchPreferenceCompat
+            android:key="video_network_speed_test"
+            android:summary="@string/biliroaming_video_network_speed_test_summary"
+            android:title="@string/biliroaming_video_network_speed_test_title" />
+        <androidx.preference.SwitchPreferenceCompat
+            android:key="video_storage_manager"
+            android:summary="@string/biliroaming_video_storage_manager_summary"
+            android:title="@string/biliroaming_video_storage_manager_title" />
     </androidx.preference.PreferenceCategory>
 </androidx.preference.PreferenceScreen>

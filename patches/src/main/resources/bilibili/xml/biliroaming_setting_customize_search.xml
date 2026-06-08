@@ -62,5 +62,9 @@
             android:key="search_auto_complete_suggest"
             android:summary="@string/biliroaming_search_auto_complete_suggest_summary"
             android:title="@string/biliroaming_search_auto_complete_suggest_title" />
+        <androidx.preference.SwitchPreferenceCompat
+            android:key="search_accessibility_mode"
+            android:summary="@string/biliroaming_search_accessibility_mode_summary"
+            android:title="@string/biliroaming_search_accessibility_mode_title" />
     </androidx.preference.PreferenceCategory>
 </androidx.preference.PreferenceScreen>

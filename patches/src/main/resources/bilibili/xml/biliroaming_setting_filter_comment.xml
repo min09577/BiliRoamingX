@@ -156,5 +156,13 @@
             android:key="comment_auto_sort_by_like"
             android:summary="@string/biliroaming_comment_auto_sort_by_like_summary"
             android:title="@string/biliroaming_comment_auto_sort_by_like_title" />
+        <androidx.preference.SwitchPreferenceCompat
+            android:key="comment_font_size_accessibility"
+            android:summary="@string/biliroaming_comment_font_size_accessibility_summary"
+            android:title="@string/biliroaming_comment_font_size_accessibility_title" />
+        <androidx.preference.SwitchPreferenceCompat
+            android:key="comment_accessibility_mode"
+            android:summary="@string/biliroaming_comment_accessibility_mode_summary"
+            android:title="@string/biliroaming_comment_accessibility_mode_title" />
     </androidx.preference.PreferenceCategory>
 </androidx.preference.PreferenceScreen>

@@ -137,5 +137,17 @@
             android:key="home_feed_auto_night_brightness_custom"
             android:summary="@string/biliroaming_home_feed_auto_night_brightness_custom_summary"
             android:title="@string/biliroaming_home_feed_auto_night_brightness_custom_title" />
+        <androidx.preference.SwitchPreferenceCompat
+            android:key="home_feed_foldable_layout"
+            android:summary="@string/biliroaming_home_feed_foldable_layout_summary"
+            android:title="@string/biliroaming_home_feed_foldable_layout_title" />
+        <androidx.preference.SwitchPreferenceCompat
+            android:key="home_feed_performance_mode"
+            android:summary="@string/biliroaming_home_feed_performance_mode_summary"
+            android:title="@string/biliroaming_home_feed_performance_mode_title" />
+        <androidx.preference.SwitchPreferenceCompat
+            android:key="home_feed_memory_cache"
+            android:summary="@string/biliroaming_home_feed_memory_cache_summary"
+            android:title="@string/biliroaming_home_feed_memory_cache_title" />
     </androidx.preference.PreferenceCategory>
 </androidx.preference.PreferenceScreen>

@@ -162,5 +162,17 @@
             android:key="dynamic_auto_block_all_sensitive"
             android:summary="@string/biliroaming_dynamic_auto_block_all_sensitive_summary"
             android:title="@string/biliroaming_dynamic_auto_block_all_sensitive_title" />
+        <androidx.preference.SwitchPreferenceCompat
+            android:key="dynamic_text_to_speech"
+            android:summary="@string/biliroaming_dynamic_text_to_speech_summary"
+            android:title="@string/biliroaming_dynamic_text_to_speech_title" />
+        <androidx.preference.SwitchPreferenceCompat
+            android:key="dynamic_voice_over"
+            android:summary="@string/biliroaming_dynamic_voice_over_summary"
+            android:title="@string/biliroaming_dynamic_voice_over_title" />
+        <androidx.preference.SwitchPreferenceCompat
+            android:key="dynamic_accessibility_mode"
+            android:summary="@string/biliroaming_dynamic_accessibility_mode_summary"
+            android:title="@string/biliroaming_dynamic_accessibility_mode_title" />
     </androidx.preference.PreferenceCategory>
 </androidx.preference.PreferenceScreen>

@@ -544,5 +544,25 @@
             android:key="player_gesture_swipe_speed"
             android:summary="@string/biliroaming_player_gesture_swipe_speed_summary"
             android:title="@string/biliroaming_player_gesture_swipe_speed_title" />
+        <androidx.preference.SwitchPreferenceCompat
+            android:key="player_haptic_feedback"
+            android:summary="@string/biliroaming_player_haptic_feedback_summary"
+            android:title="@string/biliroaming_player_haptic_feedback_title" />
+        <androidx.preference.SwitchPreferenceCompat
+            android:key="player_fps_display"
+            android:summary="@string/biliroaming_player_fps_display_summary"
+            android:title="@string/biliroaming_player_fps_display_title" />
+        <androidx.preference.SwitchPreferenceCompat
+            android:key="player_battery_temperature"
+            android:summary="@string/biliroaming_player_battery_temperature_summary"
+            android:title="@string/biliroaming_player_battery_temperature_title" />
+        <androidx.preference.SwitchPreferenceCompat
+            android:key="player_latency_display"
+            android:summary="@string/biliroaming_player_latency_display_summary"
+            android:title="@string/biliroaming_player_latency_display_title" />
+        <androidx.preference.SwitchPreferenceCompat
+            android:key="player_gpu_monitor"
+            android:summary="@string/biliroaming_player_gpu_monitor_summary"
+            android:title="@string/biliroaming_player_gpu_monitor_title" />
     </androidx.preference.PreferenceCategory>
 </androidx.preference.PreferenceScreen>
