@@ -679,6 +679,141 @@ BiliRoamingX v1.23.3 기반, AI 지원 개발로 강화.
 - ⬆️ **弹幕顶部显示** / Danmaku Area Top / 弾幕上部表示 / 탄막 상단 표시
 
 ---
+## v1.99.0 (2026-06-08)
+### 🇨🇳 中文
+- **控制手势模式** — 自定义播放器控制手势的触发模式
+- **智能缓冲策略** — 根据网络状况智能调整缓冲策略
+- **首页自动护眼** — 根据环境光线自动切换首页护眼模式
+- **动态自动置顶** — 发布动态时自动置顶显示
+
+### 🇯🇵 日本語
+- **コントロールジェスチャーモード** — プレーヤー制御ジェスチャーのトリガーモードをカスタマイズ
+- **スマートバッファ** — ネットワーク状況に基づいてバッファリング戦略をスマート調整
+- **ホーム自動アイケア** — 環境光に基づいてホームのアイケアモードを自動切替
+- **動的自動ピン留め** — 動的投稿時に自動ピン留め表示
+
+### 🇰🇷 한국어
+- **컨트롤 제스처 모드** — 플레이어 컨트롤 제스처 트리거 모드 사용자 정의
+- **스마트 버퍼** — 네트워크 상태에 따라 버퍼링 전략 스마트 조정
+- **홈 자동 아이케어** — 주변 광선에 따라 홈 아이케어 모드 자동 전환
+- **동적 자동 고정** — 동적 게시 시 자동 고정 표시
+
+### 🇺🇸 English
+- **Control Gesture Mode** — Customize player control gesture trigger mode
+- **Smart Buffer** — Smart buffer strategy based on network conditions
+- **Home Auto Eye-Care** — Auto-switch home eye-care mode based on ambient light
+- **Dynamic Auto-Pin** — Auto-pin when posting dynamics
+
+---
+
+## v1.98.0 (2026-06-08)
+### 🇨🇳 中文
+- **直播间自动重连** — 直播间断线时自动重新连接
+- **动态自动转发** — 自动转发优质动态内容
+- **评论按回复数排序** — 按评论的回复数量排序显示
+- **弹幕发送确认框** — 发送弹幕前显示确认对话框
+
+### 🇯🇵 日本語
+- **ライブ自動再接続** — ライブルーム切断時に自動再接続
+- **動的自動転送** — 優れた動的コンテンツを自動転送
+- **コメント返信数ソート** — コメントの返信数でソート表示
+- **弾幕送信確認ダイアログ** — 弾幕送信前に確認ダイアログを表示
+
+### 🇰🇷 한국어
+- **라이브 자동 재연결** — 라이브룸 연결 끊김 시 자동 재연결
+- **동적 자동 전달** — 우수한 동적 콘텐츠 자동 전달
+- **댓글 회신수 정렬** — 댓글 회신수로 정렬 표시
+- **弹幕 전송 확인 대화상자** — 弹幕 전송 전 확인 대화상자 표시
+
+### 🇺🇸 English
+- **Live Auto-Reconnect** — Auto-reconnect when live room disconnects
+- **Dynamic Auto-Repost** — Auto-repost quality dynamic content
+- **Comment Sort by Replies** — Sort comments by reply count
+- **Danmaku Send Confirm Dialog** — Show confirmation dialog before sending danmaku
+
+---
+
+## v1.97.0 (2026-06-08)
+### 🇨🇳 中文
+- **高亮管理员评论** — 高亮显示管理员/版主的评论
+- **弹幕描边宽度** — 调整弹幕文字的描边宽度
+- **截图通知提示** — 截图成功后显示通知提示
+- **通知自动暂停** — 收到通知时自动暂停视频播放
+
+### 🇯🇵 日本語
+- **モデレーターコメントハイライト** — 管理者/モデレーターのコメントをハイライト
+- **弾幕アウトライン幅** — 弾幕テキストのアウトライン幅を調整
+- **スクリーンショット通知** — スクリーンショット成功後に通知表示
+- **通知自動一時停止** — 通知受信時に動画を自動一時停止
+
+### 🇰🇷 한국어
+- **관리자 댓글 강조** — 관리자/모더레이터 댓글 강조 표시
+- **弹幕 아웃라인 너비** — 弹幕 텍스트 아웃라인 너비 조절
+- **스크린샷 알림** — 스크린샷 성공 후 알림 표시
+- **알림 자동 일시정지** — 알림 수신 시 동영상 자동 일시정지
+
+### 🇺🇸 English
+- **Highlight Moderator Comments** — Highlight comments from moderators
+- **Danmaku Outline Width** — Adjust danmaku text outline width
+- **Screenshot Notification** — Show notification after successful screenshot
+- **Auto-Pause on Notification** — Auto-pause video when receiving notification
+
+---
+
+## v1.96.0 (2026-06-08)
+### 🇨🇳 中文
+- **直播弹幕自动滚动** — 直播间弹幕自动滚动到底部
+- **首页刷新间隔** — 设置首页信息流自动刷新的时间间隔
+- **动态自动归档** — 自动归档浏览过的动态内容
+- **搜索建议数量** — 设置搜索自动补全建议的最大数量
+
+### 🇯🇵 日本語
+- **ライブ弾幕自動スクロール** — ライブ弾幕を自動で下部にスクロール
+- **フィード更新間隔** — ホームフィードの自動更新間隔を設定
+- **動的自動アーカイブ** — 閲覧した動的コンテンツを自動アーカイブ
+- **検索サジェスト数** — 検索自動補完候補の最大数を設定
+
+### 🇰🇷 한국어
+- **라이브 弹幕 자동 스크롤** — 라이브 弹幕 자동으로 하단 스크롤
+- **피드 새로고침 간격** — 홈 피드 자동 새로고침 간격 설정
+- **동적 자동 아카이브** —浏览한 동적 콘텐츠 자동 아카이브
+- **검색 제안 수** — 검색 자동완성 후보 최대 수 설정
+
+### 🇺🇸 English
+- **Live Danmaku Auto-Scroll** — Auto-scroll live danmaku to bottom
+- **Home Feed Refresh Interval** — Set home feed auto-refresh interval
+- **Dynamic Auto-Archive** — Auto-archive browsed dynamic content
+- **Search Suggest Limit** — Set max number of search auto-complete suggestions
+
+---
+
+## v1.95.0 (2026-06-08)
+### 🇨🇳 中文
+- **自动折叠旧评论** — 自动折叠发布时间较久的评论
+- **弹幕发送冷却** — 设置弹幕发送的冷却时间间隔
+- **音量手势步长** — 自定义音量手势调节的步长
+- **自动跳过转场** — 自动跳过视频中的转场动画片段
+
+### 🇯🇵 日本語
+- **古いコメント自動折りたたみ** — 古いコメントを自動折りたたみ
+- **弾幕送信クールダウン** — 弾幕送信のクールダウン間隔を設定
+- **音量ジェスチャーステップ** — 音量ジェスチャー調整のステップをカスタマイズ
+- **トランジション自動スキップ** — 動画のトランジションを自動スキップ
+
+### 🇰🇷 한국어
+- **오래된 댓글 자동 접기** — 오래된 댓글 자동 접기
+- **弹幕 전송 쿨다운** — 弹幕 전송 쿨다운 간격 설정
+- **음량 제스처 단계** — 음량 제스처 조절 단계 사용자 정의
+- **전환 자동 건너뛰기** — 동영상 전환 애니메이션 자동 건너뛰기
+
+### 🇺🇸 English
+- **Auto-Collapse Old Comments** — Auto-collapse comments posted long ago
+- **Danmaku Send Cooldown** — Set danmaku send cooldown interval
+- **Volume Gesture Step** — Customize volume gesture adjustment step
+- **Auto Skip Transition** — Auto-skip video transition animations
+
+---
+
 ## v1.94.0 (2026-06-08)
 ### 🇨🇳 中文
 - **摇动撤销操作** — 摇动手机撤销上一步播放器操作
