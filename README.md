@@ -679,6 +679,68 @@ BiliRoamingX v1.23.3 기반, AI 지원 개발로 강화.
 - ⬆️ **弹幕顶部显示** / Danmaku Area Top / 弾幕上部表示 / 탄막 상단 표시
 
 ---
+## v2.12.0 (2026-06-08)
+### 🇨🇳 中文
+- **截图分享路径** — 自定义截图分享的默认保存路径
+- **全面屏蔽敏感内容** — 全面屏蔽所有包含敏感内容的动态
+- **滑动调速手势** — 支持上下滑动调节播放速度
+- **直播弹幕用户过滤** — 按用户ID过滤直播间弹幕
+- **首页夜间亮度自定义** — 自定义首页夜间模式的屏幕亮度
+
+### 🇯🇵 日本語
+- **スクリーンショット共有パス** — スクリーンショット共有のデフォルト保存パスをカスタマイズ
+- **全面センシティブブロック** — センシティブコンテンツを含む全ての動的を全面ブロック
+- **スワイプ速度ジェスチャー** — 上下スワイプで再生速度を調整
+- **ライブ弾幕ユーザーフィルター** — ユーザーIDでライブ弾幕をフィルタリング
+- **ナイト明るさカスタマイズ** — ホームナイトモードの画面明るさをカスタマイズ
+
+### 🇰🇷 한국어
+- **스크린샷 공유 경로** — 스크린샷 공유 기본 저장 경로 사용자 정의
+- **全面 민감 콘텐츠 차단** — 민감한 콘텐츠를 포함한 모든 동적 全面 차단
+- **스와이프 속도 제스처** — 상하 스와이프로 재생 속도 조절
+- **라이브 弹幕 사용자 필터** — 사용자 ID로 라이브 弹幕 필터링
+- **야간 밝기 사용자 정의** — 홈 야간 모드 화면 밝기 사용자 정의
+
+### 🇺🇸 English
+- **Screenshot Share Path** — Customize default screenshot share save path
+- **Block All Sensitive** — Block all dynamics containing sensitive content
+- **Swipe Speed Gesture** — Swipe up/down to adjust playback speed
+- **Live Danmaku User Filter** — Filter live danmaku by user ID
+- **Night Brightness Custom** — Customize home night mode screen brightness
+
+---
+
+## v2.11.0 (2026-06-08)
+### 🇨🇳 中文
+- **评论按点赞排序** — 评论区默认按点赞数排序显示
+- **控制栏隐藏超时** — 设置播放器控制栏自动隐藏的超时时间
+- **动态全部置顶** — 一键置顶当前页面所有动态
+- **动态全部归档** — 一键归档当前页面所有动态
+- **搜索智能补全** — 搜索时显示智能补全建议
+
+### 🇯🇵 日本語
+- **コメントいいねソート** — コメント欄をデフォルトでいいね数でソート表示
+- **コントロール非表示タイムアウト** — コントロールバーの自動非表示タイムアウトを設定
+- **動的全ピン留め** — 現在のページの全動的をワンクリックピン留め
+- **動的全アーカイブ** — 現在のページの全動的をワンクリックアーカイブ
+- **検索スマート補完** — 検索時にスマート補完候補を表示
+
+### 🇰🇷 한국어
+- **댓글 좋아요 정렬** — 댓글란 기본으로 좋아요수 정렬 표시
+- **컨트롤 숨기기 타임아웃** — 컨트롤바 자동 숨기기 타임아웃 설정
+- **동적 전체 고정** — 현재 페이지 모든 동적 원클릭 고정
+- **동적 전체 아카이브** — 현재 페이지 모든 동적 원클릭 아카이브
+- **검색 스마트 완성** — 검색 시 스마트 완성 후보 표시
+
+### 🇺🇸 English
+- **Comment Sort by Likes** — Default sort comments by like count
+- **Control Hide Timeout** — Set player control bar auto-hide timeout
+- **Dynamic Pin All** — One-click pin all dynamics on current page
+- **Dynamic Archive All** — One-click archive all dynamics on current page
+- **Search Smart Suggest** — Show smart auto-complete suggestions in search
+
+---
+
 ## v2.10.0 (2026-06-08)
 ### 🇨🇳 中文
 - **控制栏自动淡出** — 播放器控制栏自动淡出隐藏
