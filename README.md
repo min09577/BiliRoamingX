@@ -679,6 +679,141 @@ BiliRoamingX v1.23.3 기반, AI 지원 개발로 강화.
 - ⬆️ **弹幕顶部显示** / Danmaku Area Top / 弾幕上部表示 / 탄막 상단 표시
 
 ---
+## v2.22.0 (2026-06-08)
+### 🇨🇳 中文
+- **搜索统计面板** — 显示搜索历史的统计数据
+- **评论图表** — 以图表形式显示评论统计数据
+- **弹幕图表叠加** — 在播放器上叠加弹幕活跃度图表
+- **任务进度** — 在播放器上显示每日任务进度
+
+### 🇯🇵 日本語
+- **検索統計パネル** — 検索履歴の統計データを表示
+- **コメントチャート** — コメント統計データをチャート形式で表示
+- **弾幕グラフオーバーレイ** — プレーヤーに弾幕アクティビティグラフをオーバーレイ
+- **タスク進捗** — プレーヤーに毎日のタスク進捗を表示
+
+### 🇰🇷 한국어
+- **검색 통계 패널** — 검색 기록 통계 데이터 표시
+- **댓글 차트** — 댓글 통계 데이터를 차트 형태로 표시
+- **弹幕 그래프 오버레이** — 플레이어에 弹幕 활동 그래프 오버레이
+- **작업 진행률** — 플레이어에 일일 작업 진행률 표시
+
+### 🇺🇸 English
+- **Search Statistics Panel** — Display search history statistics
+- **Comment Chart** — Display comment statistics as charts
+- **Danmaku Graph Overlay** — Overlay danmaku activity graph on player
+- **Task Progress** — Display daily task progress on player
+
+---
+
+## v2.21.0 (2026-06-08)
+### 🇨🇳 中文
+- **钻石徽章** — 在播放器上显示钻石会员徽章
+- **银牌画质** — 为银牌会员优化视频画质
+- **每周摘要** — 生成首页浏览的每周摘要
+- **月度报告** — 生成动态互动的月度报告
+
+### 🇯🇵 日本語
+- **ダイヤモンドバッジ** — プレーヤーにダイヤモンドメンバーバッジを表示
+- **シルバー画質** — シルバーメンバー用に動画画質を最適化
+- **週間サマリー** — ホーム浏览の週間サマリーを生成
+- **月次レポート** — 動的インタラクションの月次レポートを生成
+
+### 🇰🇷 한국어
+- **다이아몬드 배지** — 플레이어에 다이아몬드 회원 배지 표시
+- **실버 화질** — 실버 회원을 위한 동영상 화질 최적화
+- **주간 요약** — 홈浏览 주간 요약 생성
+- **월간 보고서** — 동적 상호작용 월간 보고서 생성
+
+### 🇺🇸 English
+- **Diamond Badge** — Display diamond member badge on player
+- **Silver Quality** — Optimize video quality for silver members
+- **Weekly Summary** — Generate home feed weekly summary
+- **Monthly Report** — Generate dynamic interaction monthly report
+
+---
+
+## v2.20.0 (2026-06-08)
+### 🇨🇳 中文
+- **每日报告** — 生成首页浏览的每日报告
+- **成就追踪** — 追踪动态互动的成就进度
+- **勋章显示** — 在评论区显示用户勋章
+- **投币计数器** — 统计弹幕互动的投币数量
+
+### 🇯🇵 日本語
+- **デイリーレポート** — ホーム浏览の日次レポートを生成
+- **アチーブメントトラッカー** — 動的インタラクションのアチーブメント進捗を追跡
+- **メダル表示** — コメント欄にユーザーメダルを表示
+- **コインカウンター** — 弾幕インタラクションのコイン数を統計
+
+### 🇰🇷 한국어
+- **일일 보고서** — 홈浏览 일일 보고서 생성
+- **성취 추적** — 동적 상호작용 성취 진행률 추적
+- **메달 표시** — 댓글란에 사용자 메달 표시
+- **코인 카운터** — 弹幕 상호작용 코인 수 통계
+
+### 🇺🇸 English
+- **Daily Report** — Generate home feed daily report
+- **Achievement Tracker** — Track dynamic interaction achievement progress
+- **Medal Display** — Display user medals in comment section
+- **Coin Counter** — Count coins from danmaku interactions
+
+---
+
+## v2.19.0 (2026-06-08)
+### 🇨🇳 中文
+- **评论导出导入** — 支持评论数据的导出和导入
+- **弹幕云同步** — 跨设备同步弹幕设置
+- **账号快速切换** — 支持播放器内快速切换账号
+- **个人资料快览** — 快速查看视频发布者的个人资料
+
+### 🇯🇵 日本語
+- **コメントエクスポート/インポート** — コメントデータのエクスポートとインポートをサポート
+- **弾幕クラウド同期** — デバイス間で弾幕設定を同期
+- **アカウント切替** — プレーヤー内でアカウントをすばやく切替
+- **プロフィールクイックビュー** — 動画投稿者のプロフィールをすばやく表示
+
+### 🇰🇷 한국어
+- **댓글 내보내기/가져오기** — 댓글 데이터 내보내기 및 가져오기 지원
+- **弹幕 클라우드 동기화** — 기기 간 弹幕 설정 동기화
+- **계정 빠른 전환** — 플레이어 내 계정 빠른 전환 지원
+- **프로필 빠른 보기** — 동영상 게시자 프로필 빠른 보기
+
+### 🇺🇸 English
+- **Comment Export/Import** — Support comment data export and import
+- **Danmaku Cloud Sync** — Sync danmaku settings across devices
+- **Account Quick Switch** — Quick account switching in player
+- **Profile Quick View** — Quick view video publisher profile
+
+---
+
+## v2.18.0 (2026-06-08)
+### 🇨🇳 中文
+- **分屏模式** — 支持播放器分屏模式显示
+- **剪贴板管理** — 管理视频链接的剪贴板历史
+- **数据分析显示** — 在首页显示浏览数据分析
+- **动态备份恢复** — 备份和恢复动态浏览记录
+
+### 🇯🇵 日本語
+- **分割画面モード** — プレーヤーの分割画面モード表示をサポート
+- **クリップボード管理** — 動画リンクのクリップボード履歴を管理
+- **分析データ表示** — ホームに浏览分析データを表示
+- **動的バックアップ復元** — 動的浏览記録のバックアップと復元
+
+### 🇰🇷 한국어
+- **분할 화면 모드** — 플레이어 분할 화면 모드 표시 지원
+- **클립보드 관리** — 동영상 링크 클립보드 기록 관리
+- **분석 데이터 표시** — 홈에浏览 분석 데이터 표시
+- **동적 백업 복원** — 동적浏览 기록 백업 및 복원
+
+### 🇺🇸 English
+- **Split Screen Mode** — Support player split screen display
+- **Clipboard Manager** — Manage video link clipboard history
+- **Analytics Display** — Display browsing analytics on home
+- **Dynamic Backup/Restore** — Backup and restore dynamic browsing records
+
+---
+
 ## v2.17.0 (2026-06-08)
 ### 🇨🇳 中文
 - **GPU监控** — 在播放器上显示GPU使用率
