@@ -422,5 +422,9 @@ object Settings {
     @JvmField val CommentVoiceInput = BooleanSetting(key = "comment_voice_input")
     @JvmField val VideoDownloadQuality = IntSetting(key = "video_download_quality", defValue = 0)
     @JvmField val LiveDanmakuColor = IntSetting(key = "live_danmaku_color", defValue = 0)
+    @JvmField val SearchAutoComplete = BooleanSetting(key = "search_auto_complete")
+    @JvmField val PlayerProgressBarStyle = IntSetting(key = "player_progress_bar_style", defValue = 0)
+    @JvmField val HomeShortcut = StringSetSetting(key = "home_shortcut")
+    @JvmField val VideoEndAction = IntSetting(key = "video_end_action", defValue = 0)
     // endregion
 }

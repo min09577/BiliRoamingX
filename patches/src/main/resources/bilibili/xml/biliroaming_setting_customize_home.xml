@@ -73,5 +73,9 @@
             app:radioDefaultValue="0"
             app:radioEntries="@array/biliroaming_pegasus_cover_ratio_entries"
             app:radioEntryValues="@array/biliroaming_pegasus_cover_ratio_values" />
+        <EditTextPreference
+            android:key="home_shortcut"
+            android:summary="@string/biliroaming_home_shortcut_summary"
+            android:title="@string/biliroaming_home_shortcut_title" />
     </androidx.preference.PreferenceCategory>
 </androidx.preference.PreferenceScreen>

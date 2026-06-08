@@ -22,5 +22,9 @@
             android:fragment="app.revanced.bilibili.settings.fragments.FilterSearchKeywordsFragment"
             android:key="search_keywords"
             android:title="@string/biliroaming_filter_search_keywords_title" />
+        <androidx.preference.SwitchPreferenceCompat
+            android:key="search_auto_complete"
+            android:summary="@string/biliroaming_search_auto_complete_summary"
+            android:title="@string/biliroaming_search_auto_complete_title" />
     </androidx.preference.PreferenceCategory>
 </androidx.preference.PreferenceScreen>

@@ -791,4 +791,12 @@
     <string name="biliroaming_video_download_quality_summary">自定义视频下载的画质（默认/360P/480P/720P/1080P/4K）</string>
     <string name="biliroaming_live_danmaku_color_title">直播弹幕颜色</string>
     <string name="biliroaming_live_danmaku_color_summary">设置直播间发送弹幕的默认颜色</string>
+    <string name="biliroaming_search_auto_complete_title">搜索自动补全增强</string>
+    <string name="biliroaming_search_auto_complete_summary">增强搜索框的自动补全和搜索建议</string>
+    <string name="biliroaming_player_progress_bar_style_title">进度条样式</string>
+    <string name="biliroaming_player_progress_bar_style_summary">自定义播放器进度条的颜色（默认/粉色/绿色/蓝色/橙色）</string>
+    <string name="biliroaming_home_shortcut_title">首页快捷方式</string>
+    <string name="biliroaming_home_shortcut_summary">在首页添加常用功能快捷入口</string>
+    <string name="biliroaming_video_end_action_title">视频结束动作</string>
+    <string name="biliroaming_video_end_action_summary">视频播放结束时的行为（默认/自动重播/退出/下一集）</string>
 </resources>

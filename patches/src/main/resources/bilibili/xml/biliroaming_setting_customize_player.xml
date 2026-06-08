@@ -432,5 +432,9 @@
             android:key="audio_only_mode"
             android:summary="@string/biliroaming_audio_only_mode_summary"
             android:title="@string/biliroaming_audio_only_mode_title" />
+        <EditTextPreference
+            android:key="player_progress_bar_style"
+            android:summary="@string/biliroaming_player_progress_bar_style_summary"
+            android:title="@string/biliroaming_player_progress_bar_style_title" />
     </androidx.preference.PreferenceCategory>
 </androidx.preference.PreferenceScreen>
