@@ -138,5 +138,9 @@
             android:key="live_room_auto_enter_picture"
             android:summary="@string/biliroaming_live_room_auto_enter_picture_summary"
             android:title="@string/biliroaming_live_room_auto_enter_picture_title" />
+        <EditTextPreference
+            android:key="live_danmaku_filter_user"
+            android:summary="@string/biliroaming_live_danmaku_filter_user_summary"
+            android:title="@string/biliroaming_live_danmaku_filter_user_title" />
     </androidx.preference.PreferenceCategory>
 </androidx.preference.PreferenceScreen>

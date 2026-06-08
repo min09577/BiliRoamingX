@@ -133,5 +133,9 @@
             android:key="home_feed_auto_night_theme_schedule"
             android:summary="@string/biliroaming_home_feed_auto_night_theme_schedule_summary"
             android:title="@string/biliroaming_home_feed_auto_night_theme_schedule_title" />
+        <androidx.preference.SwitchPreferenceCompat
+            android:key="home_feed_auto_night_brightness_custom"
+            android:summary="@string/biliroaming_home_feed_auto_night_brightness_custom_summary"
+            android:title="@string/biliroaming_home_feed_auto_night_brightness_custom_title" />
     </androidx.preference.PreferenceCategory>
 </androidx.preference.PreferenceScreen>

@@ -1101,4 +1101,24 @@
     <string name="biliroaming_home_feed_auto_night_theme_schedule_summary">按时间计划自动切换首页夜间主题</string>
     <string name="biliroaming_dynamic_auto_pin_self_title">动态自动置顶自己</string>
     <string name="biliroaming_dynamic_auto_pin_self_summary">自动置顶自己发布的动态</string>
+    <string name="biliroaming_comment_auto_sort_by_like_title">评论按点赞排序</string>
+    <string name="biliroaming_comment_auto_sort_by_like_summary">评论区默认按点赞数排序显示</string>
+    <string name="biliroaming_player_control_auto_hide_timeout_title">控制栏隐藏超时</string>
+    <string name="biliroaming_player_control_auto_hide_timeout_summary">设置播放器控制栏自动隐藏的超时时间</string>
+    <string name="biliroaming_dynamic_auto_pin_all_title">动态全部置顶</string>
+    <string name="biliroaming_dynamic_auto_pin_all_summary">一键置顶当前页面所有动态</string>
+    <string name="biliroaming_dynamic_auto_archive_all_title">动态全部归档</string>
+    <string name="biliroaming_dynamic_auto_archive_all_summary">一键归档当前页面所有动态</string>
+    <string name="biliroaming_search_auto_complete_suggest_title">搜索智能补全</string>
+    <string name="biliroaming_search_auto_complete_suggest_summary">搜索时显示智能补全建议</string>
+    <string name="biliroaming_player_screenshot_share_path_title">截图分享路径</string>
+    <string name="biliroaming_player_screenshot_share_path_summary">自定义截图分享的默认保存路径</string>
+    <string name="biliroaming_dynamic_auto_block_all_sensitive_title">全面屏蔽敏感内容</string>
+    <string name="biliroaming_dynamic_auto_block_all_sensitive_summary">全面屏蔽所有包含敏感内容的动态</string>
+    <string name="biliroaming_player_gesture_swipe_speed_title">滑动调速手势</string>
+    <string name="biliroaming_player_gesture_swipe_speed_summary">支持上下滑动调节播放速度</string>
+    <string name="biliroaming_live_danmaku_filter_user_title">直播弹幕用户过滤</string>
+    <string name="biliroaming_live_danmaku_filter_user_summary">按用户ID过滤直播间弹幕</string>
+    <string name="biliroaming_home_feed_auto_night_brightness_custom_title">首页夜间亮度自定义</string>
+    <string name="biliroaming_home_feed_auto_night_brightness_custom_summary">自定义首页夜间模式的屏幕亮度</string>
 </resources>

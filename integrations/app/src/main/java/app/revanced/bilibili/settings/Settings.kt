@@ -578,5 +578,15 @@ object Settings {
     @JvmField val VideoSmartBitrate = BooleanSetting(key = "video_smart_bitrate")
     @JvmField val HomeFeedAutoNightThemeSchedule = BooleanSetting(key = "home_feed_auto_night_theme_schedule")
     @JvmField val DynamicAutoPinSelf = BooleanSetting(key = "dynamic_auto_pin_self")
+    @JvmField val CommentAutoSortByLike = BooleanSetting(key = "comment_auto_sort_by_like")
+    @JvmField val PlayerControlAutoHideTimeout = IntSetting(key = "player_control_auto_hide_timeout", defValue = 3)
+    @JvmField val DynamicAutoPinAll = BooleanSetting(key = "dynamic_auto_pin_all")
+    @JvmField val DynamicAutoArchiveAll = BooleanSetting(key = "dynamic_auto_archive_all")
+    @JvmField val SearchAutoCompleteSuggest = BooleanSetting(key = "search_auto_complete_suggest")
+    @JvmField val PlayerScreenshotSharePath = StringSetting(key = "player_screenshot_share_path")
+    @JvmField val DynamicAutoBlockAllSensitive = BooleanSetting(key = "dynamic_auto_block_all_sensitive")
+    @JvmField val PlayerGestureSwipeSpeed = BooleanSetting(key = "player_gesture_swipe_speed")
+    @JvmField val LiveDanmakuFilterUser = StringSetSetting(key = "live_danmaku_filter_user")
+    @JvmField val HomeFeedAutoNightBrightnessCustom = BooleanSetting(key = "home_feed_auto_night_brightness_custom")
     // endregion
 }
