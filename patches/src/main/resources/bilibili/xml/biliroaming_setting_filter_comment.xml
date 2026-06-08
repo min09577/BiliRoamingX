@@ -64,5 +64,9 @@
             android:key="comment_gif_sticker"
             android:summary="@string/biliroaming_comment_gif_sticker_summary"
             android:title="@string/biliroaming_comment_gif_sticker_title" />
+        <androidx.preference.SwitchPreferenceCompat
+            android:key="comment_auto_pin"
+            android:summary="@string/biliroaming_comment_auto_pin_summary"
+            android:title="@string/biliroaming_comment_auto_pin_title" />
     </androidx.preference.PreferenceCategory>
 </androidx.preference.PreferenceScreen>

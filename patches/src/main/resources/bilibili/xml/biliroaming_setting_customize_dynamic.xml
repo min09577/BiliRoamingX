@@ -58,5 +58,9 @@
             android:fragment="app.revanced.bilibili.settings.fragments.FilterDynamicByKeywordFragment"
             android:key="filter_dynamic_by_keyword"
             android:title="@string/biliroaming_filter_by_keyword_title" />
+        <androidx.preference.SwitchPreferenceCompat
+            android:key="dynamic_auto_scroll"
+            android:summary="@string/biliroaming_dynamic_auto_scroll_summary"
+            android:title="@string/biliroaming_dynamic_auto_scroll_title" />
     </androidx.preference.PreferenceCategory>
 </androidx.preference.PreferenceScreen>

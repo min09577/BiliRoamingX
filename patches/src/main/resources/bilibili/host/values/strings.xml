@@ -807,4 +807,12 @@
     <string name="biliroaming_video_auto_pause_detect_summary">检测到用户离开时自动暂停视频</string>
     <string name="biliroaming_comment_gif_sticker_title">GIF动图表情</string>
     <string name="biliroaming_comment_gif_sticker_summary">在评论输入框旁添加GIF动图表情选择面板</string>
+    <string name="biliroaming_danmaku_smart_filter_title">智能弹幕过滤</string>
+    <string name="biliroaming_danmaku_smart_filter_summary">自动过滤低质量弹幕（纯数字、重复、过短）</string>
+    <string name="biliroaming_comment_auto_pin_title">评论自动置顶</string>
+    <string name="biliroaming_comment_auto_pin_summary">发送评论后自动将其置顶显示</string>
+    <string name="biliroaming_video_auto_download_title">视频自动下载</string>
+    <string name="biliroaming_video_auto_download_summary">收藏视频后自动下载到本地</string>
+    <string name="biliroaming_dynamic_auto_scroll_title">动态自动滚动</string>
+    <string name="biliroaming_dynamic_auto_scroll_summary">动态页面自动滚动加载更多内容</string>
 </resources>

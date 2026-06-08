@@ -430,5 +430,9 @@ object Settings {
     @JvmField val PlayerGestureSeek = BooleanSetting(key = "player_gesture_seek")
     @JvmField val VideoAutoPauseDetect = BooleanSetting(key = "video_auto_pause_detect")
     @JvmField val CommentGifSticker = BooleanSetting(key = "comment_gif_sticker")
+    @JvmField val DanmakuSmartFilter = BooleanSetting(key = "danmaku_smart_filter")
+    @JvmField val CommentAutoPin = BooleanSetting(key = "comment_auto_pin")
+    @JvmField val VideoAutoDownload = BooleanSetting(key = "video_auto_download")
+    @JvmField val DynamicAutoScroll = BooleanSetting(key = "dynamic_auto_scroll")
     // endregion
 }
