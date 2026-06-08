@@ -679,6 +679,34 @@ BiliRoamingX v1.23.3 기반, AI 지원 개발로 강화.
 - ⬆️ **弹幕顶部显示** / Danmaku Area Top / 弾幕上部表示 / 탄막 상단 표시
 
 ---
+## v1.66.0 (2026-06-08)
+
+### 🇨🇳 中文
+- **动态自动刷新** — 进入动态页面时自动刷新内容
+- **评论语音输入** — 支持在评论区使用语音转文字输入
+- **下载画质选择** — 自定义视频下载的画质（360P/480P/720P/1080P/4K）
+- **直播弹幕颜色** — 设置直播间发送弹幕的默认颜色
+
+### 🇯🇵 日本語
+- **動的自動更新** — 動的ページに入った時に自動でコンテンツを更新
+- **コメント音声入力** — コメント欄で音声からテキスト入力をサポート
+- **ダウンロード画質選択** — 動画ダウンロードの画質をカスタマイズ（360P/480P/720P/1080P/4K）
+- **ライブ弾幕色** — ライブ配信で送信する弾幕のデフォルト色を設定
+
+### 🇰🇷 한국어
+- **동적 자동 새로고침** — 동적 페이지 진입 시 콘텐츠 자동 새로고침
+- **댓글 음성 입력** — 댓글란에서 음성-텍스트 입력 지원
+- **다운로드 화질 선택** — 동영상 다운로드 화질 사용자 정의 (360P/480P/720P/1080P/4K)
+- **라이브 弹幕 색상** — 라이브 방송에서 보내는 弹幕 기본 색상 설정
+
+### 🇺🇸 English
+- **Dynamic Auto-Refresh** — Auto-refresh content when entering dynamic page
+- **Comment Voice Input** — Support voice-to-text input in comment section
+- **Download Quality Selection** — Customize video download quality (360P/480P/720P/1080P/4K)
+- **Live Danmaku Color** — Set default color for danmaku sent in live streams
+
+---
+
 ## v1.65.0 (2026-06-07)
 
 ### 🇨🇳 中文
