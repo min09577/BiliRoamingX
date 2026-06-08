@@ -679,6 +679,141 @@ BiliRoamingX v1.23.3 기반, AI 지원 개발로 강화.
 - ⬆️ **弹幕顶部显示** / Danmaku Area Top / 弾幕上部表示 / 탄막 상단 표시
 
 ---
+## v1.94.0 (2026-06-08)
+### 🇨🇳 中文
+- **摇动撤销操作** — 摇动手机撤销上一步播放器操作
+- **智能缓存管理** — 根据存储空间智能管理视频缓存
+- **首页自动滚动** — 首页信息流自动缓慢滚动浏览
+- **动态自动屏蔽用户** — 自动屏蔽发布不良动态的用户
+
+### 🇯🇵 日本語
+- **シェイク元に戻す** — スマホを振ってプレーヤー操作を元に戻す
+- **スマートキャッシュ** — ストレージに基づいて動画キャッシュをスマート管理
+- **フィード自動スクロール** — ホームフィードを自動スクロール浏览
+- **動的自動ユーザーブロック** — 不良動的を投稿したユーザーを自動ブロック
+
+### 🇰🇷 한국어
+- **흔들기 실행 취소** — 휴대폰 흔들어 플레이어 작업 실행 취소
+- **스마트 캐시** — 저장 공간에 따라 동영상 캐시 스마트 관리
+- **피드 자동 스크롤** — 홈 피드 자동 스크롤浏览
+- **동적 자동 사용자 차단** — 불량 동적 게시 사용자 자동 차단
+
+### 🇺🇸 English
+- **Shake to Undo** — Shake phone to undo last player action
+- **Smart Cache** — Smart video cache management based on storage
+- **Home Feed Auto-Scroll** — Auto-scroll home feed for browsing
+- **Dynamic Auto-Block User** — Auto-block users posting inappropriate dynamics
+
+---
+
+## v1.93.0 (2026-06-08)
+### 🇨🇳 中文
+- **后台自动静音** — 直播间切到后台时自动静音
+- **动态自动删除** — 自动删除过期的动态内容
+- **高亮VIP评论** — 高亮显示VIP用户的评论
+- **弹幕字体拉伸** — 调整弹幕文字的水平拉伸比例
+
+### 🇯🇵 日本語
+- **バックグラウンド自動ミュート** — ライブルームをバックグラウンドにした時自動ミュート
+- **動的自動削除** — 期限切れ動的コンテンツを自動削除
+- **VIPコメントハイライト** — VIPユーザーのコメントをハイライト
+- **弾幕フォントストレッチ** — 弾幕テキストの水平ストレッチ比率を調整
+
+### 🇰🇷 한국어
+- **백그라운드 자동 음소거** — 라이브룸 백그라운드 전환 시 자동 음소거
+- **동적 자동 삭제** — 만료된 동적 콘텐츠 자동 삭제
+- **VIP 댓글 강조** — VIP 사용자 댓글 강조 표시
+- **弹幕 글꼴 스트레치** — 弹幕 텍스트 수평 스트레치 비율 조절
+
+### 🇺🇸 English
+- **Auto-Mute on Background** — Auto-mute live room when switching to background
+- **Dynamic Auto-Delete** — Auto-delete expired dynamic content
+- **Highlight VIP Comments** — Highlight comments from VIP users
+- **Danmaku Font Stretch** — Adjust danmaku text horizontal stretch ratio
+
+---
+
+## v1.92.0 (2026-06-08)
+### 🇨🇳 中文
+- **评论按长度排序** — 按评论内容长度排序显示
+- **弹幕发送队列** — 支持弹幕发送队列排队
+- **截图快捷分享** — 截图后显示快捷分享面板
+- **拔耳机自动暂停** — 拔出耳机时自动暂停视频
+
+### 🇯🇵 日本語
+- **コメント長さソート** — コメント内容の長さでソート表示
+- **弾幕送信キュー** — 弾幕送信キューの順番待ちをサポート
+- **スクリーンショット共有** — スクリーンショット後にクイック共有パネル
+- **ヘッドフォン抜き自動一時停止** — ヘッドフォンを抜いた時に動画を自動一時停止
+
+### 🇰🇷 한국어
+- **댓글 길이 정렬** — 댓글 내용 길이로 정렬 표시
+- **弹幕 전송 대기열** — 弹幕 전송 대기열 지원
+- **스크린샷 빠른 공유** — 스크린샷 후 빠른 공유 패널
+- **이어폰 뽑기 자동 일시정지** — 이어폰 뽑을 때 동영상 자동 일시정지
+
+### 🇺🇸 English
+- **Comment Sort by Length** — Sort comments by content length
+- **Danmaku Send Queue** — Support danmaku send queue
+- **Screenshot Quick Share** — Show quick share panel after screenshot
+- **Auto-Pause on Headphone Unplug** — Auto-pause video when headphones are unplugged
+
+---
+
+## v1.91.0 (2026-06-08)
+### 🇨🇳 中文
+- **直播弹幕字号** — 调整直播间弹幕的字体大小
+- **首页自动夜间模式** — 根据时间自动切换首页夜间模式
+- **动态自动置顶** — 发布动态时自动置顶
+- **搜索自动纠正** — 自动纠正搜索中的拼写错误
+
+### 🇯🇵 日本語
+- **ライブ弾幕フォントサイズ** — ライブ弾幕のフォントサイズを調整
+- **自動ナイトモード** — 時間に基づいてホームのナイトモードを自動切替
+- **動的自動ピン留め** — 動的投稿時に自動ピン留め
+- **検索自動訂正** — 検索中のスペルミスを自動訂正
+
+### 🇰🇷 한국어
+- **라이브 弹幕 글꼴 크기** — 라이브 弹幕 글꼴 크기 조절
+- **자동 야간 모드** — 시간에 따라 홈 야간 모드 자동 전환
+- **동적 자동 고정** — 동적 게시 시 자동 고정
+- **검색 자동 수정** — 검색 중 맞춤법 오류 자동 수정
+
+### 🇺🇸 English
+- **Live Danmaku Font Size** — Adjust live danmaku font size
+- **Auto Night Mode** — Auto-switch home night mode based on time
+- **Dynamic Auto-Pin** — Auto-pin when posting dynamics
+- **Search Auto-Correct** — Auto-correct spelling errors in search
+
+---
+
+## v1.90.0 (2026-06-08)
+### 🇨🇳 中文
+- **直播评论自动翻译** — 自动翻译直播间中的外语评论
+- **滚动时隐藏弹幕** — 滚动页面时自动隐藏弹幕
+- **摇动手势操作** — 摇动手机触发播放器操作
+- **自动跳过赞助商** — 自动跳过视频中的赞助商片段
+
+### 🇯🇵 日本語
+- **ライブコメント自動翻訳** — ライブ中の外国語コメントを自動翻訳
+- **スクロール時弾幕非表示** — ページスクロール時に弾幕を自動非表示
+- **シェイクジェスチャー** — スマホを振ってプレーヤー操作をトリガー
+- **スポンサー自動スキップ** — 動画内のスポンサーセグメントを自動スキップ
+
+### 🇰🇷 한국어
+- **라이브 댓글 자동 번역** — 라이브 중 외국어 댓글 자동 번역
+- **스크롤 시 弹幕 숨기기** — 페이지 스크롤 시 弹幕 자동 숨기기
+- **흔들기 제스처** — 휴대폰 흔들어 플레이어 작업 트리거
+- **스폰서 자동 건너뛰기** — 동영상 내 스폰서 세그먼트 자동 건너뛰기
+
+### 🇺🇸 English
+- **Live Comment Auto-Translate** — Auto-translate foreign comments in live streams
+- **Hide Danmaku on Scroll** — Auto-hide danmaku when scrolling page
+- **Shake Gesture** — Shake phone to trigger player action
+- **Auto Skip Sponsor** — Auto-skip sponsor segments in videos
+
+---
+
 ## v1.89.0 (2026-06-08)
 ### 🇨🇳 中文
 - **控制栏动画** — 启用播放器控制栏的显示/隐藏动画
