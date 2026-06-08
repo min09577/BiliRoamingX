@@ -679,6 +679,34 @@ BiliRoamingX v1.23.3 기반, AI 지원 개발로 강화.
 - ⬆️ **弹幕顶部显示** / Danmaku Area Top / 弾幕上部表示 / 탄막 상단 표시
 
 ---
+## v1.67.0 (2026-06-08)
+
+### 🇨🇳 中文
+- **搜索自动补全增强** — 增强搜索框的自动补全和搜索建议
+- **进度条样式自定义** — 自定义播放器进度条的颜色（粉色/绿色/蓝色/橙色）
+- **首页快捷方式** — 在首页添加常用功能快捷入口
+- **视频结束动作** — 自定义视频播放结束时的行为（重播/退出/下一集）
+
+### 🇯🇵 日本語
+- **検索自動補完強化** — 検索ボックスの自動補完と検索候補を強化
+- **プログレスバースタイル** — プレーヤーのプログレスバーの色をカスタマイズ
+- **ホームショートカット** — ホームに常用機能のショートカットを追加
+- **動画終了アクション** — 動画再生終了時の動作をカスタマイズ
+
+### 🇰🇷 한국어
+- **검색 자동완성 강화** — 검색창 자동완성 및 검색 제안 강화
+- **프로그레스바 스타일** — 플레이어 프로그레스바 색상 사용자 정의
+- **홈 바로가기** — 홈에 자주 사용하는 기능 바로가기 추가
+- **동영상 종료 동작** — 동영상 재생 종료 시 동작 사용자 정의
+
+### 🇺🇸 English
+- **Search Auto-Complete Enhancement** — Enhance search box auto-complete and suggestions
+- **Progress Bar Style** — Customize player progress bar color
+- **Home Shortcut** — Add common function shortcuts on homepage
+- **Video End Action** — Customize behavior when video playback ends
+
+---
+
 ## v1.66.0 (2026-06-08)
 
 ### 🇨🇳 中文
