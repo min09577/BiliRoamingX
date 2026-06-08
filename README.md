@@ -679,6 +679,141 @@ BiliRoamingX v1.23.3 기반, AI 지원 개발로 강화.
 - ⬆️ **弹幕顶部显示** / Danmaku Area Top / 弾幕上部表示 / 탄막 상단 표시
 
 ---
+## v1.74.0 (2026-06-08)
+### 🇨🇳 中文
+- **动态置顶** — 将自己的动态置顶显示
+- **弹幕字体族** — 选择弹幕显示的字体族（默认/衬线/等宽/无衬线）
+- **评论自动点赞** — 浏览评论时自动点赞优质评论
+- **视频自动画质** — 根据网络状况自动选择最佳画质
+
+### 🇯🇵 日本語
+- **動的ピン留め** — 自分の動的をピン留め表示
+- **弾幕フォントファミリー** — 弾幕のフォントファミリーを選択
+- **コメント自動いいね** — コメント閲覧時に高品質コメントに自動いいね
+- **動画画質自動** — ネットワーク状況に基づいて最適な画質を自動選択
+
+### 🇰🇷 한국어
+- **동적 고정** — 내 동적 상단 고정 표시
+- **弹幕 글꼴 패밀리** — 弹幕 글꼴 패밀리 선택 (기본/세리프/고정폭/산세리프)
+- **댓글 자동 좋아요** — 댓글浏览时优质评论에 자동 좋아요
+- **동영상 자동 화질** — 네트워크 상태에 따라 최적 화질 자동 선택
+
+### 🇺🇸 English
+- **Dynamic Pin Top** — Pin your own dynamic posts to top
+- **Danmaku Font Family** — Choose danmaku font family (default/serif/monospace/sans-serif)
+- **Comment Auto-Like** — Auto-like quality comments when browsing
+- **Video Auto Quality** — Auto-select best quality based on network
+
+---
+
+## v1.73.0 (2026-06-08)
+### 🇨🇳 中文
+- **断点续播增强** — 增强的断点续播功能，支持跨设备同步
+- **直播弹幕速度** — 调节直播间弹幕的滚动速度
+- **首页缓存控制** — 控制首页信息流的缓存行为
+- **搜索自动纠错** — 自动纠正搜索关键词中的错别字
+
+### 🇯🇵 日本語
+- **ブックマーク再生強化** — デバイス間同期対応のブックマーク再生
+- **ライブ弾幕速度** — ライブ弾幕のスクロール速度を調整
+- **フィードキャッシュ制御** — ホームフィードのキャッシュ動作を制御
+- **検索自動訂正** — 検索キーワードの誤字を自動訂正
+
+### 🇰🇷 한국어
+- **이어보기 강화** — 기기 간 동기화 지원 이어보기 기능
+- **라이브 弹幕 속도** — 라이브 弹幕 스크롤 속도 조절
+- **피드 캐시 제어** — 홈 피드 캐시 동작 제어
+- **검색 자동 수정** — 검색어의 오탈자 자동 수정
+
+### 🇺🇸 English
+- **Enhanced Resume** — Cross-device sync for video resume
+- **Live Danmaku Speed** — Adjust live danmaku scroll speed
+- **Home Feed Cache** — Control home feed caching behavior
+- **Search Auto-Correct** — Auto-correct typos in search queries
+
+---
+
+## v1.72.0 (2026-06-08)
+### 🇨🇳 中文
+- **动态自动点赞** — 浏览动态时自动点赞
+- **弹幕翻译** — 将外语弹幕翻译为中文显示
+- **评论默认排序** — 设置评论区的默认排序方式
+- **双击手势自定义** — 自定义双击播放器的行为
+
+### 🇯🇵 日本語
+- **動的自動いいね** — 動的浏览時に自動いいね
+- **弾幕翻訳** — 外国語弾幕を中国語に翻訳表示
+- **コメントデフォルトソート** — コメント欄のデフォルトソートを設定
+- **ダブルタップジェスチャー** — プレーヤーのダブルタップ動作をカスタマイズ
+
+### 🇰🇷 한국어
+- **동적 자동 좋아요** — 동적浏览 시 자동 좋아요
+- **弹幕 번역** — 외국어 弹幕을 중국어로 번역 표시
+- **댓글 기본 정렬** — 댓글란 기본 정렬 방식 설정
+- **더블탭 제스처** — 플레이어 더블탭 동작 사용자 정의
+
+### 🇺🇸 English
+- **Dynamic Auto-Like** — Auto-like when browsing dynamics
+- **Danmaku Translate** — Translate foreign danmaku to Chinese
+- **Comment Default Sort** — Set default comment sorting method
+- **Double Tap Gesture** — Customize double-tap player behavior
+
+---
+
+## v1.71.0 (2026-06-08)
+### 🇨🇳 中文
+- **直播自动录制** — 进入直播间时自动录制直播流
+- **智能预加载** — 根据网络状况智能预加载视频
+- **首页小组件自定义** — 自定义首页显示的小组件
+- **搜索质量过滤** — 过滤搜索结果中的低质量内容
+
+### 🇯🇵 日本語
+- **ライブ自動録画** — ライブルーム入場時に自動録画
+- **スマートプリロード** — ネットワーク状況に基づいてスマートプリロード
+- **ウィジェットカスタマイズ** — ホームウィジェットをカスタマイズ
+- **検索品質フィルター** — 低品質な検索結果をフィルタリング
+
+### 🇰🇷 한국어
+- **라이브 자동 녹화** — 라이브룸 입장 시 자동 녹화
+- **스마트 프리로드** — 네트워크 상태에 따른 스마트 프리로드
+- **위젯 사용자 정의** — 홈 위젯 사용자 정의
+- **검색 품질 필터** — 저품질 검색 결과 필터링
+
+### 🇺🇸 English
+- **Live Auto-Record** — Auto-record when entering live room
+- **Smart Preload** — Smart video preloading based on network
+- **Home Widget Custom** — Customize homepage widgets
+- **Search Quality Filter** — Filter low-quality search results
+
+---
+
+## v1.70.0 (2026-06-08)
+### 🇨🇳 中文
+- **视频自动变速** — 根据内容类型自动调整播放速度
+- **按用户高亮弹幕** — 高亮显示指定用户发送的弹幕
+- **评论图片压缩** — 自动压缩评论区图片以节省流量
+- **字幕同步调整** — 手动调整字幕的显示时间偏移
+
+### 🇯🇵 日本語
+- **動画自動速度調整** — コンテンツタイプに基づいて再生速度を自動調整
+- **ユーザー別弾幕ハイライト** — 指定ユーザーの弾幕をハイライト表示
+- **コメント画像圧縮** — コメント画像を自動圧縮してデータ節約
+- **字幕同期調整** — 字幕の表示タイミングを手動調整
+
+### 🇰🇷 한국어
+- **동영상 자동 속도** — 콘텐츠 유형에 따라 재생 속도 자동 조절
+- **사용자별 弹幕 강조** — 지정 사용자의 弹幕 강조 표시
+- **댓글 이미지 압축** — 댓글 이미지 자동 압축으로 데이터 절약
+- **자막 동기화 조절** — 자막 표시 타이밍 수동 조절
+
+### 🇺🇸 English
+- **Video Auto Speed** — Auto-adjust playback speed by content type
+- **Danmaku Highlight User** — Highlight danmaku from specified users
+- **Comment Image Compress** — Auto-compress comment images to save data
+- **Subtitle Sync Adjust** — Manually adjust subtitle timing offset
+
+---
+
 ## v1.69.0 (2026-06-08)
 
 ### 🇨🇳 中文
