@@ -1,0 +1,32 @@
+import urllib.request, json, ssl, time
+
+ctx = ssl.create_default_context()
+ctx.check_hostname = False
+ctx.verify_mode = ssl.CERT_NONE
+
+token = open("/tmp/gh_token.txt").read().strip()
+
+for attempt in range(5):
+    try:
+        req = urllib.request.Request("https://api.github.com/repos/min09577/BiliRoamingX/releases/336043696")
+        req.add_header("Authorization", "token " + token)
+        resp = urllib.request.urlopen(req, context=ctx, timeout=30)
+        r = json.loads(resp.read())
+        upload_url = r["upload_url"].replace("{?name,label}", "")
+
+        with open("integrations/app/build/outputs/apk/release/BiliRoamingX-integrations-2.09.0.apk", "rb") as f:
+            apk_data = f.read()
+
+        upload_req = urllib.request.Request(
+            upload_url + "?name=BiliRoamingX-integrations-2.09.0.apk",
+            data=apk_data, method="POST"
+        )
+        upload_req.add_header("Authorization", "token " + token)
+        upload_req.add_header("Content-Type", "application/vnd.android.package-archive")
+        resp2 = urllib.request.urlopen(upload_req, context=ctx, timeout=120)
+        r2 = json.loads(resp2.read())
+        print("APK: " + r2["name"])
+        break
+    except Exception as e:
+        print(f"Attempt {attempt+1}: {e}")
+        if attempt < 4: time.sleep(3)
