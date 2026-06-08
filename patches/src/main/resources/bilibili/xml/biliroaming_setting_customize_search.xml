@@ -54,5 +54,9 @@
             android:key="search_auto_complete_history"
             android:summary="@string/biliroaming_search_auto_complete_history_summary"
             android:title="@string/biliroaming_search_auto_complete_history_title" />
+        <androidx.preference.SwitchPreferenceCompat
+            android:key="search_auto_complete_trending"
+            android:summary="@string/biliroaming_search_auto_complete_trending_summary"
+            android:title="@string/biliroaming_search_auto_complete_trending_title" />
     </androidx.preference.PreferenceCategory>
 </androidx.preference.PreferenceScreen>

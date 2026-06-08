@@ -140,5 +140,17 @@
             android:key="comment_auto_expand_short"
             android:summary="@string/biliroaming_comment_auto_expand_short_summary"
             android:title="@string/biliroaming_comment_auto_expand_short_title" />
+        <androidx.preference.SwitchPreferenceCompat
+            android:key="comment_auto_translate"
+            android:summary="@string/biliroaming_comment_auto_translate_summary"
+            android:title="@string/biliroaming_comment_auto_translate_title" />
+        <androidx.preference.SwitchPreferenceCompat
+            android:key="comment_highlight_reply"
+            android:summary="@string/biliroaming_comment_highlight_reply_summary"
+            android:title="@string/biliroaming_comment_highlight_reply_title" />
+        <androidx.preference.SwitchPreferenceCompat
+            android:key="comment_auto_expand_all"
+            android:summary="@string/biliroaming_comment_auto_expand_all_summary"
+            android:title="@string/biliroaming_comment_auto_expand_all_title" />
     </androidx.preference.PreferenceCategory>
 </androidx.preference.PreferenceScreen>

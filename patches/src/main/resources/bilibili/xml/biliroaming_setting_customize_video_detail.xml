@@ -317,5 +317,17 @@
             android:key="video_smart_quality"
             android:summary="@string/biliroaming_video_smart_quality_summary"
             android:title="@string/biliroaming_video_smart_quality_title" />
+        <androidx.preference.SwitchPreferenceCompat
+            android:key="video_auto_skip_midroll"
+            android:summary="@string/biliroaming_video_auto_skip_midroll_summary"
+            android:title="@string/biliroaming_video_auto_skip_midroll_title" />
+        <androidx.preference.SwitchPreferenceCompat
+            android:key="video_auto_pause_on_silence"
+            android:summary="@string/biliroaming_video_auto_pause_on_silence_summary"
+            android:title="@string/biliroaming_video_auto_pause_on_silence_title" />
+        <androidx.preference.SwitchPreferenceCompat
+            android:key="video_smart_bitrate"
+            android:summary="@string/biliroaming_video_smart_bitrate_summary"
+            android:title="@string/biliroaming_video_smart_bitrate_title" />
     </androidx.preference.PreferenceCategory>
 </androidx.preference.PreferenceScreen>

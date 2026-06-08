@@ -520,5 +520,17 @@
             android:key="player_control_fade_out"
             android:summary="@string/biliroaming_player_control_fade_out_summary"
             android:title="@string/biliroaming_player_control_fade_out_title" />
+        <EditTextPreference
+            android:key="player_gesture_double_tap_speed"
+            android:summary="@string/biliroaming_player_gesture_double_tap_speed_summary"
+            android:title="@string/biliroaming_player_gesture_double_tap_speed_title" />
+        <EditTextPreference
+            android:key="player_screenshot_format_custom"
+            android:summary="@string/biliroaming_player_screenshot_format_custom_summary"
+            android:title="@string/biliroaming_player_screenshot_format_custom_title" />
+        <androidx.preference.SwitchPreferenceCompat
+            android:key="player_control_auto_fade"
+            android:summary="@string/biliroaming_player_control_auto_fade_summary"
+            android:title="@string/biliroaming_player_control_auto_fade_title" />
     </androidx.preference.PreferenceCategory>
 </androidx.preference.PreferenceScreen>

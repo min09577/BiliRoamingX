@@ -138,5 +138,17 @@
             android:key="dynamic_auto_pin_comment"
             android:summary="@string/biliroaming_dynamic_auto_pin_comment_summary"
             android:title="@string/biliroaming_dynamic_auto_pin_comment_title" />
+        <androidx.preference.SwitchPreferenceCompat
+            android:key="dynamic_auto_block_sensitive"
+            android:summary="@string/biliroaming_dynamic_auto_block_sensitive_summary"
+            android:title="@string/biliroaming_dynamic_auto_block_sensitive_title" />
+        <androidx.preference.SwitchPreferenceCompat
+            android:key="dynamic_auto_archive_old"
+            android:summary="@string/biliroaming_dynamic_auto_archive_old_summary"
+            android:title="@string/biliroaming_dynamic_auto_archive_old_title" />
+        <androidx.preference.SwitchPreferenceCompat
+            android:key="dynamic_auto_pin_self"
+            android:summary="@string/biliroaming_dynamic_auto_pin_self_summary"
+            android:title="@string/biliroaming_dynamic_auto_pin_self_title" />
     </androidx.preference.PreferenceCategory>
 </androidx.preference.PreferenceScreen>
