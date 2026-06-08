@@ -679,6 +679,34 @@ BiliRoamingX v1.23.3 기반, AI 지원 개발로 강화.
 - ⬆️ **弹幕顶部显示** / Danmaku Area Top / 弾幕上部表示 / 탄막 상단 표시
 
 ---
+## v1.68.0 (2026-06-08)
+
+### 🇨🇳 中文
+- **按用户屏蔽弹幕** — 屏蔽指定用户ID发送的弹幕
+- **手势快进快退** — 在播放器左右滑动快进/快退
+- **离开自动暂停** — 检测到用户离开时自动暂停视频
+- **GIF动图表情** — 在评论输入框旁添加GIF动图表情选择面板
+
+### 🇯🇵 日本語
+- **ユーザー別弾幕ブロック** — 指定ユーザーIDの弾幕をブロック
+- **ジェスチャー早送り/巻き戻し** — プレーヤーを左右にスワイプして早送り/巻き戻し
+- **離脱自動一時停止** — ユーザーが離れたことを検出して動画を自動一時停止
+- **GIFアニメ絵文字** — コメント入力欄にGIFアニメ絵文字選択パネルを追加
+
+### 🇰🇷 한국어
+- **사용자별 弹幕 차단** — 지정한 사용자 ID의 弹幕 차단
+- **제스처 빨리감기/되감기** — 플레이어를 좌우로 스와이프하여 빨리감기/되감기
+- **이탈 시 자동 일시정지** — 사용자가 자리를 비웠을 때 동영상 자동 일시정지
+- **GIF 애니메이션 이모티콘** — 댓글 입력란에 GIF 애니메이션 이모티콘 선택 패널 추가
+
+### 🇺🇸 English
+- **Block Danmaku by User** — Block danmaku from specified user IDs
+- **Gesture Seek** — Swipe left/right on player to seek forward/backward
+- **Auto-Pause on Leave** — Auto-pause video when user leaves
+- **GIF Sticker Panel** — Add GIF sticker selection panel in comment input
+
+---
+
 ## v1.67.0 (2026-06-08)
 
 ### 🇨🇳 中文
