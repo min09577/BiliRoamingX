@@ -385,5 +385,21 @@
             android:key="video_priority_mode"
             android:summary="@string/biliroaming_video_priority_mode_summary"
             android:title="@string/biliroaming_video_priority_mode_title" />
+        <androidx.preference.SwitchPreferenceCompat
+            android:key="video_gamepad_control"
+            android:summary="@string/biliroaming_video_gamepad_control_summary"
+            android:title="@string/biliroaming_video_gamepad_control_title" />
+        <androidx.preference.SwitchPreferenceCompat
+            android:key="video_hdr10_enhance"
+            android:summary="@string/biliroaming_video_hdr10_enhance_summary"
+            android:title="@string/biliroaming_video_hdr10_enhance_title" />
+        <androidx.preference.SwitchPreferenceCompat
+            android:key="video_super_resolution"
+            android:summary="@string/biliroaming_video_super_resolution_summary"
+            android:title="@string/biliroaming_video_super_resolution_title" />
+        <androidx.preference.SwitchPreferenceCompat
+            android:key="video_barcode_scanner"
+            android:summary="@string/biliroaming_video_barcode_scanner_summary"
+            android:title="@string/biliroaming_video_barcode_scanner_title" />
     </androidx.preference.PreferenceCategory>
 </androidx.preference.PreferenceScreen>

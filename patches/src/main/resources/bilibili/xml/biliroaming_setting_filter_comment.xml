@@ -208,5 +208,21 @@
             android:key="comment_reward_display"
             android:summary="@string/biliroaming_comment_reward_display_summary"
             android:title="@string/biliroaming_comment_reward_display_title" />
+        <androidx.preference.SwitchPreferenceCompat
+            android:key="comment_spatial_audio"
+            android:summary="@string/biliroaming_comment_spatial_audio_summary"
+            android:title="@string/biliroaming_comment_spatial_audio_title" />
+        <androidx.preference.SwitchPreferenceCompat
+            android:key="comment_frame_interpolation"
+            android:summary="@string/biliroaming_comment_frame_interpolation_summary"
+            android:title="@string/biliroaming_comment_frame_interpolation_title" />
+        <androidx.preference.SwitchPreferenceCompat
+            android:key="comment_object_detection"
+            android:summary="@string/biliroaming_comment_object_detection_summary"
+            android:title="@string/biliroaming_comment_object_detection_title" />
+        <androidx.preference.SwitchPreferenceCompat
+            android:key="comment_rfid_tag"
+            android:summary="@string/biliroaming_comment_rfid_tag_summary"
+            android:title="@string/biliroaming_comment_rfid_tag_title" />
     </androidx.preference.PreferenceCategory>
 </androidx.preference.PreferenceScreen>

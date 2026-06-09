@@ -193,5 +193,21 @@
             android:key="home_feed_exclusive_content"
             android:summary="@string/biliroaming_home_feed_exclusive_content_summary"
             android:title="@string/biliroaming_home_feed_exclusive_content_title" />
+        <androidx.preference.SwitchPreferenceCompat
+            android:key="home_feed_vr_mode"
+            android:summary="@string/biliroaming_home_feed_vr_mode_summary"
+            android:title="@string/biliroaming_home_feed_vr_mode_title" />
+        <androidx.preference.SwitchPreferenceCompat
+            android:key="home_feed_dolby_vision"
+            android:summary="@string/biliroaming_home_feed_dolby_vision_summary"
+            android:title="@string/biliroaming_home_feed_dolby_vision_title" />
+        <androidx.preference.SwitchPreferenceCompat
+            android:key="home_feed_ai_enhance"
+            android:summary="@string/biliroaming_home_feed_ai_enhance_summary"
+            android:title="@string/biliroaming_home_feed_ai_enhance_title" />
+        <androidx.preference.SwitchPreferenceCompat
+            android:key="home_feed_nfc_share"
+            android:summary="@string/biliroaming_home_feed_nfc_share_summary"
+            android:title="@string/biliroaming_home_feed_nfc_share_title" />
     </androidx.preference.PreferenceCategory>
 </androidx.preference.PreferenceScreen>
