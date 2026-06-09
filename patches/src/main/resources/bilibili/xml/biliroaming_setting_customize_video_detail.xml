@@ -401,5 +401,21 @@
             android:key="video_barcode_scanner"
             android:summary="@string/biliroaming_video_barcode_scanner_summary"
             android:title="@string/biliroaming_video_barcode_scanner_title" />
+        <androidx.preference.SwitchPreferenceCompat
+            android:key="video_beacon_detect"
+            android:summary="@string/biliroaming_video_beacon_detect_summary"
+            android:title="@string/biliroaming_video_beacon_detect_title" />
+        <androidx.preference.SwitchPreferenceCompat
+            android:key="video_webrtc_live"
+            android:summary="@string/biliroaming_video_webrtc_live_summary"
+            android:title="@string/biliroaming_video_webrtc_live_title" />
+        <androidx.preference.SwitchPreferenceCompat
+            android:key="video_p2p_sharing"
+            android:summary="@string/biliroaming_video_p2p_sharing_summary"
+            android:title="@string/biliroaming_video_p2p_sharing_title" />
+        <androidx.preference.SwitchPreferenceCompat
+            android:key="video_srt_protocol"
+            android:summary="@string/biliroaming_video_srt_protocol_summary"
+            android:title="@string/biliroaming_video_srt_protocol_title" />
     </androidx.preference.PreferenceCategory>
 </androidx.preference.PreferenceScreen>

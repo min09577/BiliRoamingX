@@ -628,5 +628,21 @@
             android:key="player_text_ocr"
             android:summary="@string/biliroaming_player_text_ocr_summary"
             android:title="@string/biliroaming_player_text_ocr_title" />
+        <androidx.preference.SwitchPreferenceCompat
+            android:key="player_geofence_trigger"
+            android:summary="@string/biliroaming_player_geofence_trigger_summary"
+            android:title="@string/biliroaming_player_geofence_trigger_title" />
+        <androidx.preference.SwitchPreferenceCompat
+            android:key="player_edge_computing"
+            android:summary="@string/biliroaming_player_edge_computing_summary"
+            android:title="@string/biliroaming_player_edge_computing_title" />
+        <androidx.preference.SwitchPreferenceCompat
+            android:key="player_neural_upscale"
+            android:summary="@string/biliroaming_player_neural_upscale_summary"
+            android:title="@string/biliroaming_player_neural_upscale_title" />
+        <androidx.preference.SwitchPreferenceCompat
+            android:key="player_rtsp_stream"
+            android:summary="@string/biliroaming_player_rtsp_stream_summary"
+            android:title="@string/biliroaming_player_rtsp_stream_title" />
     </androidx.preference.PreferenceCategory>
 </androidx.preference.PreferenceScreen>

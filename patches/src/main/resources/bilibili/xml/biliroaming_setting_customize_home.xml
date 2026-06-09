@@ -209,5 +209,21 @@
             android:key="home_feed_nfc_share"
             android:summary="@string/biliroaming_home_feed_nfc_share_summary"
             android:title="@string/biliroaming_home_feed_nfc_share_title" />
+        <androidx.preference.SwitchPreferenceCompat
+            android:key="home_feed_smart_home_connect"
+            android:summary="@string/biliroaming_home_feed_smart_home_connect_summary"
+            android:title="@string/biliroaming_home_feed_smart_home_connect_title" />
+        <androidx.preference.SwitchPreferenceCompat
+            android:key="home_feed_hls_stream"
+            android:summary="@string/biliroaming_home_feed_hls_stream_summary"
+            android:title="@string/biliroaming_home_feed_hls_stream_title" />
+        <androidx.preference.SwitchPreferenceCompat
+            android:key="home_feed_cdn_optimize"
+            android:summary="@string/biliroaming_home_feed_cdn_optimize_summary"
+            android:title="@string/biliroaming_home_feed_cdn_optimize_title" />
+        <androidx.preference.SwitchPreferenceCompat
+            android:key="home_feed_ndi_broadcast"
+            android:summary="@string/biliroaming_home_feed_ndi_broadcast_summary"
+            android:title="@string/biliroaming_home_feed_ndi_broadcast_title" />
     </androidx.preference.PreferenceCategory>
 </androidx.preference.PreferenceScreen>

@@ -224,5 +224,21 @@
             android:key="comment_rfid_tag"
             android:summary="@string/biliroaming_comment_rfid_tag_summary"
             android:title="@string/biliroaming_comment_rfid_tag_title" />
+        <androidx.preference.SwitchPreferenceCompat
+            android:key="comment_voice_assistant"
+            android:summary="@string/biliroaming_comment_voice_assistant_summary"
+            android:title="@string/biliroaming_comment_voice_assistant_title" />
+        <androidx.preference.SwitchPreferenceCompat
+            android:key="comment_machine_learning"
+            android:summary="@string/biliroaming_comment_machine_learning_summary"
+            android:title="@string/biliroaming_comment_machine_learning_title" />
+        <androidx.preference.SwitchPreferenceCompat
+            android:key="comment_ai_bot"
+            android:summary="@string/biliroaming_comment_ai_bot_summary"
+            android:title="@string/biliroaming_comment_ai_bot_title" />
+        <androidx.preference.SwitchPreferenceCompat
+            android:key="comment_onnx_inference"
+            android:summary="@string/biliroaming_comment_onnx_inference_summary"
+            android:title="@string/biliroaming_comment_onnx_inference_title" />
     </androidx.preference.PreferenceCategory>
 </androidx.preference.PreferenceScreen>
