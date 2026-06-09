@@ -402,9 +402,6 @@
             android:summary="@string/biliroaming_video_barcode_scanner_summary"
             android:title="@string/biliroaming_video_barcode_scanner_title" />
         <androidx.preference.SwitchPreferenceCompat
-            android:key="video_beacon_detect"
-            android:summary="@string/biliroaming_video_beacon_detect_summary"
-            android:title="@string/biliroaming_video_beacon_detect_title" />
         <androidx.preference.SwitchPreferenceCompat
             android:key="video_webrtc_live"
             android:summary="@string/biliroaming_video_webrtc_live_summary"
@@ -418,36 +415,15 @@
             android:summary="@string/biliroaming_video_srt_protocol_summary"
             android:title="@string/biliroaming_video_srt_protocol_title" />
         <androidx.preference.SwitchPreferenceCompat
-            android:key="video_blockchain_verify"
-            android:summary="@string/biliroaming_video_blockchain_verify_summary"
-            android:title="@string/biliroaming_video_blockchain_verify_title" />
         <androidx.preference.SwitchPreferenceCompat
-            android:key="video_ipfs_storage"
-            android:summary="@string/biliroaming_video_ipfs_storage_summary"
-            android:title="@string/biliroaming_video_ipfs_storage_title" />
         <androidx.preference.SwitchPreferenceCompat
-            android:key="video_web_bluetooth"
-            android:summary="@string/biliroaming_video_web_bluetooth_summary"
-            android:title="@string/biliroaming_video_web_bluetooth_title" />
         <androidx.preference.SwitchPreferenceCompat
             android:key="video_share_target"
             android:summary="@string/biliroaming_video_share_target_summary"
             android:title="@string/biliroaming_video_share_target_title" />
         <androidx.preference.SwitchPreferenceCompat
-            android:key="video_xr_mode"
-            android:summary="@string/biliroaming_video_xr_mode_summary"
-            android:title="@string/biliroaming_video_xr_mode_title" />
         <androidx.preference.SwitchPreferenceCompat
-            android:key="video_global_illumination"
-            android:summary="@string/biliroaming_video_global_illumination_summary"
-            android:title="@string/biliroaming_video_global_illumination_title" />
         <androidx.preference.SwitchPreferenceCompat
-            android:key="video_cloth_simulation"
-            android:summary="@string/biliroaming_video_cloth_simulation_summary"
-            android:title="@string/biliroaming_video_cloth_simulation_title" />
         <androidx.preference.SwitchPreferenceCompat
-            android:key="video_l_system_render"
-            android:summary="@string/biliroaming_video_l_system_render_summary"
-            android:title="@string/biliroaming_video_l_system_render_title" />
     </androidx.preference.PreferenceCategory>
 </androidx.preference.PreferenceScreen>
