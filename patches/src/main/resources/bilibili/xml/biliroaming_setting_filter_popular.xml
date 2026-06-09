@@ -16,7 +16,6 @@
             android:title="@string/biliroaming_block_popular_live_title" />
         <androidx.preference.Preference
             android:fragment="app.revanced.bilibili.settings.fragments.FilterHomeRcmdByKeywordFragment"
-            android:key="filter_popular_by_keyword"
             android:summary="@string/biliroaming_reapply_home_filter_summary"
             android:title="@string/biliroaming_filter_by_keyword_title" />
     </androidx.preference.PreferenceCategory>

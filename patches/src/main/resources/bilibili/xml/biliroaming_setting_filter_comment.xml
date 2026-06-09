@@ -30,7 +30,6 @@
             android:title="@string/biliroaming_comment_translate_title" />
         <androidx.preference.Preference
             android:fragment="app.revanced.bilibili.settings.fragments.FilterCommentByKeywordFragment"
-            android:key="filter_comment_by_keyword"
             android:title="@string/biliroaming_filter_by_keyword_title" />
         <androidx.preference.SwitchPreferenceCompat
             android:key="comment_anonymous_mode"
@@ -166,36 +165,22 @@
             android:title="@string/biliroaming_comment_accessibility_mode_title" />
         <androidx.preference.SwitchPreferenceCompat
             android:key="comment_export_import"
-            android:summary="@string/biliroaming_comment_export_import_summary"
-            android:title="@string/biliroaming_comment_export_import_title" />
         <androidx.preference.SwitchPreferenceCompat
             android:key="comment_medal_display"
-            android:summary="@string/biliroaming_comment_medal_display_summary"
-            android:title="@string/biliroaming_comment_medal_display_title" />
         <androidx.preference.SwitchPreferenceCompat
             android:key="comment_chart_display"
-            android:summary="@string/biliroaming_comment_chart_display_summary"
-            android:title="@string/biliroaming_comment_chart_display_title" />
         <androidx.preference.SwitchPreferenceCompat
             android:key="comment_bluetooth_audio"
-            android:summary="@string/biliroaming_comment_bluetooth_audio_summary"
-            android:title="@string/biliroaming_comment_bluetooth_audio_title" />
         <androidx.preference.SwitchPreferenceCompat
             android:key="comment_qr_code_share"
             android:summary="@string/biliroaming_comment_qr_code_share_summary"
             android:title="@string/biliroaming_comment_qr_code_share_title" />
         <androidx.preference.SwitchPreferenceCompat
             android:key="comment_camera_filter"
-            android:summary="@string/biliroaming_comment_camera_filter_summary"
-            android:title="@string/biliroaming_comment_camera_filter_title" />
         <androidx.preference.SwitchPreferenceCompat
             android:key="comment_compass_overlay"
-            android:summary="@string/biliroaming_comment_compass_overlay_summary"
-            android:title="@string/biliroaming_comment_compass_overlay_title" />
         <androidx.preference.SwitchPreferenceCompat
             android:key="comment_online_status"
-            android:summary="@string/biliroaming_comment_online_status_summary"
-            android:title="@string/biliroaming_comment_online_status_title" />
         <androidx.preference.SwitchPreferenceCompat
             android:key="comment_time_limit"
             android:summary="@string/biliroaming_comment_time_limit_summary"
@@ -206,37 +191,23 @@
             android:title="@string/biliroaming_comment_spam_filter_title" />
         <androidx.preference.SwitchPreferenceCompat
             android:key="comment_reward_display"
-            android:summary="@string/biliroaming_comment_reward_display_summary"
-            android:title="@string/biliroaming_comment_reward_display_title" />
         <androidx.preference.SwitchPreferenceCompat
             android:key="comment_spatial_audio"
-            android:summary="@string/biliroaming_comment_spatial_audio_summary"
-            android:title="@string/biliroaming_comment_spatial_audio_title" />
         <androidx.preference.SwitchPreferenceCompat
             android:key="comment_frame_interpolation"
-            android:summary="@string/biliroaming_comment_frame_interpolation_summary"
-            android:title="@string/biliroaming_comment_frame_interpolation_title" />
         <androidx.preference.SwitchPreferenceCompat
             android:key="comment_object_detection"
-            android:summary="@string/biliroaming_comment_object_detection_summary"
-            android:title="@string/biliroaming_comment_object_detection_title" />
         <androidx.preference.SwitchPreferenceCompat
         <androidx.preference.SwitchPreferenceCompat
             android:key="comment_voice_assistant"
-            android:summary="@string/biliroaming_comment_voice_assistant_summary"
-            android:title="@string/biliroaming_comment_voice_assistant_title" />
         <androidx.preference.SwitchPreferenceCompat
         <androidx.preference.SwitchPreferenceCompat
         <androidx.preference.SwitchPreferenceCompat
         <androidx.preference.SwitchPreferenceCompat
         <androidx.preference.SwitchPreferenceCompat
             android:key="comment_push_notification"
-            android:summary="@string/biliroaming_comment_push_notification_summary"
-            android:title="@string/biliroaming_comment_push_notification_title" />
         <androidx.preference.SwitchPreferenceCompat
             android:key="comment_file_access"
-            android:summary="@string/biliroaming_comment_file_access_summary"
-            android:title="@string/biliroaming_comment_file_access_title" />
         <androidx.preference.SwitchPreferenceCompat
         <androidx.preference.SwitchPreferenceCompat
         <androidx.preference.SwitchPreferenceCompat

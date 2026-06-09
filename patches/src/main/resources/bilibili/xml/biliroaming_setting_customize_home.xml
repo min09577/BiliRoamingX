@@ -7,20 +7,16 @@
         android:title="@string/biliroaming_customize_home_summary">
         <androidx.preference.Preference
             android:fragment="app.revanced.bilibili.settings.fragments.CustomizeBottomFragment"
-            android:key="customize_bottom"
             android:title="@string/biliroaming_customize_bottom_title" />
         <androidx.preference.Preference
             android:fragment="app.revanced.bilibili.settings.fragments.CustomizeHomeTabFragment"
-            android:key="home_tab"
             android:summary="@string/biliroaming_customize_home_tab_summary"
             android:title="@string/biliroaming_customize_home_tab_title" />
         <androidx.preference.Preference
             android:fragment="app.revanced.bilibili.settings.fragments.FilterHomeRcmdFragment"
-            android:key="filter_home_recommend"
             android:title="@string/biliroaming_filter_home_recommend_title" />
         <androidx.preference.Preference
             android:fragment="app.revanced.bilibili.settings.fragments.FilterPopularFragment"
-            android:key="filter_popular"
             android:title="@string/biliroaming_filter_popular_title" />
         <androidx.preference.SwitchPreferenceCompat
             android:key="disable_auto_refresh"
@@ -139,28 +135,16 @@
             android:title="@string/biliroaming_home_feed_auto_night_brightness_custom_title" />
         <androidx.preference.SwitchPreferenceCompat
             android:key="home_feed_foldable_layout"
-            android:summary="@string/biliroaming_home_feed_foldable_layout_summary"
-            android:title="@string/biliroaming_home_feed_foldable_layout_title" />
         <androidx.preference.SwitchPreferenceCompat
             android:key="home_feed_performance_mode"
-            android:summary="@string/biliroaming_home_feed_performance_mode_summary"
-            android:title="@string/biliroaming_home_feed_performance_mode_title" />
         <androidx.preference.SwitchPreferenceCompat
             android:key="home_feed_memory_cache"
-            android:summary="@string/biliroaming_home_feed_memory_cache_summary"
-            android:title="@string/biliroaming_home_feed_memory_cache_title" />
         <androidx.preference.SwitchPreferenceCompat
             android:key="home_feed_analytics_display"
-            android:summary="@string/biliroaming_home_feed_analytics_display_summary"
-            android:title="@string/biliroaming_home_feed_analytics_display_title" />
         <androidx.preference.SwitchPreferenceCompat
             android:key="home_feed_daily_report"
-            android:summary="@string/biliroaming_home_feed_daily_report_summary"
-            android:title="@string/biliroaming_home_feed_daily_report_title" />
         <androidx.preference.SwitchPreferenceCompat
             android:key="home_feed_weekly_summary"
-            android:summary="@string/biliroaming_home_feed_weekly_summary_summary"
-            android:title="@string/biliroaming_home_feed_weekly_summary_title" />
         <androidx.preference.SwitchPreferenceCompat
             android:key="home_feed_airplay_cast"
             android:summary="@string/biliroaming_home_feed_airplay_cast_summary"
@@ -171,36 +155,22 @@
             android:title="@string/biliroaming_home_feed_gps_location_title" />
         <androidx.preference.SwitchPreferenceCompat
             android:key="home_feed_bluetooth_scan"
-            android:summary="@string/biliroaming_home_feed_bluetooth_scan_summary"
-            android:title="@string/biliroaming_home_feed_bluetooth_scan_title" />
         <androidx.preference.SwitchPreferenceCompat
             android:key="home_feed_sensor_light"
-            android:summary="@string/biliroaming_home_feed_sensor_light_summary"
-            android:title="@string/biliroaming_home_feed_sensor_light_title" />
         <androidx.preference.SwitchPreferenceCompat
             android:key="home_feed_unread_badge"
-            android:summary="@string/biliroaming_home_feed_unread_badge_summary"
-            android:title="@string/biliroaming_home_feed_unread_badge_title" />
         <androidx.preference.SwitchPreferenceCompat
             android:key="home_feed_parental_control"
-            android:summary="@string/biliroaming_home_feed_parental_control_summary"
-            android:title="@string/biliroaming_home_feed_parental_control_title" />
         <androidx.preference.SwitchPreferenceCompat
             android:key="home_feed_mindful_mode"
-            android:summary="@string/biliroaming_home_feed_mindful_mode_summary"
-            android:title="@string/biliroaming_home_feed_mindful_mode_title" />
         <androidx.preference.SwitchPreferenceCompat
             android:key="home_feed_exclusive_content"
-            android:summary="@string/biliroaming_home_feed_exclusive_content_summary"
-            android:title="@string/biliroaming_home_feed_exclusive_content_title" />
         <androidx.preference.SwitchPreferenceCompat
             android:key="home_feed_vr_mode"
             android:summary="@string/biliroaming_home_feed_vr_mode_summary"
             android:title="@string/biliroaming_home_feed_vr_mode_title" />
         <androidx.preference.SwitchPreferenceCompat
             android:key="home_feed_dolby_vision"
-            android:summary="@string/biliroaming_home_feed_dolby_vision_summary"
-            android:title="@string/biliroaming_home_feed_dolby_vision_title" />
         <androidx.preference.SwitchPreferenceCompat
             android:key="home_feed_ai_enhance"
             android:summary="@string/biliroaming_home_feed_ai_enhance_summary"
@@ -211,8 +181,6 @@
             android:title="@string/biliroaming_home_feed_nfc_share_title" />
         <androidx.preference.SwitchPreferenceCompat
             android:key="home_feed_smart_home_connect"
-            android:summary="@string/biliroaming_home_feed_smart_home_connect_summary"
-            android:title="@string/biliroaming_home_feed_smart_home_connect_title" />
         <androidx.preference.SwitchPreferenceCompat
             android:key="home_feed_hls_stream"
             android:summary="@string/biliroaming_home_feed_hls_stream_summary"
@@ -229,12 +197,8 @@
         <androidx.preference.SwitchPreferenceCompat
         <androidx.preference.SwitchPreferenceCompat
             android:key="home_feed_service_worker"
-            android:summary="@string/biliroaming_home_feed_service_worker_summary"
-            android:title="@string/biliroaming_home_feed_service_worker_title" />
         <androidx.preference.SwitchPreferenceCompat
             android:key="home_feed_periodic_sync"
-            android:summary="@string/biliroaming_home_feed_periodic_sync_summary"
-            android:title="@string/biliroaming_home_feed_periodic_sync_title" />
         <androidx.preference.SwitchPreferenceCompat
         <androidx.preference.SwitchPreferenceCompat
         <androidx.preference.SwitchPreferenceCompat

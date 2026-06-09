@@ -3,18 +3,14 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
     <androidx.preference.PreferenceCategory>
         <androidx.preference.Preference
-            android:key="version"
             android:title="@string/biliroaming_version_title" />
         <androidx.preference.Preference
-            android:key="feedback"
             android:summary="@string/biliroaming_feedback_summary"
             android:title="@string/biliroaming_feedback_title" />
         <androidx.preference.Preference
-            android:key="project_url"
             android:summary="@string/biliroaming_project_url"
             android:title="@string/biliroaming_project_title" />
         <androidx.preference.Preference
-            android:key="tg_link"
             android:summary="@string/biliroaming_tg_url"
             android:title="@string/biliroaming_tg_title" />
     </androidx.preference.PreferenceCategory>
@@ -24,7 +20,6 @@
             android:key="debug"
             android:title="@string/biliroaming_debug_title" />
         <androidx.preference.Preference
-            android:key="share_log"
             android:summary="@string/biliroaming_share_log_summary"
             android:title="@string/biliroaming_share_log_title" />
     </androidx.preference.PreferenceCategory>

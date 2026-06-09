@@ -52,11 +52,9 @@
             android:title="@string/biliroaming_dynamic_rm_story_title" />
         <androidx.preference.Preference
             android:fragment="app.revanced.bilibili.settings.fragments.FilterDynamicByTypeFragment"
-            android:key="filter_dynamic_by_type"
             android:title="@string/biliroaming_filter_by_type_title" />
         <androidx.preference.Preference
             android:fragment="app.revanced.bilibili.settings.fragments.FilterDynamicByKeywordFragment"
-            android:key="filter_dynamic_by_keyword"
             android:title="@string/biliroaming_filter_by_keyword_title" />
         <androidx.preference.SwitchPreferenceCompat
             android:key="dynamic_auto_scroll"
@@ -107,7 +105,6 @@
             android:summary="@string/biliroaming_dynamic_auto_reply_summary"
             android:title="@string/biliroaming_dynamic_auto_reply_title" />
         <androidx.preference.SwitchPreferenceCompat
-            android:key="dynamic_auto_pin"
             android:summary="@string/biliroaming_dynamic_auto_pin_summary"
             android:title="@string/biliroaming_dynamic_auto_pin_title" />
         <androidx.preference.SwitchPreferenceCompat
@@ -136,55 +133,31 @@
             android:title="@string/biliroaming_dynamic_auto_block_keyword_title" />
         <androidx.preference.SwitchPreferenceCompat
             android:key="dynamic_auto_pin_comment"
-            android:summary="@string/biliroaming_dynamic_auto_pin_comment_summary"
-            android:title="@string/biliroaming_dynamic_auto_pin_comment_title" />
         <androidx.preference.SwitchPreferenceCompat
             android:key="dynamic_auto_block_sensitive"
-            android:summary="@string/biliroaming_dynamic_auto_block_sensitive_summary"
-            android:title="@string/biliroaming_dynamic_auto_block_sensitive_title" />
         <androidx.preference.SwitchPreferenceCompat
             android:key="dynamic_auto_archive_old"
             android:summary="@string/biliroaming_dynamic_auto_archive_old_summary"
             android:title="@string/biliroaming_dynamic_auto_archive_old_title" />
         <androidx.preference.SwitchPreferenceCompat
             android:key="dynamic_auto_pin_self"
-            android:summary="@string/biliroaming_dynamic_auto_pin_self_summary"
-            android:title="@string/biliroaming_dynamic_auto_pin_self_title" />
         <androidx.preference.SwitchPreferenceCompat
             android:key="dynamic_auto_pin_all"
-            android:summary="@string/biliroaming_dynamic_auto_pin_all_summary"
-            android:title="@string/biliroaming_dynamic_auto_pin_all_title" />
         <androidx.preference.SwitchPreferenceCompat
             android:key="dynamic_auto_archive_all"
-            android:summary="@string/biliroaming_dynamic_auto_archive_all_summary"
-            android:title="@string/biliroaming_dynamic_auto_archive_all_title" />
         <androidx.preference.SwitchPreferenceCompat
             android:key="dynamic_auto_block_all_sensitive"
-            android:summary="@string/biliroaming_dynamic_auto_block_all_sensitive_summary"
-            android:title="@string/biliroaming_dynamic_auto_block_all_sensitive_title" />
         <androidx.preference.SwitchPreferenceCompat
             android:key="dynamic_text_to_speech"
-            android:summary="@string/biliroaming_dynamic_text_to_speech_summary"
-            android:title="@string/biliroaming_dynamic_text_to_speech_title" />
         <androidx.preference.SwitchPreferenceCompat
             android:key="dynamic_voice_over"
-            android:summary="@string/biliroaming_dynamic_voice_over_summary"
-            android:title="@string/biliroaming_dynamic_voice_over_title" />
         <androidx.preference.SwitchPreferenceCompat
             android:key="dynamic_accessibility_mode"
-            android:summary="@string/biliroaming_dynamic_accessibility_mode_summary"
-            android:title="@string/biliroaming_dynamic_accessibility_mode_title" />
         <androidx.preference.SwitchPreferenceCompat
             android:key="dynamic_backup_restore"
-            android:summary="@string/biliroaming_dynamic_backup_restore_summary"
-            android:title="@string/biliroaming_dynamic_backup_restore_title" />
         <androidx.preference.SwitchPreferenceCompat
             android:key="dynamic_achievement_tracker"
-            android:summary="@string/biliroaming_dynamic_achievement_tracker_summary"
-            android:title="@string/biliroaming_dynamic_achievement_tracker_title" />
         <androidx.preference.SwitchPreferenceCompat
             android:key="dynamic_monthly_report"
-            android:summary="@string/biliroaming_dynamic_monthly_report_summary"
-            android:title="@string/biliroaming_dynamic_monthly_report_title" />
     </androidx.preference.PreferenceCategory>
 </androidx.preference.PreferenceScreen>

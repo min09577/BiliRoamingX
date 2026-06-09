@@ -7,7 +7,6 @@
             android:title="@string/biliroaming_external_downloader_title"
             android:summary="@string/biliroaming_external_downloader_summary" />
         <androidx.preference.Preference
-            android:key="package_name"
             android:title="@string/biliroaming_external_downloader_name_title"
             android:summary="@string/biliroaming_external_downloader_name_summary" />
     </androidx.preference.PreferenceCategory>

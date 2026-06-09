@@ -4,53 +4,42 @@
     <androidx.preference.PreferenceCategory>
         <androidx.preference.Preference
             android:fragment="app.revanced.bilibili.settings.fragments.UnlockAreaLimitFragment"
-            android:key="main_func_category"
             android:title="@string/biliroaming_unlock_area_limit_category_title" />
     </androidx.preference.PreferenceCategory>
 
     <androidx.preference.PreferenceCategory>
         <androidx.preference.Preference
             android:fragment="app.revanced.bilibili.settings.fragments.CustomizePlayerFragment"
-            android:key="customize_player"
             android:title="@string/biliroaming_customize_player_title" />
         <androidx.preference.Preference
             android:fragment="app.revanced.bilibili.settings.fragments.CustomizeHomeFragment"
-            android:key="customize_home"
             android:title="@string/biliroaming_customize_home_title" />
         <androidx.preference.Preference
             android:fragment="app.revanced.bilibili.settings.fragments.CustomizeDynamicFragment"
-            android:key="customize_dynamic"
             android:title="@string/biliroaming_customize_dynamic_title" />
         <androidx.preference.Preference
             android:fragment="app.revanced.bilibili.settings.fragments.CustomizeMineFragment"
-            android:key="customize_mine"
             android:title="@string/biliroaming_customize_mine_title" />
         <androidx.preference.Preference
             android:fragment="app.revanced.bilibili.settings.fragments.CustomizeLiveRoomFragment"
-            android:key="customize_live_room"
             android:title="@string/biliroaming_customize_live_room_title" />
         <androidx.preference.Preference
             android:fragment="app.revanced.bilibili.settings.fragments.CustomizeVideoDetailFragment"
-            android:key="customize_video_detail"
             android:title="@string/biliroaming_customize_video_detail_title" />
         <androidx.preference.Preference
             android:fragment="app.revanced.bilibili.settings.fragments.SpaceFragment"
-            android:key="space"
             android:title="@string/biliroaming_space_title" />
         <androidx.preference.Preference
             android:fragment="app.revanced.bilibili.settings.fragments.CustomizeSearchFragment"
-            android:key="search"
             android:title="@string/biliroaming_search_category_title" />
     </androidx.preference.PreferenceCategory>
 
     <androidx.preference.PreferenceCategory>
         <androidx.preference.Preference
             android:fragment="app.revanced.bilibili.settings.fragments.MiscFragment"
-            android:key="misc"
             android:title="@string/biliroaming_misc_title" />
         <androidx.preference.Preference
             android:fragment="app.revanced.bilibili.settings.fragments.ToolFragment"
-            android:key="tool"
             android:title="@string/biliroaming_tool_title" />
     </androidx.preference.PreferenceCategory>
 
@@ -63,7 +52,6 @@
 
     <androidx.preference.PreferenceCategory>
         <androidx.preference.Preference
-            android:key="reboot"
             android:title="@string/biliroaming_reboot_title" />
         <androidx.preference.Preference
             android:fragment="app.revanced.bilibili.settings.fragments.AboutFragment"

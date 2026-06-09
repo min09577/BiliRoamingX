@@ -8,12 +8,10 @@
             android:title="@string/biliroaming_teenagers_mode_dialog_title" />
         <androidx.preference.Preference
             android:fragment="app.revanced.bilibili.settings.fragments.BlockFollowFragment"
-            android:key="follow_button"
             android:summary="@string/biliroaming_block_follow_button_summary"
             android:title="@string/biliroaming_block_follow_button_title" />
         <androidx.preference.Preference
             android:fragment="app.revanced.bilibili.settings.fragments.TextFoldFragment"
-            android:key="text_fold"
             android:summary="@string/biliroaming_text_fold_summary"
             android:title="@string/biliroaming_text_fold_title" />
         <androidx.preference.SwitchPreferenceCompat
@@ -77,7 +75,6 @@
             android:title="@string/biliroaming_skin_title" />
         <androidx.preference.Preference
             android:dependency="skin"
-            android:key="skin_json_pref"
             android:title="@string/biliroaming_skin_json_pref_title" />
     </androidx.preference.PreferenceCategory>
 
@@ -154,27 +151,22 @@
         android:layout="@layout/bili_app_layout_preference_category_title"
         android:title="@string/biliroaming_always_enabled_title">
         <androidx.preference.Preference
-            android:key="prefs_clear_app_icon"
             android:summary="@string/biliroaming_clear_app_icon_summary"
             android:title="@string/biliroaming_clear_app_icon_title"
             android:widgetLayout="@null" />
         <androidx.preference.Preference
-            android:key="prefs_themed_icon"
             android:summary="@string/biliroaming_themed_icon_summary"
             android:title="@string/biliroaming_themed_icon_title"
             android:widgetLayout="@null" />
         <androidx.preference.Preference
-            android:key="prefs_follow_dark"
             android:summary="@string/biliroaming_splash_follow_dark_summary"
             android:title="@string/biliroaming_splash_follow_dark_title"
             android:widgetLayout="@null" />
         <androidx.preference.Preference
-            android:key="prefs_per_app_language"
             android:summary="@string/biliroaming_per_app_language_summary"
             android:title="@string/biliroaming_per_app_language_title"
             android:widgetLayout="@null" />
         <androidx.preference.Preference
-            android:key="prefs_keep_data"
             android:summary="@string/biliroaming_keep_data_summary"
             android:title="@string/biliroaming_keep_data_title"
             android:widgetLayout="@null" />

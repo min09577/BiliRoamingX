@@ -12,15 +12,12 @@
             android:title="@string/biliroaming_search_area_movie_title" />
         <androidx.preference.Preference
             android:fragment="app.revanced.bilibili.settings.fragments.PurifySearchTypesFragment"
-            android:key="fragment_purify_search_types"
             android:title="@string/biliroaming_purify_search_types_title" />
         <androidx.preference.Preference
             android:fragment="app.revanced.bilibili.settings.fragments.FilterSearchTypeFragment"
-            android:key="search_type"
             android:title="@string/biliroaming_filter_search_type_title" />
         <androidx.preference.Preference
             android:fragment="app.revanced.bilibili.settings.fragments.FilterSearchKeywordsFragment"
-            android:key="search_keywords"
             android:title="@string/biliroaming_filter_search_keywords_title" />
         <androidx.preference.SwitchPreferenceCompat
             android:key="search_auto_complete"
@@ -36,8 +33,6 @@
             android:title="@string/biliroaming_search_auto_correct_title" />
         <androidx.preference.SwitchPreferenceCompat
             android:key="search_auto_suggest"
-            android:summary="@string/biliroaming_search_auto_suggest_summary"
-            android:title="@string/biliroaming_search_auto_suggest_title" />
         <androidx.preference.SwitchPreferenceCompat
             android:key="search_history_clear"
             android:summary="@string/biliroaming_search_history_clear_summary"
@@ -48,27 +43,15 @@
             android:title="@string/biliroaming_search_auto_filter_title" />
         <EditTextPreference
             android:key="search_auto_suggest_limit"
-            android:summary="@string/biliroaming_search_auto_suggest_limit_summary"
-            android:title="@string/biliroaming_search_auto_suggest_limit_title" />
         <androidx.preference.SwitchPreferenceCompat
             android:key="search_auto_complete_history"
-            android:summary="@string/biliroaming_search_auto_complete_history_summary"
-            android:title="@string/biliroaming_search_auto_complete_history_title" />
         <androidx.preference.SwitchPreferenceCompat
             android:key="search_auto_complete_trending"
-            android:summary="@string/biliroaming_search_auto_complete_trending_summary"
-            android:title="@string/biliroaming_search_auto_complete_trending_title" />
         <androidx.preference.SwitchPreferenceCompat
             android:key="search_auto_complete_suggest"
-            android:summary="@string/biliroaming_search_auto_complete_suggest_summary"
-            android:title="@string/biliroaming_search_auto_complete_suggest_title" />
         <androidx.preference.SwitchPreferenceCompat
             android:key="search_accessibility_mode"
-            android:summary="@string/biliroaming_search_accessibility_mode_summary"
-            android:title="@string/biliroaming_search_accessibility_mode_title" />
         <androidx.preference.SwitchPreferenceCompat
             android:key="search_statistics_panel"
-            android:summary="@string/biliroaming_search_statistics_panel_summary"
-            android:title="@string/biliroaming_search_statistics_panel_title" />
     </androidx.preference.PreferenceCategory>
 </androidx.preference.PreferenceScreen>

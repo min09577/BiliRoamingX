@@ -53,7 +53,6 @@
             app:radioEntryValues="@array/biliroaming_subtitle_translate_server_values" />
         <androidx.preference.Preference
             android:fragment="app.revanced.bilibili.settings.fragments.CustomizeSubtitleStyleFragment"
-            android:key="customize_subtitle_style"
             android:title="@string/biliroaming_subtitle_style_title" />
         <androidx.preference.SwitchPreferenceCompat
             android:key="subtitle_import_save"
@@ -70,15 +69,12 @@
         android:layout="@layout/bili_app_layout_preference_category_title"
         android:title="@string/biliroaming_playback_speed_title">
         <androidx.preference.Preference
-            android:key="default_speed"
             android:summary="@string/biliroaming_default_speed_summary"
             android:title="@string/biliroaming_default_speed_title" />
         <androidx.preference.Preference
-            android:key="long_press_speed"
             android:summary="@string/biliroaming_long_press_speed_summary"
             android:title="@string/biliroaming_long_press_speed_title" />
         <androidx.preference.Preference
-            android:key="override_speed"
             android:summary="@string/biliroaming_speed_override_summary"
             android:title="@string/biliroaming_speed_override_title" />
         <androidx.preference.SwitchPreferenceCompat
@@ -347,7 +343,6 @@
             android:summary="@string/biliroaming_prefer_stable_cdn_summary"
             android:title="@string/biliroaming_prefer_stable_cdn_title" />
         <androidx.preference.Preference
-            android:key="custom_access_key"
             android:summary="@string/biliroaming_custom_access_key_summary"
             android:title="@string/biliroaming_custom_access_key_title" />
     </androidx.preference.PreferenceCategory>
@@ -474,28 +469,18 @@
             android:title="@string/biliroaming_player_screenshot_auto_save_title" />
         <androidx.preference.SwitchPreferenceCompat
             android:key="player_gesture_pinch"
-            android:summary="@string/biliroaming_player_gesture_pinch_summary"
-            android:title="@string/biliroaming_player_gesture_pinch_title" />
         <androidx.preference.SwitchPreferenceCompat
             android:key="player_night_mode"
-            android:summary="@string/biliroaming_player_night_mode_summary"
-            android:title="@string/biliroaming_player_night_mode_title" />
         <androidx.preference.SwitchPreferenceCompat
             android:key="player_control_animation"
-            android:summary="@string/biliroaming_player_control_animation_summary"
-            android:title="@string/biliroaming_player_control_animation_title" />
         <androidx.preference.SwitchPreferenceCompat
             android:key="player_gesture_shake"
-            android:summary="@string/biliroaming_player_gesture_shake_summary"
-            android:title="@string/biliroaming_player_gesture_shake_title" />
         <androidx.preference.SwitchPreferenceCompat
             android:key="player_screenshot_share"
             android:summary="@string/biliroaming_player_screenshot_share_summary"
             android:title="@string/biliroaming_player_screenshot_share_title" />
         <androidx.preference.SwitchPreferenceCompat
             android:key="player_gesture_shake_undo"
-            android:summary="@string/biliroaming_player_gesture_shake_undo_summary"
-            android:title="@string/biliroaming_player_gesture_shake_undo_title" />
         <EditTextPreference
             android:key="player_gesture_volume_step"
             android:summary="@string/biliroaming_player_gesture_volume_step_summary"
@@ -510,8 +495,6 @@
             android:title="@string/biliroaming_player_control_gesture_title" />
         <androidx.preference.SwitchPreferenceCompat
             android:key="player_gesture_rotate"
-            android:summary="@string/biliroaming_player_gesture_rotate_summary"
-            android:title="@string/biliroaming_player_gesture_rotate_title" />
         <EditTextPreference
             android:key="player_screenshot_path"
             android:summary="@string/biliroaming_player_screenshot_path_summary"
@@ -530,8 +513,6 @@
             android:title="@string/biliroaming_player_screenshot_format_custom_title" />
         <androidx.preference.SwitchPreferenceCompat
             android:key="player_control_auto_fade"
-            android:summary="@string/biliroaming_player_control_auto_fade_summary"
-            android:title="@string/biliroaming_player_control_auto_fade_title" />
         <EditTextPreference
             android:key="player_control_auto_hide_timeout"
             android:summary="@string/biliroaming_player_control_auto_hide_timeout_summary"
@@ -542,84 +523,48 @@
             android:title="@string/biliroaming_player_screenshot_share_path_title" />
         <androidx.preference.SwitchPreferenceCompat
             android:key="player_gesture_swipe_speed"
-            android:summary="@string/biliroaming_player_gesture_swipe_speed_summary"
-            android:title="@string/biliroaming_player_gesture_swipe_speed_title" />
         <androidx.preference.SwitchPreferenceCompat
             android:key="player_haptic_feedback"
-            android:summary="@string/biliroaming_player_haptic_feedback_summary"
-            android:title="@string/biliroaming_player_haptic_feedback_title" />
         <androidx.preference.SwitchPreferenceCompat
             android:key="player_fps_display"
             android:summary="@string/biliroaming_player_fps_display_summary"
             android:title="@string/biliroaming_player_fps_display_title" />
         <androidx.preference.SwitchPreferenceCompat
             android:key="player_battery_temperature"
-            android:summary="@string/biliroaming_player_battery_temperature_summary"
-            android:title="@string/biliroaming_player_battery_temperature_title" />
         <androidx.preference.SwitchPreferenceCompat
             android:key="player_latency_display"
-            android:summary="@string/biliroaming_player_latency_display_summary"
-            android:title="@string/biliroaming_player_latency_display_title" />
         <androidx.preference.SwitchPreferenceCompat
             android:key="player_gpu_monitor"
             android:summary="@string/biliroaming_player_gpu_monitor_summary"
             android:title="@string/biliroaming_player_gpu_monitor_title" />
         <androidx.preference.SwitchPreferenceCompat
             android:key="player_split_screen_mode"
-            android:summary="@string/biliroaming_player_split_screen_mode_summary"
-            android:title="@string/biliroaming_player_split_screen_mode_title" />
         <androidx.preference.SwitchPreferenceCompat
             android:key="player_account_switch"
-            android:summary="@string/biliroaming_player_account_switch_summary"
-            android:title="@string/biliroaming_player_account_switch_title" />
         <androidx.preference.SwitchPreferenceCompat
             android:key="player_diamond_badge"
-            android:summary="@string/biliroaming_player_diamond_badge_summary"
-            android:title="@string/biliroaming_player_diamond_badge_title" />
         <androidx.preference.SwitchPreferenceCompat
             android:key="player_task_progress"
-            android:summary="@string/biliroaming_player_task_progress_summary"
-            android:title="@string/biliroaming_player_task_progress_title" />
         <androidx.preference.SwitchPreferenceCompat
             android:key="player_chromecast_support"
-            android:summary="@string/biliroaming_player_chromecast_support_summary"
-            android:title="@string/biliroaming_player_chromecast_support_title" />
         <androidx.preference.SwitchPreferenceCompat
             android:key="player_gyroscope_rotate"
-            android:summary="@string/biliroaming_player_gyroscope_rotate_summary"
-            android:title="@string/biliroaming_player_gyroscope_rotate_title" />
         <androidx.preference.SwitchPreferenceCompat
             android:key="player_accelerometer_gesture"
-            android:summary="@string/biliroaming_player_accelerometer_gesture_summary"
-            android:title="@string/biliroaming_player_accelerometer_gesture_title" />
         <androidx.preference.SwitchPreferenceCompat
             android:key="player_speaker_boost"
-            android:summary="@string/biliroaming_player_speaker_boost_summary"
-            android:title="@string/biliroaming_player_speaker_boost_title" />
         <androidx.preference.SwitchPreferenceCompat
             android:key="player_wearable_control"
-            android:summary="@string/biliroaming_player_wearable_control_summary"
-            android:title="@string/biliroaming_player_wearable_control_title" />
         <androidx.preference.SwitchPreferenceCompat
             android:key="player_privacy_mode"
-            android:summary="@string/biliroaming_player_privacy_mode_summary"
-            android:title="@string/biliroaming_player_privacy_mode_title" />
         <androidx.preference.SwitchPreferenceCompat
             android:key="player_focus_mode"
-            android:summary="@string/biliroaming_player_focus_mode_summary"
-            android:title="@string/biliroaming_player_focus_mode_title" />
         <androidx.preference.SwitchPreferenceCompat
             android:key="player_do_not_disturb"
-            android:summary="@string/biliroaming_player_do_not_disturb_summary"
-            android:title="@string/biliroaming_player_do_not_disturb_title" />
         <androidx.preference.SwitchPreferenceCompat
             android:key="player_smartwatch_remote"
-            android:summary="@string/biliroaming_player_smartwatch_remote_summary"
-            android:title="@string/biliroaming_player_smartwatch_remote_title" />
         <androidx.preference.SwitchPreferenceCompat
             android:key="player_dolby_atmos"
-            android:summary="@string/biliroaming_player_dolby_atmos_summary"
-            android:title="@string/biliroaming_player_dolby_atmos_title" />
         <androidx.preference.SwitchPreferenceCompat
             android:key="player_upscale_ai"
             android:summary="@string/biliroaming_player_upscale_ai_summary"

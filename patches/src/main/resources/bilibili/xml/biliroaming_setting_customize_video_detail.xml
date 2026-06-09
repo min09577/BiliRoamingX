@@ -23,7 +23,6 @@
             android:title="@string/biliroaming_disable_story_full_title" />
         <androidx.preference.Preference
             android:fragment="app.revanced.bilibili.settings.fragments.RemoveVideoPopupsFragment"
-            android:key="fragment_remove_video_popups"
             android:title="@string/biliroaming_remove_video_popups_title" />
         <androidx.preference.SwitchPreferenceCompat
             android:key="block_dm_feedback"
@@ -56,11 +55,9 @@
             android:title="@string/biliroaming_old_dm_panel_title" />
         <androidx.preference.Preference
             android:fragment="app.revanced.bilibili.settings.fragments.VideoDetailFilterFragment"
-            android:key="fragment_video_relate"
             android:title="@string/biliroaming_video_relate_title" />
         <androidx.preference.Preference
             android:fragment="app.revanced.bilibili.settings.fragments.FilterStoryFragment"
-            android:key="fragment_filter_story"
             android:title="@string/biliroaming_filter_story_title" />
         <app.revanced.bilibili.widget.RadioGroupEntrancePreference
             android:fragment="app.revanced.bilibili.settings.fragments.StoryUIStyleFragment"
@@ -73,7 +70,6 @@
             app:radioEntryValues="@array/biliroaming_story_ui_style_values" />
         <androidx.preference.Preference
             android:fragment="app.revanced.bilibili.settings.fragments.ExternalDownloaderFragment"
-            android:key="fragment_external_downloader"
             android:title="@string/biliroaming_external_downloader_title" />
     </androidx.preference.PreferenceCategory>
     <androidx.preference.PreferenceCategory
@@ -104,7 +100,6 @@
             android:title="@string/biliroaming_unlock_gif_title" />
         <androidx.preference.Preference
             android:fragment="app.revanced.bilibili.settings.fragments.FilterCommentFragment"
-            android:key="fragment_filter_comment"
             android:title="@string/biliroaming_filter_comment_title" />
         <androidx.preference.SwitchPreferenceCompat
             android:key="comment_filter_level"
@@ -169,7 +164,6 @@
             android:title="@string/biliroaming_no_colorful_danmaku_title" />
         <tv.danmaku.bili.widget.preference.BLRadioGroupEntrancePreference
             android:fragment="app.revanced.bilibili.settings.fragments.FilterDanmakuFragment"
-            android:key="danmaku_filter"
             android:summary="@string/biliroaming_danmaku_filter_summary"
             android:title="@string/biliroaming_danmaku_filter_title" />
         <androidx.preference.SwitchPreferenceCompat
@@ -182,7 +176,6 @@
             android:title="@string/biliroaming_show_av_bv_title" />
         <tv.danmaku.bili.widget.preference.BLRadioGroupEntrancePreference
             android:fragment="app.revanced.bilibili.settings.fragments.DanmakuDisplaySettingsFragment"
-            android:key="danmaku_display"
             android:summary="@string/biliroaming_danmaku_display_summary"
             android:title="@string/biliroaming_danmaku_display_title" />
         <androidx.preference.SwitchPreferenceCompat
@@ -255,8 +248,6 @@
             android:title="@string/biliroaming_video_auto_skip_credits_title" />
         <androidx.preference.SwitchPreferenceCompat
             android:key="video_auto_pause_on_call"
-            android:summary="@string/biliroaming_video_auto_pause_on_call_summary"
-            android:title="@string/biliroaming_video_auto_pause_on_call_title" />
         <androidx.preference.SwitchPreferenceCompat
             android:key="video_chapters_auto_skip"
             android:summary="@string/biliroaming_video_chapters_auto_skip_summary"
@@ -267,8 +258,6 @@
             android:title="@string/biliroaming_video_auto_skip_preview_title" />
         <androidx.preference.SwitchPreferenceCompat
             android:key="video_auto_pause_on_lock"
-            android:summary="@string/biliroaming_video_auto_pause_on_lock_summary"
-            android:title="@string/biliroaming_video_auto_pause_on_lock_title" />
         <androidx.preference.SwitchPreferenceCompat
             android:key="video_smart_pause"
             android:summary="@string/biliroaming_video_smart_pause_summary"
@@ -279,20 +268,14 @@
             android:title="@string/biliroaming_video_auto_skip_ending_title" />
         <EditTextPreference
             android:key="video_auto_pause_on_battery"
-            android:summary="@string/biliroaming_video_auto_pause_on_battery_summary"
-            android:title="@string/biliroaming_video_auto_pause_on_battery_title" />
         <androidx.preference.SwitchPreferenceCompat
             android:key="video_smart_resolution"
-            android:summary="@string/biliroaming_video_smart_resolution_summary"
-            android:title="@string/biliroaming_video_smart_resolution_title" />
         <androidx.preference.SwitchPreferenceCompat
             android:key="video_auto_skip_sponsor"
             android:summary="@string/biliroaming_video_auto_skip_sponsor_summary"
             android:title="@string/biliroaming_video_auto_skip_sponsor_title" />
         <androidx.preference.SwitchPreferenceCompat
             android:key="video_auto_pause_on_headphone"
-            android:summary="@string/biliroaming_video_auto_pause_on_headphone_summary"
-            android:title="@string/biliroaming_video_auto_pause_on_headphone_title" />
         <androidx.preference.SwitchPreferenceCompat
             android:key="video_smart_cache"
             android:summary="@string/biliroaming_video_smart_cache_summary"
@@ -303,56 +286,34 @@
             android:title="@string/biliroaming_video_auto_skip_transition_title" />
         <androidx.preference.SwitchPreferenceCompat
             android:key="video_auto_pause_on_notification"
-            android:summary="@string/biliroaming_video_auto_pause_on_notification_summary"
-            android:title="@string/biliroaming_video_auto_pause_on_notification_title" />
         <androidx.preference.SwitchPreferenceCompat
             android:key="video_smart_buffer"
-            android:summary="@string/biliroaming_video_smart_buffer_summary"
-            android:title="@string/biliroaming_video_smart_buffer_title" />
         <androidx.preference.SwitchPreferenceCompat
             android:key="video_auto_repeat_segment"
             android:summary="@string/biliroaming_video_auto_repeat_segment_summary"
             android:title="@string/biliroaming_video_auto_repeat_segment_title" />
         <androidx.preference.SwitchPreferenceCompat
             android:key="video_smart_quality"
-            android:summary="@string/biliroaming_video_smart_quality_summary"
-            android:title="@string/biliroaming_video_smart_quality_title" />
         <androidx.preference.SwitchPreferenceCompat
             android:key="video_auto_skip_midroll"
             android:summary="@string/biliroaming_video_auto_skip_midroll_summary"
             android:title="@string/biliroaming_video_auto_skip_midroll_title" />
         <androidx.preference.SwitchPreferenceCompat
             android:key="video_auto_pause_on_silence"
-            android:summary="@string/biliroaming_video_auto_pause_on_silence_summary"
-            android:title="@string/biliroaming_video_auto_pause_on_silence_title" />
         <androidx.preference.SwitchPreferenceCompat
             android:key="video_smart_bitrate"
-            android:summary="@string/biliroaming_video_smart_bitrate_summary"
-            android:title="@string/biliroaming_video_smart_bitrate_title" />
         <androidx.preference.SwitchPreferenceCompat
             android:key="video_bandwidth_monitor"
-            android:summary="@string/biliroaming_video_bandwidth_monitor_summary"
-            android:title="@string/biliroaming_video_bandwidth_monitor_title" />
         <androidx.preference.SwitchPreferenceCompat
             android:key="video_network_speed_test"
-            android:summary="@string/biliroaming_video_network_speed_test_summary"
-            android:title="@string/biliroaming_video_network_speed_test_title" />
         <androidx.preference.SwitchPreferenceCompat
             android:key="video_storage_manager"
-            android:summary="@string/biliroaming_video_storage_manager_summary"
-            android:title="@string/biliroaming_video_storage_manager_title" />
         <androidx.preference.SwitchPreferenceCompat
             android:key="video_clipboard_manager"
-            android:summary="@string/biliroaming_video_clipboard_manager_summary"
-            android:title="@string/biliroaming_video_clipboard_manager_title" />
         <androidx.preference.SwitchPreferenceCompat
             android:key="video_profile_quick_view"
-            android:summary="@string/biliroaming_video_profile_quick_view_summary"
-            android:title="@string/biliroaming_video_profile_quick_view_title" />
         <androidx.preference.SwitchPreferenceCompat
             android:key="video_silver_quality"
-            android:summary="@string/biliroaming_video_silver_quality_summary"
-            android:title="@string/biliroaming_video_silver_quality_title" />
         <androidx.preference.SwitchPreferenceCompat
             android:key="video_dlna_mirror"
             android:summary="@string/biliroaming_video_dlna_mirror_summary"
@@ -363,44 +324,26 @@
             android:title="@string/biliroaming_video_wifi_preload_title" />
         <androidx.preference.SwitchPreferenceCompat
             android:key="video_proximity_sensor"
-            android:summary="@string/biliroaming_video_proximity_sensor_summary"
-            android:title="@string/biliroaming_video_proximity_sensor_title" />
         <androidx.preference.SwitchPreferenceCompat
             android:key="video_scanner_mode"
-            android:summary="@string/biliroaming_video_scanner_mode_summary"
-            android:title="@string/biliroaming_video_scanner_mode_title" />
         <androidx.preference.SwitchPreferenceCompat
             android:key="video_desktop_widget"
-            android:summary="@string/biliroaming_video_desktop_widget_summary"
-            android:title="@string/biliroaming_video_desktop_widget_title" />
         <androidx.preference.SwitchPreferenceCompat
             android:key="video_age_gate"
-            android:summary="@string/biliroaming_video_age_gate_summary"
-            android:title="@string/biliroaming_video_age_gate_title" />
         <androidx.preference.SwitchPreferenceCompat
             android:key="video_digital_wellbeing"
-            android:summary="@string/biliroaming_video_digital_wellbeing_summary"
-            android:title="@string/biliroaming_video_digital_wellbeing_title" />
         <androidx.preference.SwitchPreferenceCompat
             android:key="video_priority_mode"
-            android:summary="@string/biliroaming_video_priority_mode_summary"
-            android:title="@string/biliroaming_video_priority_mode_title" />
         <androidx.preference.SwitchPreferenceCompat
             android:key="video_gamepad_control"
-            android:summary="@string/biliroaming_video_gamepad_control_summary"
-            android:title="@string/biliroaming_video_gamepad_control_title" />
         <androidx.preference.SwitchPreferenceCompat
             android:key="video_hdr10_enhance"
             android:summary="@string/biliroaming_video_hdr10_enhance_summary"
             android:title="@string/biliroaming_video_hdr10_enhance_title" />
         <androidx.preference.SwitchPreferenceCompat
             android:key="video_super_resolution"
-            android:summary="@string/biliroaming_video_super_resolution_summary"
-            android:title="@string/biliroaming_video_super_resolution_title" />
         <androidx.preference.SwitchPreferenceCompat
             android:key="video_barcode_scanner"
-            android:summary="@string/biliroaming_video_barcode_scanner_summary"
-            android:title="@string/biliroaming_video_barcode_scanner_title" />
         <androidx.preference.SwitchPreferenceCompat
         <androidx.preference.SwitchPreferenceCompat
             android:key="video_webrtc_live"
@@ -419,8 +362,6 @@
         <androidx.preference.SwitchPreferenceCompat
         <androidx.preference.SwitchPreferenceCompat
             android:key="video_share_target"
-            android:summary="@string/biliroaming_video_share_target_summary"
-            android:title="@string/biliroaming_video_share_target_title" />
         <androidx.preference.SwitchPreferenceCompat
         <androidx.preference.SwitchPreferenceCompat
         <androidx.preference.SwitchPreferenceCompat
