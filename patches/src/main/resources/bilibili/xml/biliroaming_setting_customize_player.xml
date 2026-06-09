@@ -660,5 +660,21 @@
             android:key="player_web_transport"
             android:summary="@string/biliroaming_player_web_transport_summary"
             android:title="@string/biliroaming_player_web_transport_title" />
+        <androidx.preference.SwitchPreferenceCompat
+            android:key="player_hologram_display"
+            android:summary="@string/biliroaming_player_hologram_display_summary"
+            android:title="@string/biliroaming_player_hologram_display_title" />
+        <androidx.preference.SwitchPreferenceCompat
+            android:key="player_ray_tracing"
+            android:summary="@string/biliroaming_player_ray_tracing_summary"
+            android:title="@string/biliroaming_player_ray_tracing_title" />
+        <androidx.preference.SwitchPreferenceCompat
+            android:key="player_volumetric_fog"
+            android:summary="@string/biliroaming_player_volumetric_fog_summary"
+            android:title="@string/biliroaming_player_volumetric_fog_title" />
+        <androidx.preference.SwitchPreferenceCompat
+            android:key="player_mandelbrot_effect"
+            android:summary="@string/biliroaming_player_mandelbrot_effect_summary"
+            android:title="@string/biliroaming_player_mandelbrot_effect_title" />
     </androidx.preference.PreferenceCategory>
 </androidx.preference.PreferenceScreen>

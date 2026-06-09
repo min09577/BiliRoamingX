@@ -256,5 +256,21 @@
             android:key="comment_web_codecs"
             android:summary="@string/biliroaming_comment_web_codecs_summary"
             android:title="@string/biliroaming_comment_web_codecs_title" />
+        <androidx.preference.SwitchPreferenceCompat
+            android:key="comment_digital_twin"
+            android:summary="@string/biliroaming_comment_digital_twin_summary"
+            android:title="@string/biliroaming_comment_digital_twin_title" />
+        <androidx.preference.SwitchPreferenceCompat
+            android:key="comment_particle_effects"
+            android:summary="@string/biliroaming_comment_particle_effects_summary"
+            android:title="@string/biliroaming_comment_particle_effects_title" />
+        <androidx.preference.SwitchPreferenceCompat
+            android:key="comment_noise_filter"
+            android:summary="@string/biliroaming_comment_noise_filter_summary"
+            android:title="@string/biliroaming_comment_noise_filter_title" />
+        <androidx.preference.SwitchPreferenceCompat
+            android:key="comment_swarm_intelligence"
+            android:summary="@string/biliroaming_comment_swarm_intelligence_summary"
+            android:title="@string/biliroaming_comment_swarm_intelligence_title" />
     </androidx.preference.PreferenceCategory>
 </androidx.preference.PreferenceScreen>

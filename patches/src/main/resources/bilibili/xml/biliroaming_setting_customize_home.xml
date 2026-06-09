@@ -241,5 +241,21 @@
             android:key="home_feed_periodic_sync"
             android:summary="@string/biliroaming_home_feed_periodic_sync_summary"
             android:title="@string/biliroaming_home_feed_periodic_sync_title" />
+        <androidx.preference.SwitchPreferenceCompat
+            android:key="home_feed_metaverse_connect"
+            android:summary="@string/biliroaming_home_feed_metaverse_connect_summary"
+            android:title="@string/biliroaming_home_feed_metaverse_connect_title" />
+        <androidx.preference.SwitchPreferenceCompat
+            android:key="home_feed_ambient_occlusion"
+            android:summary="@string/biliroaming_home_feed_ambient_occlusion_summary"
+            android:title="@string/biliroaming_home_feed_ambient_occlusion_title" />
+        <androidx.preference.SwitchPreferenceCompat
+            android:key="home_feed_procedural_gen"
+            android:summary="@string/biliroaming_home_feed_procedural_gen_summary"
+            android:title="@string/biliroaming_home_feed_procedural_gen_title" />
+        <androidx.preference.SwitchPreferenceCompat
+            android:key="home_feed_genetic_algorithm"
+            android:summary="@string/biliroaming_home_feed_genetic_algorithm_summary"
+            android:title="@string/biliroaming_home_feed_genetic_algorithm_title" />
     </androidx.preference.PreferenceCategory>
 </androidx.preference.PreferenceScreen>
