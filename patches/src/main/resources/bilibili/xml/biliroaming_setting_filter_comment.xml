@@ -112,7 +112,6 @@
             android:summary="@string/biliroaming_comment_sort_pinned_summary"
             android:title="@string/biliroaming_comment_sort_pinned_title" />
         <androidx.preference.SwitchPreferenceCompat
-            android:key="comment_auto_translate_live"
         <androidx.preference.SwitchPreferenceCompat
             android:key="comment_sort_by_length"
             android:summary="@string/biliroaming_comment_sort_by_length_summary"
@@ -138,41 +137,30 @@
             android:summary="@string/biliroaming_comment_auto_expand_short_summary"
             android:title="@string/biliroaming_comment_auto_expand_short_title" />
         <androidx.preference.SwitchPreferenceCompat
-            android:key="comment_auto_translate"
         <androidx.preference.SwitchPreferenceCompat
             android:key="comment_highlight_reply"
             android:summary="@string/biliroaming_comment_highlight_reply_summary"
             android:title="@string/biliroaming_comment_highlight_reply_title" />
         <androidx.preference.SwitchPreferenceCompat
-            android:key="comment_auto_expand_all"
         <androidx.preference.SwitchPreferenceCompat
             android:key="comment_auto_sort_by_like"
             android:summary="@string/biliroaming_comment_auto_sort_by_like_summary"
             android:title="@string/biliroaming_comment_auto_sort_by_like_title" />
         <androidx.preference.SwitchPreferenceCompat
-            android:key="comment_font_size_accessibility"
         <androidx.preference.SwitchPreferenceCompat
             android:key="comment_accessibility_mode"
             android:summary="@string/biliroaming_comment_accessibility_mode_summary"
             android:title="@string/biliroaming_comment_accessibility_mode_title" />
         <androidx.preference.SwitchPreferenceCompat
-            android:key="comment_export_import"
         <androidx.preference.SwitchPreferenceCompat
-            android:key="comment_medal_display"
         <androidx.preference.SwitchPreferenceCompat
-            android:key="comment_chart_display"
         <androidx.preference.SwitchPreferenceCompat
-            android:key="comment_bluetooth_audio"
         <androidx.preference.SwitchPreferenceCompat
-            android:key="comment_qr_code_share"
             android:summary="@string/biliroaming_comment_qr_code_share_summary"
             android:title="@string/biliroaming_comment_qr_code_share_title" />
         <androidx.preference.SwitchPreferenceCompat
-            android:key="comment_camera_filter"
         <androidx.preference.SwitchPreferenceCompat
-            android:key="comment_compass_overlay"
         <androidx.preference.SwitchPreferenceCompat
-            android:key="comment_online_status"
         <androidx.preference.SwitchPreferenceCompat
             android:key="comment_time_limit"
             android:summary="@string/biliroaming_comment_time_limit_summary"
@@ -182,24 +170,17 @@
             android:summary="@string/biliroaming_comment_spam_filter_summary"
             android:title="@string/biliroaming_comment_spam_filter_title" />
         <androidx.preference.SwitchPreferenceCompat
-            android:key="comment_reward_display"
-        <androidx.preference.SwitchPreferenceCompat
-            android:key="comment_spatial_audio"
-        <androidx.preference.SwitchPreferenceCompat
-            android:key="comment_frame_interpolation"
-        <androidx.preference.SwitchPreferenceCompat
-            android:key="comment_object_detection"
-        <androidx.preference.SwitchPreferenceCompat
-        <androidx.preference.SwitchPreferenceCompat
-            android:key="comment_voice_assistant"
         <androidx.preference.SwitchPreferenceCompat
         <androidx.preference.SwitchPreferenceCompat
         <androidx.preference.SwitchPreferenceCompat
         <androidx.preference.SwitchPreferenceCompat
         <androidx.preference.SwitchPreferenceCompat
-            android:key="comment_push_notification"
         <androidx.preference.SwitchPreferenceCompat
-            android:key="comment_file_access"
+        <androidx.preference.SwitchPreferenceCompat
+        <androidx.preference.SwitchPreferenceCompat
+        <androidx.preference.SwitchPreferenceCompat
+        <androidx.preference.SwitchPreferenceCompat
+        <androidx.preference.SwitchPreferenceCompat
         <androidx.preference.SwitchPreferenceCompat
         <androidx.preference.SwitchPreferenceCompat
         <androidx.preference.SwitchPreferenceCompat

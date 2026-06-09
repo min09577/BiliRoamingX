@@ -32,7 +32,6 @@
             android:summary="@string/biliroaming_search_auto_correct_summary"
             android:title="@string/biliroaming_search_auto_correct_title" />
         <androidx.preference.SwitchPreferenceCompat
-            android:key="search_auto_suggest"
         <androidx.preference.SwitchPreferenceCompat
             android:key="search_history_clear"
             android:summary="@string/biliroaming_search_history_clear_summary"
@@ -42,16 +41,10 @@
             android:summary="@string/biliroaming_search_auto_filter_summary"
             android:title="@string/biliroaming_search_auto_filter_title" />
         <EditTextPreference
-            android:key="search_auto_suggest_limit"
         <androidx.preference.SwitchPreferenceCompat
-            android:key="search_auto_complete_history"
         <androidx.preference.SwitchPreferenceCompat
-            android:key="search_auto_complete_trending"
         <androidx.preference.SwitchPreferenceCompat
-            android:key="search_auto_complete_suggest"
         <androidx.preference.SwitchPreferenceCompat
-            android:key="search_accessibility_mode"
         <androidx.preference.SwitchPreferenceCompat
-            android:key="search_statistics_panel"
     </androidx.preference.PreferenceCategory>
 </androidx.preference.PreferenceScreen>

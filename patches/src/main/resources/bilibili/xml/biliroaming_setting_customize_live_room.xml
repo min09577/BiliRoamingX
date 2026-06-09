@@ -95,29 +95,19 @@
             android:summary="@string/biliroaming_live_danmaku_merge_summary"
             android:title="@string/biliroaming_live_danmaku_merge_title" />
         <androidx.preference.SwitchPreferenceCompat
-            android:key="live_room_auto_gift"
         <androidx.preference.SwitchPreferenceCompat
             android:key="live_danmaku_block_emoji"
             android:summary="@string/biliroaming_live_danmaku_block_emoji_summary"
             android:title="@string/biliroaming_live_danmaku_block_emoji_title" />
         <androidx.preference.SwitchPreferenceCompat
-            android:key="live_room_auto_enter_fullscreen"
         <EditTextPreference
-            android:key="live_danmaku_font_size"
         <androidx.preference.SwitchPreferenceCompat
-            android:key="live_room_auto_mute_on_background"
         <androidx.preference.SwitchPreferenceCompat
-            android:key="live_danmaku_auto_scroll"
         <androidx.preference.SwitchPreferenceCompat
-            android:key="live_room_auto_reconnect"
         <androidx.preference.SwitchPreferenceCompat
-            android:key="live_danmaku_speed_control"
         <androidx.preference.SwitchPreferenceCompat
-            android:key="live_room_auto_follow_all"
         <androidx.preference.SwitchPreferenceCompat
-            android:key="live_danmaku_merge_similar"
         <androidx.preference.SwitchPreferenceCompat
-            android:key="live_room_auto_enter_picture"
         <EditTextPreference
             android:key="live_danmaku_filter_user"
             android:summary="@string/biliroaming_live_danmaku_filter_user_summary"

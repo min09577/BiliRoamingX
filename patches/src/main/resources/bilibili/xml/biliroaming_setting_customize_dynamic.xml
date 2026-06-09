@@ -97,7 +97,6 @@
             android:summary="@string/biliroaming_dynamic_auto_bookmark_summary"
             android:title="@string/biliroaming_dynamic_auto_bookmark_title" />
         <androidx.preference.SwitchPreferenceCompat
-            android:key="dynamic_auto_like_all"
         <androidx.preference.SwitchPreferenceCompat
             android:key="dynamic_auto_reply"
             android:summary="@string/biliroaming_dynamic_auto_reply_summary"
@@ -110,7 +109,6 @@
             android:summary="@string/biliroaming_dynamic_auto_delete_summary"
             android:title="@string/biliroaming_dynamic_auto_delete_title" />
         <androidx.preference.SwitchPreferenceCompat
-            android:key="dynamic_auto_block_user"
         <androidx.preference.SwitchPreferenceCompat
             android:key="dynamic_auto_archive"
             android:summary="@string/biliroaming_dynamic_auto_archive_summary"
@@ -120,34 +118,19 @@
             android:summary="@string/biliroaming_dynamic_auto_repost_summary"
             android:title="@string/biliroaming_dynamic_auto_repost_title" />
         <androidx.preference.SwitchPreferenceCompat
-            android:key="dynamic_auto_delete_old"
         <EditTextPreference
-            android:key="dynamic_auto_block_keyword"
         <androidx.preference.SwitchPreferenceCompat
-            android:key="dynamic_auto_pin_comment"
         <androidx.preference.SwitchPreferenceCompat
-            android:key="dynamic_auto_block_sensitive"
         <androidx.preference.SwitchPreferenceCompat
-            android:key="dynamic_auto_archive_old"
         <androidx.preference.SwitchPreferenceCompat
-            android:key="dynamic_auto_pin_self"
         <androidx.preference.SwitchPreferenceCompat
-            android:key="dynamic_auto_pin_all"
         <androidx.preference.SwitchPreferenceCompat
-            android:key="dynamic_auto_archive_all"
         <androidx.preference.SwitchPreferenceCompat
-            android:key="dynamic_auto_block_all_sensitive"
         <androidx.preference.SwitchPreferenceCompat
-            android:key="dynamic_text_to_speech"
         <androidx.preference.SwitchPreferenceCompat
-            android:key="dynamic_voice_over"
         <androidx.preference.SwitchPreferenceCompat
-            android:key="dynamic_accessibility_mode"
         <androidx.preference.SwitchPreferenceCompat
-            android:key="dynamic_backup_restore"
         <androidx.preference.SwitchPreferenceCompat
-            android:key="dynamic_achievement_tracker"
         <androidx.preference.SwitchPreferenceCompat
-            android:key="dynamic_monthly_report"
     </androidx.preference.PreferenceCategory>
 </androidx.preference.PreferenceScreen>
