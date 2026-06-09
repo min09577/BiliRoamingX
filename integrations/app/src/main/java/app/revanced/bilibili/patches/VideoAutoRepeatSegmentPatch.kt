@@ -4,4 +4,5 @@ import app.revanced.bilibili.settings.Settings
 @Keep
 object VideoAutoRepeatSegmentPatch {
     @JvmStatic fun isEnabled(): Boolean = Settings.VideoAutoRepeatSegment.get()
+    @JvmStatic fun shouldRepeat(): Boolean = isEnabled()
 }

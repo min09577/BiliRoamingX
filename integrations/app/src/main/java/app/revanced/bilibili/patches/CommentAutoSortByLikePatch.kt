@@ -4,4 +4,5 @@ import app.revanced.bilibili.settings.Settings
 @Keep
 object CommentAutoSortByLikePatch {
     @JvmStatic fun isEnabled(): Boolean = Settings.CommentAutoSortByLike.get()
+    @JvmStatic fun getSortType(): Int = if (isEnabled()) 2 else 0
 }

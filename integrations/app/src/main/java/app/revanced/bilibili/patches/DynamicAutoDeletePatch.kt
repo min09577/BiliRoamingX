@@ -4,6 +4,5 @@ import app.revanced.bilibili.settings.Settings
 @Keep
 object DynamicAutoDeletePatch {
     @JvmStatic fun isEnabled(): Boolean = Settings.DynamicAutoDelete.get()
-    private const val EXPIRE_DAYS = 30
-    @JvmStatic fun shouldDelete(daysOld: Int): Boolean = isEnabled() && daysOld > EXPIRE_DAYS
+    @JvmStatic fun shouldAutoDelete(): Boolean = isEnabled()
 }

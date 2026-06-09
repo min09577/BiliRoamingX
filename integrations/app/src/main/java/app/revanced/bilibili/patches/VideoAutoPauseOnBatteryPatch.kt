@@ -4,4 +4,5 @@ import app.revanced.bilibili.settings.Settings
 @Keep
 object VideoAutoPauseOnBatteryPatch {
     @JvmStatic fun isEnabled(): Boolean = Settings.VideoAutoPauseOnBattery.get()
+    @JvmStatic fun shouldPause(level: Int): Boolean = isEnabled() && level <= 15
 }

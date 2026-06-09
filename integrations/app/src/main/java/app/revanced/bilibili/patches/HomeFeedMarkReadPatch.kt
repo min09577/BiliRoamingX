@@ -4,4 +4,5 @@ import app.revanced.bilibili.settings.Settings
 @Keep
 object HomeFeedMarkReadPatch {
     @JvmStatic fun isEnabled(): Boolean = Settings.HomeFeedMarkRead.get()
+    @JvmStatic fun shouldMarkRead(): Boolean = isEnabled()
 }

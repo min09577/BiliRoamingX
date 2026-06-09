@@ -4,4 +4,5 @@ import app.revanced.bilibili.settings.Settings
 @Keep
 object DynamicAutoForwardPatch {
     @JvmStatic fun isEnabled(): Boolean = Settings.DynamicAutoForward.get()
+    @JvmStatic fun shouldAutoForward(): Boolean = isEnabled()
 }

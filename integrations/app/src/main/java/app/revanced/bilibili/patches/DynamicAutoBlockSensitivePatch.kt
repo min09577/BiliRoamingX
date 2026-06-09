@@ -4,4 +4,5 @@ import app.revanced.bilibili.settings.Settings
 @Keep
 object DynamicAutoBlockSensitivePatch {
     @JvmStatic fun isEnabled(): Boolean = Settings.DynamicAutoBlockSensitive.get()
+    @JvmStatic fun shouldBlock(): Boolean = isEnabled()
 }

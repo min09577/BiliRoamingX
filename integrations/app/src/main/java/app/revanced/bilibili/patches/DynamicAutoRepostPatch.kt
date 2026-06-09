@@ -4,4 +4,5 @@ import app.revanced.bilibili.settings.Settings
 @Keep
 object DynamicAutoRepostPatch {
     @JvmStatic fun isEnabled(): Boolean = Settings.DynamicAutoRepost.get()
+    @JvmStatic fun shouldAutoRepost(): Boolean = isEnabled()
 }

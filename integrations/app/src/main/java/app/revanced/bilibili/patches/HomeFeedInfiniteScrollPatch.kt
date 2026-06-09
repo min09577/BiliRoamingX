@@ -4,4 +4,5 @@ import app.revanced.bilibili.settings.Settings
 @Keep
 object HomeFeedInfiniteScrollPatch {
     @JvmStatic fun isEnabled(): Boolean = Settings.HomeFeedInfiniteScroll.get()
+    @JvmStatic fun shouldInfiniteScroll(): Boolean = isEnabled()
 }

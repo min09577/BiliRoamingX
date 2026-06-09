@@ -4,4 +4,5 @@ import app.revanced.bilibili.settings.Settings
 @Keep
 object PlayerBrightnessAutoPatch {
     @JvmStatic fun isEnabled(): Boolean = Settings.PlayerBrightnessAuto.get()
+    @JvmStatic fun shouldAutoBrightness(): Boolean = isEnabled()
 }

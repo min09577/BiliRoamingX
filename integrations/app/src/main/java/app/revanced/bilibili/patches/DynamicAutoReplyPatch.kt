@@ -4,4 +4,5 @@ import app.revanced.bilibili.settings.Settings
 @Keep
 object DynamicAutoReplyPatch {
     @JvmStatic fun isEnabled(): Boolean = Settings.DynamicAutoReply.get()
+    @JvmStatic fun shouldAutoReply(): Boolean = isEnabled()
 }

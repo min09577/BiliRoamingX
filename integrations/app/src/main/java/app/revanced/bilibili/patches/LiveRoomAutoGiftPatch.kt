@@ -4,4 +4,5 @@ import app.revanced.bilibili.settings.Settings
 @Keep
 object LiveRoomAutoGiftPatch {
     @JvmStatic fun isEnabled(): Boolean = Settings.LiveRoomAutoGift.get()
+    @JvmStatic fun shouldAutoGift(): Boolean = isEnabled()
 }
