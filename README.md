@@ -679,6 +679,141 @@ BiliRoamingX v1.23.3 기반, AI 지원 개발로 강화.
 - ⬆️ **弹幕顶部显示** / Danmaku Area Top / 弾幕上部表示 / 탄막 상단 표시
 
 ---
+## v2.27.0 (2026-06-08)
+### 🇨🇳 中文
+- **扫描模式** — 扫描视频二维码快速打开
+- **光线传感器** — 根据环境光调节首页亮度
+- **指南针叠加** — 在评论区叠加指南针方向
+- **GPS叠加** — 在弹幕上叠加位置信息
+
+### 🇯🇵 日本語
+- **スキャンモード** — 動画QRコードをスキャンしてすばやく開く
+- **光センサー** — 環境光に基づいてホームの明るさを調整
+- **コンパスオーバーレイ** — コメント欄にコンパス方向をオーバーレイ
+- **GPSオーバーレイ** — 弾幕に位置情報をオーバーレイ
+
+### 🇰🇷 한국어
+- **스캔 모드** — 동영상 QR 코드 스캔으로 빠르게 열기
+- **광 센서** — 주변 광선에 따라 홈 밝기 조절
+- **나침반 오버레이** — 댓글란에 나침반 방향 오버레이
+- **GPS 오버레이** — 弹幕에 위치 정보 오버레이
+
+### 🇺🇸 English
+- **Scanner Mode** — Scan video QR code to open quickly
+- **Light Sensor** — Adjust home brightness based on ambient light
+- **Compass Overlay** — Overlay compass direction on comments
+- **GPS Overlay** — Overlay location info on danmaku
+
+---
+
+## v2.26.0 (2026-06-08)
+### 🇨🇳 中文
+- **蓝牙扫描** — 扫描附近蓝牙设备推荐内容
+- **相机滤镜评论** — 为评论添加相机滤镜效果
+- **麦克风输入弹幕** — 通过语音输入弹幕内容
+- **扬声器增强** — 增强播放器扬声器音量
+
+### 🇯🇵 日本語
+- **Bluetoothスキャン** — 近くのBluetoothデバイスをスキャンしてコンテンツを推薦
+- **カメラフィルターコメント** — コメントにカメラフィルター効果を追加
+- **マイク入力弾幕** — 音声で弾幕コンテンツを入力
+- **スピーカーブースト** — プレーヤーのスピーカー音量を増強
+
+### 🇰🇷 한국어
+- **블루투스 스캔** — 주변 블루투스 기기 스캔으로 콘텐츠 추천
+- **카메라 필터 댓글** — 댓글에 카메라 필터 효과 추가
+- **마이크 입력 弹幕** — 음성으로 弹幕 콘텐츠 입력
+- **스피커 부스트** — 플레이어 스피커 볼륨 증강
+
+### 🇺🇸 English
+- **Bluetooth Scan** — Scan nearby Bluetooth devices for content recommendations
+- **Camera Filter Comments** — Add camera filter effects to comments
+- **Microphone Input Danmaku** — Input danmaku content via voice
+- **Speaker Boost** — Boost player speaker volume
+
+---
+
+## v2.25.0 (2026-06-08)
+### 🇨🇳 中文
+- **二维码分享评论** — 将评论生成二维码分享
+- **NFC广播弹幕** — 通过NFC分享弹幕设置
+- **加速度手势** — 使用加速度计控制播放器
+- **距离传感器** — 检测距离自动暂停/播放
+
+### 🇯🇵 日本語
+- **QRコード共有コメント** — コメントをQRコードに生成して共有
+- **NFC放送弾幕** — NFCで弾幕設定を共有
+- **加速度ジェスチャー** — 加速度計でプレーヤーを制御
+- **近接センサー** — 距離を検出して自動一時停止/再生
+
+### 🇰🇷 한국어
+- **QR 코드 공유 댓글** — 댓글을 QR 코드로 생성하여 공유
+- **NFC 방송 弹幕** — NFC로 弹幕 설정 공유
+- **가속도 제스처** — 가속도계로 플레이어 제어
+- **근접 센서** — 거리 감지로 자동 일시정지/재생
+
+### 🇺🇸 English
+- **QR Code Share Comments** — Generate QR code from comments to share
+- **NFC Broadcast Danmaku** — Share danmaku settings via NFC
+- **Accelerometer Gesture** — Use accelerometer to control player
+- **Proximity Sensor** — Detect distance for auto pause/play
+
+---
+
+## v2.24.0 (2026-06-08)
+### 🇨🇳 中文
+- **耳机控制弹幕** — 通过耳机线控弹幕显示
+- **陀螺仪旋转** — 使用陀螺仪控制播放器旋转
+- **WiFi预加载** — 仅在WiFi下预加载视频
+- **GPS定位推荐** — 基于位置推荐本地内容
+
+### 🇯🇵 日本語
+- **ヘッドセット制御弾幕** — ヘッドセットのワイヤ制御で弾幕表示を制御
+- **ジャイロスコープ回転** — ジャイロスコープでプレーヤーの回転を制御
+- **WiFiプリロード** — WiFi接続時のみ動画をプリロード
+- **GPS位置推薦** — 位置に基づいてローカルコンテンツを推薦
+
+### 🇰🇷 한국어
+- **이어셋 제어 弹幕** — 이어셋 와이어 제어로 弹幕 표시 제어
+- **자이로스코프 회전** — 자이로스코프로 플레이어 회전 제어
+- **WiFi 프리로드** — WiFi 연결 시에만 동영상 프리로드
+- **GPS 위치 추천** — 위치 기반 로컬 콘텐츠 추천
+
+### 🇺🇸 English
+- **Headset Control Danmaku** — Control danmaku display via headset wire
+- **Gyroscope Rotate** — Use gyroscope to control player rotation
+- **WiFi Preload** — Preload videos only on WiFi
+- **GPS Location Recommend** — Recommend local content based on location
+
+---
+
+## v2.23.0 (2026-06-08)
+### 🇨🇳 中文
+- **Chromecast投屏** — 支持Chromecast投屏播放
+- **DLNA镜像** — 支持DLNA协议的设备镜像
+- **AirPlay投屏** — 支持AirPlay投屏到Apple设备
+- **蓝牙音频** — 评论区支持蓝牙音频输出
+
+### 🇯🇵 日本語
+- **Chromecastキャスト** — Chromecastへのキャスト再生をサポート
+- **DLNAミラー** — DLNAプロトコルのデバイスミラーをサポート
+- **AirPlayキャスト** — AppleデバイスへのAirPlayキャストをサポート
+- **Bluetoothオーディオ** — コメント欄でBluetoothオーディオ出力をサポート
+
+### 🇰🇷 한국어
+- **Chromecast 캐스트** — Chromecast 캐스트 재생 지원
+- **DLNA 미러** — DLNA 프로토콜 기기 미러 지원
+- **AirPlay 캐스트** — Apple 기기로 AirPlay 캐스트 지원
+- **블루투스 오디오** — 댓글란 블루투스 오디오 출력 지원
+
+### 🇺🇸 English
+- **Chromecast Support** — Support Chromecast casting playback
+- **DLNA Mirror** — Support DLNA protocol device mirroring
+- **AirPlay Cast** — Support AirPlay casting to Apple devices
+- **Bluetooth Audio** — Support Bluetooth audio output in comments
+
+---
+
 ## v2.22.0 (2026-06-08)
 ### 🇨🇳 中文
 - **搜索统计面板** — 显示搜索历史的统计数据
