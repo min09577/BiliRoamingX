@@ -679,6 +679,141 @@ BiliRoamingX v1.23.3 기반, AI 지원 개발로 강화.
 - ⬆️ **弹幕顶部显示** / Danmaku Area Top / 弾幕上部表示 / 탄막 상단 표시
 
 ---
+## v2.42.0 (2026-06-08)
+### 🇨🇳 中文
+- **SRT协议** — 支持SRT安全可靠传输协议
+- **NDI广播** — 首页支持NDI网络设备接口广播
+- **ONNX推理** — 使用ONNX运行时进行评论推理
+- **Matter连接** — 弹幕支持Matter智能家居协议
+
+### 🇯🇵 日本語
+- **SRTプロトコル** — SRT安全可靠トランスポートプロトコルをサポート
+- **NDI放送** — ホームでNDIネットワークデバイスインターフェース放送をサポート
+- **ONNX推論** — ONNXランタイムでコメント推論を実行
+- **Matter接続** — 弾幕でMatterスマートホームプロトコルをサポート
+
+### 🇰🇷 한국어
+- **SRT 프로토콜** — SRT 안전 신뢰 전송 프로토콜 지원
+- **NDI 방송** — 홈 NDI 네트워크 장치 인터페이스 방송 지원
+- **ONNX 추론** — ONNX 런타임으로 댓글 추론 실행
+- **Matter 연결** — 弹幕 Matter 스마트홈 프로토콜 지원
+
+### 🇺🇸 English
+- **SRT Protocol** — Support SRT Secure Reliable Transport protocol
+- **NDI Broadcast** — Support NDI Network Device Interface broadcast on home
+- **ONNX Inference** — Run comment inference with ONNX runtime
+- **Matter Connect** — Support Matter smart home protocol for danmaku
+
+---
+
+## v2.41.0 (2026-06-08)
+### 🇨🇳 中文
+- **CDN优化** — 首页启用CDN智能优化
+- **AI机器人评论** — AI机器人自动回复评论
+- **TensorFlow增强** — 使用TensorFlow增强弹幕体验
+- **RTSP流** — 支持RTSP协议流媒体播放
+
+### 🇯🇵 日本語
+- **CDN最適化** — ホームでCDNスマート最適化を有効化
+- **AIボットコメント** — AIボットが自動でコメントに返信
+- **TensorFlowエンハンス** — TensorFlowで弾幕体験を強化
+- **RTSPストリーム** — RTSPプロトコルのストリーミング再生をサポート
+
+### 🇰🇷 한국어
+- **CDN 최적화** — 홈 CDN 스마트 최적화 활성화
+- **AI 봇 댓글** — AI 봇 자동 댓글 답변
+- **TensorFlow 강화** — TensorFlow로 弹幕 경험 강화
+- **RTSP 스트림** — RTSP 프로토콜 스트리밍 재생 지원
+
+### 🇺🇸 English
+- **CDN Optimize** — Enable CDN smart optimization on home
+- **AI Bot Comments** — AI bot auto-reply to comments
+- **TensorFlow Enhance** — Enhance danmaku experience with TensorFlow
+- **RTSP Stream** — Support RTSP protocol streaming playback
+
+---
+
+## v2.40.0 (2026-06-08)
+### 🇨🇳 中文
+- **机器学习评论** — 使用机器学习优化评论排序
+- **深度学习过滤** — 使用深度学习过滤低质量弹幕
+- **神经网络超分** — 使用神经网络进行视频超分辨率
+- **P2P分享** — 支持P2P协议分享视频
+
+### 🇯🇵 日本語
+- **機械学習コメント** — 機械学習でコメントソートを最適化
+- **深層学習フィルター** — 深層学習で低品質弾幕をフィルタリング
+- **ニューラルネットワーク超解像度** — ニューラルネットワークで動画の超解像度を実現
+- **P2P共有** — P2Pプロトコルで動画共有をサポート
+
+### 🇰🇷 한국어
+- **기계 학습 댓글** — 기계 학습으로 댓글 정렬 최적화
+- **딥러닝 필터** — 딥러닝으로 저품질 弹幕 필터링
+- **신경망 초해상도** — 신경망으로 동영상 초해상도 구현
+- **P2P 공유** — P2P 프로토콜 동영상 공유 지원
+
+### 🇺🇸 English
+- **Machine Learning Comments** — Optimize comment sorting with ML
+- **Deep Learning Filter** — Filter low-quality danmaku with deep learning
+- **Neural Upscale** — Video super resolution with neural networks
+- **P2P Sharing** — Support P2P protocol for video sharing
+
+---
+
+## v2.39.0 (2026-06-08)
+### 🇨🇳 中文
+- **弹幕聊天机器人** — AI聊天机器人自动回复弹幕
+- **边缘计算** — 播放器启用边缘计算加速
+- **WebRTC直播** — 支持WebRTC协议实时直播
+- **HLS流媒体** — 首页启用HLS流媒体播放
+
+### 🇯🇵 日本語
+- **弾幕チャットボット** — AIチャットボットが弾幕に自動返信
+- **エッジコンピューティング** — プレーヤーでエッジコンピューティング加速を有効化
+- **WebRTCライブ** — WebRTCプロトコルのリアルタイムライブをサポート
+- **HLSストリーミング** — ホームでHLSストリーミング再生を有効化
+
+### 🇰🇷 한국어
+- **弹幕 챗봇** — AI 챗봇 자동 弹幕 답변
+- **엣지 컴퓨팅** — 플레이어 엣지 컴퓨팅 가속 활성화
+- **WebRTC 라이브** — WebRTC 프로토콜 실시간 라이브 지원
+- **HLS 스트리밍** — 홈 HLS 스트리밍 재생 활성화
+
+### 🇺🇸 English
+- **Danmaku Chatbot** — AI chatbot auto-reply to danmaku
+- **Edge Computing** — Enable edge computing acceleration on player
+- **WebRTC Live** — Support WebRTC protocol real-time live streaming
+- **HLS Stream** — Enable HLS streaming playback on home
+
+---
+
+## v2.38.0 (2026-06-08)
+### 🇨🇳 中文
+- **地理围栏触发** — 根据地理位置自动触发播放器操作
+- **信标检测** — 检测附近的视频信标信号
+- **智能家居连接** — 首页支持智能家居设备连接
+- **语音助手评论** — 通过语音助手发送评论
+
+### 🇯🇵 日本語
+- **ジオフェンストリガー** — 地理的位置に基づいてプレーヤー操作を自動トリガー
+- **ビーコン検出** — 近くの動画ビーコン信号を検出
+- **スマートホーム接続** — ホームでスマートホームデバイス接続をサポート
+- **音声アシスタントコメント** — 音声アシスタントでコメントを送信
+
+### 🇰🇷 한국어
+- **지오펜스 트리거** — 지리적 위치에 따라 플레이어 작업 자동 트리거
+- **비콘 감지** — 주변 동영상 비콘 신호 감지
+- **스마트홈 연결** — 홈 스마트홈 기기 연결 지원
+- **음성 어시스턴트 댓글** — 음성 어시스턴트로 댓글 전송
+
+### 🇺🇸 English
+- **Geofence Trigger** — Auto-trigger player actions by geolocation
+- **Beacon Detect** — Detect nearby video beacon signals
+- **Smart Home Connect** — Support smart home device connection on home
+- **Voice Assistant Comments** — Send comments via voice assistant
+
+---
+
 ## v2.37.0 (2026-06-08)
 ### 🇨🇳 中文
 - **条形码扫描** — 扫描视频中的条形码获取信息
