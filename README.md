@@ -679,6 +679,141 @@ BiliRoamingX v1.23.3 기반, AI 지원 개발로 강화.
 - ⬆️ **弹幕顶部显示** / Danmaku Area Top / 弾幕上部表示 / 탄막 상단 표시
 
 ---
+## v2.52.0 (2026-06-08)
+### 🇨🇳 中文
+- **L系统渲染** — 视频使用L系统算法渲染
+- **遗传算法** — 首页使用遗传算法优化推荐
+- **群体智能评论** — 评论区使用群体智能算法
+- **蚁群算法弹幕** — 弹幕使用蚁群算法优化路径
+
+### 🇯🇵 日本語
+- **Lシステムレンダリング** — 動画がLシステムアルゴリズムでレンダリング
+- **遺伝的アルゴリズム** — ホームが遺伝的アルゴリズムで推薦を最適化
+- **群知能コメント** — コメント欄が群知能アルゴリズムを使用
+- **アリコロニーアルゴリズム弾幕** — 弾幕がアリコロニーアルゴリズムでパスを最適化
+
+### 🇰🇷 한국어
+- **L시스템 렌더링** — 동영상이 L시스템 알고리즘으로 렌더링
+- **유전 알고리즘** — 홈이 유전 알고리즘으로 추천 최적화
+- **군집 지능 댓글** — 댓글란이 군집 지능 알고리즘 사용
+- **개미 군집 알고리즘 弹幕** — 弹幕이 개미 군집 알고리즘으로 경로 최적화
+
+### 🇺🇸 English
+- **L-System Render** — Video renders using L-system algorithm
+- **Genetic Algorithm** — Home optimizes recommendations with genetic algorithm
+- **Swarm Intelligence Comments** — Comments use swarm intelligence algorithm
+- **Ant Colony Danmaku** — Danmaku optimizes paths with ant colony algorithm
+
+---
+
+## v2.51.0 (2026-06-08)
+### 🇨🇳 中文
+- **程序化生成** — 首页使用程序化内容生成
+- **噪声过滤评论** — 评论区启用噪声过滤
+- **分形叠加弹幕** — 弹幕叠加分形图案
+- **曼德博特效** — 播放器启用曼德博集合特效
+
+### 🇯🇵 日本語
+- **プロシージャル生成** — ホームがプロシージャルコンテンツ生成を使用
+- **ノイズフィルターコメント** — コメント欄でノイズフィルタリングを有効化
+- **フラクタルオーバーレイ弾幕** — 弾幕にフラクタルパターンをオーバーレイ
+- **マンデルブロエフェクト** — プレーヤーでマンデルブロ集合エフェクトを有効化
+
+### 🇰🇷 한국어
+- **절차적 생성** — 홈이 절차적 콘텐츠 생성 사용
+- **노이즈 필터 댓글** — 댓글란 노이즈 필터링 활성화
+- **프랙탈 오버레이 弹幕** — 弹幕에 프랙탈 패턴 오버레이
+- **만델브로 효과** — 플레이어 만델브로 집합 효과 활성화
+
+### 🇺🇸 English
+- **Procedural Gen** — Home uses procedural content generation
+- **Noise Filter Comments** — Enable noise filtering in comments
+- **Fractal Overlay Danmaku** — Overlay fractal patterns on danmaku
+- **Mandelbrot Effect** — Enable Mandelbrot set effect on player
+
+---
+
+## v2.50.0 (2026-06-08)
+### 🇨🇳 中文
+- **粒子特效评论** — 评论区启用粒子特效
+- **流体动力学弹幕** — 弹幕使用流体动力学模拟
+- **体积雾** — 播放器启用体积雾效果
+- **布料模拟** — 视频启用布料物理模拟
+
+### 🇯🇵 日本語
+- **パーティクルエフェクトコメント** — コメント欄でパーティクルエフェクトを有効化
+- **流体力学弾幕** — 弾幕が流体力学シミュレーションを使用
+- **ボリュメトリックフォグ** — プレーヤーでボリュメトリックフォグを有効化
+- **クロスシミュレーション** — 動画でクロス物理シミュレーションを有効化
+
+### 🇰🇷 한국어
+- **파티클 효과 댓글** — 댓글란 파티클 효과 활성화
+- **유체 역학 弹幕** — 弹幕이 유체 역학 시뮬레이션 사용
+- **볼류메트릭 포그** — 플레이어 볼류메트릭 포그 활성화
+- **천 시뮬레이션** — 동영상 천 물리 시뮬레이션 활성화
+
+### 🇺🇸 English
+- **Particle Effects Comments** — Enable particle effects in comments
+- **Fluid Dynamics Danmaku** — Danmaku uses fluid dynamics simulation
+- **Volumetric Fog** — Enable volumetric fog on player
+- **Cloth Simulation** — Enable cloth physics simulation for video
+
+---
+
+## v2.49.0 (2026-06-08)
+### 🇨🇳 中文
+- **物理引擎弹幕** — 弹幕使用物理引擎模拟
+- **光线追踪** — 播放器启用光线追踪渲染
+- **全局光照** — 视频启用全局光照效果
+- **环境光遮蔽** — 首页启用环境光遮蔽效果
+
+### 🇯🇵 日本語
+- **物理エンジン弾幕** — 弾幕が物理エンジンシミュレーションを使用
+- **レイトレーシング** — プレーヤーでレイトレーシングレンダリングを有効化
+- **グローバルイルミネーション** — 動画でグローバルイルミネーション効果を有効化
+- **アンビエントオクルージョン** — ホームでアンビエントオクルージョン効果を有効化
+
+### 🇰🇷 한국어
+- **물리 엔진 弹幕** — 弹幕이 물리 엔진 시뮬레이션 사용
+- **레이 트레이싱** — 플레이어 레이 트레이싱 렌더링 활성화
+- **전역 조명** — 동영상 전역 조명 효과 활성화
+- **앰비언트 오클루전** — 홈 앰비언트 오클루전 효과 활성화
+
+### 🇺🇸 English
+- **Physics Engine Danmaku** — Danmaku uses physics engine simulation
+- **Ray Tracing** — Enable ray tracing rendering on player
+- **Global Illumination** — Enable global illumination for video
+- **Ambient Occlusion** — Enable ambient occlusion on home
+
+---
+
+## v2.48.0 (2026-06-08)
+### 🇨🇳 中文
+- **全息显示** — 播放器支持全息投影显示
+- **XR模式** — 视频支持扩展现实模式
+- **元宇宙连接** — 首页连接元宇宙虚拟世界
+- **数字孪生评论** — 评论区支持数字孪生技术
+
+### 🇯🇵 日本語
+- **ホログラム表示** — プレーヤーがホログラム投影表示をサポート
+- **XRモード** — 動画が拡張現実モードをサポート
+- **メタバース接続** — ホームがメタバースバーチャルワールドに接続
+- **デジタルツインコメント** — コメント欄がデジタルツイン技術をサポート
+
+### 🇰🇷 한국어
+- **홀로그램 표시** — 플레이어 홀로그램 투영 표시 지원
+- **XR 모드** — 동영상 확장 현실 모드 지원
+- **메타버스 연결** — 홈 메타버스 가상 세계 연결
+- **디지털 트윈 댓글** — 댓글란 디지털 트윈 기술 지원
+
+### 🇺🇸 English
+- **Hologram Display** — Player supports holographic projection display
+- **XR Mode** — Video supports extended reality mode
+- **Metaverse Connect** — Home connects to metaverse virtual world
+- **Digital Twin Comments** — Comments support digital twin technology
+
+---
+
 ## v2.47.0 (2026-06-08)
 ### 🇨🇳 中文
 - **分享目标** — 视频支持作为系统分享目标
