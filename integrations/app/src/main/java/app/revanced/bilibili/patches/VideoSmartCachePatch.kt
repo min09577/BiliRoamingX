@@ -1,8 +1,11 @@
 package app.revanced.bilibili.patches
+
 import androidx.annotation.Keep
 import app.revanced.bilibili.settings.Settings
+
 @Keep
 object VideoSmartCachePatch {
     @JvmStatic fun isEnabled(): Boolean = Settings.VideoSmartCache.get()
-    @JvmStatic fun getMaxCacheSizeMb(): Int = if (isEnabled()) 500 else 0
+    
+    @JvmStatic fun getSmartCacheSize(): Long = if (isEnabled()) 100L * 1024 * 1024 else 50L * 1024 * 1024
 }

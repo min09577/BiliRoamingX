@@ -1,7 +1,11 @@
 package app.revanced.bilibili.patches
+
 import androidx.annotation.Keep
 import app.revanced.bilibili.settings.Settings
+
 @Keep
 object CommentSortReversePatch {
     @JvmStatic fun isEnabled(): Boolean = Settings.CommentSortReverse.get()
+    
+    @JvmStatic fun getSortOrder(): Int = if (isEnabled()) 1 else 0
 }
