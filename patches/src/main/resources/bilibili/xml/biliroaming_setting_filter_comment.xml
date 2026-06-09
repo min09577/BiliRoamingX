@@ -192,5 +192,21 @@
             android:key="comment_compass_overlay"
             android:summary="@string/biliroaming_comment_compass_overlay_summary"
             android:title="@string/biliroaming_comment_compass_overlay_title" />
+        <androidx.preference.SwitchPreferenceCompat
+            android:key="comment_online_status"
+            android:summary="@string/biliroaming_comment_online_status_summary"
+            android:title="@string/biliroaming_comment_online_status_title" />
+        <androidx.preference.SwitchPreferenceCompat
+            android:key="comment_time_limit"
+            android:summary="@string/biliroaming_comment_time_limit_summary"
+            android:title="@string/biliroaming_comment_time_limit_title" />
+        <androidx.preference.SwitchPreferenceCompat
+            android:key="comment_spam_filter"
+            android:summary="@string/biliroaming_comment_spam_filter_summary"
+            android:title="@string/biliroaming_comment_spam_filter_title" />
+        <androidx.preference.SwitchPreferenceCompat
+            android:key="comment_reward_display"
+            android:summary="@string/biliroaming_comment_reward_display_summary"
+            android:title="@string/biliroaming_comment_reward_display_title" />
     </androidx.preference.PreferenceCategory>
 </androidx.preference.PreferenceScreen>

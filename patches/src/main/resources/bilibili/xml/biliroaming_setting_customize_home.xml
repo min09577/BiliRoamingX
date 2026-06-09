@@ -177,5 +177,21 @@
             android:key="home_feed_sensor_light"
             android:summary="@string/biliroaming_home_feed_sensor_light_summary"
             android:title="@string/biliroaming_home_feed_sensor_light_title" />
+        <androidx.preference.SwitchPreferenceCompat
+            android:key="home_feed_unread_badge"
+            android:summary="@string/biliroaming_home_feed_unread_badge_summary"
+            android:title="@string/biliroaming_home_feed_unread_badge_title" />
+        <androidx.preference.SwitchPreferenceCompat
+            android:key="home_feed_parental_control"
+            android:summary="@string/biliroaming_home_feed_parental_control_summary"
+            android:title="@string/biliroaming_home_feed_parental_control_title" />
+        <androidx.preference.SwitchPreferenceCompat
+            android:key="home_feed_mindful_mode"
+            android:summary="@string/biliroaming_home_feed_mindful_mode_summary"
+            android:title="@string/biliroaming_home_feed_mindful_mode_title" />
+        <androidx.preference.SwitchPreferenceCompat
+            android:key="home_feed_exclusive_content"
+            android:summary="@string/biliroaming_home_feed_exclusive_content_summary"
+            android:title="@string/biliroaming_home_feed_exclusive_content_title" />
     </androidx.preference.PreferenceCategory>
 </androidx.preference.PreferenceScreen>

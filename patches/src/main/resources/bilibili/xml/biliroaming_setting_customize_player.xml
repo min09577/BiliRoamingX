@@ -596,5 +596,21 @@
             android:key="player_speaker_boost"
             android:summary="@string/biliroaming_player_speaker_boost_summary"
             android:title="@string/biliroaming_player_speaker_boost_title" />
+        <androidx.preference.SwitchPreferenceCompat
+            android:key="player_wearable_control"
+            android:summary="@string/biliroaming_player_wearable_control_summary"
+            android:title="@string/biliroaming_player_wearable_control_title" />
+        <androidx.preference.SwitchPreferenceCompat
+            android:key="player_privacy_mode"
+            android:summary="@string/biliroaming_player_privacy_mode_summary"
+            android:title="@string/biliroaming_player_privacy_mode_title" />
+        <androidx.preference.SwitchPreferenceCompat
+            android:key="player_focus_mode"
+            android:summary="@string/biliroaming_player_focus_mode_summary"
+            android:title="@string/biliroaming_player_focus_mode_title" />
+        <androidx.preference.SwitchPreferenceCompat
+            android:key="player_do_not_disturb"
+            android:summary="@string/biliroaming_player_do_not_disturb_summary"
+            android:title="@string/biliroaming_player_do_not_disturb_title" />
     </androidx.preference.PreferenceCategory>
 </androidx.preference.PreferenceScreen>
