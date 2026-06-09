@@ -98,8 +98,6 @@
             android:title="@string/biliroaming_dynamic_auto_bookmark_title" />
         <androidx.preference.SwitchPreferenceCompat
             android:key="dynamic_auto_like_all"
-            android:summary="@string/biliroaming_dynamic_auto_like_all_summary"
-            android:title="@string/biliroaming_dynamic_auto_like_all_title" />
         <androidx.preference.SwitchPreferenceCompat
             android:key="dynamic_auto_reply"
             android:summary="@string/biliroaming_dynamic_auto_reply_summary"
@@ -113,8 +111,6 @@
             android:title="@string/biliroaming_dynamic_auto_delete_title" />
         <androidx.preference.SwitchPreferenceCompat
             android:key="dynamic_auto_block_user"
-            android:summary="@string/biliroaming_dynamic_auto_block_user_summary"
-            android:title="@string/biliroaming_dynamic_auto_block_user_title" />
         <androidx.preference.SwitchPreferenceCompat
             android:key="dynamic_auto_archive"
             android:summary="@string/biliroaming_dynamic_auto_archive_summary"
@@ -125,20 +121,14 @@
             android:title="@string/biliroaming_dynamic_auto_repost_title" />
         <androidx.preference.SwitchPreferenceCompat
             android:key="dynamic_auto_delete_old"
-            android:summary="@string/biliroaming_dynamic_auto_delete_old_summary"
-            android:title="@string/biliroaming_dynamic_auto_delete_old_title" />
         <EditTextPreference
             android:key="dynamic_auto_block_keyword"
-            android:summary="@string/biliroaming_dynamic_auto_block_keyword_summary"
-            android:title="@string/biliroaming_dynamic_auto_block_keyword_title" />
         <androidx.preference.SwitchPreferenceCompat
             android:key="dynamic_auto_pin_comment"
         <androidx.preference.SwitchPreferenceCompat
             android:key="dynamic_auto_block_sensitive"
         <androidx.preference.SwitchPreferenceCompat
             android:key="dynamic_auto_archive_old"
-            android:summary="@string/biliroaming_dynamic_auto_archive_old_summary"
-            android:title="@string/biliroaming_dynamic_auto_archive_old_title" />
         <androidx.preference.SwitchPreferenceCompat
             android:key="dynamic_auto_pin_self"
         <androidx.preference.SwitchPreferenceCompat

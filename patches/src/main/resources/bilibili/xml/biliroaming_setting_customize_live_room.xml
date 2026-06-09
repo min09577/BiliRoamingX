@@ -104,8 +104,6 @@
             android:key="live_room_auto_enter_fullscreen"
         <EditTextPreference
             android:key="live_danmaku_font_size"
-            android:summary="@string/biliroaming_live_danmaku_font_size_summary"
-            android:title="@string/biliroaming_live_danmaku_font_size_title" />
         <androidx.preference.SwitchPreferenceCompat
             android:key="live_room_auto_mute_on_background"
         <androidx.preference.SwitchPreferenceCompat
@@ -118,8 +116,6 @@
             android:key="live_room_auto_follow_all"
         <androidx.preference.SwitchPreferenceCompat
             android:key="live_danmaku_merge_similar"
-            android:summary="@string/biliroaming_live_danmaku_merge_similar_summary"
-            android:title="@string/biliroaming_live_danmaku_merge_similar_title" />
         <androidx.preference.SwitchPreferenceCompat
             android:key="live_room_auto_enter_picture"
         <EditTextPreference
