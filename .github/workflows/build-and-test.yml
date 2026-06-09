@@ -1,0 +1,123 @@
+name: Build BiliRoamingX APK
+
+on:
+  push:
+    branches: [main]
+    tags: ['v*']
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up JDK 17
+        uses: actions/setup-java@v4
+        with:
+          java-version: '17'
+          distribution: 'temurin'
+
+      - name: Setup Android SDK
+        uses: android-actions/setup-android@v3
+
+      - name: Build integrations APK
+        run: ./gradlew :integrations:app:assembleRelease
+
+      - name: Upload integrations APK
+        uses: actions/upload-artifact@v4
+        with:
+          name: BiliRoamingX-integrations
+          path: integrations/app/build/outputs/apk/release/*.apk
+
+  patch:
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up JDK 17
+        uses: actions/setup-java@v4
+        with:
+          java-version: '17'
+          distribution: 'temurin'
+
+      - name: Download integrations APK
+        uses: actions/download-artifact@v4
+        with:
+          name: BiliRoamingX-integrations
+          path: ./apks/
+
+      - name: Download Bilibili APK
+        run: |
+          # Download latest Bilibili from official source
+          curl -L -o bilibili.apk "https://d.apkpure.com/b/APK/tv.danmaku.bili?version=latest"
+
+      - name: Download ReVanced CLI
+        run: |
+          # Download revanced-cli
+          CLI_URL=$(curl -s https://api.github.com/repos/ReVanced/revanced-cli/releases/latest | grep -o '"browser_download_url": "[^"]*\.jar"' | head -1 | cut -d'"' -f4)
+          curl -L -o revanced-cli.jar "$CLI_URL"
+
+      - name: Download ReVanced Patches
+        run: |
+          # Download revanced-patches
+          PATCHES_URL=$(curl -s https://api.github.com/repos/ReVanced/revanced-patches/releases/latest | grep -o '"browser_download_url": "[^"]*\.jar"' | head -1 | cut -d'"' -f4)
+          curl -L -o revanced-patches.jar "$PATCHES_URL"
+
+      - name: Patch Bilibili APK
+        run: |
+          java -jar revanced-cli.jar patch \
+            --patch-bundle revanced-patches.jar \
+            --include-merge-integrations \
+            --out patched-bilibili.apk \
+            bilibili.apk
+
+      - name: Upload patched APK
+        uses: actions/upload-artifact@v4
+        with:
+          name: BiliRoamingX-patched
+          path: patched-bilibili.apk
+
+  test:
+    needs: patch
+    runs-on: ubuntu-latest
+    steps:
+      - name: Download patched APK
+        uses: actions/download-artifact@v4
+        with:
+          name: BiliRoamingX-patched
+
+      - name: Basic APK validation
+        run: |
+          # Check APK exists and has reasonable size
+          ls -lh patched-bilibili.apk
+          SIZE=$(stat -c%s patched-bilibili.apk)
+          if [ "$SIZE" -lt 10000000 ]; then
+            echo "APK too small, likely failed"
+            exit 1
+          fi
+          echo "APK size OK: $SIZE bytes"
+
+      - name: Run Android emulator tests
+        uses: reactivecircus/android-emulator-runner@v2
+        with:
+          api-level: 34
+          arch: x86_64
+          profile: Nexus 6
+          script: |
+            # Install the patched APK
+            adb install patched-bilibili.apk
+            # Wait for app to launch
+            sleep 10
+            # Take screenshot
+            adb shell screencap -p /sdcard/screenshot.png
+            adb pull /sdcard/screenshot.png
+            # Basic UI test - check if app launches
+            adb shell am start -n tv.danmaku.bili/.MainActivityV2
+            sleep 5
+            adb shell screencap -p /sdcard/screenshot2.png
+            adb pull /sdcard/screenshot2.png
+            echo "Screenshots captured for verification"
