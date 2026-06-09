@@ -186,5 +186,9 @@
         <androidx.preference.SwitchPreferenceCompat
         <androidx.preference.SwitchPreferenceCompat
         <androidx.preference.SwitchPreferenceCompat
+        <androidx.preference.SwitchPreferenceCompat
+            android:key="comment_auto_expand"
+            android:summary="@string/biliroaming_comment_auto_expand_summary"
+            android:title="@string/biliroaming_comment_auto_expand_title" />
     </androidx.preference.PreferenceCategory>
 </androidx.preference.PreferenceScreen>

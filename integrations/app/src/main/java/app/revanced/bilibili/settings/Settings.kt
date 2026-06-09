@@ -536,5 +536,10 @@ object Settings {
     @JvmField val CommentAccessibilityMode = BooleanSetting(key = "comment_accessibility_mode")
     @JvmField val CommentTimeLimit = BooleanSetting(key = "comment_time_limit")
     @JvmField val CommentSpamFilter = BooleanSetting(key = "comment_spam_filter")
+    @JvmField val CommentAutoExpand = BooleanSetting(key = "comment_auto_expand")
+    @JvmField val PlayerGestureLongPressSpeed = BooleanSetting(key = "player_gesture_long_press_speed")
+    @JvmField val VideoAutoPauseOnBattery = BooleanSetting(key = "video_auto_pause_on_battery")
+    @JvmField val LiveRoomAutoGift = BooleanSetting(key = "live_room_auto_gift")
+    @JvmField val DynamicAutoBlockSensitive = BooleanSetting(key = "dynamic_auto_block_sensitive")
     // endregion
 }

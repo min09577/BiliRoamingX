@@ -867,4 +867,14 @@
     <string name="biliroaming_comment_time_limit_summary">限制评论区的浏览时间</string>
     <string name="biliroaming_comment_spam_filter_title">垃圾评论过滤</string>
     <string name="biliroaming_comment_spam_filter_summary">自动过滤垃圾评论内容</string>
+    <string name="biliroaming_comment_auto_expand_title">评论自动展开</string>
+    <string name="biliroaming_comment_auto_expand_summary">自动展开折叠的评论内容</string>
+    <string name="biliroaming_player_gesture_long_press_speed_title">长按手势速度</string>
+    <string name="biliroaming_player_gesture_long_press_speed_summary">自定义长按手势的触发速度</string>
+    <string name="biliroaming_video_auto_pause_on_battery_title">低电量暂停</string>
+    <string name="biliroaming_video_auto_pause_on_battery_summary">电量低于阈值时自动暂停视频</string>
+    <string name="biliroaming_live_room_auto_gift_title">直播自动送礼</string>
+    <string name="biliroaming_live_room_auto_gift_summary">在直播间自动送出免费礼物</string>
+    <string name="biliroaming_dynamic_auto_block_sensitive_title">动态屏蔽敏感</string>
+    <string name="biliroaming_dynamic_auto_block_sensitive_summary">自动屏蔽包含敏感内容的动态</string>
 </resources>

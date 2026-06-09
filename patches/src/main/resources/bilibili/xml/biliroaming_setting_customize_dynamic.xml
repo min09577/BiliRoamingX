@@ -132,5 +132,9 @@
         <androidx.preference.SwitchPreferenceCompat
         <androidx.preference.SwitchPreferenceCompat
         <androidx.preference.SwitchPreferenceCompat
+        <androidx.preference.SwitchPreferenceCompat
+            android:key="dynamic_auto_block_sensitive"
+            android:summary="@string/biliroaming_dynamic_auto_block_sensitive_summary"
+            android:title="@string/biliroaming_dynamic_auto_block_sensitive_title" />
     </androidx.preference.PreferenceCategory>
 </androidx.preference.PreferenceScreen>

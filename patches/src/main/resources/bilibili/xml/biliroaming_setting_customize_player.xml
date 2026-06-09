@@ -555,5 +555,9 @@
         <androidx.preference.SwitchPreferenceCompat
         <androidx.preference.SwitchPreferenceCompat
         <androidx.preference.SwitchPreferenceCompat
+        <androidx.preference.SwitchPreferenceCompat
+            android:key="player_gesture_long_press_speed"
+            android:summary="@string/biliroaming_player_gesture_long_press_speed_summary"
+            android:title="@string/biliroaming_player_gesture_long_press_speed_title" />
     </androidx.preference.PreferenceCategory>
 </androidx.preference.PreferenceScreen>
