@@ -679,6 +679,141 @@ BiliRoamingX v1.23.3 기반, AI 지원 개발로 강화.
 - ⬆️ **弹幕顶部显示** / Danmaku Area Top / 弾幕上部表示 / 탄막 상단 표시
 
 ---
+## v2.47.0 (2026-06-08)
+### 🇨🇳 中文
+- **分享目标** — 视频支持作为系统分享目标
+- **定期同步** — 首页定期后台同步内容
+- **WebCodecs评论** — 评论使用WebCodecs编解码
+- **AudioWorklet弹幕** — 弹幕使用AudioWorklet音频处理
+
+### 🇯🇵 日本語
+- **共有ターゲット** — 動画がシステム共有ターゲットとしてサポート
+- **定期同期** — ホームの定期バックグラウンドコンテンツ同期
+- **WebCodecsコメント** — コメントがWebCodecsコーデックを使用
+- **AudioWorklet弾幕** — 弾幕がAudioWorkletオーディオ処理を使用
+
+### 🇰🇷 한국어
+- **공유 대상** — 동영상이 시스템 공유 대상으로 지원
+- **정기 동기화** — 홈 정기 백그라운드 콘텐츠 동기화
+- **WebCodecs 댓글** — 댓글이 WebCodecs 코덱 사용
+- **AudioWorklet 弹幕** — 弹幕이 AudioWorklet 오디오 처리 사용
+
+### 🇺🇸 English
+- **Share Target** — Video supports system share target
+- **Periodic Sync** — Home periodic background content sync
+- **WebCodecs Comments** — Comments use WebCodecs codec
+- **AudioWorklet Danmaku** — Danmaku uses AudioWorklet audio processing
+
+---
+
+## v2.46.0 (2026-06-08)
+### 🇨🇳 中文
+- **Service Worker** — 首页启用Service Worker缓存
+- **文件访问评论** — 评论支持文件系统访问
+- **WebSocket同步弹幕** — 弹幕通过WebSocket实时同步
+- **WebTransport** — 播放器使用WebTransport协议
+
+### 🇯🇵 日本語
+- **Service Worker** — ホームでService Workerキャッシュを有効化
+- **ファイルアクセスコメント** — コメントがファイルシステムアクセスをサポート
+- **WebSocket同期弾幕** — 弾幕がWebSocketでリアルタイム同期
+- **WebTransport** — プレーヤーがWebTransportプロトコルを使用
+
+### 🇰🇷 한국어
+- **Service Worker** — 홈 Service Worker 캐시 활성화
+- **파일 접근 댓글** — 댓글이 파일 시스템 접근 지원
+- **WebSocket 동기화 弹幕** — 弹幕이 WebSocket으로 실시간 동기화
+- **WebTransport** — 플레이어가 WebTransport 프로토콜 사용
+
+### 🇺🇸 English
+- **Service Worker** — Enable Service Worker cache on home
+- **File Access Comments** — Comments support file system access
+- **WebSocket Sync Danmaku** — Danmaku sync via WebSocket in real-time
+- **WebTransport** — Player uses WebTransport protocol
+
+---
+
+## v2.45.0 (2026-06-08)
+### 🇨🇳 中文
+- **推送通知评论** — 评论收到回复时推送通知
+- **后台同步弹幕** — 弹幕设置后台自动同步
+- **WebUSB控制** — 通过WebUSB控制播放器
+- **Web蓝牙视频** — 通过Web蓝牙分享视频
+
+### 🇯🇵 日本語
+- **プッシュ通知コメント** — コメントの返信時にプッシュ通知
+- **バックグラウンド同期弾幕** — 弾幕設定をバックグラウンドで自動同期
+- **WebUSB制御** — WebUSBでプレーヤーを制御
+- **WebBluetooth動画** — WebBluetoothで動画を共有
+
+### 🇰🇷 한국어
+- **푸시 알림 댓글** — 댓글 답변 시 푸시 알림
+- **백그라운드 동기화 弹幕** — 弹幕 설정 백그라운드 자동 동기화
+- **WebUSB 제어** — WebUSB로 플레이어 제어
+- **WebBluetooth 동영상** — WebBluetooth로 동영상 공유
+
+### 🇺🇸 English
+- **Push Notification Comments** — Push notification on comment replies
+- **Background Sync Danmaku** — Auto-sync danmaku settings in background
+- **WebUSB Control** — Control player via WebUSB
+- **WebBluetooth Video** — Share video via WebBluetooth
+
+---
+
+## v2.44.0 (2026-06-08)
+### 🇨🇳 中文
+- **代币奖励** — 弹幕互动获得代币奖励
+- **DeFi连接** — 播放器连接DeFi去中心化金融
+- **IPFS存储** — 视频使用IPFS分布式存储
+- **WebAssembly** — 首页启用WebAssembly加速
+
+### 🇯🇵 日本語
+- **トークン報酬** — 弾幕インタラクションでトークン報酬を獲得
+- **DeFi接続** — プレーヤーがDeFi分散型金融に接続
+- **IPFSストレージ** — 動画がIPFS分散ストレージを使用
+- **WebAssembly** — ホームでWebAssembly高速化を有効化
+
+### 🇰🇷 한국어
+- **토큰 보상** — 弹幕 상호작용으로 토큰 보상 획득
+- **DeFi 연결** — 플레이어가 DeFi 탈중앙 금융에 연결
+- **IPFS 저장** — 동영상이 IPFS 분산 저장 사용
+- **WebAssembly** — 홈 WebAssembly 가속 활성화
+
+### 🇺🇸 English
+- **Token Reward** — Earn token rewards from danmaku interactions
+- **DeFi Connect** — Player connects to DeFi decentralized finance
+- **IPFS Storage** — Video uses IPFS distributed storage
+- **WebAssembly** — Enable WebAssembly acceleration on home
+
+---
+
+## v2.43.0 (2026-06-08)
+### 🇨🇳 中文
+- **量子渲染** — 播放器启用量子计算加速渲染
+- **区块链验证** — 使用区块链技术验证视频真实性
+- **NFT显示** — 在首页显示NFT数字藏品
+- **加密打赏** — 支持加密货币打赏评论
+
+### 🇯🇵 日本語
+- **量子レンダリング** — プレーヤーで量子コンピューティング高速レンダリングを有効化
+- **ブロックチェーン検証** — ブロックチェーン技術で動画の真正性を検証
+- **NFT表示** — ホームにNFTデジタルコレクティブルを表示
+- **暗号チップ** — 暗号通貨でコメントにチップをサポート
+
+### 🇰🇷 한국어
+- **양자 렌더링** — 플레이어 양자 컴퓨팅 가속 렌더링 활성화
+- **블록체인 검증** — 블록체인 기술로 동영상 진위 검증
+- **NFT 표시** — 홈에 NFT 디지털 컬렉티블 표시
+- **암호화 팁** — 암호화폐로 댓글 팁 지원
+
+### 🇺🇸 English
+- **Quantum Render** — Enable quantum computing acceleration on player
+- **Blockchain Verify** — Verify video authenticity with blockchain
+- **NFT Display** — Display NFT digital collectibles on home
+- **Crypto Tip** — Support cryptocurrency tipping for comments
+
+---
+
 ## v2.42.0 (2026-06-08)
 ### 🇨🇳 中文
 - **SRT协议** — 支持SRT安全可靠传输协议
