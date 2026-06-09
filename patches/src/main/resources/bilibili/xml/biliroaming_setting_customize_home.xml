@@ -161,5 +161,21 @@
             android:key="home_feed_weekly_summary"
             android:summary="@string/biliroaming_home_feed_weekly_summary_summary"
             android:title="@string/biliroaming_home_feed_weekly_summary_title" />
+        <androidx.preference.SwitchPreferenceCompat
+            android:key="home_feed_airplay_cast"
+            android:summary="@string/biliroaming_home_feed_airplay_cast_summary"
+            android:title="@string/biliroaming_home_feed_airplay_cast_title" />
+        <androidx.preference.SwitchPreferenceCompat
+            android:key="home_feed_gps_location"
+            android:summary="@string/biliroaming_home_feed_gps_location_summary"
+            android:title="@string/biliroaming_home_feed_gps_location_title" />
+        <androidx.preference.SwitchPreferenceCompat
+            android:key="home_feed_bluetooth_scan"
+            android:summary="@string/biliroaming_home_feed_bluetooth_scan_summary"
+            android:title="@string/biliroaming_home_feed_bluetooth_scan_title" />
+        <androidx.preference.SwitchPreferenceCompat
+            android:key="home_feed_sensor_light"
+            android:summary="@string/biliroaming_home_feed_sensor_light_summary"
+            android:title="@string/biliroaming_home_feed_sensor_light_title" />
     </androidx.preference.PreferenceCategory>
 </androidx.preference.PreferenceScreen>

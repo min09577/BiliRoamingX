@@ -353,5 +353,21 @@
             android:key="video_silver_quality"
             android:summary="@string/biliroaming_video_silver_quality_summary"
             android:title="@string/biliroaming_video_silver_quality_title" />
+        <androidx.preference.SwitchPreferenceCompat
+            android:key="video_dlna_mirror"
+            android:summary="@string/biliroaming_video_dlna_mirror_summary"
+            android:title="@string/biliroaming_video_dlna_mirror_title" />
+        <androidx.preference.SwitchPreferenceCompat
+            android:key="video_wifi_preload"
+            android:summary="@string/biliroaming_video_wifi_preload_summary"
+            android:title="@string/biliroaming_video_wifi_preload_title" />
+        <androidx.preference.SwitchPreferenceCompat
+            android:key="video_proximity_sensor"
+            android:summary="@string/biliroaming_video_proximity_sensor_summary"
+            android:title="@string/biliroaming_video_proximity_sensor_title" />
+        <androidx.preference.SwitchPreferenceCompat
+            android:key="video_scanner_mode"
+            android:summary="@string/biliroaming_video_scanner_mode_summary"
+            android:title="@string/biliroaming_video_scanner_mode_title" />
     </androidx.preference.PreferenceCategory>
 </androidx.preference.PreferenceScreen>

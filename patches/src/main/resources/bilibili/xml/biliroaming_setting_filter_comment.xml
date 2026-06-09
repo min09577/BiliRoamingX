@@ -176,5 +176,21 @@
             android:key="comment_chart_display"
             android:summary="@string/biliroaming_comment_chart_display_summary"
             android:title="@string/biliroaming_comment_chart_display_title" />
+        <androidx.preference.SwitchPreferenceCompat
+            android:key="comment_bluetooth_audio"
+            android:summary="@string/biliroaming_comment_bluetooth_audio_summary"
+            android:title="@string/biliroaming_comment_bluetooth_audio_title" />
+        <androidx.preference.SwitchPreferenceCompat
+            android:key="comment_qr_code_share"
+            android:summary="@string/biliroaming_comment_qr_code_share_summary"
+            android:title="@string/biliroaming_comment_qr_code_share_title" />
+        <androidx.preference.SwitchPreferenceCompat
+            android:key="comment_camera_filter"
+            android:summary="@string/biliroaming_comment_camera_filter_summary"
+            android:title="@string/biliroaming_comment_camera_filter_title" />
+        <androidx.preference.SwitchPreferenceCompat
+            android:key="comment_compass_overlay"
+            android:summary="@string/biliroaming_comment_compass_overlay_summary"
+            android:title="@string/biliroaming_comment_compass_overlay_title" />
     </androidx.preference.PreferenceCategory>
 </androidx.preference.PreferenceScreen>
