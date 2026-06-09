@@ -679,6 +679,141 @@ BiliRoamingX v1.23.3 기반, AI 지원 개발로 강화.
 - ⬆️ **弹幕顶部显示** / Danmaku Area Top / 弾幕上部表示 / 탄막 상단 표시
 
 ---
+## v2.37.0 (2026-06-08)
+### 🇨🇳 中文
+- **条形码扫描** — 扫描视频中的条形码获取信息
+- **NFC分享** — 通过NFC分享视频链接
+- **RFID标签** — 支持RFID标签读取视频信息
+- **UWB广播** — 通过超宽带广播分享弹幕设置
+
+### 🇯🇵 日本語
+- **バーコードスキャン** — 動画内のバーコードをスキャンして情報を取得
+- **NFC共有** — NFCで動画リンクを共有
+- **RFIDタグ** — RFIDタグから動画情報を読み取り
+- **UWB放送** — 超広帯域で弾幕設定を放送共有
+
+### 🇰🇷 한국어
+- **바코드 스캔** — 동영상 내 바코드 스캔으로 정보获取
+- **NFC 공유** — NFC로 동영상 링크 공유
+- **RFID 태그** — RFID 태그에서 동영상 정보 읽기
+- **UWB 방송** — 초광대역으로 弹幕 설정 방송 공유
+
+### 🇺🇸 English
+- **Barcode Scanner** — Scan barcodes in videos for info
+- **NFC Share** — Share video links via NFC
+- **RFID Tag** — Read video info from RFID tags
+- **UWB Broadcast** — Broadcast danmaku settings via UWB
+
+---
+
+## v2.36.0 (2026-06-08)
+### 🇨🇳 中文
+- **对象检测** — 评论区支持图片中的对象检测
+- **人脸识别** — 弹幕叠加人脸检测信息
+- **文字OCR** — 播放器支持视频文字识别
+- **AI增强** — 首页启用AI画质增强
+
+### 🇯🇵 日本語
+- **オブジェクト検出** — コメント欄で画像内のオブジェクトを検出
+- **顔認識** — 弾幕に顔検出情報をオーバーレイ
+- **テキストOCR** — プレーヤーで動画テキスト認識をサポート
+- **AIエンハンス** — ホームでAI画質エンハンスを有効化
+
+### 🇰🇷 한국어
+- **객체 감지** — 댓글란에서 이미지 내 객체 감지
+- **얼굴 인식** — 弹幕에 얼굴 감지 정보 오버레이
+- **텍스트 OCR** — 플레이어 동영상 텍스트 인식 지원
+- **AI 강화** — 홈 AI 화질 강화 활성화
+
+### 🇺🇸 English
+- **Object Detection** — Detect objects in comment images
+- **Face Recognition** — Overlay face detection on danmaku
+- **Text OCR** — Video text recognition in player
+- **AI Enhance** — Enable AI quality enhancement on home
+
+---
+
+## v2.35.0 (2026-06-08)
+### 🇨🇳 中文
+- **帧插值评论** — 为评论区启用帧插值平滑
+- **弹幕运动平滑** — 弹幕滚动启用运动平滑
+- **AI超分辨率** — 播放器启用AI超分辨率
+- **超分辨率视频** — 视频启用超分辨率处理
+
+### 🇯🇵 日本語
+- **フレーム補間コメント** — コメント欄でフレーム補間スムーズを有効化
+- **弾幕モーションスムーズ** — 弾幕スクロールにモーションスムーズを有効化
+- **AIスーパー解像度** — プレーヤーでAIスーパー解像度を有効化
+- **スーパー解像度動画** — 動画にスーパー解像度処理を有効化
+
+### 🇰🇷 한국어
+- **프레임 보간 댓글** — 댓글란 프레임 보간 스무딩 활성화
+- **弹幕 모션 스무딩** — 弹幕 스크롤 모션 스무딩 활성화
+- **AI 초해상도** — 플레이어 AI 초해상도 활성화
+- **초해상도 동영상** — 동영상 초해상도 처리 활성화
+
+### 🇺🇸 English
+- **Frame Interpolation Comments** — Enable frame interpolation for comments
+- **Danmaku Motion Smooth** — Enable motion smoothing for danmaku
+- **AI Upscale** — Enable AI super resolution on player
+- **Super Resolution Video** — Enable super resolution for videos
+
+---
+
+## v2.34.0 (2026-06-08)
+### 🇨🇳 中文
+- **环绕声弹幕** — 弹幕启用环绕声效果
+- **杜比全景声** — 播放器支持杜比全景声
+- **HDR10增强** — 视频启用HDR10增强显示
+- **杜比视界** — 首页支持杜比视界显示
+
+### 🇯🇵 日本語
+- **サラウンドサウンド弾幕** — 弾幕にサラウンドサウンド効果を有効化
+- **ドルビーアトモス** — プレーヤーでドルビーアトモスをサポート
+- **HDR10エンハンス** — 動画でHDR10エンハンス表示を有効化
+- **ドルビービジョン** — ホームでドルビービジョン表示をサポート
+
+### 🇰🇷 한국어
+- **서라운드 사운드 弹幕** — 弹幕 서라운드 사운드 효과 활성화
+- **돌비 애트모스** — 플레이어 돌비 애트모스 지원
+- **HDR10 강화** — 동영상 HDR10 강화 표시 활성화
+- **돌비 비전** — 홈 돌비 비전 표시 지원
+
+### 🇺🇸 English
+- **Surround Sound Danmaku** — Enable surround sound for danmaku
+- **Dolby Atmos** — Support Dolby Atmos on player
+- **HDR10 Enhance** — Enable HDR10 enhanced display for videos
+- **Dolby Vision** — Support Dolby Vision display on home
+
+---
+
+## v2.33.0 (2026-06-08)
+### 🇨🇳 中文
+- **智能手表遥控** — 支持智能手表遥控播放器
+- **手柄控制** — 支持游戏手柄控制播放器
+- **VR模式** — 首页支持VR虚拟现实模式
+- **空间音频评论** — 评论区支持空间音频播放
+
+### 🇯🇵 日本語
+- **スマートウォッチリモコン** — スマートウォッチでプレーヤーをリモコン操作
+- **ゲームパッド制御** — ゲームパッドでプレーヤーを制御
+- **VRモード** — ホームでVRバーチャルリアリティモードをサポート
+- **空間オーディオコメント** — コメント欄で空間オーディオ再生をサポート
+
+### 🇰🇷 한국어
+- **스마트워치 리모컨** — 스마트워치로 플레이어 리모컨 조작
+- **게임패드 제어** — 게임패드로 플레이어 제어
+- **VR 모드** — 홈 VR 가상현실 모드 지원
+- **공간 오디오 댓글** — 댓글란 공간 오디오 재생 지원
+
+### 🇺🇸 English
+- **Smartwatch Remote** — Control player with smartwatch
+- **Gamepad Control** — Control player with gamepad
+- **VR Mode** — Support VR virtual reality mode on home
+- **Spatial Audio Comments** — Support spatial audio playback in comments
+
+---
+
 ## v2.32.0 (2026-06-08)
 ### 🇨🇳 中文
 - **优先模式** — 视频播放获得系统优先级
