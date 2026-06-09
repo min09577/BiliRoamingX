@@ -679,6 +679,133 @@ BiliRoamingX v1.23.3 기반, AI 지원 개발로 강화.
 - ⬆️ **弹幕顶部显示** / Danmaku Area Top / 弾幕上部表示 / 탄막 상단 표시
 
 ---
+## v2.57.0 (2026-06-09)
+### 🇨🇳 中文
+- **评论自动展开** — 自动展开折叠的评论内容
+- **长按手势速度** — 自定义长按手势的触发速度
+- **低电量暂停** — 电量低于阈值时自动暂停视频
+- **直播自动送礼** — 在直播间自动送出免费礼物
+- **动态屏蔽敏感** — 自动屏蔽包含敏感内容的动态
+
+### 🇯🇵 日本語
+- **コメント自動展開** — 折りたたまれたコメントを自動展開
+- **ロングプレス速度** — ロングプレスジェスチャーのトリガー速度をカスタマイズ
+- **低バッテリー一時停止** — バッテリー残量がしきい値以下で動画を自動一時停止
+- **ライブ自動ギフト** — ライブルームで無料ギフトを自動送信
+- **動態ブロック敏感** — 感度の高い内容を含む動態を自動ブロック
+
+### 🇰🇷 한국어
+- **댓글 자동 펼치기** — 접힌 댓글 내용 자동 펼치기
+- **길게 누르기 속도** — 길게 누르기 제스처 트리거 속도 사용자 정의
+- **저배터리 일시정지** — 배터리 임계값 미만 시 동영상 자동 일시정지
+- **라이브 자동 선물** — 라이브룸에서 무료 선물 자동 전송
+- **동태 민감 차단** — 민감한 콘텐츠 포함 동태 자동 차단
+
+### 🇺🇸 English
+- **Auto Expand Comments** — Automatically expand folded comment content
+- **Long Press Gesture Speed** — Customize long press gesture trigger speed
+- **Auto Pause on Low Battery** — Auto pause video when battery below threshold
+- **Live Auto Gift** — Auto send free gifts in live rooms
+- **Auto Block Sensitive** — Auto block dynamics containing sensitive content
+
+---
+
+## v2.56.0 (2026-06-09)
+### 🇨🇳 中文
+- **代码质量修复** — 修复22个代码质量问题
+- **when分支修复** — 修复12个when分支缺少闭合括号
+- **线程安全** — 修复7个线程安全问题
+- **异常处理** — 修复8个空catch块
+
+### 🇯🇵 日本語
+- **コード品質修正** — 22個のコード品質問題を修正
+- **when分岐修正** — 12個のwhen分岐の閉じ括弧欠落を修正
+- **スレッドセーフティ** — 7個のスレッドセーフティ問題を修正
+- **例外処理** — 8個の空catchブロックを修正
+
+### 🇰🇷 한국어
+- **코드 품질 수정** — 22개 코드 품질 문제 수정
+- **when 분기 수정** — 12개 when 분기 닫는 괄호 누락 수정
+- **스레드 안전성** — 7개 스레드 안전성 문제 수정
+- **예외 처리** — 8개 빈 catch 블록 수정
+
+### 🇺🇸 English
+- **Code Quality Fix** — Fixed 22 code quality issues
+- **when Branch Fix** — Fixed 12 when branches missing closing brackets
+- **Thread Safety** — Fixed 7 thread safety issues
+- **Exception Handling** — Fixed 8 empty catch blocks
+
+---
+
+## v2.55.0 (2026-06-09)
+### 🇨🇳 中文
+- **语义重复清理** — 清理18个语义重复设置
+- **孤立字符串清理** — 清理36个孤立字符串
+- **XML条目清理** — 清理144个孤立XML条目
+
+### 🇯🇵 日本語
+- **意味重複クリーンアップ** — 18個の意味重複設定をクリーンアップ
+- **孤立文字列クリーンアップ** — 36個の孤立文字列をクリーンアップ
+- **XMLエントリクリーンアップ** — 144個の孤立XMLエントリをクリーンアップ
+
+### 🇰🇷 한국어
+- **의미 중복 정리** — 18개 의미 중복 설정 정리
+- **고립 문자열 정리** — 36개 고립 문자열 정리
+- **XML 항목 정리** — 144개 고립 XML 항목 정리
+
+### 🇺🇸 English
+- **Semantic Duplicate Cleanup** — Cleaned 18 semantic duplicate settings
+- **Orphaned Strings Cleanup** — Cleaned 36 orphaned strings
+- **XML Entries Cleanup** — Cleaned 144 orphaned XML entries
+
+---
+
+## v2.54.0 (2026-06-09)
+### 🇨🇳 中文
+- **全面清理** — 删除148个不现实空壳patch
+- **字符串清理** — 清理446个孤立字符串
+- **XML清理** — 清理216个XML条目
+
+### 🇯🇵 日本語
+- **全面クリーンアップ** — 148個の非現実的なスタブpatchを削除
+- **文字列クリーンアップ** — 446個の孤立文字列をクリーンアップ
+- **XMLクリーンアップ** — 216個のXMLエントリをクリーンアップ
+
+### 🇰🇷 한국어
+- **전면 정리** — 148개 비현실적 스텁 patch 삭제
+- **문자열 정리** — 446개 고립 문자열 정리
+- **XML 정리** — 216개 XML 항목 정리
+
+### 🇺🇸 English
+- **Full Cleanup** — Removed 148 unrealistic stub patches
+- **Strings Cleanup** — Cleaned 446 orphaned strings
+- **XML Cleanup** — Cleaned 216 XML entries
+
+---
+
+## v2.53.0 (2026-06-08)
+### 🇨🇳 中文
+- **不现实功能清理** — 清理46个不现实功能
+- **量子渲染删除** — 删除量子渲染、区块链、NFT等
+- **元宇宙删除** — 删除元宇宙、全息显示、XR等
+
+### 🇯🇵 日本語
+- **非現実機能クリーンアップ** — 46個の非現実機能をクリーンアップ
+- **量子レンダリング削除** — 量子レンダリング、ブロックチェーン、NFT等を削除
+- **メタバース削除** — メタバース、ホログラム、XR等を削除
+
+### 🇰🇷 한국어
+- **비현실 기능 정리** — 46개 비현실 기능 정리
+- **양자 렌더링 삭제** — 양자 렌더링、블록체인、NFT 등 삭제
+- **메타버스 삭제** — 메타버스、홀로그램、XR 등 삭제
+
+### 🇺🇸 English
+- **Unrealistic Features Cleanup** — Cleaned 46 unrealistic features
+- **Quantum Render Removed** — Removed quantum rendering, blockchain, NFT etc
+- **Metaverse Removed** — Removed metaverse, hologram, XR etc
+
+---
+
 ## v2.52.0 (2026-06-08)
 ### 🇨🇳 中文
 - **L系统渲染** — 视频使用L系统算法渲染
