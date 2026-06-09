@@ -240,5 +240,21 @@
             android:key="comment_onnx_inference"
             android:summary="@string/biliroaming_comment_onnx_inference_summary"
             android:title="@string/biliroaming_comment_onnx_inference_title" />
+        <androidx.preference.SwitchPreferenceCompat
+            android:key="comment_crypto_tip"
+            android:summary="@string/biliroaming_comment_crypto_tip_summary"
+            android:title="@string/biliroaming_comment_crypto_tip_title" />
+        <androidx.preference.SwitchPreferenceCompat
+            android:key="comment_push_notification"
+            android:summary="@string/biliroaming_comment_push_notification_summary"
+            android:title="@string/biliroaming_comment_push_notification_title" />
+        <androidx.preference.SwitchPreferenceCompat
+            android:key="comment_file_access"
+            android:summary="@string/biliroaming_comment_file_access_summary"
+            android:title="@string/biliroaming_comment_file_access_title" />
+        <androidx.preference.SwitchPreferenceCompat
+            android:key="comment_web_codecs"
+            android:summary="@string/biliroaming_comment_web_codecs_summary"
+            android:title="@string/biliroaming_comment_web_codecs_title" />
     </androidx.preference.PreferenceCategory>
 </androidx.preference.PreferenceScreen>

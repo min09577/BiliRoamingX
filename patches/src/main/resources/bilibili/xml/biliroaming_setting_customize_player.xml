@@ -644,5 +644,21 @@
             android:key="player_rtsp_stream"
             android:summary="@string/biliroaming_player_rtsp_stream_summary"
             android:title="@string/biliroaming_player_rtsp_stream_title" />
+        <androidx.preference.SwitchPreferenceCompat
+            android:key="player_quantum_render"
+            android:summary="@string/biliroaming_player_quantum_render_summary"
+            android:title="@string/biliroaming_player_quantum_render_title" />
+        <androidx.preference.SwitchPreferenceCompat
+            android:key="player_defi_connect"
+            android:summary="@string/biliroaming_player_defi_connect_summary"
+            android:title="@string/biliroaming_player_defi_connect_title" />
+        <androidx.preference.SwitchPreferenceCompat
+            android:key="player_web_usb_control"
+            android:summary="@string/biliroaming_player_web_usb_control_summary"
+            android:title="@string/biliroaming_player_web_usb_control_title" />
+        <androidx.preference.SwitchPreferenceCompat
+            android:key="player_web_transport"
+            android:summary="@string/biliroaming_player_web_transport_summary"
+            android:title="@string/biliroaming_player_web_transport_title" />
     </androidx.preference.PreferenceCategory>
 </androidx.preference.PreferenceScreen>

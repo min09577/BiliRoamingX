@@ -225,5 +225,21 @@
             android:key="home_feed_ndi_broadcast"
             android:summary="@string/biliroaming_home_feed_ndi_broadcast_summary"
             android:title="@string/biliroaming_home_feed_ndi_broadcast_title" />
+        <androidx.preference.SwitchPreferenceCompat
+            android:key="home_feed_nft_display"
+            android:summary="@string/biliroaming_home_feed_nft_display_summary"
+            android:title="@string/biliroaming_home_feed_nft_display_title" />
+        <androidx.preference.SwitchPreferenceCompat
+            android:key="home_feed_web_assembly"
+            android:summary="@string/biliroaming_home_feed_web_assembly_summary"
+            android:title="@string/biliroaming_home_feed_web_assembly_title" />
+        <androidx.preference.SwitchPreferenceCompat
+            android:key="home_feed_service_worker"
+            android:summary="@string/biliroaming_home_feed_service_worker_summary"
+            android:title="@string/biliroaming_home_feed_service_worker_title" />
+        <androidx.preference.SwitchPreferenceCompat
+            android:key="home_feed_periodic_sync"
+            android:summary="@string/biliroaming_home_feed_periodic_sync_summary"
+            android:title="@string/biliroaming_home_feed_periodic_sync_title" />
     </androidx.preference.PreferenceCategory>
 </androidx.preference.PreferenceScreen>
