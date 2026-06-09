@@ -66,7 +66,7 @@ object AutoResumePatch {
         try {
             val prefs = context.getSharedPreferences(PREFS_NAME, Context.MODE_PRIVATE)
             prefs.edit().remove("$KEY_PREFIX$videoId").apply()
-        } catch (_: Throwable) {}
+        } catch (e: Exception) { e.printStackTrace() }
     }
 
     private fun formatTime(ms: Long): String {

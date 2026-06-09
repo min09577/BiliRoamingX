@@ -81,7 +81,7 @@ object PlaybackStatsOverlayPatch {
                 try {
                     val fps = Reflex.callMethod<Any>(player, "getVideoFps")
                     if (fps != null && fps != 0) append("FPS: $fps\n")
-                } catch (_: Throwable) {}
+                } catch (e: Exception) { e.printStackTrace() }
 
                 // Try to get buffer duration
                 try {
@@ -90,7 +90,7 @@ object PlaybackStatsOverlayPatch {
                         val bufferMs = if (buffer is Long) buffer else (buffer as Int).toLong()
                         append("缓冲: ${bufferMs / 1000}s\n")
                     }
-                } catch (_: Throwable) {}
+                } catch (e: Exception) { e.printStackTrace() }
 
                 // Try to get bitrate
                 try {
@@ -99,7 +99,7 @@ object PlaybackStatsOverlayPatch {
                         val br = if (bitrate is Long) bitrate else (bitrate as Int).toLong()
                         append("码率: ${br / 1000}kbps\n")
                     }
-                } catch (_: Throwable) {}
+                } catch (e: Exception) { e.printStackTrace() }
 
                 // Try to get network speed
                 try {
@@ -108,7 +108,7 @@ object PlaybackStatsOverlayPatch {
                         val sp = if (speed is Long) speed else (speed as Int).toLong()
                         append("网速: ${sp / 1024}KB/s")
                     }
-                } catch (_: Throwable) {}
+                } catch (e: Exception) { e.printStackTrace() }
             }.trim()
 
             if (stats.isNotEmpty()) {

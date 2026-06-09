@@ -92,7 +92,7 @@ object VideoCropPatch {
                     }
                 }
             }
-        } catch (_: Throwable) {}
+        } catch (e: Exception) { e.printStackTrace() }
         return null
     }
 

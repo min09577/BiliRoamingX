@@ -115,7 +115,7 @@ object PlaybackSpeedPatch {
             try {
                 val playerService = playerCoreService.callMethod(app.revanced.bilibili.utils.PlayerHookProvider.getRenderServiceMethodName)
                 playerService?.callMethod(app.revanced.bilibili.utils.PlayerHookProvider.setAspectRatioMethodName, aspectRatio)
-            } catch (_: Throwable) {}
+            } catch (e: Exception) { e.printStackTrace() }
         }
     }
 

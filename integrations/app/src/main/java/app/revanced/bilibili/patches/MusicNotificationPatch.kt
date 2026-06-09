@@ -172,7 +172,8 @@ object MusicNotificationPatch {
                     bitmapActionClass -> when (viewId) {
                         liveNotificationIconId ->
                             setLargeIcon(action.getObjectFieldAsX<Bitmap>("bitmap"))
-                    }
+                    else -> { }
+    }
 
                     reflectionActionClass -> when (action.getObjectFieldAsX<String>("methodName")) {
                         "setText" -> when (viewId) {
@@ -184,7 +185,8 @@ object MusicNotificationPatch {
 
                             liveNotificationUpNameId ->
                                 setSubText(action.getObjectFieldAsX<CharSequence>("value"))
-                        }
+                        else -> { }
+    }
                     }
 
                     onClickActionClass -> {
@@ -194,8 +196,8 @@ object MusicNotificationPatch {
                             liveNotificationStopId -> {
                                 buttons[stopId]?.icon = liveNotificationStopIconId
                                 buttons[stopId]?.intent = pendingIntent
-                            }
-                        }
+                                }
+                                }
                     }
 
                     onClickPendingIntentActionClass -> {
@@ -204,8 +206,8 @@ object MusicNotificationPatch {
                             liveNotificationStopId -> {
                                 buttons[stopId]?.icon = liveNotificationStopIconId
                                 buttons[stopId]?.intent = pendingIntent
-                            }
-                        }
+                                }
+                                }
                     }
                 }
             }

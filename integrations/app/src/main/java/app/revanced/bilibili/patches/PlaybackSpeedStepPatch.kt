@@ -1,6 +1,7 @@
 package app.revanced.bilibili.patches
 
 import androidx.annotation.Keep
+import java.util.concurrent.CopyOnWriteArrayList
 import app.revanced.bilibili.settings.Settings
 import app.revanced.bilibili.utils.Logger
 
@@ -33,7 +34,7 @@ object PlaybackSpeedStepPatch {
     @JvmStatic
     fun getCustomSpeeds(): FloatArray {
         val step = getSpeedStep()
-        val speeds = mutableListOf<Float>()
+        val speeds = CopyOnWriteArrayList<Float>()
         var speed = 0.25f
         while (speed <= 5.0f) {
             // Round to avoid floating point issues

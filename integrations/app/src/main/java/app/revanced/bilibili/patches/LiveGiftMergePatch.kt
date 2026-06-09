@@ -1,6 +1,7 @@
 package app.revanced.bilibili.patches
 
 import androidx.annotation.Keep
+import java.util.concurrent.CopyOnWriteArrayList
 import app.revanced.bilibili.settings.Settings
 import app.revanced.bilibili.utils.Logger
 
@@ -25,7 +26,7 @@ object LiveGiftMergePatch {
     )
 
     // Cache for pending gifts to merge
-    private val pendingGifts = mutableListOf<GiftEntry>()
+    private val pendingGifts = CopyOnWriteArrayList<GiftEntry>()
 
     /**
      * Check if gift merge is enabled.

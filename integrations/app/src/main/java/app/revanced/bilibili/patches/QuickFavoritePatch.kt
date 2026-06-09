@@ -38,7 +38,8 @@ object QuickFavoritePatch {
                         0 -> addToDefault(activity, avid)
                         1 -> addToWatchLater(activity, avid)
                         2 -> showCreateFolderDialog(activity, avid)
-                    }
+                    else -> {}
+    }
                 }
                 .setNegativeButton("取消", null)
                 .show()

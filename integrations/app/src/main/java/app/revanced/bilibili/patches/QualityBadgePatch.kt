@@ -79,7 +79,7 @@ object QualityBadgePatch {
             badgeView?.let { windowManager?.removeView(it) }
             badgeView = null
             isShowing = false
-        } catch (_: Throwable) {}
+        } catch (e: Exception) { e.printStackTrace() }
     }
 
     private fun getQualityName(qn: Int): String {
