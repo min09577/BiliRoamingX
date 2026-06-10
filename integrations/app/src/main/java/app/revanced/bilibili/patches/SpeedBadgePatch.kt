@@ -4,7 +4,6 @@ import androidx.annotation.Keep
 import app.revanced.bilibili.settings.Settings
 import app.revanced.bilibili.utils.Logger
 import app.revanced.bilibili.utils.PlayerHookProvider.showTextToast
-import app.revanced.bilibili.utils.Utils
 
 @Keep
 object SpeedBadgePatch {

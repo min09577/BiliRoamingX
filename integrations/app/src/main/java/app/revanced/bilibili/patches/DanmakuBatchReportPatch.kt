@@ -3,7 +3,6 @@ package app.revanced.bilibili.patches
 import androidx.annotation.Keep
 import app.revanced.bilibili.settings.Settings
 import app.revanced.bilibili.utils.Logger
-import app.revanced.bilibili.utils.Toasts
 
 /**
  * 弹幕批量举报 — 在弹幕列表中支持批量选择和举报违规弹幕

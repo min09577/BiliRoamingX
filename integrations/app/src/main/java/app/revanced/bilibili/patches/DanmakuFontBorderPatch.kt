@@ -1,7 +1,6 @@
 package app.revanced.bilibili.patches
 
 import android.graphics.Color
-import android.graphics.Paint
 import android.widget.TextView
 import androidx.annotation.Keep
 import app.revanced.bilibili.settings.Settings

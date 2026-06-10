@@ -2,7 +2,6 @@ package app.revanced.bilibili.patches
 
 import androidx.annotation.Keep
 import app.revanced.bilibili.settings.Settings
-import app.revanced.bilibili.utils.Logger
 
 /**
  * 首页快捷方式自定义 — 在首页添加常用功能快捷入口

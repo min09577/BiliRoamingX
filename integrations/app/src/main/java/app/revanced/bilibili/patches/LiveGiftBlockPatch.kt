@@ -36,7 +36,7 @@ object LiveGiftBlockPatch {
                         view.visibility = View.GONE
                         Logger.debug { "LiveGiftBlock: hidden gift view $resName" }
                     }
-                } catch (e: Exception) { e.printStackTrace() }
+                } catch (e: Exception) { Logger.error { "Error in LiveGiftBlockPatch: ${e.message}" } }
             }
         } catch (e: Throwable) {
             Logger.error(e) { "LiveGiftBlock: failed to hide" }

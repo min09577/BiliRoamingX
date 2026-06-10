@@ -1,10 +1,8 @@
 package app.revanced.bilibili.patches
 
-import android.content.Context
 import androidx.annotation.Keep
 import app.revanced.bilibili.settings.Settings
 import app.revanced.bilibili.utils.Logger
-import app.revanced.bilibili.utils.Toasts
 
 /**
  * 弹幕批量删除 — 在弹幕列表中支持批量选择和删除弹幕

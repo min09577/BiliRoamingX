@@ -3,8 +3,6 @@ package app.revanced.bilibili.patches
 import android.view.ScaleGestureDetector
 import android.widget.TextView
 import androidx.annotation.Keep
-import android.os.Handler
-import android.os.Looper
 import app.revanced.bilibili.settings.Settings
 import app.revanced.bilibili.utils.*
 import app.revanced.bilibili.utils.PlayerHookProvider.getAspectRatio

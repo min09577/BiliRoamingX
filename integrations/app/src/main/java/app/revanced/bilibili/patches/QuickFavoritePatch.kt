@@ -2,7 +2,6 @@ package app.revanced.bilibili.patches
 
 import android.app.Activity
 import android.app.AlertDialog
-import android.widget.ArrayAdapter
 import androidx.annotation.Keep
 import app.revanced.bilibili.settings.Settings
 import app.revanced.bilibili.utils.Logger

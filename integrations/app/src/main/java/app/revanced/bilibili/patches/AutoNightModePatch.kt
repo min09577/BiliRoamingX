@@ -2,7 +2,6 @@ package app.revanced.bilibili.patches
 
 import android.app.UiModeManager
 import android.content.Context
-import android.os.Build
 import androidx.annotation.Keep
 import app.revanced.bilibili.settings.Settings
 import app.revanced.bilibili.utils.Logger

@@ -1,7 +1,6 @@
 package app.revanced.bilibili.patches
 
 import android.app.Activity
-import android.content.res.Configuration
 import android.view.KeyEvent
 import androidx.annotation.Keep
 import app.revanced.bilibili.settings.Settings

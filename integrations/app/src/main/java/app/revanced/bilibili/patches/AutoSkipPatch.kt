@@ -1,6 +1,5 @@
 package app.revanced.bilibili.patches
 
-import android.content.Context
 import androidx.annotation.Keep
 import app.revanced.bilibili.patches.main.VideoInfoHolder
 import app.revanced.bilibili.settings.Settings

@@ -2,7 +2,6 @@ package app.revanced.bilibili.patches
 
 import androidx.annotation.Keep
 import app.revanced.bilibili.settings.Settings
-import app.revanced.bilibili.utils.Logger
 
 /**
  * 视频结束后动作选择 — 自定义视频播放结束时的行为

@@ -11,8 +11,6 @@ import android.view.Gravity
 import android.view.View
 import androidx.annotation.Keep
 import androidx.documentfile.provider.DocumentFile
-import android.os.Handler
-import android.os.Looper
 import app.revanced.bilibili.patches.SubtitleImportSavePatch.HookInfo.getDanmakuParamsMethod
 import app.revanced.bilibili.patches.SubtitleImportSavePatch.HookInfo.getDmViewReplyMethod
 import app.revanced.bilibili.patches.SubtitleImportSavePatch.HookInfo.hideWidgetMethod

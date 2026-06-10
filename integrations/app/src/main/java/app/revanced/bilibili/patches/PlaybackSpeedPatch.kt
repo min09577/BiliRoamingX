@@ -9,6 +9,7 @@ import android.widget.HorizontalScrollView
 import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.annotation.Keep
+import app.revanced.bilibili.utils.Logger
 import app.revanced.bilibili.patches.main.ApplicationDelegate
 import app.revanced.bilibili.settings.Settings
 import app.revanced.bilibili.utils.Reflex
@@ -16,7 +17,6 @@ import app.revanced.bilibili.utils.Utils
 import app.revanced.bilibili.utils.children
 import app.revanced.bilibili.utils.dp
 import app.revanced.bilibili.utils.callMethod
-import app.revanced.bilibili.utils.PlayerHookProvider.getAspectRatio
 import app.revanced.bilibili.utils.PlayerHookProvider.setAspectRatio
 import com.bilibili.video.story.StoryVideoActivity
 import tv.danmaku.ijk.media.player.IMediaPlayer
@@ -115,7 +115,7 @@ object PlaybackSpeedPatch {
             try {
                 val playerService = playerCoreService.callMethod(app.revanced.bilibili.utils.PlayerHookProvider.getRenderServiceMethodName)
                 playerService?.callMethod(app.revanced.bilibili.utils.PlayerHookProvider.setAspectRatioMethodName, aspectRatio)
-            } catch (e: Exception) { e.printStackTrace() }
+            } catch (e: Exception) { Logger.error { "Error in PlaybackSpeedPatch: ${e.message}" } }
         }
     }
 

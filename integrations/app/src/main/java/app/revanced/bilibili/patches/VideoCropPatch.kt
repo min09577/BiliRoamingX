@@ -92,7 +92,7 @@ object VideoCropPatch {
                     }
                 }
             }
-        } catch (e: Exception) { e.printStackTrace() }
+        } catch (e: Exception) { Logger.error { "Error in VideoCropPatch: ${e.message}" } }
         return null
     }
 

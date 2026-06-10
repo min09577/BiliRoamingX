@@ -3,8 +3,6 @@ package app.revanced.bilibili.patches
 import android.app.AlertDialog
 import android.app.Activity
 import android.graphics.Bitmap
-import android.graphics.Matrix
-import android.view.MotionEvent
 import android.view.ScaleGestureDetector
 import android.widget.ImageView
 import androidx.annotation.Keep

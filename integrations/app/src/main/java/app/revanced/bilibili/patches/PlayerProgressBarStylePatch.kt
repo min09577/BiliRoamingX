@@ -1,8 +1,6 @@
 package app.revanced.bilibili.patches
 
 import android.graphics.Color
-import android.graphics.drawable.GradientDrawable
-import android.view.View
 import android.widget.SeekBar
 import androidx.annotation.Keep
 import app.revanced.bilibili.settings.Settings

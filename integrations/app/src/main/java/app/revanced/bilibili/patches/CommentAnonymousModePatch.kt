@@ -65,14 +65,14 @@ object CommentAnonymousModePatch {
                     val nameField = clazz.getDeclaredField("name")
                     nameField.isAccessible = true
                     nameField.set(commentData, ANONYMOUS_NAME)
-                } catch (e: Exception) { e.printStackTrace() }
+                } catch (e: Exception) { Logger.error { "Error in CommentAnonymousModePatch: ${e.message}" } }
             }
             // Try to clear avatar
             try {
                 val avatarField = clazz.getDeclaredField("avatar")
                 avatarField.isAccessible = true
                 avatarField.set(commentData, ANONYMOUS_AVATAR)
-            } catch (e: Exception) { e.printStackTrace() }
+            } catch (e: Exception) { Logger.error { "Error in CommentAnonymousModePatch: ${e.message}" } }
 
             Logger.debug { "$TAG: comment anonymized" }
             return true

@@ -3,7 +3,6 @@ package app.revanced.bilibili.patches
 import android.graphics.Typeface
 import androidx.annotation.Keep
 import app.revanced.bilibili.settings.Settings
-import app.revanced.bilibili.utils.Logger
 
 @Keep
 object DanmakuFontFamilyPatch {

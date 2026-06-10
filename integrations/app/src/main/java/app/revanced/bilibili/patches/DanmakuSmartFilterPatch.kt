@@ -2,7 +2,6 @@ package app.revanced.bilibili.patches
 
 import androidx.annotation.Keep
 import app.revanced.bilibili.settings.Settings
-import app.revanced.bilibili.utils.Logger
 
 /**
  * 智能弹幕过滤 — 自动过滤低质量弹幕（纯数字、重复内容、过短弹幕）

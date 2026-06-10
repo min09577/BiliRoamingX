@@ -1,7 +1,6 @@
 package app.revanced.bilibili.patches
 
 import android.view.View
-import android.view.ViewTreeObserver
 import android.widget.TextView
 import androidx.annotation.Keep
 import app.revanced.bilibili.settings.Settings

@@ -1,7 +1,6 @@
 package app.revanced.bilibili.patches
 
 import android.view.MotionEvent
-import android.widget.ProgressBar
 import androidx.annotation.Keep
 import app.revanced.bilibili.settings.Settings
 import app.revanced.bilibili.utils.Logger

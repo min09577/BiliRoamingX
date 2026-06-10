@@ -1,7 +1,6 @@
 package app.revanced.bilibili.patches
 
 import android.annotation.SuppressLint
-import android.view.MotionEvent
 import android.view.ScaleGestureDetector
 import android.widget.TextView
 import androidx.annotation.Keep

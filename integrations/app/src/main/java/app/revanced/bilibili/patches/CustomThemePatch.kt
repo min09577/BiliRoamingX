@@ -7,8 +7,6 @@ import android.util.SparseArray
 import android.view.View
 import androidx.annotation.ColorInt
 import androidx.annotation.Keep
-import android.os.Handler
-import android.os.Looper
 import app.revanced.bilibili.settings.Setting
 import app.revanced.bilibili.settings.Settings
 import app.revanced.bilibili.settings.dialog.ColorChooseDialog

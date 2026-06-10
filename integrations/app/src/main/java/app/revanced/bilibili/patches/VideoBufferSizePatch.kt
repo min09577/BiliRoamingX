@@ -2,7 +2,6 @@ package app.revanced.bilibili.patches
 
 import androidx.annotation.Keep
 import app.revanced.bilibili.settings.Settings
-import app.revanced.bilibili.utils.Logger
 
 /**
  * 视频缓冲大小自定义 — 控制视频预加载缓冲时长

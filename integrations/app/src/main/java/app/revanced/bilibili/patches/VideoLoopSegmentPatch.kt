@@ -9,7 +9,6 @@ import androidx.annotation.Keep
 import app.revanced.bilibili.settings.Settings
 import app.revanced.bilibili.utils.Logger
 import app.revanced.bilibili.utils.Toasts
-import app.revanced.bilibili.utils.Utils
 import tv.danmaku.ijk.media.player.IMediaPlayer
 
 @Keep
