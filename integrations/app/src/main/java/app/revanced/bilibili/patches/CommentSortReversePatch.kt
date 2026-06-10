@@ -4,5 +4,8 @@ import app.revanced.bilibili.settings.Settings
 @Keep
 object CommentSortReversePatch {
     @JvmStatic fun isEnabled(): Boolean = Settings.CommentSortReverse.get()
+    /**
+     * getSortOrder
+     */
     @JvmStatic fun getSortOrder(): Int = if (isEnabled()) 1 else 0
 }

@@ -8,6 +8,9 @@ object SearchAutoCorrectPatch {
     private const val TAG = "AutoCorrect"
     private val CORRECTIONS = mapOf("biliblli" to "bilibili", "bliibili" to "bilibili")
     @JvmStatic fun isEnabled(): Boolean = Settings.SearchAutoCorrect.get()
+    /**
+     * correct
+     */
     @JvmStatic fun correct(query: String): String {
         if (!isEnabled()) return query
         var result = query

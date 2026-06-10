@@ -4,5 +4,8 @@ import app.revanced.bilibili.settings.Settings
 @Keep
 object CommentHighlightReplyPatch {
     @JvmStatic fun isEnabled(): Boolean = Settings.CommentHighlightReply.get()
+    /**
+     * hasReplies
+     */
     @JvmStatic fun hasReplies(count: Int): Boolean = isEnabled() && count > 0
 }

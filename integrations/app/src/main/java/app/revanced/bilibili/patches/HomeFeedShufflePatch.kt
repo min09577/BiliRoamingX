@@ -4,5 +4,8 @@ import app.revanced.bilibili.settings.Settings
 @Keep
 object HomeFeedShufflePatch {
     @JvmStatic fun isEnabled(): Boolean = Settings.HomeFeedShuffle.get()
+    /**
+     * shouldShuffle
+     */
     @JvmStatic fun shouldShuffle(): Boolean = isEnabled()
 }

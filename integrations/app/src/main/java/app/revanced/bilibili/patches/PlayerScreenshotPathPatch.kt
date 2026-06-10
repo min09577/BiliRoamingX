@@ -6,5 +6,8 @@ import app.revanced.bilibili.settings.Settings
 @Keep
 object PlayerScreenshotPathPatch {
     @JvmStatic fun isEnabled(): Boolean = Settings.PlayerScreenshotPath.get().isNotEmpty()
+    /**
+     * getScreenshotPath
+     */
     @JvmStatic fun getScreenshotPath(): String = Settings.PlayerScreenshotPath.get()
 }

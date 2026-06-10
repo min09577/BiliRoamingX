@@ -4,5 +4,8 @@ import app.revanced.bilibili.settings.Settings
 @Keep
 object VideoAutoSkipEndingPatch {
     @JvmStatic fun isEnabled(): Boolean = Settings.VideoAutoSkipEnding.get()
+    /**
+     * shouldSkipEnding
+     */
     @JvmStatic fun shouldSkipEnding(): Boolean = isEnabled()
 }

@@ -4,5 +4,8 @@ import app.revanced.bilibili.settings.Settings
 @Keep
 object HomeFeedAutoNightPatch {
     @JvmStatic fun isEnabled(): Boolean = Settings.HomeFeedAutoNight.get()
+    /**
+     * shouldAutoNight
+     */
     @JvmStatic fun shouldAutoNight(): Boolean = isEnabled()
 }

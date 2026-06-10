@@ -7,6 +7,9 @@ import app.revanced.bilibili.settings.Settings
 object VideoAutoSpeedPatch {
     private const val TAG = "VideoAutoSpeed"
     @JvmStatic fun isEnabled(): Boolean = Settings.VideoAutoSpeed.get()
+    /**
+     * getRecommendedSpeed
+     */
     @JvmStatic fun getRecommendedSpeed(contentType: String): Float {
         if (!isEnabled()) return 1.0f
         return when (contentType) {

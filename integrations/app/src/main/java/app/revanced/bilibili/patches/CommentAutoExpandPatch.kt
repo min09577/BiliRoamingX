@@ -4,5 +4,8 @@ import app.revanced.bilibili.settings.Settings
 @Keep
 object CommentAutoExpandPatch {
     @JvmStatic fun isEnabled(): Boolean = Settings.CommentAutoExpand.get()
+    /**
+     * shouldAutoExpand
+     */
     @JvmStatic fun shouldAutoExpand(): Boolean = isEnabled()
 }

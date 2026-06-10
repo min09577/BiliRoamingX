@@ -4,5 +4,8 @@ import app.revanced.bilibili.settings.Settings
 @Keep
 object DanmakuHideOnPausePatch {
     @JvmStatic fun isEnabled(): Boolean = Settings.DanmakuHideOnPause.get()
+    /**
+     * shouldHide
+     */
     @JvmStatic fun shouldHide(isPlaying: Boolean): Boolean = isEnabled() && !isPlaying
 }

@@ -5,5 +5,8 @@ import app.revanced.bilibili.settings.Settings
 object CommentSpamFilterPatch {
     @JvmStatic fun isEnabled(): Boolean = Settings.CommentSpamFilter.get()
     private val spamPatterns = listOf("加微信", "加QQ", "私聊", "免费领", "点击链接", "优惠券")
+    /**
+     * isSpam
+     */
     @JvmStatic fun isSpam(text: String): Boolean = isEnabled() && spamPatterns.any { text.contains(it) }
 }

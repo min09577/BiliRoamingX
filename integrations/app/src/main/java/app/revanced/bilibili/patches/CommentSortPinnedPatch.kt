@@ -4,5 +4,8 @@ import app.revanced.bilibili.settings.Settings
 @Keep
 object CommentSortPinnedPatch {
     @JvmStatic fun isEnabled(): Boolean = Settings.CommentSortPinned.get()
+    /**
+     * shouldPin
+     */
     @JvmStatic fun shouldPin(): Boolean = isEnabled()
 }

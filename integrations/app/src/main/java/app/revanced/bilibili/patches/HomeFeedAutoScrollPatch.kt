@@ -4,5 +4,8 @@ import app.revanced.bilibili.settings.Settings
 @Keep
 object HomeFeedAutoScrollPatch {
     @JvmStatic fun isEnabled(): Boolean = Settings.HomeFeedAutoScroll.get()
+    /**
+     * shouldAutoScroll
+     */
     @JvmStatic fun shouldAutoScroll(): Boolean = isEnabled()
 }

@@ -4,5 +4,8 @@ import app.revanced.bilibili.settings.Settings
 @Keep
 object CommentAccessibilityModePatch {
     @JvmStatic fun isEnabled(): Boolean = Settings.CommentAccessibilityMode.get()
+    /**
+     * getMode
+     */
     @JvmStatic fun getMode(): Int = if (isEnabled()) 1 else 0
 }

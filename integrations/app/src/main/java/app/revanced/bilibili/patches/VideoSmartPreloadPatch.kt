@@ -7,6 +7,9 @@ import app.revanced.bilibili.settings.Settings
 object VideoSmartPreloadPatch {
     private const val TAG = "SmartPreload"
     @JvmStatic fun isEnabled(): Boolean = Settings.VideoSmartPreload.get()
+    /**
+     * getPreloadSize
+     */
     @JvmStatic fun getPreloadSize(networkType: Int): Int {
         if (!isEnabled()) return 0
         return when (networkType) {

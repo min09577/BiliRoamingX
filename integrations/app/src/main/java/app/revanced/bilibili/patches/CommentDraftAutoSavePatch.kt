@@ -4,5 +4,8 @@ import app.revanced.bilibili.settings.Settings
 @Keep
 object CommentDraftAutoSavePatch {
     @JvmStatic fun isEnabled(): Boolean = Settings.CommentDraftAutoSave.get()
+    /**
+     * shouldAutoSave
+     */
     @JvmStatic fun shouldAutoSave(): Boolean = isEnabled()
 }

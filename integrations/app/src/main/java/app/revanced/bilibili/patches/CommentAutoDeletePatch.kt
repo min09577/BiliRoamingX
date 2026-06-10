@@ -4,5 +4,8 @@ import app.revanced.bilibili.settings.Settings
 @Keep
 object CommentAutoDeletePatch {
     @JvmStatic fun isEnabled(): Boolean = Settings.CommentAutoDelete.get()
+    /**
+     * shouldAutoDelete
+     */
     @JvmStatic fun shouldAutoDelete(): Boolean = isEnabled()
 }

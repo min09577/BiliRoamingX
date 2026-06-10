@@ -4,5 +4,8 @@ import app.revanced.bilibili.settings.Settings
 @Keep
 object CommentSortByReplyPatch {
     @JvmStatic fun isEnabled(): Boolean = Settings.CommentSortByReply.get()
+    /**
+     * compare
+     */
     @JvmStatic fun compare(a: Int, b: Int): Int = b - a
 }

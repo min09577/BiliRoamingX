@@ -4,5 +4,8 @@ import app.revanced.bilibili.settings.Settings
 @Keep
 object PlayerScreenshotNotificationPatch {
     @JvmStatic fun isEnabled(): Boolean = Settings.PlayerScreenshotNotification.get()
+    /**
+     * shouldNotify
+     */
     @JvmStatic fun shouldNotify(): Boolean = isEnabled()
 }

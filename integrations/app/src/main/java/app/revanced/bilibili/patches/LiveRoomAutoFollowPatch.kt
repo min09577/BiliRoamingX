@@ -4,5 +4,8 @@ import app.revanced.bilibili.settings.Settings
 @Keep
 object LiveRoomAutoFollowPatch {
     @JvmStatic fun isEnabled(): Boolean = Settings.LiveRoomAutoFollow.get()
+    /**
+     * shouldAutoFollow
+     */
     @JvmStatic fun shouldAutoFollow(): Boolean = isEnabled()
 }

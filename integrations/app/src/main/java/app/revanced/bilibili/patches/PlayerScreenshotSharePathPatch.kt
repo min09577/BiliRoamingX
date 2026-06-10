@@ -6,5 +6,8 @@ import app.revanced.bilibili.settings.Settings
 @Keep
 object PlayerScreenshotSharePathPatch {
     @JvmStatic fun isEnabled(): Boolean = Settings.PlayerScreenshotSharePath.get().isNotEmpty()
+    /**
+     * getSharePath
+     */
     @JvmStatic fun getSharePath(): String = Settings.PlayerScreenshotSharePath.get()
 }

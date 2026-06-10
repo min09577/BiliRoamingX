@@ -4,5 +4,8 @@ import app.revanced.bilibili.settings.Settings
 @Keep
 object CommentImageCompressPatch {
     @JvmStatic fun isEnabled(): Boolean = Settings.CommentImageCompress.get()
+    /**
+     * getCompressQuality
+     */
     @JvmStatic fun getCompressQuality(): Int = if (isEnabled()) 80 else 100
 }

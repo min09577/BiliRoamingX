@@ -4,5 +4,8 @@ import app.revanced.bilibili.settings.Settings
 @Keep
 object CommentHighlightVIPPatch {
     @JvmStatic fun isEnabled(): Boolean = Settings.CommentHighlightVIP.get()
+    /**
+     * isVIP
+     */
     @JvmStatic fun isVIP(vipType: Int): Boolean = isEnabled() && vipType > 0
 }

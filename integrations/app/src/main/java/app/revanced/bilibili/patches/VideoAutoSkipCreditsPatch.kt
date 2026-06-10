@@ -4,5 +4,8 @@ import app.revanced.bilibili.settings.Settings
 @Keep
 object VideoAutoSkipCreditsPatch {
     @JvmStatic fun isEnabled(): Boolean = Settings.VideoAutoSkipCredits.get()
+    /**
+     * shouldSkipCredits
+     */
     @JvmStatic fun shouldSkipCredits(): Boolean = isEnabled()
 }

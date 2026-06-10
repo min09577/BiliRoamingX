@@ -4,5 +4,8 @@ import app.revanced.bilibili.settings.Settings
 @Keep
 object PlayerScreenshotAutoSavePatch {
     @JvmStatic fun isEnabled(): Boolean = Settings.PlayerScreenshotAutoSave.get()
+    /**
+     * shouldAutoSave
+     */
     @JvmStatic fun shouldAutoSave(): Boolean = isEnabled()
 }

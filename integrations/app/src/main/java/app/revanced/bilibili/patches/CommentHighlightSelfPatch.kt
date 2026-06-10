@@ -7,6 +7,9 @@ import app.revanced.bilibili.settings.Settings
 object CommentHighlightSelfPatch {
     @JvmStatic fun isEnabled(): Boolean = Settings.CommentHighlightSelf.get()
 
+    /**
+     * isSelfComment
+     */
     @JvmStatic fun isSelfComment(mid: Long): Boolean {
         if (!isEnabled()) return false
         return mid == getCurrentUserId()

@@ -4,5 +4,8 @@ import app.revanced.bilibili.settings.Settings
 @Keep
 object VideoSmartPausePatch {
     @JvmStatic fun isEnabled(): Boolean = Settings.VideoSmartPause.get()
+    /**
+     * shouldSmartPause
+     */
     @JvmStatic fun shouldSmartPause(): Boolean = isEnabled()
 }

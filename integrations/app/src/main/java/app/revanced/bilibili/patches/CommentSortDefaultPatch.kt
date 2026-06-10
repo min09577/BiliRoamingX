@@ -10,7 +10,13 @@ object CommentSortDefaultPatch {
     const val SORT_HOT = 1
     const val SORT_TIME = 2
     const val SORT_LIKE = 3
+    /**
+     * getSortMode
+     */
     @JvmStatic fun getSortMode(): Int = Settings.CommentSortDefault.get().coerceIn(0, 3)
+    /**
+     * getSortDescription
+     */
     @JvmStatic fun getSortDescription(): String = when (getSortMode()) {
         SORT_HOT -> "最热"; SORT_TIME -> "最新"; SORT_LIKE -> "最赞"; else -> "默认"
     }

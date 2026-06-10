@@ -4,5 +4,8 @@ import app.revanced.bilibili.settings.Settings
 @Keep
 object CommentTimeLimitPatch {
     @JvmStatic fun isEnabled(): Boolean = Settings.CommentTimeLimit.get()
+    /**
+     * shouldLimit
+     */
     @JvmStatic fun shouldLimit(): Boolean = isEnabled()
 }

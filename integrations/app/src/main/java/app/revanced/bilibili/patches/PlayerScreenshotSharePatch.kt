@@ -4,5 +4,8 @@ import app.revanced.bilibili.settings.Settings
 @Keep
 object PlayerScreenshotSharePatch {
     @JvmStatic fun isEnabled(): Boolean = Settings.PlayerScreenshotShare.get()
+    /**
+     * shouldShare
+     */
     @JvmStatic fun shouldShare(): Boolean = isEnabled()
 }

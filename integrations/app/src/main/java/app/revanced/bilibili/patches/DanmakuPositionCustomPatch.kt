@@ -6,5 +6,8 @@ import app.revanced.bilibili.settings.Settings
 @Keep
 object DanmakuPositionCustomPatch {
     @JvmStatic fun isEnabled(): Boolean = Settings.DanmakuPositionCustom.get() != 0
+    /**
+     * getPosition
+     */
     @JvmStatic fun getPosition(): Int = Settings.DanmakuPositionCustom.get()
 }

@@ -5,6 +5,9 @@ import app.revanced.bilibili.settings.Settings
 object DanmakuFilterDuplicatePatch {
     @JvmStatic fun isEnabled(): Boolean = Settings.DanmakuFilterDuplicate.get()
     private val recentDanmaku = LinkedHashSet<String>()
+    /**
+     * isDuplicate
+     */
     @JvmStatic fun isDuplicate(text: String): Boolean {
         if (!isEnabled()) return false
         val dup = recentDanmaku.contains(text)
