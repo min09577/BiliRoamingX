@@ -14,8 +14,8 @@ object CommentHighlightSelfPatch {
     
     private fun getCurrentUserId(): Long {
         return try {
-            val clazz = Class.forName("tv.danmaku.bili.AccountHelper")
-            clazz.getMethod("getMid").invoke(null) as Long
+            val clazz = try { Class.forName("tv.danmaku.bili.AccountHelper") } catch (_: Exception) { null }
+            clazz?.getMethod("getMid")?.invoke(null) as? Long ?: 0L
         } catch (_: Exception) { 0L }
     }
 }
