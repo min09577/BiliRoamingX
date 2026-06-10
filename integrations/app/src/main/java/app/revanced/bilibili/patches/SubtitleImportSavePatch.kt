@@ -63,7 +63,6 @@ object SubtitleImportSavePatch {
         if (!Settings.SubtitleImportSave()) {
             importButton.hide()
             saveButton.hide()
-            return
         }
         importButton.show()
         saveButton.show()

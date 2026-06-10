@@ -31,7 +31,6 @@ object AudioOnlyModePatch {
             if (isAudioOnlyActive) {
                 restoreVideo(surfaceView)
             }
-            return
         }
 
         isAudioOnlyActive = true

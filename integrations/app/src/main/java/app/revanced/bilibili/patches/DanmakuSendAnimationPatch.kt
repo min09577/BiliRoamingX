@@ -91,7 +91,6 @@ object DanmakuSendAnimationPatch {
     fun applyExitAnimation(view: View, onEnd: Runnable? = null) {
         if (!Settings.DanmakuSendAnimation.get()) {
             onEnd?.run()
-            return
         }
 
         try {

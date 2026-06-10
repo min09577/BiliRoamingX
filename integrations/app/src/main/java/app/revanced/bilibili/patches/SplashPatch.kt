@@ -56,7 +56,6 @@ object SplashPatch {
             } catch (e: Exception) {
                 Logger.error(e) { "SplashPatch, failed to hide splash views" }
             }
-            return
         }
         if (Settings.CustomSplash()) {
             val splash = view.findView<ImageView>("brand_splash")

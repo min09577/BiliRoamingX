@@ -14,7 +14,6 @@ object DarkSwitchPatch {
     fun switchDarkMode(listener: OnSwitchDarkModeOriginListener, report: Boolean) {
         if (!Settings.SwitchDarkTipsDialog()) {
             listener.switchDarkMode_Origin(report)
-            return
         }
         if (Utils.isNightFollowSystem()) {
             val context = (listener as Fragment).context

@@ -112,7 +112,6 @@ object VideoBookmarkPatch {
             val bookmarks = getBookmarks(activity, bvid, cid)
             if (bookmarks.isEmpty()) {
                 Toast.makeText(activity, "暂无书签", Toast.LENGTH_SHORT).show()
-                return
             }
 
             val adapter = ArrayAdapter<String>(activity, android.R.layout.simple_list_item_1)

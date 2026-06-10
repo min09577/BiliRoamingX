@@ -34,7 +34,6 @@ object LiveSignPatch {
             val csrf = Accounts.cookieBiliJct
             if (sessData.isEmpty() || csrf.isEmpty()) {
                 Logger.debug { "LiveSignPatch: not logged in, skip sign" }
-                return
             }
 
             val response = HttpClient.post(

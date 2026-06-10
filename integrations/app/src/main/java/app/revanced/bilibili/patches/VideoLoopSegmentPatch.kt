@@ -65,12 +65,10 @@ object VideoLoopSegmentPatch {
         if (isLooping) {
             stopLoop()
             Toasts.showShort("A-B循环已停止")
-            return
         }
 
         if (loopStartMs < 0 || loopEndMs < 0) {
             Toasts.showShort("请先设置循环起点和终点")
-            return
         }
 
         isLooping = true
@@ -138,7 +136,6 @@ object VideoLoopSegmentPatch {
     fun showSettingsDialog(context: Context) {
         if (!Settings.VideoLoopSegment.get()) {
             Toasts.showShort("请先开启A-B循环功能")
-            return
         }
 
         val items = arrayOf(
