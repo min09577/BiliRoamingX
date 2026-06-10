@@ -14,6 +14,7 @@ import app.revanced.bilibili.utils.Utils
 
 @Keep
 object LiveSignPatch {
+    private const val SIGN_EVENT_ID = 1011040
     @Volatile
     private var signedToday = false
     private var lastSignTime = 0L

@@ -8,6 +8,7 @@ import app.revanced.bilibili.settings.Settings
  */
 @Keep
 object DanmakuSmartFilterPatch {
+    private const val MIN_DANMAKU_LENGTH = 2
     private const val TAG = "SmartFilter"
     private const val MIN_LENGTH = 2
 

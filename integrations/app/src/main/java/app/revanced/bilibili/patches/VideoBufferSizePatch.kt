@@ -9,6 +9,7 @@ import app.revanced.bilibili.settings.Settings
  */
 @Keep
 object VideoBufferSizePatch {
+    private const val DEFAULT_BUFFER_SIZE_KB = 10240
     private const val TAG = "VideoBufferSize"
     const val BUFFER_DEFAULT = 0
     const val BUFFER_LOW = 1
