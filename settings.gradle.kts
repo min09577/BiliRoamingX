@@ -42,6 +42,7 @@ include(
     ":integrations:extend",
     ":integrations:ksp",
     ":integrations",
-    ":patches"
+    ":patches",
+    ":manager"
 )
 rootProject.name = "BiliRoamingX-AI"

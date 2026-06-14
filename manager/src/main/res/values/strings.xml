@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">BiliRoamingX Manager</string>
+    <string name="title">哔哩漫游X\n一键注入工具</string>
+    <string name="subtitle">AI 自我维护迭代升级版本</string>
+    <string name="step1">1. 选择 B站 APK</string>
+    <string name="step1_hint">点击选择已安装的B站客户端或本地APK文件</string>
+    <string name="step2">2. 开始注入</string>
+    <string name="btn_select">选择 APK</string>
+    <string name="btn_patch">一键注入</string>
+    <string name="btn_install">安装</string>
+    <string name="status_ready">已就绪，请选择 APK</string>
+    <string name="status_patching">正在注入补丁…</string>
+    <string name="status_signing">正在签名…</string>
+    <string name="status_done">注入完成！</string>
+    <string name="status_error">出错了</string>
+    <string name="apk_selected">已选择: %s</string>
+    <string name="warn_storage">需要存储权限来读取和保存APK文件</string>
+</resources>
