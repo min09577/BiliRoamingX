@@ -44,4 +44,4 @@ include(
     ":integrations",
     ":patches"
 )
-rootProject.name = "BiliRoamingX"
+rootProject.name = "BiliRoamingX-AI"
