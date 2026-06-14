@@ -37,32 +37,6 @@ sealed class Setting<out T : Any>(
         saveInternal(newValue)
     }
 
-    /**
-     * 批量保存多个设置到同一个 Editor, 最后统一 apply
-     * 解决单次保存多个设置时的竞态数据丢失问题 (Fix #754)
-     */
-    companion object {
-        fun saveBatch(block: () -> Unit) {
-            val editor = prefs.edit()
-            _batchEditor = editor
-            block()
-            _batchEditor = null
-            editor.apply()
-        }
-
-        @JvmField
-        @Volatile
-        var _batchEditor: SharedPreferences.Editor? = null
-    }
-
-    fun set(newValue: @UnsafeVariance T) {
-        value = newValue
-    }
-
-    fun isSetToDefault(): Boolean {
-        return value == defValue
-    }
-
     fun restoreToDefault() {
         save(defValue)
     }
@@ -140,6 +114,22 @@ sealed class Setting<out T : Any>(
 
         fun unregisterPreferenceChangeListener(listener: OnSharedPreferenceChangeListener) {
             prefs.unregisterOnSharedPreferenceChangeListener(listener)
+        }
+
+        @JvmField
+        @Volatile
+        var _batchEditor: SharedPreferences.Editor? = null
+
+        /**
+         * 批量保存多个设置到同一个 Editor, 最后统一 apply
+         * 解决单次保存多个设置时的竞态数据丢失问题 (Fix #754)
+         */
+        fun saveBatch(block: () -> Unit) {
+            val editor = prefs.edit()
+            _batchEditor = editor
+            block()
+            _batchEditor = null
+            editor.apply()
         }
     }
 }
