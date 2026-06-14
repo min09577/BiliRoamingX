@@ -6,13 +6,18 @@ import app.revanced.patcher.PatchBundleLoader
 import app.revanced.patcher.Patcher
 import app.revanced.patcher.PatcherOptions
 import kotlinx.coroutines.flow.first
-import java.io.File
-import java.io.FileOutputStream
 import kotlinx.coroutines.runBlocking
+import java.io.File
+import java.io.FileInputStream
+import java.io.FileOutputStream
+import java.util.zip.ZipEntry
+import java.util.zip.ZipFile
+import java.util.zip.ZipOutputStream
 
 /**
  * BiliRoamingX 补丁引擎
- * 使用 revanced-patcher (kofua 19.3.1.2) 将补丁注入到 某站 APK
+ * 使用 revanced-patcher（kofua 19.3.1.2）将补丁注入到 某站 APK
+ * 流程: 选 APK → DEX 注入 → 重打包 → 签名 → 安装
  */
 object PatcherEngine {
 
@@ -23,31 +28,25 @@ object PatcherEngine {
         // 1. 复制用户选择的 APK 到本地
         val inputApk = File(cacheDir, "input.apk")
         context.contentResolver.openInputStream(apkUri)?.use { input ->
-            FileOutputStream(inputApk).use { output ->
-                input.copyTo(output)
-            }
+            FileOutputStream(inputApk).use { input.copyTo(it) }
         } ?: throw IllegalStateException("无法读取 APK")
 
         // 2. 从 assets 解出 patches.jar 和 integrations.apk
         val patchesJar = File(cacheDir, "patches.jar")
-        context.assets.open("patches.jar").use { input ->
-            FileOutputStream(patchesJar).use { output ->
-                input.copyTo(output)
-            }
+        context.assets.open("patches.jar").use {
+            FileOutputStream(patchesJar).use { out -> it.copyTo(out) }
         }
         val integrationsApk = File(cacheDir, "integrations.apk")
-        context.assets.open("integrations.apk").use { input ->
-            FileOutputStream(integrationsApk).use { output ->
-                input.copyTo(output)
-            }
+        context.assets.open("integrations.apk").use {
+            FileOutputStream(integrationsApk).use { out -> it.copyTo(out) }
         }
 
-        // 3. 加载补丁 -> 创建 Patcher -> 注入
+        // 3. 加载补丁 → 创建 Patcher → 注入
         val patches = PatchBundleLoader.Jar(patchesJar)
         val options = PatcherOptions(
             inputFile = inputApk,
             resourceCachePath = File(cacheDir, "resources"),
-            aaptBinaryPath = null,      // 手机上没 aapt, 跳过资源编译
+            aaptBinaryPath = null,
             frameworkFileDirectory = null,
             multithreadingDexFileWriter = false
         )
@@ -55,26 +54,54 @@ object PatcherEngine {
         patcher.acceptPatches(patches.toList())
         patcher.acceptIntegrations(listOf(integrationsApk))
 
-        // apply(false) = 同步在当前线程执行, 返回 Flow<PatchResult>
-        runBlocking {
-            patcher.apply(false).first()
-        }
+        runBlocking { patcher.apply(false).first() }
 
-        // 4. 拿到补丁结果, 写出 DEX 文件
+        // 4. 保存补丁后的 DEX 文件
         val result = patcher.get()
+        val dexDir = File(cacheDir, "dex")
+        dexDir.mkdirs()
         result.dexFiles.forEach { dex ->
-            val outFile = File(cacheDir, dex.name)
-            dex.stream.use { input ->
-                FileOutputStream(outFile).use { output ->
-                    input.copyTo(output)
-                }
+            FileOutputStream(File(dexDir, dex.name)).use { out ->
+                dex.stream.use { it.copyTo(out) }
             }
         }
 
-        // 5. 重新打包 APK + 签名
-        // TODO: 实现 APK 重打包 (替换原 APK 中的 DEX) + V1/V2 签名
-        val patchedApk = File(cacheDir, "biliroamingx-patched.apk")
-        inputApk.copyTo(patchedApk, overwrite = true)
-        return patchedApk
+        // 5. 重打包 APK：原 APK 替换 DEX
+        val repackaged = File(cacheDir, "biliroamingx-repack.apk")
+        repackageApk(inputApk, dexDir, repackaged)
+
+        // 6. 签名
+        val signed = File(cacheDir, "biliroamingx-signed.apk")
+        ApkSigner.sign(repackaged, signed)
+
+        return signed
+    }
+
+    /**
+     * APK 重打包：读取原始 APK，替换其中的 .dex 文件
+     */
+    private fun repackageApk(originalApk: File, dexDir: File, output: File) {
+        ZipOutputStream(FileOutputStream(output)).use { zos ->
+            ZipFile(originalApk).use { zip ->
+                val entries = zip.entries()
+                while (entries.hasMoreElements()) {
+                    val entry = entries.nextElement()
+                    // 跳过原始 DEX 文件，后面用新的替换
+                    if (entry.name.endsWith(".dex")) continue
+                    // 保持其他所有文件不变
+                    zos.putNextEntry(ZipEntry(entry.name))
+                    if (!entry.isDirectory) {
+                        zip.getInputStream(entry).use { it.copyTo(zos) }
+                    }
+                    zos.closeEntry()
+                }
+            }
+            // 写入新的 DEX 文件
+            dexDir.listFiles()?.sortedBy { it.name }?.forEach { dex ->
+                zos.putNextEntry(ZipEntry(dex.name))
+                FileInputStream(dex).use { it.copyTo(zos) }
+                zos.closeEntry()
+            }
+        }
     }
 }
