@@ -1,0 +1,77 @@
+name: Release
+
+on:
+  push:
+    tags:
+      - 'v*'
+
+jobs:
+  build:
+    name: Build and Release
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          submodules: 'recursive'
+
+      - name: Set up JDK
+        uses: actions/setup-java@v4
+        with:
+          distribution: 'temurin'
+          java-version: '17'
+
+      - name: Cache gradle
+        uses: actions/cache@v4
+        with:
+          path: |
+            ~/.gradle/caches
+            ~/.gradle/wrapper
+          key: ${{ runner.os }}-gradle-${{ hashFiles('**/*.gradle*', '**/gradle-wrapper.properties', 'gradle/*.versions.toml') }}
+          restore-keys: |
+            ${{ runner.os }}-gradle-
+
+      - name: Set version
+        run: |
+          version=`awk -F "=" '$1 == "version" {print $2}' gradle.properties`
+          commit_count=`git rev-list HEAD --count`
+          version="${version}.r${commit_count}"
+          echo "VERSION=$version" >> $GITHUB_ENV
+
+      - name: Build with gradle
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+        run: ./gradlew --no-daemon -Dorg.gradle.jvmargs=-Xmx2g -Pversion=$VERSION dist
+
+      - name: Create Release
+        uses: softprops/action-gh-release@v2
+        with:
+          name: BiliRoamingX-AI ${{ env.VERSION }}
+          body: |
+            ## BiliRoamingX-AI ${{ env.VERSION }}
+
+            AI 自我维护迭代版本。基于 [BiliRoamingX](https://github.com/BiliRoamingX/BiliRoamingX) 原版持续维护。
+
+            ### 构建产物
+            - `patches.jar` - ReVanced 补丁包
+            - `integrations.apk` - 集成模块
+
+            ### 使用方法
+            ```shell
+            java -jar revanced-cli.jar patch \
+              --merge integrations.apk \
+              --patch-bundle patches.jar \
+              --signing-levels 1,2,3 \
+              bilibili.apk
+            ```
+
+            ### 上游变更
+            参见 [BiliRoamingX Releases](https://github.com/BiliRoamingX/BiliRoamingX/releases)
+          files: |
+            build/libs/*.jar
+            build/libs/*.apk
+          draft: false
+          prerelease: false
+          generate_release_notes: true

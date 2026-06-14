@@ -1,6 +1,7 @@
 package app.revanced.bilibili.patches
 
 import android.annotation.SuppressLint
+import android.util.Log
 import android.util.TypedValue
 import android.view.View
 import android.view.ViewGroup
@@ -20,6 +21,7 @@ import tv.danmaku.ijk.media.player.IMediaPlayer
 import java.lang.ref.WeakReference
 
 object PlaybackSpeedPatch {
+    private const val TAG = "BiliRoamingX-Speed"
 
     @JvmStatic
     private val stockSpeedArray = floatArrayOf(2.0f, 1.5f, 1.25f, 1.0f, 0.75f, 0.5f)
@@ -67,15 +69,24 @@ object PlaybackSpeedPatch {
     @JvmStatic
     private var playerCache = WeakReference<IMediaPlayer>(null)
 
+    @JvmStatic
+    @Volatile
+    private var lastAppliedSpeed: Float = 0f
+
     @Keep
     @JvmStatic
     fun defaultSpeed(player: IMediaPlayer?, speed: Float): Float {
         // only apply to video, not apply to podcast
         if (player != null && player.videoSarNum <= 0) return speed
-        val newSpeed = if (playerCache.get() !== player || ApplicationDelegate.getTopActivity() is StoryVideoActivity) {
+        val isNewPlayer = playerCache.get() !== player || ApplicationDelegate.getTopActivity() is StoryVideoActivity
+        val newSpeed = if (isNewPlayer) {
             defaultSpeed(speed)
         } else speed
         playerCache = WeakReference(player)
+        if (isNewPlayer) {
+            lastAppliedSpeed = newSpeed
+            Log.d(TAG, "defaultSpeed: new player=${player != null}, speed=$newSpeed (was $speed)")
+        }
         return newSpeed
     }
 
@@ -86,11 +97,14 @@ object PlaybackSpeedPatch {
         return if (Settings.RememberPlaybackSpeed()) {
             val selectedSpeed = Settings.SelectedPlaybackSpeed()
             if (selectedSpeed == 0f && defaultSpeed != 0f) {
+                Log.d(TAG, "defaultSpeed: use default=$defaultSpeed")
                 defaultSpeed
             } else if (selectedSpeed != 0f) {
+                Log.d(TAG, "defaultSpeed: use remembered=$selectedSpeed")
                 selectedSpeed
             } else speed
         } else if (defaultSpeed != 0f) {
+            Log.d(TAG, "defaultSpeed: use default=$defaultSpeed (no remember)")
             defaultSpeed
         } else speed
     }
@@ -105,10 +119,17 @@ object PlaybackSpeedPatch {
     @Keep
     @JvmStatic
     fun longPressSpeed(speed: Float): Float {
-        if (speed == 2.0f || speed == 3.0f) {
+        // Use epsilon comparison to avoid floating-point precision edge cases
+        // B站 may pass ~2.0f or ~3.0f for long-press speedup
+        val isLongPressSpeed = (speed > 1.99f && speed < 2.01f) || (speed > 2.99f && speed < 3.01f)
+        if (isLongPressSpeed) {
             val customSpeed = Settings.LongPressPlaybackSpeed()
-            if (customSpeed != 0f) return customSpeed
+            if (customSpeed != 0f) {
+                Log.d(TAG, "longPressSpeed: override $speed -> $customSpeed")
+                return customSpeed
+            }
         }
+        Log.d(TAG, "longPressSpeed: pass-through speed=$speed (custom=${Settings.LongPressPlaybackSpeed()})")
         return speed
     }
 
