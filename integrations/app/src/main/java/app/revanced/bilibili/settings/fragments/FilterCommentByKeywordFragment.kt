@@ -5,6 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.view.inputmethod.EditorInfo
+import app.revanced.bilibili.settings.Setting
 import app.revanced.bilibili.settings.Settings
 import app.revanced.bilibili.utils.Toasts
 import app.revanced.bilibili.utils.dp
@@ -65,12 +66,14 @@ class FilterCommentByKeywordFragment : BaseWidgetSettingFragment() {
                 return@onClick
             }
 
-            Settings.BlockCommentUpLevel.save(upLevelItem.progress)
-            Settings.BlockCommentContent.save(contents)
-            Settings.BlockCommentContentRegexMode.save(contentRegexMode)
-            Settings.BlockCommentUp.save(upNames)
-            Settings.BlockCommentUpRegexMode.save(upNameRegexMode)
-            Settings.BlockCommentUid.save(uidGroup.getKeywords())
+            Setting.saveBatch {
+                Settings.BlockCommentUpLevel.save(upLevelItem.progress)
+                Settings.BlockCommentContent.save(contents)
+                Settings.BlockCommentContentRegexMode.save(contentRegexMode)
+                Settings.BlockCommentUp.save(upNames)
+                Settings.BlockCommentUpRegexMode.save(upNameRegexMode)
+                Settings.BlockCommentUid.save(uidGroup.getKeywords())
+            }
 
             parentFragmentManager.popBackStack()
         }

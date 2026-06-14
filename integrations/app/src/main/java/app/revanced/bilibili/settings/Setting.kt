@@ -27,8 +27,32 @@ sealed class Setting<out T : Any>(
 
     protected abstract fun saveInternal(newValue: @UnsafeVariance T)
 
+    /**
+     * 将值写入给定的 Editor (不调用 apply, 由调用方统一提交)
+     * 用于批量保存多个设置时避免竞态条件
+     */
+    protected abstract fun saveToEditor(newValue: @UnsafeVariance T, editor: SharedPreferences.Editor)
+
     fun save(newValue: @UnsafeVariance T) {
         saveInternal(newValue)
+    }
+
+    /**
+     * 批量保存多个设置到同一个 Editor, 最后统一 apply
+     * 解决单次保存多个设置时的竞态数据丢失问题 (Fix #754)
+     */
+    companion object {
+        fun saveBatch(block: () -> Unit) {
+            val editor = prefs.edit()
+            _batchEditor = editor
+            block()
+            _batchEditor = null
+            editor.apply()
+        }
+
+        @JvmField
+        @Volatile
+        var _batchEditor: SharedPreferences.Editor? = null
     }
 
     fun set(newValue: @UnsafeVariance T) {
@@ -132,8 +156,18 @@ class BooleanSetting(
     }
 
     override fun saveInternal(newValue: Boolean) {
+        val editor = _batchEditor
+        if (editor != null) {
+            saveToEditor(newValue, editor)
+        } else {
+            value = newValue
+            prefs.edit { putBoolean(key, newValue) }
+        }
+    }
+
+    override fun saveToEditor(newValue: Boolean, editor: SharedPreferences.Editor) {
         value = newValue
-        prefs.edit { putBoolean(key, newValue) }
+        editor.putBoolean(key, newValue)
     }
 }
 
@@ -149,8 +183,18 @@ class IntSetting(
     }
 
     override fun saveInternal(newValue: Int) {
+        val editor = _batchEditor
+        if (editor != null) {
+            saveToEditor(newValue, editor)
+        } else {
+            value = newValue
+            prefs.edit { putInt(key, newValue) }
+        }
+    }
+
+    override fun saveToEditor(newValue: Int, editor: SharedPreferences.Editor) {
         value = newValue
-        prefs.edit { putInt(key, newValue) }
+        editor.putInt(key, newValue)
     }
 }
 
@@ -166,8 +210,18 @@ class LongSetting(
     }
 
     override fun saveInternal(newValue: Long) {
+        val editor = _batchEditor
+        if (editor != null) {
+            saveToEditor(newValue, editor)
+        } else {
+            value = newValue
+            prefs.edit { putLong(key, newValue) }
+        }
+    }
+
+    override fun saveToEditor(newValue: Long, editor: SharedPreferences.Editor) {
         value = newValue
-        prefs.edit { putLong(key, newValue) }
+        editor.putLong(key, newValue)
     }
 }
 
@@ -183,8 +237,18 @@ class FloatSetting(
     }
 
     override fun saveInternal(newValue: Float) {
+        val editor = _batchEditor
+        if (editor != null) {
+            saveToEditor(newValue, editor)
+        } else {
+            value = newValue
+            prefs.edit { putFloat(key, newValue) }
+        }
+    }
+
+    override fun saveToEditor(newValue: Float, editor: SharedPreferences.Editor) {
         value = newValue
-        prefs.edit { putFloat(key, newValue) }
+        editor.putFloat(key, newValue)
     }
 }
 
@@ -200,8 +264,18 @@ class StringSetting(
     }
 
     override fun saveInternal(newValue: String) {
+        val editor = _batchEditor
+        if (editor != null) {
+            saveToEditor(newValue, editor)
+        } else {
+            value = newValue
+            prefs.edit { putString(key, newValue) }
+        }
+    }
+
+    override fun saveToEditor(newValue: String, editor: SharedPreferences.Editor) {
         value = newValue
-        prefs.edit { putString(key, newValue) }
+        editor.putString(key, newValue)
     }
 }
 
@@ -217,8 +291,18 @@ class StringSetSetting(
     }
 
     override fun saveInternal(newValue: Set<String>) {
+        val editor = _batchEditor
+        if (editor != null) {
+            saveToEditor(newValue, editor)
+        } else {
+            value = newValue
+            prefs.edit { putStringSet(key, newValue) }
+        }
+    }
+
+    override fun saveToEditor(newValue: Set<String>, editor: SharedPreferences.Editor) {
         value = newValue
-        prefs.edit { putStringSet(key, newValue) }
+        editor.putStringSet(key, newValue)
     }
 
     fun append(newValue: String) {

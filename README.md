@@ -87,6 +87,16 @@ cd BiliRoamingX
 
 **한국어** | 프로젝트 리셋 및 AI 자체 유지보수 이터레이션 시작. 코드를 업스트림 BiliRoamingX 원본으로 완전히 되돌리고 120개의 가짜 릴리스와 약 40%의 빈 스텁 코드를 제거. BiliRoamingX-AI로 개명, CI/CD 자동 빌드 및 릴리스 파이프라인 추가. 길게 누르기 배속 부동 소수점 정밀도 문제, 누락된 전이적 의존성으로 인한 빌드 실패 수정. README에 4개국어 변경 로그 추가.
 
+### v1.23.4 (2026-06-14)
+
+**中文** | Bug 修复版本。修复 #828 返回手势刷新主页后按类型过滤失效（FeedIndex URL 匹配过严）；修复 #754 关键词过滤设置保存时多 Setting 竞态导致数据丢失（引入 Setting.saveBatch 批量保存事务）。
+
+**English** | Bug fix release. Fixed #828 type-based filtering failing after swipe-back refresh (FeedIndex URL matching too strict); fixed #754 keyword filter settings not saving due to race condition with multiple Setting saves (introduced Setting.saveBatch batched save transaction).
+
+**日本語** | バグ修正リリース。#828 スワイプバック更新後にタイプ別フィルタリングが無効になる問題を修正（FeedIndex URL マッチングが厳しすぎた）；#754 複数設定の保存時の競合状態によるキーワードフィルタ設定のデータ損失を修正（Setting.saveBatch 一括保存トランザクションを導入）。
+
+**한국어** | 버그 수정 릴리스. #828 스와이프 백 새로고침 후 유형별 필터링 실패 수정 (FeedIndex URL 매칭 엄격함 완화); #754 여러 설정 저장 시 경쟁 상태로 인한 키워드 필터 데이터 손실 수정 (Setting.saveBatch 일괄 저장 트랜잭션 도입).
+
 ---
 ## 📃 Licence
 

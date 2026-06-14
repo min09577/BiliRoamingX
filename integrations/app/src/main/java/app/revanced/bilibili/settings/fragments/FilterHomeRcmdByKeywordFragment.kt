@@ -5,6 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.view.inputmethod.EditorInfo
+import app.revanced.bilibili.settings.Setting
 import app.revanced.bilibili.settings.Settings
 import app.revanced.bilibili.utils.Toasts
 import app.revanced.bilibili.utils.onClick
@@ -124,23 +125,26 @@ class FilterHomeRcmdByKeywordFragment : BaseWidgetSettingFragment() {
                 return@onClick
             }
 
-            Settings.LowPlayCountLimit.save(lowPlayCount)
-            Settings.ShortDurationLimit.save(shortDuration)
-            Settings.LongDurationLimit.save(longDuration)
-            Settings.ShortDurationLimitStory.save(shortDurationStory)
-            Settings.LongDurationLimitStory.save(longDurationStory)
-            Settings.HomeRcmdFilterTitle.save(titles)
-            Settings.HomeRcmdFilterReason.save(reasons)
-            Settings.HomeRcmdFilterUid.save(uidGroup.getKeywords())
-            Settings.HomeRcmdFilterUp.save(ups)
-            Settings.HomeRcmdFilterCategory.save(categoryGroup.getKeywords())
-            Settings.HomeRcmdFilterChannel.save(channelGroup.getKeywords())
-            Settings.HomeRcmdFilterTitleRegexMode.save(titleRegexMode)
-            Settings.HomeRcmdFilterReasonRegexMode.save(reasonRegexMode)
-            Settings.HomeRcmdFilterUpRegexMode.save(upRegexMode)
-            Settings.HomeFilterApplyToVideo.save(applyToRelateSwitch.isChecked)
-            Settings.HomeFilterApplyToPopular.save(applyToPopularSwitch.isChecked)
-            Settings.HomeFilterApplyToStory.save(applyToStorySwitch.isChecked)
+            // 批量保存: 使用单个 Editor 事务避免竞态数据丢失 (Fix #754)
+            Setting.saveBatch {
+                Settings.LowPlayCountLimit.save(lowPlayCount)
+                Settings.ShortDurationLimit.save(shortDuration)
+                Settings.LongDurationLimit.save(longDuration)
+                Settings.ShortDurationLimitStory.save(shortDurationStory)
+                Settings.LongDurationLimitStory.save(longDurationStory)
+                Settings.HomeRcmdFilterTitle.save(titles)
+                Settings.HomeRcmdFilterReason.save(reasons)
+                Settings.HomeRcmdFilterUid.save(uidGroup.getKeywords())
+                Settings.HomeRcmdFilterUp.save(ups)
+                Settings.HomeRcmdFilterCategory.save(categoryGroup.getKeywords())
+                Settings.HomeRcmdFilterChannel.save(channelGroup.getKeywords())
+                Settings.HomeRcmdFilterTitleRegexMode.save(titleRegexMode)
+                Settings.HomeRcmdFilterReasonRegexMode.save(reasonRegexMode)
+                Settings.HomeRcmdFilterUpRegexMode.save(upRegexMode)
+                Settings.HomeFilterApplyToVideo.save(applyToRelateSwitch.isChecked)
+                Settings.HomeFilterApplyToPopular.save(applyToPopularSwitch.isChecked)
+                Settings.HomeFilterApplyToStory.save(applyToStorySwitch.isChecked)
+            }
 
             when (from) {
                 "home" -> Toasts.showShortWithId("biliroaming_save_success_and_refresh_home")

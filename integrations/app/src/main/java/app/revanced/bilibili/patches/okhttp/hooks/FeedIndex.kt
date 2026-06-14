@@ -13,7 +13,9 @@ object FeedIndex : ApiHook() {
     }
 
     override fun shouldHook(url: String, status: Int): Boolean {
-        return status.isOk && Versions.ge7_76_0() && url.contains("/x/v2/feed/index?")
+        // 宽松匹配: 去掉尾部 ? 以兼容刷新时可能不带查询参数的URL变体
+        // Fix #828: 返回手势刷新主页后URL格式变化导致过滤失效
+        return status.isOk && Versions.ge7_76_0() && url.contains("/x/v2/feed/index")
                 && newPegasusEnabled
     }
 

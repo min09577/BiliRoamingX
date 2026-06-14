@@ -5,6 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.view.inputmethod.EditorInfo
+import app.revanced.bilibili.settings.Setting
 import app.revanced.bilibili.settings.Settings
 import app.revanced.bilibili.utils.Toasts
 import app.revanced.bilibili.utils.dp
@@ -53,11 +54,13 @@ class FilterSearchKeywordsFragment : BaseWidgetSettingFragment() {
                 return@onClick
             }
 
-            Settings.FilterSearchContent.save(contents)
-            Settings.FilterSearchContentRegexMode.save(contentRegexMode)
-            Settings.FilterSearchUp.save(upNames)
-            Settings.FilterSearchUpRegexMode.save(upNameRegexMode)
-            Settings.FilterSearchUid.save(uidGroup.getKeywords())
+            Setting.saveBatch {
+                Settings.FilterSearchContent.save(contents)
+                Settings.FilterSearchContentRegexMode.save(contentRegexMode)
+                Settings.FilterSearchUp.save(upNames)
+                Settings.FilterSearchUpRegexMode.save(upNameRegexMode)
+                Settings.FilterSearchUid.save(uidGroup.getKeywords())
+            }
 
             parentFragmentManager.popBackStack()
         }
