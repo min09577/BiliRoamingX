@@ -5,6 +5,10 @@ on:
     tags:
       - 'v*'
 
+permissions:
+  contents: write
+  packages: read
+
 jobs:
   build:
     name: Build and Release
@@ -42,7 +46,7 @@ jobs:
 
       - name: Build with gradle
         env:
-          GITHUB_TOKEN: ${{ github.token }}
+          GITHUB_TOKEN: ${{ secrets.GH_PAT }}
         run: ./gradlew --no-daemon -Dorg.gradle.jvmargs=-Xmx2g -Pversion=$VERSION dist
 
       - name: Create Release

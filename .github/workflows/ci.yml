@@ -9,6 +9,10 @@ on:
       - '.github/**'
       - '!.github/workflows/*'
 
+permissions:
+  contents: read
+  packages: read
+
 jobs:
   build:
     name: Build
@@ -46,7 +50,7 @@ jobs:
 
       - name: Build with gradle
         env:
-          GITHUB_TOKEN: ${{ github.token }}
+          GITHUB_TOKEN: ${{ secrets.GH_PAT }}
         run: ./gradlew --no-daemon -Dorg.gradle.jvmargs=-Xmx2g -Pversion=$VERSION dist
 
       - name: Upload artifacts
