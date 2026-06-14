@@ -79,20 +79,15 @@ cd BiliRoamingX
 
 ### v1.23.3 (2026-06-14)
 
-**中文** | 项目重置并启动 AI 自我维护迭代。代码完全回退至上游 BiliRoamingX 原版，清除此前 AI 生成的大量空壳代码（约40%为无效存根）。项目更名为 BiliRoamingX-AI，添加 CI/CD 自动构建与发布流水线。修复长按倍速在视频切换后可能失效的浮点精度问题。
+**中文** | 项目重置并启动 AI 自我维护迭代。代码完全回退至上游 BiliRoamingX 原版，清除此前 AI 生成的 120 个虚假 Release 及约 40% 空壳代码。项目更名为 BiliRoamingX-AI，添加 CI/CD 自动构建与发布流水线。修复长按倍速在视频切换后浮点精度失效问题、revanced-patcher 传递依赖缺失导致的构建失败。README 新增中日韩英四国语言更新日志，仓库描述改为某站以降低品牌风险。
 
-**English** | Project reset and AI self-maintaining iteration launched. Code fully reverted to upstream BiliRoamingX original, removing previously AI-generated hollow shell code (~40% were ineffective stubs). Renamed to BiliRoamingX-AI with CI/CD auto-build and release pipelines. Fixed long-press playback speed floating-point precision issue that could cause failure after video switching.
+**English** | Project reset and AI self-maintaining iteration launched. Code fully reverted to upstream BiliRoamingX original, removing 120 fake releases and ~40% hollow stub code. Renamed to BiliRoamingX-AI with CI/CD auto-build and release pipelines. Fixed long-press speed float precision issue, and build failure caused by missing transitive dependency. README now includes quad-lingual changelog (zh/ja/ko/en), repo description updated for brand safety.
 
-**日本語** | プロジェクトをリセットし、AI自己保守イテレーションを開始しました。コードを完全に上流のBiliRoamingXオリジナルに戻し、以前AIが生成した大量の空殻コード（約40%が無効なスタブ）を削除しました。BiliRoamingX-AIに改名し、CI/CD自動ビルド・リリースパイプラインを追加しました。動画切り替え後に長押し倍速が無効になる可能性のある浮動小数点精度の問題を修正しました。
+**日本語** | プロジェクトをリセットし、AI自己保守イテレーションを開始。コードを完全に上流のBiliRoamingXオリジナルに戻し、120件の偽リリースと約40%の空殻コードを削除。BiliRoamingX-AIに改名し、CI/CD自動ビルド・リリースパイプラインを追加。長押し倍速の浮動小数点精度問題、および不足した推移的依存関係によるビルド失敗を修正。READMEに日中韓英の4言語変更履歴を追加。
 
-**한국어** | 프로젝트가 재설정되고 AI 자체 유지보수 이터레이션이 시작되었습니다. 코드가 업스트림 BiliRoamingX 원본으로 완전히 되돌려졌으며, 이전에 AI가 생성한 대량의 빈 껍데기 코드(약 40%가 무효 스텁)를 제거했습니다. BiliRoamingX-AI로 이름이 변경되었고 CI/CD 자동 빌드 및 릴리스 파이프라인이 추가되었습니다. 동영상 전환 후 길게 누르기 배속이 실패할 수 있는 부동 소수점 정밀도 문제를 수정했습니다.
+**한국어** | 프로젝트 리셋 및 AI 자체 유지보수 이터레이션 시작. 코드를 업스트림 BiliRoamingX 원본으로 완전히 되돌리고 120개의 가짜 릴리스와 약 40%의 빈 스텁 코드를 제거. BiliRoamingX-AI로 개명, CI/CD 자동 빌드 및 릴리스 파이프라인 추가. 길게 누르기 배속 부동 소수점 정밀도 문제, 누락된 전이적 의존성으로 인한 빌드 실패 수정. README에 4개국어 변경 로그 추가.
 
 ---
-
-## ⭐ Star History
-
-[![Star History Chart](https://api.star-history.com/svg?repos=BiliRoamingX/BiliRoamingX&type=Timeline)](https://star-history.com/#BiliRoamingX/BiliRoamingX&Timeline)
-
 ## 📃 Licence
 
 [![GitHub](https://img.shields.io/github/license/BiliRoamingX/BiliRoamingX?style=for-the-badge)](https://github.com/BiliRoamingX/BiliRoamingX/blob/main/LICENSE)
