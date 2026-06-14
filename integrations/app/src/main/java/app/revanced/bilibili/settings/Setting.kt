@@ -37,6 +37,14 @@ sealed class Setting<out T : Any>(
         saveInternal(newValue)
     }
 
+    fun set(newValue: @UnsafeVariance T) {
+        value = newValue
+    }
+
+    fun isSetToDefault(): Boolean {
+        return value == defValue
+    }
+
     fun restoreToDefault() {
         save(defValue)
     }
