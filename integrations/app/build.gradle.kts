@@ -137,6 +137,9 @@ dependencies {
     implementation(libs.kotlinx.serialization.json)
     ksp(projects.integrations.ksp)
     compileOnly(projects.integrations.dummy)
+
+    // Unit test dependencies
+    testImplementation("junit:junit:4.13.2")
 }
 
 tasks.named<Delete>("clean") {
