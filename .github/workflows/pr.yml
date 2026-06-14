@@ -42,4 +42,4 @@ jobs:
       - name: Build with gradle
         env:
           GITHUB_TOKEN: ${{ secrets.GH_PAT }}
-        run: ./gradlew --no-daemon -Dorg.gradle.jvmargs=-Xmx2g dist
+        run: ./gradlew --no-daemon -Dorg.gradle.jvmargs=-Xmx2g -Pgpr.user=min09577 -Pgpr.key=${{ secrets.GH_PAT }} dist
