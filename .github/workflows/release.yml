@@ -44,10 +44,20 @@ jobs:
           version="${version}.r${commit_count}"
           echo "VERSION=$version" >> $GITHUB_ENV
 
-      - name: Build with gradle
+      - name: Build patches + integrations
         env:
           GITHUB_TOKEN: ${{ secrets.GH_PAT }}
         run: ./gradlew --no-daemon -Dorg.gradle.jvmargs=-Xmx2g -Pversion=$VERSION -Pgpr.user=min09577 -Pgpr.key=${{ secrets.GH_PAT }} dist
+
+      - name: Build Manager APK
+        env:
+          GITHUB_TOKEN: ${{ secrets.GH_PAT }}
+        run: ./gradlew --no-daemon -Dorg.gradle.jvmargs=-Xmx2g -Pversion=$VERSION -Pgpr.user=min09577 -Pgpr.key=${{ secrets.GH_PAT }} :manager:assembleRelease
+
+      - name: Copy Manager APK to release dir
+        run: |
+          mkdir -p build/release
+          cp manager/build/outputs/apk/release/*.apk build/release/ 2>/dev/null || true
 
       - name: Create Release
         uses: softprops/action-gh-release@v2
@@ -58,11 +68,9 @@ jobs:
 
             AI 自我维护迭代版本。基于 [BiliRoamingX](https://github.com/BiliRoamingX/BiliRoamingX) 原版持续维护。
 
-            ### 构建产物
+            ### 命令行方式
             - `patches.jar` - ReVanced 补丁包
             - `integrations.apk` - 集成模块
-
-            ### 使用方法
             ```shell
             java -jar revanced-cli.jar patch \
               --merge integrations.apk \
@@ -71,11 +79,16 @@ jobs:
               bilibili.apk
             ```
 
+            ### 📱 一键注入 (推荐)
+            - `Manager APK` - 手机安装后自动检测/选 APK → 一键注入 → 安装
+            > 当前为未签名版，需手动签名后安装。后续版本将实现自签名。
+
             ### 上游变更
             参见 [BiliRoamingX Releases](https://github.com/BiliRoamingX/BiliRoamingX/releases)
           files: |
             build/libs/*.jar
             build/libs/*.apk
+            build/release/*.apk
           draft: false
           prerelease: false
           generate_release_notes: true
