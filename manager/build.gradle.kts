@@ -31,8 +31,14 @@ android {
 }
 
 dependencies {
-    implementation(libs.revanced.patcher)
-    implementation(libs.smali)
+    implementation(libs.revanced.patcher) {
+        exclude(group = "xmlpull", module = "xmlpull")
+        exclude(group = "xpp3", module = "xpp3")
+    }
+    implementation(libs.smali) {
+        exclude(group = "xmlpull", module = "xmlpull")
+        exclude(group = "xpp3", module = "xpp3")
+    }
 
     implementation("androidx.core:core-ktx:1.13.1")
     implementation("androidx.appcompat:appcompat:1.7.0")
