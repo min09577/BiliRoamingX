@@ -37,11 +37,7 @@ dependencies {
     }
 
     // BouncyCastle PKIX for APK signing
-    // Android 只内置 bcprov, 不含 bcpkix (CMS/证书生成)
-    implementation("org.bouncycastle:bcpkix-jdk18on:1.78") {
-        exclude(group = "org.bouncycastle", module = "bcprov-jdk18on")
-        exclude(group = "org.bouncycastle", module = "bcutil-jdk18on")
-    }
+    implementation("org.bouncycastle:bcpkix-jdk18on:1.78")
 
     implementation("androidx.core:core-ktx:1.13.1")
     implementation("androidx.appcompat:appcompat:1.7.0")
