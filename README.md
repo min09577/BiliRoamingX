@@ -107,6 +107,16 @@ cd BiliRoamingX
 
 **한국어** | Manager APK 서명 및 안정성 수정. targetSdk를 33으로 낮춰 jarsigner v1 서명 호환성 확보 (Android 14+는 targetSdk≥34의 v1-only APK 거부). FileProvider 경로 불일치 수정, `<queries>` 선언 추가, 적응형 아이콘, 단계별 오류 로그 등 다수 개선.
 
+### v1.23.16 (2026-06-15)
+
+**中文** | 核心修复：替换 `PatchBundleLoader.Jar()` 为 Android 原生 `DexClassLoader` 加载方案。解决 URLClassLoader.findClass() 在 Android 上抛 UnsupportedOperationException 而非 ClassNotFoundException 导致的补丁注入崩溃。自定义 `loadPatchesFromJar()` 扫描 JAR 类名后通过 DexClassLoader 加载，兼容所有 Android 版本。
+
+**English** | Core fix: Replaced `PatchBundleLoader.Jar()` with native Android `DexClassLoader` loading. Fixed URLClassLoader.findClass() throwing UnsupportedOperationException instead of ClassNotFoundException on Android, causing patch injection crash. Custom `loadPatchesFromJar()` scans JAR class names then loads via DexClassLoader, compatible with all Android versions.
+
+**日本語** | コア修正: `PatchBundleLoader.Jar()` を Android ネイティブ `DexClassLoader` ローディングに置き換え。Android 上の URLClassLoader.findClass() が ClassNotFoundException ではなく UnsupportedOperationException をスローしパッチ注入がクラッシュする問題を修正。カスタム `loadPatchesFromJar()` が JAR クラス名をスキャンし DexClassLoader で読み込み、すべての Android バージョンと互換。
+
+**한국어** | 핵심 수정: `PatchBundleLoader.Jar()`를 Android 네이티브 `DexClassLoader` 로딩으로 교체. Android에서 URLClassLoader.findClass()가 ClassNotFoundException 대신 UnsupportedOperationException을 발생시켜 패치 주입 충돌 문제 수정. 커스텀 `loadPatchesFromJar()`가 JAR 클래스명을 스캔 후 DexClassLoader로 로드, 모든 Android 버전과 호환.
+
 ---
 ## 📃 Licence
 
