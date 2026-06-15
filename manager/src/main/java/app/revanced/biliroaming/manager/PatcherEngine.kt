@@ -6,7 +6,6 @@ import android.util.Log
 import app.revanced.patcher.PatchBundleLoader
 import app.revanced.patcher.Patcher
 import app.revanced.patcher.PatcherConfig
-import app.revanced.patcher.data.ResourceContext
 import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.runBlocking
 import java.io.File
@@ -96,7 +95,20 @@ object PatcherEngine {
                 false,                          // multithreadingDexFileWriter
                 false                           // shortenResourcePaths
             )
-            config.`setResourceMode$revanced_patcher`(ResourceContext.ResourceMode.NONE)
+            // 通过反射设置 ResourceMode.NONE，跳过 aapt 资源解码
+            // ResourceMode 是 internal enum，只能反射访问
+            try {
+                val modeClass = Class.forName("app.revanced.patcher.data.ResourceContext\$ResourceMode")
+                val noneField = modeClass.getDeclaredField("NONE")
+                val noneValue = noneField.get(null)
+                val setter = PatcherConfig::class.java.getDeclaredMethod(
+                    "setResourceMode\$revanced_patcher", modeClass
+                )
+                setter.invoke(config, noneValue)
+                Log.i(TAG, "ResourceMode 已设置为 NONE（跳过资源解码）")
+            } catch (e: Exception) {
+                Log.w(TAG, "设置 ResourceMode.NONE 失败，将尝试默认模式: ${e.message}")
+            }
             val patcher = try {
                 Patcher(config)
             } catch (e: Exception) {
