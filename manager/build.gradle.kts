@@ -16,7 +16,7 @@ android {
     }
 
     signingConfigs {
-        create("release") {
+        create("debug") {
             storeFile = rootProject.file("debug.keystore")
             storePassword = "android"
             keyAlias = "androiddebugkey"
@@ -27,7 +27,12 @@ android {
     buildTypes {
         release {
             isMinifyEnabled = false
-            signingConfig = signingConfigs.getByName("release")
+            signingConfig = signingConfigs.getByName("debug")
+            // 显式启用 v1, v2 签名
+            matchingFallbacks += "release"
+        }
+        debug {
+            signingConfig = signingConfigs.getByName("debug")
         }
     }
 
