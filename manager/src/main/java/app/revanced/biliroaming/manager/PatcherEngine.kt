@@ -85,81 +85,92 @@ object PatcherEngine {
     }
 
     /**
-     * 创建 Patcher，优先尝试跳过资源解码，失败则用假 aapt
+     * 创建 Patcher，通过反射彻底禁用资源解码
      */
     private fun createPatcher(inputApk: File, tmpDir: File, ctx: Context): Patcher {
-        // 方案1: 设置 ResourceMode.NONE 跳过 decodeResources
+        val config = PatcherConfig(inputApk, tmpDir, null, null, false, false)
+        
+        // 多方案并行尝试禁用资源解码
+        var success = false
+        
+        // 方案1: 设置 resourceMode = NONE
         try {
-            val config = PatcherConfig(inputApk, tmpDir, null, null, false, false)
             val modeClass = Class.forName("app.revanced.patcher.data.ResourceContext\$ResourceMode")
             val noneVal = modeClass.getDeclaredField("NONE").get(null)
-
-            // 直接修改 private 字段
             val field = PatcherConfig::class.java.getDeclaredField("resourceMode")
             field.isAccessible = true
             field.set(config, noneVal)
-
-            val actual = field.get(config)
-            Log.i(TAG, "ResourceMode = $actual")
-            return Patcher(config)
+            Log.i(TAG, "ResourceMode 设置为 NONE")
+            success = true
         } catch (e: Exception) {
-            Log.w(TAG, "ResourceMode.NONE 方案失败: ${e.message}，尝试假 aapt")
+            Log.w(TAG, "设置 ResourceMode 失败: ${e.message}")
         }
-
-        // 方案2: 用假 aapt 脚本提供 manifest 信息
-        val fakeAapt = createFakeAapt(ctx, inputApk, tmpDir.parentFile)
-        val config = PatcherConfig(inputApk, tmpDir, fakeAapt, null, false, false)
+        
+        // 方案2: 修改 resourceConfig 中的 options，禁用 renameManifestPackage
+        // 这是 getRenameManifestPackage NPE 的真正源头
+        try {
+            val resourceConfigField = PatcherConfig::class.java.getDeclaredField("resourceConfig")
+            resourceConfigField.isAccessible = true
+            val resourceConfig = resourceConfigField.get(config)
+            
+            // 获取并修改 brut.androlib.Config 中的 renameManifestPackage
+            val renameField = resourceConfig.javaClass.getDeclaredField("renameManifestPackage")
+            renameField.isAccessible = true
+            renameField.set(resourceConfig, "")  // 设为空字符串而非 null
+            
+            // 同时设置 analysisMode = true 跳过某些资源处理
+            val analysisField = resourceConfig.javaClass.getDeclaredField("analysisMode")
+            analysisField.isAccessible = true
+            analysisField.set(resourceConfig, true)
+            
+            Log.i(TAG, "resourceConfig 修改成功")
+            success = true
+        } catch (e: Exception) {
+            Log.w(TAG, "修改 resourceConfig 失败: ${e.message}")
+        }
+        
+        // 方案3: 如果实在不行，使用真正的 aapt2 二进制
+        if (!success) {
+            Log.w(TAG, "反射方案均失败，尝试使用系统 aapt2")
+            // 尝试从系统 PATH 找 aapt2
+            val systemAapt = findSystemAapt()
+            if (systemAapt != null) {
+                Log.i(TAG, "使用系统 aapt2: $systemAapt")
+                val configWithAapt = PatcherConfig(inputApk, tmpDir, systemAapt, null, false, false)
+                return Patcher(configWithAapt)
+            }
+        }
+        
         return Patcher(config)
     }
-
+    
     /**
-     * 用 PackageManager 解析 APK manifest，生成假 aapt 脚本
+     * 在系统 PATH 中查找 aapt/aapt2
      */
-    private fun createFakeAapt(ctx: Context, apk: File, cacheDir: File): String {
-        // 提取包信息
-        var pkg = "unknown"; var vc = 1; var vn = "1.0"; var minSdk = 21; var tgtSdk = 33
+    private fun findSystemAapt(): String? {
+        val paths = arrayOf(
+            "/system/bin/aapt",
+            "/system/bin/aapt2",
+            "/system/xbin/aapt",
+            "/system/xbin/aapt2",
+            "/data/local/tmp/aapt2"
+        )
+        for (path in paths) {
+            if (File(path).exists() && File(path).canExecute()) {
+                return path
+            }
+        }
+        // 尝试 which 命令
         try {
-            val info = ctx.packageManager.getPackageArchiveInfo(apk.absolutePath, 0)
-            if (info != null) {
-                pkg = info.packageName ?: pkg
-                vc = info.versionCode
-                vn = info.versionName ?: vn
-                if (android.os.Build.VERSION.SDK_INT >= 24) {
-                    minSdk = info.applicationInfo?.minSdkVersion ?: minSdk
-                    tgtSdk = info.applicationInfo?.targetSdkVersion ?: tgtSdk
-                }
-                Log.i(TAG, "APK: $pkg v$vn($vc) SDK$minSdk-$tgtSdk")
+            val process = Runtime.getRuntime().exec(arrayOf("which", "aapt2"))
+            val result = process.inputStream.bufferedReader().readLine()
+            if (result != null && result.isNotEmpty() && File(result).exists()) {
+                return result
             }
         } catch (e: Exception) {
-            Log.w(TAG, "PackageParser 失败: ${e.message}")
+            // ignore
         }
-
-        val vcHex = "%08x".format(vc)
-        val script = """#!/system/bin/sh
-case "${'$'}1" in
-  dump) echo "package: name='$pkg' versionCode='$vc' versionName='$vn'"
-        echo "sdkVersion:'$minSdk'"
-        echo "targetSdkVersion:'$tgtSdk'" ;;
-  d) echo "N: android=http://schemas.android.com/apk/res/android"
-     echo "  E: manifest (line=2)"
-     echo "    A: package=\"$pkg\" (Raw: \"$pkg\")"
-     echo "    A: android:versionCode=(type 0x10)0x$vcHex"
-     echo "    A: android:versionName=\"$vn\" (Raw: \"$vn\")" ;;
-esac
-exit 0
-""".trimIndent()
-
-        val f = File("/data/local/tmp", "biliroamingx_aapt.sh")
-        try {
-            f.writeText(script)
-            f.setExecutable(true, false)
-            return f.absolutePath
-        } catch (e: Exception) {
-            val fb = File(cacheDir, "aapt.sh")
-            fb.writeText(script)
-            fb.setExecutable(true, false)
-            return fb.absolutePath
-        }
+        return null
     }
 
     private fun stackTraceString(e: Throwable): String {
