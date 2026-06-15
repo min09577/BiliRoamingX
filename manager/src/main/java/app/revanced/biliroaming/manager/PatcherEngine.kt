@@ -74,13 +74,12 @@ object PatcherEngine {
                 throw IllegalStateException("缺少 integrations.apk！assets 中只有: $available")
             }
 
-            // 3. 加载补丁 — 使用 PatchBundleLoader.Dex (Android 兼容)
+            // 3. 加载补丁 — PatchBundleLoader.Dex (Android 原生 DEX 加载)
             Log.i(TAG, "步骤3/6: 加载补丁...")
-            val dexOptDir = File(cacheDir, "dexopt").also { it.mkdirs() }
             val patchBundle = try {
-                PatchBundleLoader.Dex(arrayOf(patchesJar), dexOptDir).also {
-                    Log.i(TAG, "补丁加载成功，共 ${it.size} 个补丁")
-                }
+                @Suppress("UNCHECKED_CAST")
+                val loader = PatchBundleLoader.Dex(patchesJar)
+                loader.also { Log.i(TAG, "补丁加载成功，共 ${it.size} 个补丁") }
             } catch (e: Exception) {
                 throw IllegalStateException("补丁加载失败: ${stackTraceString(e)}")
             }
