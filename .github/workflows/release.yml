@@ -64,7 +64,10 @@ jobs:
       - name: Build Manager APK
         env:
           GITHUB_TOKEN: ${{ secrets.GH_PAT }}
-        run: ./gradlew --no-daemon -Dorg.gradle.jvmargs=-Xmx2g -Pversion=$VERSION -Pgpr.user=min09577 -Pgpr.key=${{ secrets.GH_PAT }} :manager:assembleRelease
+        run: |
+          # 清除可能缓存的无签名 packageRelease 输出，确保重新签名
+          rm -rf manager/build/outputs/apk/release
+          ./gradlew --no-daemon -Dorg.gradle.jvmargs=-Xmx2g -Pversion=$VERSION -Pgpr.user=min09577 -Pgpr.key=${{ secrets.GH_PAT }} :manager:assembleRelease
 
       - name: Copy Manager APK to release dir
         run: |
