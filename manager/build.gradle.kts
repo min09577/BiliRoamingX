@@ -10,7 +10,7 @@ android {
     defaultConfig {
         applicationId = "app.revanced.biliroaming.manager"
         minSdk = 26
-        targetSdk = 34
+        targetSdk = 33  // 14+ 拒绝 v1-only 签名(targetSdk≥34), 暂降 33 兼容 jarsigner
         versionName = project.version.toString()
         versionCode = 1
     }

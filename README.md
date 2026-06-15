@@ -97,15 +97,15 @@ cd BiliRoamingX
 
 **한국어** | 버그 수정 릴리스. #828 스와이프 백 새로고침 후 유형별 필터링 실패 수정 (FeedIndex URL 매칭 엄격함 완화); #754 여러 설정 저장 시 경쟁 상태로 인한 키워드 필터 데이터 손실 수정 (Setting.saveBatch 일괄 저장 트랜잭션 도입).
 
-### v1.23.7 (2026-06-14)
+### v1.23.15 (2026-06-15)
 
-**中文** | CI 签名修复。在 GitHub Actions 中显式生成 Android debug keystore，解决 CI 构建的 Manager APK 完全未签名导致无法安装的问题。v1.23.6 所有改进均包含在内。
+**中文** | Manager APK 签名与稳定性修复。降低 targetSdk 至 33 以兼容 jarsigner v1 签名（Android 14+ 拒绝 targetSdk≥34 的 v1-only APK）。修复 FileProvider 路径不匹配、添加 `<queries>` 包可见性声明、自适应图标、分步错误日志等多项改进。
 
-**English** | CI signing fix. Explicitly generate Android debug keystore in GitHub Actions to fix Manager APK being completely unsigned and uninstallable. All v1.23.6 improvements included.
+**English** | Manager APK signing & stability fixes. Lowered targetSdk to 33 for jarsigner v1 compatibility (Android 14+ rejects v1-only APKs with targetSdk≥34). Fixed FileProvider path mismatch, added `<queries>` declarations, adaptive icons, step-by-step error logging, and more.
 
-**日本語** | CI 署名修正。GitHub Actions で Android debug keystore を明示的に生成し、Manager APK が完全に未署名でインストール不可となる問題を修正。v1.23.6 の全改善を含む。
+**日本語** | Manager APK 署名と安定性修正。targetSdk を 33 に下げ jarsigner v1 署名と互換性を確保（Android 14+ は targetSdk≥34 の v1-only APK を拒否）。FileProvider パス不一致修正、`<queries>` 宣言追加、アダプティブアイコン、詳細ログなど多数改善。
 
-**한국어** | CI 서명 수정. GitHub Actions에서 Android debug keystore를 명시적으로 생성하여 Manager APK가 완전히 서명되지 않아 설치 불가능한 문제 수정. v1.23.6의 모든 개선 사항 포함.
+**한국어** | Manager APK 서명 및 안정성 수정. targetSdk를 33으로 낮춰 jarsigner v1 서명 호환성 확보 (Android 14+는 targetSdk≥34의 v1-only APK 거부). FileProvider 경로 불일치 수정, `<queries>` 선언 추가, 적응형 아이콘, 단계별 오류 로그 등 다수 개선.
 
 ---
 ## 📃 Licence
