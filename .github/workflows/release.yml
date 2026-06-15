@@ -61,6 +61,18 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GH_PAT }}
         run: ./gradlew --no-daemon --no-build-cache -Dorg.gradle.jvmargs=-Xmx2g -Pversion=$VERSION -Pgpr.user=min09577 -Pgpr.key=${{ secrets.GH_PAT }} dist
 
+      - name: Patch revanced-patcher JAR (fix Android NPE)
+        run: |
+          # 找到 gradle 缓存中的 revanced-patcher JAR 并修补
+          JAR=$(find ~/.gradle/caches -name "revanced-patcher-19.3.1*.jar" ! -name "*sources*" -not -name "*-patched*" | head -1)
+          if [ -z "$JAR" ]; then
+            echo "ERROR: 未找到 revanced-patcher JAR"
+            exit 1
+          fi
+          echo "Found: $JAR"
+          python3 scripts/patch_revanced_patcher.py "$JAR"
+          echo "Patch done"
+
       - name: Build Manager APK
         env:
           GITHUB_TOKEN: ${{ secrets.GH_PAT }}
