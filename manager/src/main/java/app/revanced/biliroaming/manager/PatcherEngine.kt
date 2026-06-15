@@ -1,12 +1,11 @@
 package app.revanced.biliroaming.manager
 
-import android.content.Context as AndroidContext
+import android.content.Context
 import android.net.Uri
 import android.util.Log
+import app.revanced.patcher.PatchBundleLoader
 import app.revanced.patcher.Patcher
 import app.revanced.patcher.PatcherOptions
-import app.revanced.patcher.patch.Patch
-import dalvik.system.DexClassLoader
 import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.runBlocking
 import java.io.File
@@ -27,7 +26,7 @@ object PatcherEngine {
 
     private const val TAG = "BiliRoamingX-Mgr"
 
-    fun patch(context: AndroidContext, apkUri: Uri): File {
+    fun patch(context: Context, apkUri: Uri): File {
         val cacheDir = File(context.cacheDir, "patcher")
         cacheDir.mkdirs()
 
@@ -75,10 +74,11 @@ object PatcherEngine {
                 throw IllegalStateException("缺少 integrations.apk！assets 中只有: $available")
             }
 
-            // 3. 加载补丁 — 使用 Android DexClassLoader 代替 URLClassLoader
+            // 3. 加载补丁 — 使用 PatchBundleLoader.Dex (Android 兼容)
             Log.i(TAG, "步骤3/6: 加载补丁...")
-            val patchClasses = try {
-                loadPatchesFromJar(context, patchesJar).also {
+            val dexOptDir = File(cacheDir, "dexopt").also { it.mkdirs() }
+            val patchBundle = try {
+                PatchBundleLoader.Dex(arrayOf(patchesJar), dexOptDir).also {
                     Log.i(TAG, "补丁加载成功，共 ${it.size} 个补丁")
                 }
             } catch (e: Exception) {
@@ -99,7 +99,7 @@ object PatcherEngine {
                 throw IllegalStateException("Patcher 初始化失败: ${stackTraceString(e)}")
             }
 
-            patcher.acceptPatches(patchClasses)
+            patcher.acceptPatches(patchBundle)
             patcher.acceptIntegrations(listOf(integrationsApk))
 
             Log.i(TAG, "步骤5/6: 执行注入...")
@@ -184,62 +184,5 @@ object PatcherEngine {
                 zos.closeEntry()
             }
         }
-    }
-
-    /**
-     * Android 兼容的补丁加载器
-     * 使用 DexClassLoader 加载 patches.jar 中的 classes.dex，
-     * 扫描 .class 条目获取补丁类名，过滤出 Patch<Context> 的子类
-     */
-    @Suppress("UNCHECKED_CAST")
-    private fun loadPatchesFromJar(context: AndroidContext, jar: File): List<Class<out Patch<*>>> {
-        val optimizedDir = File(context.cacheDir, "dexopt").also { it.mkdirs() }
-
-        // 使用 DexClassLoader 加载 JAR 中的 DEX
-        val classLoader = DexClassLoader(
-            jar.absolutePath,
-            optimizedDir.absolutePath,
-            null,
-            PatcherEngine::class.java.classLoader
-        )
-
-        // 从 JAR 中扫描 .class 条目获取补丁类名
-        val classNames = mutableListOf<String>()
-        ZipFile(jar).use { zip ->
-            val entries = zip.entries()
-            while (entries.hasMoreElements()) {
-                val entry = entries.nextElement()
-                if (!entry.isDirectory && entry.name.endsWith(".class")) {
-                    val className = entry.name
-                        .removeSuffix(".class")
-                        .replace('/', '.')
-                    classNames.add(className)
-                }
-            }
-        }
-
-        Log.i(TAG, "JAR 中共发现 ${classNames.size} 个类，正在加载...")
-
-        val patchClasses = mutableListOf<Class<out Patch<*>>>()
-        for (className in classNames) {
-            try {
-                val clazz = classLoader.loadClass(className)
-                if (Patch::class.java.isAssignableFrom(clazz) &&
-                    !clazz.isInterface &&
-                    !java.lang.reflect.Modifier.isAbstract(clazz.modifiers) &&
-                    !className.contains('$')
-                ) {
-                    patchClasses.add(clazz as Class<out Patch<*>>)
-                    Log.d(TAG, "  加载补丁: $className")
-                }
-            } catch (e: ClassNotFoundException) {
-                Log.w(TAG, "跳过无法加载的类: $className")
-            } catch (e: NoClassDefFoundError) {
-                Log.w(TAG, "跳过缺少依赖的类: $className")
-            }
-        }
-
-        Log.i(TAG, "成功加载 ${patchClasses.size} 个补丁类")
-        return patchClasses
     }
 }
