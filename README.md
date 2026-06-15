@@ -97,15 +97,15 @@ cd BiliRoamingX
 
 **한국어** | 버그 수정 릴리스. #828 스와이프 백 새로고침 후 유형별 필터링 실패 수정 (FeedIndex URL 매칭 엄격함 완화); #754 여러 설정 저장 시 경쟁 상태로 인한 키워드 필터 데이터 손실 수정 (Setting.saveBatch 일괄 저장 트랜잭션 도입).
 
-### v1.23.6 (2026-06-14)
+### v1.23.7 (2026-06-14)
 
-**中文** | 紧急修复 Manager APK 签名文件被 packaging excludes 规则剥离导致无法安装。移除 `META-INF/*.SF/*.DSA/*.RSA` 排除规则；修复 FileProvider 路径不匹配；新增 Android 11+ `<queries>` 声明以检测已安装某站；添加自适应图标和详细分步日志。
+**中文** | CI 签名修复。在 GitHub Actions 中显式生成 Android debug keystore，解决 CI 构建的 Manager APK 完全未签名导致无法安装的问题。v1.23.6 所有改进均包含在内。
 
-**English** | Hotfix: Manager APK signing files stripped by packaging excludes rule, causing install failure. Removed `META-INF/*.SF/*.DSA/*.RSA` excludes; fixed FileProvider path mismatch; added Android 11+ `<queries>` for installed app detection; added adaptive icons and step-by-step logging.
+**English** | CI signing fix. Explicitly generate Android debug keystore in GitHub Actions to fix Manager APK being completely unsigned and uninstallable. All v1.23.6 improvements included.
 
-**日本語** | 緊急修正: packaging excludes ルールにより Manager APK の署名ファイルが除去されインストール不能に。`META-INF/*.SF/*.DSA/*.RSA` の除外を削除；FileProvider パス不一致を修正；Android 11+ `<queries>` 宣言を追加；アダプティブアイコンと詳細ログを追加。
+**日本語** | CI 署名修正。GitHub Actions で Android debug keystore を明示的に生成し、Manager APK が完全に未署名でインストール不可となる問題を修正。v1.23.6 の全改善を含む。
 
-**한국어** | 긴급 수정: packaging excludes 규칙으로 Manager APK 서명 파일이 제거되어 설치 불가. `META-INF/*.SF/*.DSA/*.RSA` 제외 제거; FileProvider 경로 불일치 수정; Android 11+ `<queries>` 선언 추가; 적응형 아이콘 및 상세 로그 추가.
+**한국어** | CI 서명 수정. GitHub Actions에서 Android debug keystore를 명시적으로 생성하여 Manager APK가 완전히 서명되지 않아 설치 불가능한 문제 수정. v1.23.6의 모든 개선 사항 포함.
 
 ---
 ## 📃 Licence
