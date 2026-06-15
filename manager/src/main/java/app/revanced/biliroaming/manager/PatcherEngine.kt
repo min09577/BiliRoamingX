@@ -1,6 +1,6 @@
 package app.revanced.biliroaming.manager
 
-import android.content.Context
+import android.content.Context as AndroidContext
 import android.net.Uri
 import android.util.Log
 import app.revanced.patcher.Patcher
@@ -27,7 +27,7 @@ object PatcherEngine {
 
     private const val TAG = "BiliRoamingX-Mgr"
 
-    fun patch(context: Context, apkUri: Uri): File {
+    fun patch(context: AndroidContext, apkUri: Uri): File {
         val cacheDir = File(context.cacheDir, "patcher")
         cacheDir.mkdirs()
 
@@ -192,7 +192,7 @@ object PatcherEngine {
      * 扫描 .class 条目获取补丁类名，过滤出 Patch<Context> 的子类
      */
     @Suppress("UNCHECKED_CAST")
-    private fun loadPatchesFromJar(context: Context, jar: File): List<Class<out Patch<Context>>> {
+    private fun loadPatchesFromJar(context: AndroidContext, jar: File): List<Class<out Patch<*>>> {
         val optimizedDir = File(context.cacheDir, "dexopt").also { it.mkdirs() }
 
         // 使用 DexClassLoader 加载 JAR 中的 DEX
@@ -210,7 +210,6 @@ object PatcherEngine {
             while (entries.hasMoreElements()) {
                 val entry = entries.nextElement()
                 if (!entry.isDirectory && entry.name.endsWith(".class")) {
-                    // app/revanced/patches/.../FooPatch.class → app.revanced.patches.xxx.FooPatch
                     val className = entry.name
                         .removeSuffix(".class")
                         .replace('/', '.')
@@ -221,23 +220,22 @@ object PatcherEngine {
 
         Log.i(TAG, "JAR 中共发现 ${classNames.size} 个类，正在加载...")
 
-        val patchClasses = mutableListOf<Class<out Patch<Context>>>()
+        val patchClasses = mutableListOf<Class<out Patch<*>>>()
         for (className in classNames) {
             try {
                 val clazz = classLoader.loadClass(className)
-                // 检查是否是 Patch 的子类（排除抽象类和内部类）
                 if (Patch::class.java.isAssignableFrom(clazz) &&
                     !clazz.isInterface &&
                     !java.lang.reflect.Modifier.isAbstract(clazz.modifiers) &&
                     !className.contains('$')
                 ) {
-                    patchClasses.add(clazz as Class<out Patch<Context>>)
+                    patchClasses.add(clazz as Class<out Patch<*>>)
                     Log.d(TAG, "  加载补丁: $className")
                 }
             } catch (e: ClassNotFoundException) {
-                Log.w(TAG, "跳过无法加载的类: $className - ${e.message}")
+                Log.w(TAG, "跳过无法加载的类: $className")
             } catch (e: NoClassDefFoundError) {
-                Log.w(TAG, "跳过缺少依赖的类: $className - ${e.message}")
+                Log.w(TAG, "跳过缺少依赖的类: $className")
             }
         }
 
