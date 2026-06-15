@@ -97,15 +97,15 @@ cd BiliRoamingX
 
 **한국어** | 버그 수정 릴리스. #828 스와이프 백 새로고침 후 유형별 필터링 실패 수정 (FeedIndex URL 매칭 엄격함 완화); #754 여러 설정 저장 시 경쟁 상태로 인한 키워드 필터 데이터 손실 수정 (Setting.saveBatch 일괄 저장 트랜잭션 도입).
 
-### v1.23.5 (2026-06-14)
+### v1.23.6 (2026-06-14)
 
-**中文** | Manager APK 稳定性修复。修复 FileProvider 路径不匹配导致安装时崩溃；新增 Android 11+ `<queries>` 声明以正确检测已安装某站版本；添加 mipmap-anydpi-v26 自适应图标兼容所有密度设备；PatcherEngine 增加详细日志和分步错误提示便于诊断。
+**中文** | 紧急修复 Manager APK 签名文件被 packaging excludes 规则剥离导致无法安装。移除 `META-INF/*.SF/*.DSA/*.RSA` 排除规则；修复 FileProvider 路径不匹配；新增 Android 11+ `<queries>` 声明以检测已安装某站；添加自适应图标和详细分步日志。
 
-**English** | Manager APK stability fixes. Fixed FileProvider path mismatch causing crash on install; added Android 11+ `<queries>` declaration for proper installed app detection; added mipmap-anydpi-v26 adaptive icon for all density devices; PatcherEngine now includes detailed logging and step-by-step error messages for easier diagnosis.
+**English** | Hotfix: Manager APK signing files stripped by packaging excludes rule, causing install failure. Removed `META-INF/*.SF/*.DSA/*.RSA` excludes; fixed FileProvider path mismatch; added Android 11+ `<queries>` for installed app detection; added adaptive icons and step-by-step logging.
 
-**日本語** | Manager APK 安定性修正。インストール時にクラッシュする FileProvider パス不一致を修正；Android 11+ の `<queries>` 宣言を追加し、インストール済みバージョンを正しく検出；全密度デバイス向けに mipmap-anydpi-v26 アダプティブアイコンを追加；PatcherEngine に詳細ログとステップ別エラーメッセージを追加し診断を容易に。
+**日本語** | 緊急修正: packaging excludes ルールにより Manager APK の署名ファイルが除去されインストール不能に。`META-INF/*.SF/*.DSA/*.RSA` の除外を削除；FileProvider パス不一致を修正；Android 11+ `<queries>` 宣言を追加；アダプティブアイコンと詳細ログを追加。
 
-**한국어** | Manager APK 안정성 수정. 설치 시 충돌하는 FileProvider 경로 불일치 수정; Android 11+ `<queries>` 선언 추가로 설치된 버전 올바르게 감지; 모든 밀도 기기용 mipmap-anydpi-v26 적응형 아이콘 추가; PatcherEngine에 상세 로그와 단계별 오류 메시지 추가로 진단 용이.
+**한국어** | 긴급 수정: packaging excludes 규칙으로 Manager APK 서명 파일이 제거되어 설치 불가. `META-INF/*.SF/*.DSA/*.RSA` 제외 제거; FileProvider 경로 불일치 수정; Android 11+ `<queries>` 선언 추가; 적응형 아이콘 및 상세 로그 추가.
 
 ---
 ## 📃 Licence

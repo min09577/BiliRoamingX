@@ -30,10 +30,13 @@ android {
     packaging {
         resources {
             excludes += setOf(
-                "META-INF/versions/**",
-                "META-INF/*.SF",
-                "META-INF/*.DSA",
-                "META-INF/*.RSA"
+                "META-INF/versions/**"
+            )
+            // 处理库的重复 META-INF 文件 (Android Gradle Plugin 会自动处理签名)
+            pickFirsts += setOf(
+                "META-INF/LICENSE",
+                "META-INF/NOTICE",
+                "META-INF/DEPENDENCIES"
             )
         }
     }
