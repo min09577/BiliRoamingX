@@ -70,11 +70,10 @@ object PatcherEngine {
         val repackaged = File(cacheDir, "biliroamingx-repack.apk")
         repackageApk(inputApk, dexDir, repackaged)
 
-        // 6. 签名
-        val signed = File(cacheDir, "biliroamingx-signed.apk")
-        ApkSigner.sign(repackaged, signed)
-
-        return signed
+        // 6. 签名 (TODO: 接入系统 apksigner 或自实现)
+        // 现在返回未签名的 APK, 需要用户手动签名后安装
+        // 或使用 Android PackageInstaller 安装未签名 APK
+        return repackaged
     }
 
     /**
