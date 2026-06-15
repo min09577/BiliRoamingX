@@ -41,7 +41,7 @@ jobs:
           ./gradlew --no-daemon -Dorg.gradle.jvmargs=-Xmx2g \
             -Pgpr.user=min09577 \
             -Pgpr.key=${{ secrets.GH_PAT }} \
-            build
+            dist :manager:assembleRelease
 
       - name: Upload Manager APK
         uses: actions/upload-artifact@v4
