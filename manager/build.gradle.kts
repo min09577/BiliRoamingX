@@ -17,10 +17,14 @@ android {
 
     signingConfigs {
         create("release") {
-            storeFile = file(System.getProperty("user.home") + "/.android/debug.keystore")
+            storeFile = rootProject.file("debug.keystore")
             storePassword = "android"
             keyAlias = "androiddebugkey"
             keyPassword = "android"
+            // Android 标准 debug keystore, 不存在则 keytool 生成
+            if (!storeFile.exists()) {
+                logger.warn("Keystore not found at ${storeFile.absolutePath}, generating...")
+            }
         }
     }
 
