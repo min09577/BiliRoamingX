@@ -65,10 +65,18 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GH_PAT }}
         run: |
-          # 清除可能缓存的无签名 packageRelease 输出，确保重新签名
           rm -rf manager/build/outputs/apk/release
-          # --no-build-cache 禁用全局缓存，确保签名步骤不被跳过
           ./gradlew --no-daemon --no-build-cache -Dorg.gradle.jvmargs=-Xmx2g -Pversion=$VERSION -Pgpr.user=min09577 -Pgpr.key=${{ secrets.GH_PAT }} :manager:assembleRelease
+
+      - name: Sign APK with jarsigner
+        run: |
+          APK=$(find manager/build/outputs/apk/release -name "*.apk" ! -name "*unsigned*" | head -1)
+          echo "Signing APK: $APK"
+          jarsigner -verbose -sigalg SHA256withRSA -digestalg SHA-256 \
+            -keystore debug.keystore -storepass android -keypass android \
+            "$APK" androiddebugkey
+          echo "Verifying..."
+          jarsigner -verify -verbose "$APK" 2>&1 | tail -5
 
       - name: Copy Manager APK to release dir
         run: |
