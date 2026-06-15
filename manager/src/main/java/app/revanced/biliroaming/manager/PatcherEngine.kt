@@ -5,7 +5,8 @@ import android.net.Uri
 import android.util.Log
 import app.revanced.patcher.PatchBundleLoader
 import app.revanced.patcher.Patcher
-import app.revanced.patcher.PatcherOptions
+import app.revanced.patcher.PatcherConfig
+import app.revanced.patcher.data.ResourceContext
 import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.runBlocking
 import java.io.File
@@ -85,15 +86,19 @@ object PatcherEngine {
             }
 
             Log.i(TAG, "步骤4/6: 初始化 Patcher...")
-            val options = PatcherOptions(
-                inputFile = inputApk,
-                resourceCachePath = File(cacheDir, "resources"),
-                aaptBinaryPath = null,
-                frameworkFileDirectory = null,
-                multithreadingDexFileWriter = false
+            // 使用 PatcherConfig 直接构造，设置 ResourceMode.NONE 跳过 aapt 资源解码
+            // BiliRoamingX 补丁只修改 DEX，不需要处理资源文件
+            val config = PatcherConfig(
+                inputApk,                       // apkFile
+                File(cacheDir, "tmp").also { it.mkdirs() },  // temporaryFilesPath
+                null,                           // aaptBinaryPath
+                null,                           // frameworkFileDirectory
+                false,                          // multithreadingDexFileWriter
+                false                           // shortenResourcePaths
             )
+            config.`setResourceMode$revanced_patcher`(ResourceContext.ResourceMode.NONE)
             val patcher = try {
-                Patcher(options)
+                Patcher(config)
             } catch (e: Exception) {
                 throw IllegalStateException("Patcher 初始化失败: ${stackTraceString(e)}")
             }
