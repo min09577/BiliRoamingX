@@ -1,116 +1,81 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:gravity="center_horizontal"
-    android:padding="24dp"
-    android:background="#FAFAFA">
+    android:background="#FAFAFA"
+    android:padding="24dp">
 
-    <Space android:layout_height="36dp" android:layout_width="match_parent"/>
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textSize="26sp"
-        android:textColor="#FF4081"
-        android:textStyle="bold"
-        android:gravity="center"
-        android:text="@string/title" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="6dp"
-        android:textSize="12sp"
-        android:textColor="#999"
-        android:text="@string/subtitle" />
-
-    <Space android:layout_height="28dp" android:layout_width="match_parent"/>
-
-    <!-- 主操作卡片 -->
-    <com.google.android.material.card.MaterialCardView
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:cardCornerRadius="16dp"
-        app:cardElevation="2dp"
-        android:layout_marginBottom="12dp">
+        android:orientation="vertical"
+        android:gravity="center_horizontal">
 
-        <LinearLayout
+        <Space android:layout_height="36dp" android:layout_width="match_parent"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="26sp"
+            android:textColor="#FF4081"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:text="@string/title" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:textSize="12sp"
+            android:textColor="#999"
+            android:text="@string/subtitle" />
+
+        <Space android:layout_height="24dp" android:layout_width="match_parent"/>
+
+        <TextView
+            android:id="@+id/tv_status"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:padding="20dp">
+            android:textSize="14sp"
+            android:textColor="#333"
+            android:lineSpacingExtra="4dp"
+            android:text="@string/guide_summary" />
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textSize="15sp"
-                android:textStyle="bold"
-                android:textColor="#333"
-                android:text="@string/step1" />
+        <Space android:layout_height="24dp" android:layout_width="match_parent"/>
 
-            <TextView
-                android:id="@+id/tv_status"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="4dp"
-                android:textSize="12sp"
-                android:textColor="#999"
-                android:text="@string/step1_hint" />
+        <!-- placeholder buttons for compatibility -->
+        <Button
+            android:id="@+id/btn_select"
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:text="@string/btn_select"
+            android:textAllCaps="false"
+            android:textSize="14sp"
+            android:visibility="gone" />
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:orientation="horizontal">
+        <Button
+            android:id="@+id/btn_patch"
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:text="@string/btn_patch"
+            android:textAllCaps="false"
+            android:textSize="14sp"
+            android:visibility="gone" />
 
-                <Button
-                    android:id="@+id/btn_select"
-                    android:layout_width="0dp"
-                    android:layout_height="44dp"
-                    android:layout_weight="1"
-                    android:layout_marginEnd="8dp"
-                    android:text="@string/btn_select"
-                    android:textAllCaps="false"
-                    android:textSize="14sp"
-                    app:cornerRadius="10dp" />
+        <Button
+            android:id="@+id/btn_install"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:text="@string/btn_install"
+            android:textAllCaps="false"
+            android:textSize="15sp"
+            android:visibility="gone" />
 
-                <Button
-                    android:id="@+id/btn_patch"
-                    android:layout_width="0dp"
-                    android:layout_height="44dp"
-                    android:layout_weight="1"
-                    android:text="@string/btn_patch"
-                    android:textAllCaps="false"
-                    android:textSize="14sp"
-                    android:enabled="false"
-                    app:cornerRadius="10dp"
-                    app:backgroundTint="#7C4DFF" />
-            </LinearLayout>
-        </LinearLayout>
-    </com.google.android.material.card.MaterialCardView>
+        <ProgressBar
+            android:id="@+id/progress"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:visibility="gone" />
 
-    <!-- 安装按钮 (注入完成后显示) -->
-    <Button
-        android:id="@+id/btn_install"
-        android:layout_width="match_parent"
-        android:layout_height="48dp"
-        android:text="@string/btn_install"
-        android:textAllCaps="false"
-        android:textSize="15sp"
-        android:visibility="gone"
-        android:textColor="#7C4DFF"
-        app:cornerRadius="12dp"
-        style="@style/Widget.MaterialComponents.Button.OutlinedButton" />
-
-    <Space android:layout_height="12dp" android:layout_width="match_parent"/>
-
-    <ProgressBar
-        android:id="@+id/progress"
-        android:layout_width="36dp"
-        android:layout_height="36dp"
-        android:visibility="gone" />
-
-</LinearLayout>
+    </LinearLayout>
+</ScrollView>

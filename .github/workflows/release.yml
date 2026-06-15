@@ -15,32 +15,17 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout
-        uses: actions/checkout@v4
+      - uses: actions/checkout@v4
         with:
           fetch-depth: 0
           submodules: 'recursive'
 
-      - name: Set up JDK
-        uses: actions/setup-java@v4
+      - uses: actions/setup-java@v4
         with:
           distribution: 'temurin'
           java-version: '17'
 
-      - name: Generate debug keystore
-        run: |
-          keytool -genkey -v \
-            -keystore debug.keystore \
-            -storepass android \
-            -alias androiddebugkey \
-            -keypass android \
-            -keyalg RSA \
-            -keysize 2048 \
-            -validity 10000 \
-            -dname "CN=Android Debug,O=Android,C=US"
-
-      - name: Cache gradle
-        uses: actions/cache@v4
+      - uses: actions/cache@v4
         with:
           path: |
             ~/.gradle/caches
@@ -56,49 +41,25 @@ jobs:
           version="${version}.r${commit_count}"
           echo "VERSION=$version" >> $GITHUB_ENV
 
-      - name: Build patches + integrations
-        env:
-          GITHUB_TOKEN: ${{ secrets.GH_PAT }}
-        run: ./gradlew --no-daemon --no-build-cache -Dorg.gradle.jvmargs=-Xmx2g -Pversion=$VERSION -Pgpr.user=min09577 -Pgpr.key=${{ secrets.GH_PAT }} dist
-
-      - name: Patch revanced-patcher JAR (fix Android NPE)
-        run: |
-          # 找到 gradle 缓存中的 revanced-patcher JAR 并修补
-          JAR=$(find ~/.gradle/caches -name "revanced-patcher-19.3.1*.jar" ! -name "*sources*" -not -name "*-patched*" | head -1)
-          if [ -z "$JAR" ]; then
-            echo "ERROR: 未找到 revanced-patcher JAR"
-            exit 1
-          fi
-          echo "Found: $JAR"
-          python3 scripts/patch_revanced_patcher.py "$JAR"
-          echo "Patch done"
-
-      - name: Build Manager APK
+      - name: Build patches + integrations + Manager
         env:
           GITHUB_TOKEN: ${{ secrets.GH_PAT }}
         run: |
-          rm -rf manager/build/outputs/apk/release
-          ./gradlew --no-daemon --no-build-cache -Dorg.gradle.jvmargs=-Xmx2g -Pversion=$VERSION -Pgpr.user=min09577 -Pgpr.key=${{ secrets.GH_PAT }} :manager:assembleRelease
+          ./gradlew --no-daemon -Dorg.gradle.jvmargs=-Xmx2g \
+            -Pversion=$VERSION \
+            -Pgpr.user=min09577 \
+            -Pgpr.key=${{ secrets.GH_PAT }} \
+            dist :manager:assembleRelease
 
-      - name: Sign APK with jarsigner
-        run: |
-          APK=$(find manager/build/outputs/apk/release -name "*.apk" ! -name "*unsigned*" | head -1)
-          echo "Signing APK: $APK"
-          jarsigner -verbose -sigalg SHA256withRSA -digestalg SHA-256 \
-            -keystore debug.keystore -storepass android -keypass android \
-            "$APK" androiddebugkey
-          echo "Verifying..."
-          jarsigner -verify -verbose "$APK" 2>&1 | tail -5
-
-      - name: Copy Manager APK to release dir
+      - name: Collect release artifacts
         run: |
           mkdir -p build/release
-          # 只复制签名的 APK（排除 unsigned）
-          for f in manager/build/outputs/apk/release/*.apk; do
-            if [[ "$f" != *unsigned* ]]; then
-              cp "$f" build/release/
-            fi
-          done
+          # patches.jar
+          cp patches/build/libs/*.jar build/release/ 2>/dev/null || true
+          # integrations.apk
+          cp integrations/app/build/outputs/apk/release/*.apk build/release/ 2>/dev/null || true
+          # Manager APK (guide app)
+          cp manager/build/outputs/apk/release/*.apk build/release/ 2>/dev/null || true
 
       - name: Create Release
         uses: softprops/action-gh-release@v2
@@ -107,27 +68,26 @@ jobs:
           body: |
             ## BiliRoamingX-AI ${{ env.VERSION }}
 
-            AI 自我维护迭代版本。基于 [BiliRoamingX](https://github.com/BiliRoamingX/BiliRoamingX) 原版持续维护。
+            AI 自我维护迭代版本。基于 [BiliRoamingX](https://github.com/BiliRoamingX/BiliRoamingX)。
 
-            ### 命令行方式
-            - `patches.jar` - ReVanced 补丁包
-            - `integrations.apk` - 集成模块
+            ### 命令行注入 (推荐)
+
             ```shell
             java -jar revanced-cli.jar patch \
-              --merge integrations.apk \
-              --patch-bundle patches.jar \
-              --signing-levels 1,2,3 \
+              -b patches.jar \
+              -m integrations.apk \
               bilibili.apk
             ```
 
-            ### 📱 一键注入 (推荐)
-            - `Manager APK` - 手机安装后自动检测/选 APK → 一键注入 → 安装
+            ### 文件说明
+            - `patches.jar` - 补丁包
+            - `integrations.apk` - 集成模块  
+            - `Manager APK` - 手机上的操作指引（不能直接注入）
 
             ### 上游变更
-            参见 [BiliRoamingX Releases](https://github.com/BiliRoamingX/BiliRoamingX/releases)
+            [BiliRoamingX Releases](https://github.com/BiliRoamingX/BiliRoamingX/releases)
           files: |
-            build/libs/*.jar
-            build/libs/*.apk
+            build/release/*.jar
             build/release/*.apk
           draft: false
           prerelease: false

@@ -2,12 +2,9 @@ name: CI
 
 on:
   push:
-    branches:
-      - main
-    paths-ignore:
-      - '**.md'
-      - '.github/**'
-      - '!.github/workflows/*'
+    branches: [main]
+  pull_request:
+    branches: [main]
 
 permissions:
   contents: read
@@ -19,32 +16,16 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout
-        uses: actions/checkout@v4
+      - uses: actions/checkout@v4
         with:
-          fetch-depth: 0
           submodules: 'recursive'
 
-      - name: Set up JDK
-        uses: actions/setup-java@v4
+      - uses: actions/setup-java@v4
         with:
           distribution: 'temurin'
           java-version: '17'
 
-      - name: Generate debug keystore
-        run: |
-          keytool -genkey -v \
-            -keystore debug.keystore \
-            -storepass android \
-            -alias androiddebugkey \
-            -keypass android \
-            -keyalg RSA \
-            -keysize 2048 \
-            -validity 10000 \
-            -dname "CN=Android Debug,O=Android,C=US"
-
-      - name: Cache gradle
-        uses: actions/cache@v4
+      - uses: actions/cache@v4
         with:
           path: |
             ~/.gradle/caches
@@ -53,40 +34,18 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-gradle-
 
-      - name: Retrieve version
-        run: |
-          version=`awk -F "=" '$1 == "version" {print $2}' gradle.properties`
-          commit_count=`git rev-list HEAD --count`
-          version="${version}.r${commit_count}"
-          echo "VERSION=$version" >> $GITHUB_ENV
-
-      - name: Build patches + integrations
+      - name: Build
         env:
           GITHUB_TOKEN: ${{ secrets.GH_PAT }}
-        run: ./gradlew --no-daemon -Dorg.gradle.jvmargs=-Xmx2g -Pversion=$VERSION -Pgpr.user=min09577 -Pgpr.key=${{ secrets.GH_PAT }} dist
-
-      - name: Patch revanced-patcher JAR (fix Android NPE)
         run: |
-          JAR=$(find ~/.gradle/caches -name "revanced-patcher-19.3.1*.jar" ! -name "*sources*" -not -name "*-patched*" | head -1)
-          if [ -z "$JAR" ]; then echo "ERROR: JAR not found"; exit 1; fi
-          echo "Found: $JAR"
-          python3 scripts/patch_revanced_patcher.py "$JAR"
-
-      - name: Build Manager APK
-        env:
-          GITHUB_TOKEN: ${{ secrets.GH_PAT }}
-        run: ./gradlew --no-daemon -Dorg.gradle.jvmargs=-Xmx2g -Pversion=$VERSION -Pgpr.user=min09577 -Pgpr.key=${{ secrets.GH_PAT }} :manager:assembleRelease
-
-      - name: Upload patches artifacts
-        uses: actions/upload-artifact@v4
-        if: success()
-        with:
-          name: BiliRoamingX-${{ env.VERSION }}
-          path: 'build'
+          ./gradlew --no-daemon -Dorg.gradle.jvmargs=-Xmx2g \
+            -Pgpr.user=min09577 \
+            -Pgpr.key=${{ secrets.GH_PAT }} \
+            build
 
       - name: Upload Manager APK
         uses: actions/upload-artifact@v4
         if: success()
         with:
-          name: BiliRoamingX-Manager-${{ env.VERSION }}
+          name: manager-apk
           path: 'manager/build/outputs/apk/release/*.apk'

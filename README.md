@@ -67,13 +67,43 @@ cd BiliRoamingX
 - Windows 系统上使用 `gradlew.bat` 命令而不是 `./gradlew`
 - 构建产物在 `build` 目录下
 
-## ⬇️ 下载使用
+## ⬇️ 怎么用（超简单，3 步搞定）
 
-- 前往 [BiliRoamingX-PreBuilds Release](https://github.com/BiliRoamingX/BiliRoamingX-PreBuilds/releases/latest) 下载
-- 参照 [revanced-cli](https://github.com/ReVanced/revanced-cli/tree/main/docs) 文档打包
-  1. 下载定制版 [revanced-cli.jar](https://github.com/zjns/revanced-cli/releases/latest)
-  2. 从 [releases](https://github.com/BiliRoamingX/BiliRoamingX/releases/latest) 下载 `integrations.apk` 和 `patches.jar`
-  3. 执行终端命令 `java -jar revanced-cli.jar patch --merge integrations.apk --patch-bundle patches.jar --signing-levels 1,2,3 bilibili.apk`
+### 你需要准备
+- 一台电脑（Windows / Mac / Linux 都行）
+- 你的手机上安装好 Java 17 或更高版本
+- 你手机里已经装好的 B站 APK 文件
+
+### 第一步：下载工具
+
+去 [Releases](https://github.com/min09577/BiliRoamingX/releases/latest) 下载这三个文件：
+- `patches.jar` — 补丁包
+- `integrations.apk` — 集成模块
+- 还需要 `revanced-cli.jar` — 去 [这里](https://github.com/zjns/revanced-cli/releases/latest) 下载
+
+把这三个文件和你的 `bilibili.apk` 放在**同一个文件夹**里。
+
+### 第二步：打开命令行
+
+在文件夹里打开终端（Windows 按 `Shift+右键`→「在此处打开 PowerShell」，Mac 直接打开「终端」拖入文件夹）。
+
+### 第三步：复制粘贴，回车
+
+```shell
+java -jar revanced-cli.jar patch -b patches.jar -m integrations.apk bilibili.apk
+```
+
+等几秒就完事了，文件夹里会多出一个 `bilibili-patched.apk`。
+
+### 第四步：装到手机
+
+把 `bilibili-patched.apk` 传到手机上，直接安装就行。
+
+> ⚠️ **常见问题**
+> - 如果提示「java 不是内部命令」→ 你还没装 Java，去 [java.com](https://java.com) 下载
+> - 如果安装失败 → 把手机上原来的 B站 卸载了再装
+> - 不同版本的 B站 APK 都可以用同一套补丁，不用每个版本都重新下载
+> - Manager APK 只是个指引工具，不能直接在手机上注入（手机上没那个环境）
 
 ## 📝 更新日志 / Changelog / 更新履歴 / 업데이트 로그
 
@@ -97,25 +127,9 @@ cd BiliRoamingX
 
 **한국어** | 버그 수정 릴리스. #828 스와이프 백 새로고침 후 유형별 필터링 실패 수정 (FeedIndex URL 매칭 엄격함 완화); #754 여러 설정 저장 시 경쟁 상태로 인한 키워드 필터 데이터 손실 수정 (Setting.saveBatch 일괄 저장 트랜잭션 도입).
 
-### v1.23.15 (2026-06-15)
+### v1.23.5 (2026-06-16)
 
-**中文** | Manager APK 签名与稳定性修复。降低 targetSdk 至 33 以兼容 jarsigner v1 签名（Android 14+ 拒绝 targetSdk≥34 的 v1-only APK）。修复 FileProvider 路径不匹配、添加 `<queries>` 包可见性声明、自适应图标、分步错误日志等多项改进。
-
-**English** | Manager APK signing & stability fixes. Lowered targetSdk to 33 for jarsigner v1 compatibility (Android 14+ rejects v1-only APKs with targetSdk≥34). Fixed FileProvider path mismatch, added `<queries>` declarations, adaptive icons, step-by-step error logging, and more.
-
-**日本語** | Manager APK 署名と安定性修正。targetSdk を 33 に下げ jarsigner v1 署名と互換性を確保（Android 14+ は targetSdk≥34 の v1-only APK を拒否）。FileProvider パス不一致修正、`<queries>` 宣言追加、アダプティブアイコン、詳細ログなど多数改善。
-
-**한국어** | Manager APK 서명 및 안정성 수정. targetSdk를 33으로 낮춰 jarsigner v1 서명 호환성 확보 (Android 14+는 targetSdk≥34의 v1-only APK 거부). FileProvider 경로 불일치 수정, `<queries>` 선언 추가, 적응형 아이콘, 단계별 오류 로그 등 다수 개선.
-
-### v1.23.16 (2026-06-15)
-
-**中文** | 核心修复：替换 `PatchBundleLoader.Jar()` 为 Android 原生 `DexClassLoader` 加载方案。解决 URLClassLoader.findClass() 在 Android 上抛 UnsupportedOperationException 而非 ClassNotFoundException 导致的补丁注入崩溃。自定义 `loadPatchesFromJar()` 扫描 JAR 类名后通过 DexClassLoader 加载，兼容所有 Android 版本。
-
-**English** | Core fix: Replaced `PatchBundleLoader.Jar()` with native Android `DexClassLoader` loading. Fixed URLClassLoader.findClass() throwing UnsupportedOperationException instead of ClassNotFoundException on Android, causing patch injection crash. Custom `loadPatchesFromJar()` scans JAR class names then loads via DexClassLoader, compatible with all Android versions.
-
-**日本語** | コア修正: `PatchBundleLoader.Jar()` を Android ネイティブ `DexClassLoader` ローディングに置き換え。Android 上の URLClassLoader.findClass() が ClassNotFoundException ではなく UnsupportedOperationException をスローしパッチ注入がクラッシュする問題を修正。カスタム `loadPatchesFromJar()` が JAR クラス名をスキャンし DexClassLoader で読み込み、すべての Android バージョンと互換。
-
-**한국어** | 핵심 수정: `PatchBundleLoader.Jar()`를 Android 네이티브 `DexClassLoader` 로딩으로 교체. Android에서 URLClassLoader.findClass()가 ClassNotFoundException 대신 UnsupportedOperationException을 발생시켜 패치 주입 충돌 문제 수정. 커스텀 `loadPatchesFromJar()`가 JAR 클래스명을 스캔 후 DexClassLoader로 로드, 모든 Android 버전과 호환.
+**中文** | 回归命令行方案。移除失败的 Manager 手机端注入方案（revanced-patcher 无法在 Android 上运行），Manager 改为纯指引工具。清理中间版本的所有无意义 Release。README 重写使用指南，用大白话讲清四步操作：下载工具→打开命令行→复制命令→安装 APK。
 
 ---
 ## 📃 Licence

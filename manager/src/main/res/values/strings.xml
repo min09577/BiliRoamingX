@@ -1,24 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">BiliRoamingX Manager</string>
-    <string name="title">哔哩漫游X\n一键注入工具</string>
+    <string name="app_name">哔哩漫游X 指引</string>
+    <string name="title">哔哩漫游X</string>
     <string name="subtitle">AI 自我维护迭代升级版本</string>
-    <string name="step1">1. 获取某站 APK</string>
-    <string name="step1_hint">自动检测已安装版本或手动选择文件</string>
-    <string name="step2">2. 开始注入</string>
-    <string name="btn_select">选择 APK</string>
-    <string name="btn_choose_source">选择来源</string>
-    <string name="btn_patch">一键注入</string>
-    <string name="btn_install">安装</string>
-    <string name="status_ready">已就绪，请获取某站 APK</string>
-    <string name="status_installed_but_locked">已检测到已安装版本，但系统限制无法直接读取\n请点击下方按钮手动获取</string>
-    <string name="status_not_installed">未检测到已安装的某站客户端\n请点击下方按钮手动选择 APK</string>
-    <string name="status_patching">正在注入补丁…</string>
-    <string name="status_signing">正在签名…</string>
-    <string name="status_done">注入完成！</string>
-    <string name="status_error">出错了</string>
-    <string name="apk_selected">已选择: %s</string>
-    <string name="dialog_select_source">请选择获取 APK 的方式</string>
-    <string name="option_share_from_manager">从文件管理器选择 APK</string>
-    <string name="option_manual_pick">浏览本地文件</string>
+    <string name="step1">电脑端操作指南</string>
+    <string name="step1_hint">用命令行注入，简单可靠</string>
+    <string name="step2">获取工具</string>
+    <string name="btn_select">查看教程</string>
+    <string name="btn_choose_source">打开 GitHub</string>
+    <string name="btn_patch">复制命令</string>
+    <string name="btn_install">下载工具</string>
+    <string name="status_ready">把 B站 APK 传到电脑，打开命令行</string>
+    <string name="status_installed_but_locked">安装 Java 17+，下载对应工具</string>
+    <string name="status_not_installed">还没安装 B站客户端</string>
+    <string name="status_patching">用 revanced-cli 打补丁，几秒就好</string>
+    <string name="status_signing">自动签名</string>
+    <string name="status_done">把打完补丁的 APK 传回手机安装</string>
+    <string name="status_error">报错了？截图发 GitHub Issue</string>
+    <string name="apk_selected">版本: %s</string>
+    <string name="dialog_select_source">选择下一步操作</string>
+    <string name="option_share_from_manager">复制命令行到剪贴板</string>
+    <string name="option_manual_pick">打开详细图文教程</string>
+    <string name="guide_summary">⚠️ 这个 App 不能直接在手机上注入\n\n请在电脑上操作：\n\n1. 从 GitHub Release 下载 patches.jar 和 integrations.apk\n2. 下载 revanced-cli.jar\n3. 把手机里的 B站 APK 传到电脑\n4. 打开命令行，输入：\njava -jar revanced-cli.jar patch -b patches.jar -m integrations.apk bilibili.apk\n5. 生成 patched APK，传回手机安装\n\n详细教程见 GitHub README</string>
 </resources>
