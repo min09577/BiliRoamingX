@@ -57,7 +57,12 @@ jobs:
       - name: Copy Manager APK to release dir
         run: |
           mkdir -p build/release
-          cp manager/build/outputs/apk/release/*.apk build/release/ 2>/dev/null || true
+          # 只复制签名的 APK（排除 unsigned）
+          for f in manager/build/outputs/apk/release/*.apk; do
+            if [[ "$f" != *unsigned* ]]; then
+              cp "$f" build/release/
+            fi
+          done
 
       - name: Create Release
         uses: softprops/action-gh-release@v2
@@ -81,7 +86,6 @@ jobs:
 
             ### 📱 一键注入 (推荐)
             - `Manager APK` - 手机安装后自动检测/选 APK → 一键注入 → 安装
-            > 当前为未签名版，需手动签名后安装。后续版本将实现自签名。
 
             ### 上游变更
             参见 [BiliRoamingX Releases](https://github.com/BiliRoamingX/BiliRoamingX/releases)

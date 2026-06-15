@@ -1,14 +1,12 @@
 package app.revanced.biliroaming.manager
 
 import android.content.Intent
-import android.content.pm.PackageInfo
 import android.content.pm.PackageManager
 import android.net.Uri
 import android.os.Build
 import android.os.Bundle
-import android.os.Environment
 import android.provider.Settings
-import android.widget.ArrayAdapter
+import android.util.Log
 import android.widget.Toast
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AppCompatActivity
@@ -19,6 +17,8 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 import java.io.File
+import java.io.PrintWriter
+import java.io.StringWriter
 
 class MainActivity : AppCompatActivity() {
 
@@ -27,6 +27,7 @@ class MainActivity : AppCompatActivity() {
     private var patchedApkFile: File? = null
 
     companion object {
+        private const val TAG = "BiliRoamingX-Mgr"
         // 某站可能的包名
         private val BILI_PACKAGES = setOf(
             "tv.danmaku.bili",        // 标准版
@@ -54,7 +55,12 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        scanInstalledBili()
+        try {
+            scanInstalledBili()
+        } catch (e: Exception) {
+            Log.e(TAG, "扫描已安装应用失败", e)
+            binding.tvStatus.text = getString(R.string.status_not_installed)
+        }
 
         binding.btnSelect.setOnClickListener { showApkSourceOptions() }
         binding.btnPatch.setOnClickListener { selectedPath?.let { startPatching(it) } }
@@ -85,7 +91,7 @@ class MainActivity : AppCompatActivity() {
         }
 
         if (found.isNotEmpty()) {
-            val autoPick = found.first { it.third.endsWith(".apk") || it.third.startsWith("/data/app/") }
+            val autoPick = found.firstOrNull { it.third.endsWith(".apk") || it.third.startsWith("/data/app/") }
             if (autoPick != null) {
                 val apkFile = File(autoPick.third)
                 if (apkFile.exists() && apkFile.canRead()) {
@@ -155,10 +161,12 @@ class MainActivity : AppCompatActivity() {
         lifecycleScope.launch {
             try {
                 val uri = if (apkPath.startsWith("/")) {
+                    @Suppress("DEPRECATION")
                     Uri.fromFile(File(apkPath))
                 } else {
                     Uri.parse(apkPath)
                 }
+                Log.i(TAG, "开始注入: $apkPath")
                 val result = withContext(Dispatchers.IO) {
                     PatcherEngine.patch(this@MainActivity, uri)
                 }
@@ -166,12 +174,15 @@ class MainActivity : AppCompatActivity() {
                 binding.progress.visibility = android.view.View.GONE
                 binding.tvStatus.text = getString(R.string.status_done)
                 binding.btnInstall.visibility = android.view.View.VISIBLE
+                Log.i(TAG, "注入成功: ${result.absolutePath}")
             } catch (e: Exception) {
+                Log.e(TAG, "注入失败", e)
                 binding.progress.visibility = android.view.View.GONE
-                binding.tvStatus.text = "${getString(R.string.status_error)}: ${e.message}"
+                val errMsg = e.message ?: "未知错误"
+                binding.tvStatus.text = "${getString(R.string.status_error)}:\n$errMsg"
                 binding.btnPatch.isEnabled = true
                 binding.btnSelect.isEnabled = true
-                Toast.makeText(this@MainActivity, e.message, Toast.LENGTH_LONG).show()
+                Toast.makeText(this@MainActivity, errMsg, Toast.LENGTH_LONG).show()
             }
         }
     }

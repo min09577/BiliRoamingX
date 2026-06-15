@@ -28,16 +28,28 @@ import java.security.cert.X509Certificate
 
 object ApkSigner {
 
+    private const val TAG = "BiliRoamingX-Mgr"
+
     init {
-        if (Security.getProvider("BC") == null) {
-            Security.addProvider(BouncyCastleProvider())
+        try {
+            if (Security.getProvider("BC") == null) {
+                Security.addProvider(BouncyCastleProvider())
+                android.util.Log.i(TAG, "BouncyCastleProvider 注册成功")
+            }
+        } catch (e: Exception) {
+            android.util.Log.e(TAG, "BouncyCastleProvider 注册失败", e)
         }
     }
 
     fun sign(input: File, output: File) {
-        val keyPair = KeyPairGenerator.getInstance("RSA").apply {
-            initialize(2048, SecureRandom())
-        }.generateKeyPair()
+        android.util.Log.i(TAG, "开始签名: ${input.length()} bytes")
+        val keyPair = try {
+            KeyPairGenerator.getInstance("RSA").apply {
+                initialize(2048, SecureRandom())
+            }.generateKeyPair()
+        } catch (e: Exception) {
+            throw IllegalStateException("生成密钥对失败: ${e.message}", e)
+        }
 
         val issuer = X500Name("CN=BiliRoamingX Manager")
         val subject = X500Name("CN=BiliRoamingX")
